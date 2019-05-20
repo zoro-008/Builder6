@@ -1,0 +1,82 @@
+#ifndef	__PMD_DEFINE_H__
+#define	__PMD_DEFINE_H__
+
+#define PRE_ADR							0x0000
+#define ID_ADR							0x0002
+#define BASE_ADR						0x0020
+#define DATA_ADDR						0x0020
+#define COMMAND_ADDR					0x0022
+#define STATUS_ADDR						0x0022
+#define RDY_ADDR						0x0200
+#define INPUT0_ADR						0x0200
+#define OUTPUT0_ADR						0x0202
+#define EMGN_ADR						0x0204
+#define INPUT1_ADR						0x0220
+#define OUTPUT1_ADR						0x0222
+
+//@#define MAX_AXT_BOARD	8
+//@#define MAX_AXIS		64
+
+/**/
+/* PCI BOARD		*/
+//@#define BD_SYNC_OFFSET	0x1800
+//@#define BD_INTR_OFFSET	0x1806
+
+#define PMD_ADDR		0x00
+/* BOARD SELECT		*/
+#define BASE_ADDR			0
+#define BOARD0_BASE_ADDR	0
+#define BOARD1_BASE_ADDR	1
+#define BOARD2_BASE_ADDR	2
+#define BOARD3_BASE_ADDR	3
+#define BOARD4_BASE_ADDR	4
+#define BOARD5_BASE_ADDR	5
+#define BOARD6_BASE_ADDR	6
+#define BOARD7_BASE_ADDR	7
+
+/*	AMCS Board 추가		*/
+/*	2000년 12월 16일	*/
+/*	작성자 : 이성재		*/
+typedef enum _BOARD_PMD_SELECT {
+	PMD2X	= 0x02,
+	PMD4X	= 0x04,
+	PMD6X	= 0x06,
+	PMD8X	= 0x08
+} BOARD_PMD_SELECT;
+
+typedef struct _AXIS_PMD_INFO {
+	INT16  uBoardAddress;
+	INT16  nAxis;
+	INT16  ModuleID;
+	INT16  ModuleNo;
+} AXIS_PMD_INFO;
+
+typedef enum {
+	PMD_NO_STOPMODE = 0,
+	PMD_ABRUPT_STOPMODE,
+	PMD_SMOOTH_STOPMODE
+} STOPMODE_ACTION;
+
+typedef enum {
+	PMD_NO_ACTION = 0,
+	PMD_UPDATE,
+	PMD_ABRUPTSTOP,
+	PMD_SMOOTHSTOP,
+	PMD_MOTOROFF
+} BREAKPOINT_ACTION;
+
+typedef enum {
+	PMD_TR_NONE	= 0,
+	PMD_TR_GE_CMD_POS,
+	PMD_TR_LE_CMD_POS,
+	PMD_TR_GE_ACT_POS,
+	PMD_TR_LE_ACT_POS,
+	PMD_TR_CMD_POS_CROSS,
+	PMD_TR_ACT_POS_CROSS,
+	PMD_TR_TIME,
+	PMD_TR_EVENTSTATUS,
+	PMD_TR_ACTIVITYSTATUS,
+	PMD_TR_SIGNALSTATUS
+} BREAKPOINT_TRIGGER;
+
+#endif

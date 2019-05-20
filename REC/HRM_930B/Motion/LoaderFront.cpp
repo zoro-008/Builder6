@@ -1,0 +1,577 @@
+//---------------------------------------------------------------------------
+#include <vcl.h>
+#pragma hdrstop
+
+//---------------------------------------------------------------------------
+//Part Reference
+//---------------------------------------------------------------------------
+#include "LoaderFront.h"
+#include "LeftTool.h"
+//---------------------------------------------------------------------------
+#include "SLogUnit.h"
+#include "SMInterfaceUnit.h"
+#include "UtilDefine.h"
+#include "PstnMan.h"
+#include "OptionMan.h"
+#include "Index.h"
+//#include "LotUnit.h"
+#include "UserIni.h"
+#include "UserFile.h"
+//---------------------------------------------------------------------------
+
+#pragma package(smart_init)
+//sun MT.AllDone
+//sun AT.AllDone만들기.
+//---------------------------------------------------------------------------
+CLoaderFront LDR_F;
+
+CGridData g_LotData ;
+
+CLoaderFront::CLoaderFront(void)
+{
+
+}
+
+CLoaderFront::~CLoaderFront (void)
+{
+
+}
+
+void CLoaderFront::Init()
+{
+    m_sPartName = "MBlock Magazine" ;        //20160419 수정 진섭
+
+    g_LotData.LoadFromCsv(EXE_FOLDER + "SeqData\\LotData.csv");
+
+    m_sCheckSafeMsg = "" ;
+
+    Reset();
+    Load(true);
+
+    InitCycleName();
+    InitCycleTime();
+}
+
+void CLoaderFront::Close()
+{
+    Load(false);
+    g_LotData.SaveToCsv(EXE_FOLDER + "SeqData\\LotData.csv");
+}
+
+void CLoaderFront::ResetTimer()
+{
+    //Clear Timer.
+    m_tmMain   .Clear();
+    m_tmCycle  .Clear();
+    m_tmHome   .Clear();
+    m_tmToStop .Clear();
+    m_tmToStart.Clear();
+    m_tmDelay  .Clear();
+}
+
+bool CLoaderFront::FindChip(int &r ,int &c , EN_CHIP_STAT _eStat)
+{
+    if(_eStat == csUnkwn) { //꺼내 갈때.
+        if(-1 != DM.ARAY[riLDR_F].FindFrstRowLastCol(_eStat , r , c)){
+            return true ;
+        }
+    }
+    else if(_eStat == csDetect) { //한번 훌고갈때.
+        if(-1 != DM.ARAY[riLDR_F].FindFrstRowLastCol(_eStat , r , c)){
+            return true ;
+        }
+    }
+
+    return false ;
+}
+
+double CLoaderFront::GetMotrPos(EN_MOTR_ID _iMotr , EN_PSTN_ID _iPstnId )
+{
+    double dPos = 0.0 ;
+
+    double dPickStt ; //작업해야할 메거진의 맨 아래 슬롯 위치.
+    double dPick    ; //현재 작업해야할 포지션.
+    double dDetect  ; //자재확인 위치.
+    double dDetectStt ;
+    int r , c;
+    EN_ARAY_ID riWork ;
+
+    if(FindChip(r, c, csUnkwn)){
+        dPickStt = PM.GetValue(miLDR_ZElevF , pvLDR_ZElevFPickFrst) ;
+        dPick    = dPickStt + r * OM.DevInfo.dLDRFMgzSlotPitch ;
+    }
+    if(FindChip(r, c, csDetect)){
+        dDetectStt = PM.GetValue(miLDR_ZElevF , pvLDR_ZElevFPickFrst) ;
+        dDetect    = dPickStt + r * OM.DevInfo.dLDRFMgzSlotPitch ;
+    }
+
+    if(_iMotr == miLDR_ZElevF){
+             if(_iPstnId ==  piLDR_ZElevFWait        ) dPos = PM.GetValue (_iMotr , pvLDR_ZElevFWait    );
+        else if(_iPstnId ==  piLDR_ZElevFPickFrst    ) dPos = PM.GetValue (_iMotr , pvLDR_ZElevFPickFrst);
+        else if(_iPstnId ==  piLDR_ZElevFPick        ) dPos = dPick                                      ;
+        else if(_iPstnId ==  piLDR_ZElevFDetect      ) dPos = dDetect                                    ;
+        else                                           dPos = MT_GetCmdPos(_iMotr                       );
+    }
+    else {
+        dPos = MT_GetCmdPos(_iMotr);
+    }
+
+    return dPos ;
+}
+
+void CLoaderFront::Reset()
+{
+    ResetTimer();
+
+    //Init. Buffers
+    memset(&Stat    , 0 , sizeof(SStat ));
+    memset(&Step    , 0 , sizeof(SStep ));
+    memset(&PreStep , 0 , sizeof(SStep ));
+}
+
+bool CLoaderFront::ToStopCon(void) //스탑을 하기 위한 조건을 보는 함수.
+{
+    Stat.bReqStop = true ;
+    //During the auto run, do not stop.
+    if (Step.iSeq) return false;
+
+    Step.iToStop = 10;
+    //Ok.
+    return true;
+}
+
+bool CLoaderFront::ToStartCon(void) //스타트를 하기 위한 조건을 보는 함수.
+{
+    Step.iToStart = 10 ;
+    //Ok.
+    return true;
+}
+
+bool CLoaderFront::ToStart(void) //스타트를 하기 위한 함수.
+{
+    //Check Time Out.
+    if (m_tmToStart.OnDelay(Step.iToStart && !PreStep.iToStart == Step.iToStart && CheckStop(), 5000)) EM_SetErrMsg(eiPRT_ToStartTO,m_sPartName.c_str()); //EM_SetErr(eiLDR_ToStartTO);
+
+    AnsiString sTemp ;
+    sTemp = sTemp.sprintf("Step.iToStart=%02d" , Step.iToStart );
+    if(Step.iToStart != PreStep.iToStart) {
+        Trace(m_sPartName.c_str(),sTemp.c_str());
+    }
+
+    PreStep.iToStart = Step.iToStart ;
+
+    //Move Home.
+    switch (Step.iToStart) {
+        default: Step.iToStart = 0 ;
+                 return true ;
+
+        case 10:
+                 Step.iToStart ++ ;
+                 return false ;
+
+        case 11: //if(!MT_GetStopInpos(miLDR_ZElev)) return false ;
+                 Step.iToStart = 0 ;
+                 return true ;
+    }
+}
+
+bool CLoaderFront::ToStop(void) //스탑을 하기 위한 함수.
+{
+    //Check Time Out.
+    if (m_tmToStop.OnDelay(Step.iToStop && !PreStep.iToStop == Step.iToStop && CheckStop(), 10000)) EM_SetErrMsg(eiPRT_ToStopTO , m_sPartName.c_str()); //EM_SetErr(eiLDR_ToStopTO);
+
+    AnsiString sTemp ;
+    sTemp = sTemp.sprintf("Step.iToStop=%02d" , Step.iToStop );
+    if(Step.iToStop != PreStep.iToStop) {
+        Trace(m_sPartName.c_str(),sTemp.c_str());
+    }
+
+    PreStep.iToStop = Step.iToStop ;
+
+    Stat.bReqStop = false ;
+
+    //Move Home.
+    switch (Step.iToStop) {
+        default: Step.iToStop = 0;
+                 return true ;
+
+        case 10: //if(IO_GetX(xPRI_Detect1)){
+                 //    Step.iCycle = 0;
+                 //    return true;
+                 //}
+                 if(IO_GetX(xLDR_Detect1)) { // juhyeon
+                      EM_SetErrMsg(eiPRT_Crash , (m_sPartName + "레일 진입부 센서 감지 상태로 자재 돌출 상태를 확인하세요").c_str());
+                      Step.iToStop = 0 ;
+                      return true ;
+                 }
+
+                 MoveMotr(miLDR_ZElevF , piLDR_ZElevFWait);
+                 Step.iToStop++;
+                 return false;
+
+        case 11: if(!MoveMotr(miLDR_ZElevF , piLDR_ZElevFWait))return false;
+                 Step.iToStop = 0 ;
+                 return true ;
+    }
+}
+
+bool CLoaderFront::Autorun(void) //오토런닝시에 계속 타는 함수.
+{
+    //Check Cycle Time Out.
+    AnsiString sTemp ;
+    sTemp = sTemp.sprintf("%s Step.iCycle=%02d" , __FUNC__ , Step.iCycle );
+    if(Step.iSeq != PreStep.iSeq) {
+        Trace(m_sPartName.c_str(),sTemp.c_str());
+    }
+
+    PreStep.iSeq = Step.iSeq ;
+
+    //Check Error & Decide Step.
+    if (Step.iSeq == 0) {
+        if (Stat.bReqStop)return false ;
+
+        //if( DM.ARAY[riLDR_F].CheckAllStat(csNone) &&  IO_GetX(xLDR_Detect1)) {EM_SetErrMsg(eiPKG_Unknwn , "Loader Front Unknwn PKG Error."   ); return false;}
+        //if(!DM.ARAY[riLDR_F].CheckAllStat(csNone) && !IO_GetX(xLDR_Detect1)) {EM_SetErrMsg(eiPKG_Dispr  , "Loader Front Disappear PKG Error."); return false;}
+
+        //sunsun
+        const int iWorkMode = OM.CmnOptn.iWorkMode ; //0:노말 1:측정.
+
+//        bool isZPickPos = MT_CmprPos(miLDR_ZElevF , GetMotrPos(miLDR_ZElevF , piLDR_ZElevFPick   )) ;
+//        bool isSafeIdx  = MT_GetCmdPos(miIDX_XIndxR) <= GetMotrPos(miIDX_XIndxR , piIDX_XIndxRGetWait) ;
+//        bool isCyclePick = DM.ARAY[riLDR_F].GetCntStat(csUnkwn) && !isZPickPos && isSafeIdx && !DM.ARAY[riLDR_F].GetCntStat(csMask);
+//        bool isCycleEnd  = DM.ARAY[riLDR_F].GetCntStat(csUnkwn) == 0 && DM.ARAY[riLDR_F].GetCntStat(csMask) == 0 ;
+
+        bool isZDetectPos  = MT_CmprPos(miLDR_ZElevF , GetMotrPos(miLDR_ZElevF , piLDR_ZElevFDetect )) ;
+        bool isZPickPos    = MT_CmprPos(miLDR_ZElevF , GetMotrPos(miLDR_ZElevF , piLDR_ZElevFPick   )) ;
+
+        bool isCycleDetect = DM.ARAY[riLDR_F].GetCntStat(csDetect) && LTL.GetSeqStep() != CLeftTool::scMidSupply;
+        bool isCyclePick   = DM.ARAY[riLDR_F].GetCntStat(csUnkwn)  &&
+                            !isZPickPos   &&
+                             LTL.GetSeqStep() != CLeftTool::scMidSupply &&
+                             DM.ARAY[riLDR_F].GetCntStat(csDetect) == 0 ;
+        bool isCycleEnd    = DM.ARAY[riLDR_F].GetCntStat(csUnkwn ) == 0 &&
+                             DM.ARAY[riLDR_F].GetCntStat(csDetect) == 0 ;
+
+        if(EM_IsErr()) return false ;
+
+         //Normal Decide Step.
+             if (isCycleDetect) {Trace(m_sPartName.c_str(),"CycleDetect Stt"); Step.iSeq = scDetect ; InitCycleStep(); m_iCycleSttTime=GetTime();}
+        else if (isCyclePick  ) {Trace(m_sPartName.c_str(),"CyclePick   Stt"); Step.iSeq = scPick   ; InitCycleStep(); m_iCycleSttTime=GetTime();}
+        else if (isCycleEnd   ) {Stat.bWorkEnd = true ; return true ;}
+        Stat.bWorkEnd = false ;
+    }
+
+    //Cycle.
+    switch (Step.iSeq) {
+        default      :                      Trace(m_sPartName.c_str(),"default     End");                                                   Step.iSeq = scIdle ;  return false ;
+        case scIdle  :                                                                                                                                          return false ;
+        case scDetect: if(CycleDetect  ()){ Trace(m_sPartName.c_str(),"CycleDetect End");m_iCycleTime[Step.iSeq]=GetTime()-m_iCycleSttTime; Step.iSeq = scIdle ;} return false ;
+        case scPick  : if(CyclePick    ()){ Trace(m_sPartName.c_str(),"CyclePick   End");m_iCycleTime[Step.iSeq]=GetTime()-m_iCycleSttTime; Step.iSeq = scIdle ;} return false ;
+    }
+
+    return false ;
+}
+//---------------------------------------------------------------------------
+bool CLoaderFront::CycleHome()     //sun DLL direct access.
+{
+    //Check Cycle Time Out.
+    AnsiString sTemp ;
+    if (m_tmCycle.OnDelay(Step.iHome && Step.iHome == PreStep.iHome && CheckStop() &&!OM.MstOptn.bDebugMode, 5000 )) {
+        sTemp  = sTemp.sprintf(" %s TIMEOUT Step.iHome=%02d" , __FUNC__ , Step.iHome );
+        sTemp  = m_sPartName + sTemp ;
+        EM_SetErrMsg(eiPRT_HomeTo,sTemp.c_str());
+        Trace(m_sPartName.c_str(),sTemp.c_str());
+        Step.iCycle = 0 ;
+        return true;
+    }
+
+    if(Step.iHome != PreStep.iHome) {
+        sTemp = sTemp.sprintf("%s Step.iHome=%02d" , __FUNC__ , Step.iHome );
+        Trace(m_sPartName.c_str(),sTemp.c_str());
+    }
+
+    PreStep.iHome = Step.iHome ;
+
+    if(Stat.bReqStop) {
+        //Step.iHome = 0;
+        //return true ;
+    }
+
+    switch (Step.iHome) {
+
+        default: sTemp = sTemp.sprintf("Cycle Default Clear %s Step.iCycle=%02d" , __FUNC__ , Step.iCycle );
+                 //if(Step.iHome != PreStep.iHome)Trace(m_sPartName.c_str(), sTemp.c_str());
+                 Step.iHome = 0 ;
+                 return true ;
+
+        case 10: if(IO_GetX(xLDR_Detect1)) {
+                      EM_SetErrMsg(eiPRT_Crash , (m_sPartName + " 레일 진입부 센서 감지 상태로 미들 블럭 돌출을 확인하세요").c_str());
+                      Step.iHome = 0 ;
+                      return true ;
+                 }
+                 MT_DoHome(miLDR_ZElevF);
+                 Step.iHome++;
+                 return false ;
+
+        case 11: if(!MT_GetHomeEnd(miLDR_ZElevF)) return false ;
+                 MT_GoAbsMan(miLDR_ZElevF , PM.GetValue(miLDR_ZElevF , pvLDR_ZElevFWait ));
+                 Step.iHome++;
+                 return false ;
+
+        case 12: if(!MT_GoAbsMan(miLDR_ZElevF , PM.GetValue(miLDR_ZElevF , pvLDR_ZElevFWait ))) return false ;
+                 SetLastCmd();
+                 Step.iHome = 0;
+                 return true ;
+    }
+}
+//---------------------------------------------------------------------------
+bool CLoaderFront::CycleDetect()
+{
+//Check Cycle Time Out.
+    AnsiString sTemp ;
+    if (m_tmCycle.OnDelay(Step.iCycle && Step.iCycle == PreStep.iCycle && CheckStop() && !OM.MstOptn.bDebugMode, 6000 )) {
+        sTemp = sTemp.sprintf( "%s %s Step.iCycle=%03d %s",m_sPartName.c_str() , __FUNC__ , Step.iCycle , m_sCheckSafeMsg);
+        EM_SetErrMsg(eiPRT_CycleTO , sTemp.c_str()); //EM_SetErr(eiLDR_CycleTO);
+        Trace(m_sPartName.c_str(),sTemp.c_str());
+        Step.iCycle = 0 ;
+        return true;
+    }
+
+    sTemp = sTemp.sprintf("%s Step.iCycle=%02d" , __FUNC__ , Step.iCycle );
+    if(Step.iCycle != PreStep.iCycle) {
+        Trace(m_sPartName.c_str(),sTemp.c_str());
+    }
+
+    PreStep.iCycle = Step.iCycle ;
+
+    if(Stat.bReqStop) { //스탑시에 그냥 멈춤.
+        //Step.iCycle = 0;
+        //return true ;
+    }
+
+    int r, c;
+
+    FindChip(r, c, csDetect);
+
+    //Cycle.
+    switch (Step.iCycle) {
+
+        default : sTemp = sTemp.sprintf("Cycle Default Clear %s Step.iCycle=%02d" , __FUNC__ , Step.iCycle );
+                  if(Step.iHome != PreStep.iHome)Trace(m_sPartName.c_str(), sTemp.c_str());
+                  Step.iCycle = 0 ;
+                  return true ;
+
+
+        case  10: MoveMotr(miLDR_ZElevF , piLDR_ZElevFDetect);
+                  Step.iCycle++;
+                  return false;
+
+        case  11: if(!MoveMotr(miLDR_ZElevF , piLDR_ZElevFDetect)) return false ;
+                  Step.iCycle++;
+                  return false;
+
+        case  12: if(OM.DevInfo.iLDRFMgzBayCnt == 1) {
+                      if( IO_GetX(xLDR_FMidDetectR)) {DM.ARAY[riLDR_F].SetStat(r, 0, csUnkwn);}
+                      else                           {DM.ARAY[riLDR_F].SetStat(r, 0, csEmpty);}
+                  }
+                  else if(OM.DevInfo.iLDRFMgzBayCnt == 2) {
+                      if( IO_GetX(xLDR_FMidDetectR)) {DM.ARAY[riLDR_F].SetStat(r, 1, csUnkwn);}
+                      else                           {DM.ARAY[riLDR_F].SetStat(r, 1, csEmpty);}
+
+                      if( IO_GetX(xLDR_FMidDetectL)) {DM.ARAY[riLDR_F].SetStat(r, 0, csUnkwn);}
+                      else                           {DM.ARAY[riLDR_F].SetStat(r, 0, csEmpty);}
+                  }
+
+                  Step.iCycle++;
+                  return false;
+
+        case  13: Step.iCycle = 0;
+                  return true;
+    }
+
+}
+//---------------------------------------------------------------------------
+bool CLoaderFront::CyclePick(void)
+{
+//Check Cycle Time Out.
+    AnsiString sTemp ;
+    if (m_tmCycle.OnDelay(Step.iCycle && Step.iCycle == PreStep.iCycle && CheckStop() && !OM.MstOptn.bDebugMode, 6000 )) {
+        sTemp = sTemp.sprintf( "%s %s Step.iCycle=%03d %s",m_sPartName.c_str() , __FUNC__ , Step.iCycle , m_sCheckSafeMsg);
+        EM_SetErrMsg(eiPRT_CycleTO , sTemp.c_str()); //EM_SetErr(eiLDR_CycleTO);
+        Trace(m_sPartName.c_str(),sTemp.c_str());
+        Step.iCycle = 0 ;
+        return true;
+    }
+
+    sTemp = sTemp.sprintf("%s Step.iCycle=%02d" , __FUNC__ , Step.iCycle );
+    if(Step.iCycle != PreStep.iCycle) {
+        Trace(m_sPartName.c_str(),sTemp.c_str());
+    }
+
+    PreStep.iCycle = Step.iCycle ;
+
+    if(Stat.bReqStop) { //스탑시에 그냥 멈춤.
+        //Step.iCycle = 0;
+        //return true ;
+    }
+
+    //Cycle.
+    switch (Step.iCycle) {
+
+        default : sTemp = sTemp.sprintf("Cycle Default Clear %s Step.iCycle=%02d" , __FUNC__ , Step.iCycle );
+                  if(Step.iHome != PreStep.iHome)Trace(m_sPartName.c_str(), sTemp.c_str());
+                  Step.iCycle = 0 ;
+                  return true ;
+
+
+        case  10: if(IO_GetX(xLDR_Detect1)) {
+                      EM_SetErrMsg(eiPRT_Crash , (m_sPartName + " 레일 진입부 센서 감지 상태로 보트 돌출 확인하세요").c_str());
+                      Step.iCycle = 0 ;
+                      return true ;
+                  }
+                  MoveMotr(miLDR_ZElevF , piLDR_ZElevFPick);
+                  Step.iCycle++;
+                  return false;
+
+        case  11: if(!MoveMotr(miLDR_ZElevF , piLDR_ZElevFPick)) return false ;
+                  Step.iCycle=0;
+                  return true;
+    }
+
+}
+//---------------------------------------------------------------------------
+bool CLoaderFront::CheckSafe(EN_MOTR_ID _iMotr , EN_PSTN_ID _iPstnId)
+{
+    if(MT_CmprPos(_iMotr , GetMotrPos(_iMotr , _iPstnId)) ) return true ;
+
+    bool bRet = true ;
+    AnsiString sMsg ;
+
+    if(_iMotr == miLDR_ZElevF){
+        if(IO_GetX(xLDR_Detect1)) {
+            sMsg = m_sPartName + " 레일 진입부 센서 감지 상태로 미들 블럭 돌출을 확인하세요" ;
+            bRet = false;
+        }
+
+        if(MT_GetCmdPos(miLTL_XGenRr) < PM.GetValue(miLTL_XGenRr , pvLTL_XWait) - 1) {
+            sMsg = m_sPartName + "현재 레프트툴 X축 모터 위치가 Wait 위치보다 왼쪽입니다.";
+            bRet = false;
+        }
+    }
+
+    else {
+        sMsg = "Motor " + AnsiString(MT_GetName(_iMotr)) + " is Not this parts." ;
+        bRet = false ;
+    }
+
+    if(!bRet){
+        m_sCheckSafeMsg = sMsg ;
+        Trace(MT_GetName(_iMotr), sMsg.c_str());
+        if(!Step.iSeq)FM_MsgOk(MT_GetName(_iMotr),sMsg.c_str());
+    }
+    else {
+        m_sCheckSafeMsg = "" ;
+    }
+
+    return bRet ;
+}
+
+//---------------------------------------------------------------------------
+bool CLoaderFront::CheckSafe(EN_ACTR_ID _iActr , bool _bFwd)
+{
+    if(AT_Complete(_iActr , _bFwd)) return true ;
+
+    AnsiString sMsg ;
+    bool       bRet = true ;
+
+    //if(_iActr == aiLDR_IndxUpUp){
+    //    if(_bFwd == ccFwd) {
+    //        //if(!bExistSply /*|| !bSRT_ZTop*/) {sMsg = AnsiString("Tray 센서 감지중!"); bRet = false ;}
+    //    }
+    //}
+    //else {
+        sMsg = "Cylinder " + AnsiString(AT_GetName(_iActr)) + " is Not this parts." ;
+        bRet = false ;
+    //}
+
+
+    if(!bRet){
+        m_sCheckSafeMsg = sMsg ;
+        Trace(AT_GetName(_iActr), sMsg.c_str());
+        if(!Step.iCycle)FM_MsgOk(AT_GetName(_iActr),sMsg.c_str());
+    }
+    else {
+        m_sCheckSafeMsg = "" ;
+    }
+
+    return bRet ;
+}
+
+bool CLoaderFront::MoveMotr(EN_MOTR_ID _iMotr , EN_PSTN_ID _iPstnId , bool _bSlow )
+{
+    if (!CheckSafe(_iMotr , _iPstnId)) return false;
+
+    double dPosition = GetMotrPos(_iMotr , _iPstnId);
+
+    if(_bSlow) {
+        return MT_GoAbsSlow(_iMotr , dPosition);
+    }
+    else {
+        if(Step.iCycle) return MT_GoAbsRun(_iMotr , dPosition);
+        else            return MT_GoAbsMan(_iMotr , dPosition);
+    }
+
+    return false ;
+}
+
+void CLoaderFront::MoveIncMotr(EN_MOTR_ID _iMotr , double iPstn) // 모터를 움직일때 쓰는 함수.
+{
+    if(Step.iCycle) MT_GoIncRun(_iMotr , iPstn);
+    else            MT_GoIncMan(_iMotr , iPstn);
+}
+
+bool CLoaderFront::MoveActr(EN_ACTR_ID _iActr , bool _bFwd) //실린더를 움직일때 쓰는 함수.
+{
+    if (!CheckSafe(_iActr, _bFwd)) return false;
+
+    return AT_MoveCyl(_iActr , _bFwd );
+}
+
+void CLoaderFront::SetLastCmd()
+{
+    m_dLastIdxPos = MT_GetCmdPos( miLDR_ZElevF);
+    return ; //이파트는 필요 없다.
+}
+
+bool CLoaderFront::CheckMoved()
+{
+    if(m_dLastIdxPos != MT_GetCmdPos(miLDR_ZElevF)) return true  ; //이파트는 필요 없다.
+    else                                           return false ;
+}
+
+bool CLoaderFront::CheckStop()
+{
+    if(!MT_GetStop(miLDR_ZElevF)) return false ;
+
+    return true ;
+}
+
+void CLoaderFront::Load(bool _bLoad)
+{
+    //Make Dir.
+    TUserINI    UserINI ;
+    AnsiString  sPath ,sItem;
+    sPath = EXE_FOLDER + "SeqData\\" + m_sPartName +".INI";
+    if ( _bLoad ) {
+        UserINI.Load(sPath, "Member" , "m_dLastIdxPos" , m_dLastIdxPos );
+    }
+    else {
+        UserINI.ClearFile(sPath) ;
+        UserINI.Save(sPath, "Member" , "m_dLastIdxPos" , m_dLastIdxPos );
+    }
+}
+
+
+
+
+

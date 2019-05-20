@@ -1,0 +1,22 @@
+IP address of Hanra Instrument
+
+IP1 (Camera): 
+IP_address: 192.168.1.99
+Subnet Mask: 255.255.255.0
+
+IP2 (Motor control):
+IP_address: 192.168.0.99
+Subnet Mask: 255.255.255.0
+
+
+장비쪽 (Camera)
+IP_address: 192.168.1.12
+Subnet Mask: 255.255.255.0
+
+장비쪽 Motor control
+IP_address: 192.168.0.20
+Subnet Mask: 255.255.255.0
+
+
+
+

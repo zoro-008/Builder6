@@ -1,0 +1,221 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<!-- C++Builder XML Project -->
+<PROJECT>
+  <MACROS>
+    <VERSION value="BCB.06.00"/>
+    <PROJECT value="BIN\pHVI_1200t.exe"/>
+    <OBJFILES value="OBJ\pHVI_1200t.obj OBJ\MainThread.obj OBJ\Chip.obj OBJ\Array.obj 
+      OBJ\DataMan.obj OBJ\IoState.obj OBJ\UserINI.obj OBJ\UserFile.obj 
+      OBJ\FrmMain.obj OBJ\FrmOperation.obj OBJ\FrmManual.obj OBJ\FrmDevice.obj 
+      OBJ\FrmDeviceSet.obj OBJ\FrmMotorPos.obj OBJ\FrmInOutState.obj 
+      OBJ\FrmLotOpen.obj OBJ\FrmSPC.obj OBJ\FrmOption.obj OBJ\FrmLimitCnt.obj 
+      OBJ\FrmVisionRlstSet.obj OBJ\FrmRsltBig.obj OBJ\FrmMaster.obj 
+      OBJ\FlmMotr.obj OBJ\FlmCyl.obj OBJ\PstnMan.obj OBJ\OptionMan.obj 
+      OBJ\Sequence.obj OBJ\Loader.obj OBJ\PreBuff.obj OBJ\Rail.obj OBJ\Head.obj 
+      OBJ\PstBuff.obj OBJ\UnLoader.obj OBJ\LotUnit.obj OBJ\SPCUnit.obj 
+      OBJ\VisnComUnit.obj OBJ\ManualMan.obj"/>
+    <RESFILES value="pHVI_1200t.res"/>
+    <IDLFILES value=""/>
+    <IDLGENFILES value=""/>
+    <DEFFILE value=""/>
+    <RESDEPEN value="$(RESFILES) FrmMain.dfm FrmOperation.dfm FrmManual.dfm FrmDevice.dfm 
+      FrmDeviceSet.dfm FrmMotorPos.dfm FrmInOutState.dfm FrmLotOpen.dfm 
+      FrmSPC.dfm FrmOption.dfm FrmLimitCnt.dfm FrmVisionRlstSet.dfm 
+      FrmRsltBig.dfm FrmMaster.dfm FlmMotr.dfm FlmCyl.dfm"/>
+    <LIBFILES value="lib\Hanra\SLDll.lib bin\SMDll.lib"/>
+    <LIBRARIES value=""/>
+    <SPARELIBS value="vcl.lib rtl.lib vclx.lib teedb.lib tee.lib dbrtl.lib"/>
+    <PACKAGES value="vcl.bpi rtl.bpi vclx.bpi bcbsmp.bpi dbrtl.bpi adortl.bpi vcldb.bpi 
+      qrpt.bpi bdertl.bpi vcldbx.bpi dsnap.bpi cds.bpi bdecds.bpi teeui.bpi 
+      teedb.bpi tee.bpi teeqr.bpi ibxpress.bpi visualclx.bpi visualdbclx.bpi 
+      vclie.bpi xmlrtl.bpi inet.bpi inetdbbde.bpi inetdbxpress.bpi inetdb.bpi 
+      nmfast.bpi bcbie.bpi soaprtl.bpi dclocx.bpi dbexpress.bpi dbxcds.bpi 
+      indy.bpi bcb2kaxserver.bpi"/>
+    <PATHCPP value=".;"/>
+    <PATHPAS value=".;"/>
+    <PATHRC value=".;"/>
+    <PATHASM value=".;"/>
+    <DEBUGLIBPATH value="$(BCB)\lib\debug"/>
+    <RELEASELIBPATH value="$(BCB)\lib\release"/>
+    <LINKER value="ilink32"/>
+    <USERDEFINES value="_DEBUG"/>
+    <SYSDEFINES value="NO_STRICT;_RTLDLL;USEPACKAGES"/>
+    <MAINSOURCE value="pHVI_1200t.cpp"/>
+    <INCLUDEPATH value="..;&quot;C:\Program Files\Borland\CBuilder6\Projects&quot;;$(BCB)\include;$(BCB)\include\vcl;include\Hanra;include\AXL"/>
+    <LIBPATH value="..;$(BCB)\lib\obj;$(BCB)\lib;D:\BC6Works\HRI_550R\lib\Hanra;lib\Hanra;lib\AXT;lib\AXL;bin;include\AXL"/>
+    <WARNINGS value="-w-par"/>
+    <OTHERFILES value=""/>
+  </MACROS>
+  <OPTIONS>
+    <IDLCFLAGS value="-I.. -I&quot;D:\Program Files\Borland\CBuilder6\Projects&quot; 
+      -I&quot;D:\BC6Works\HRI - 550R&quot; -I$(BCB)\include -I$(BCB)\include\vcl 
+      -ID:\BC6Works\HRI_550R\include\Hanra 
+      -IC:\Users\k\Desktop\HRI_550R\include\Hanra -src_suffix cpp -D_DEBUG -boa"/>
+    <CFLAG1 value="-Od -H=$(BCB)\lib\vcl60.csm -Hc -Vx -Ve -X- -r- -a8 -b- -k -y -v -vi- -c 
+      -tW -tWM"/>
+    <PFLAGS value="-N2OBJ -N0OBJ -$YD -$W -$O- -$A8 -v -JPHNE -M"/>
+    <RFLAGS value=""/>
+    <AFLAGS value="/mx /w2 /zd"/>
+    <LFLAGS value="-llib -IOBJ -D&quot;&quot; -aa -Tpe -x -Gn -v"/>
+    <OTHERFILES value=""/>
+  </OPTIONS>
+  <LINKER>
+    <ALLOBJ value="c0w32.obj $(PACKAGES) Memmgr.Lib sysinit.obj $(OBJFILES)"/>
+    <ALLRES value="$(RESFILES)"/>
+    <ALLLIB value="$(LIBFILES) $(LIBRARIES) import32.lib cp32mti.lib"/>
+    <OTHERFILES value=""/>
+  </LINKER>
+  <FILELIST>
+      <FILE FILENAME="pHVI_1200t.res" FORMNAME="" UNITNAME="pHVI_1200t.res" CONTAINERID="ResTool" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="pHVI_1200t.cpp" FORMNAME="" UNITNAME="pHVI_1200t" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="include\Hanra\SLogUnit.h" FORMNAME="" UNITNAME="SLogUnit.h" CONTAINERID="" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="lib\Hanra\SLDll.lib" FORMNAME="" UNITNAME="SLDll.lib" CONTAINERID="LibTool" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="include\Hanra\SMDllDefine.h" FORMNAME="" UNITNAME="SMDllDefine.h" CONTAINERID="" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="include\Hanra\SMInterfaceUnit.h" FORMNAME="" UNITNAME="SMInterfaceUnit.h" CONTAINERID="" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="bin\SMDll.lib" FORMNAME="" UNITNAME="SMDll.lib" CONTAINERID="LibTool" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="AxtTrigger.h" FORMNAME="" UNITNAME="AxtTrigger.h" CONTAINERID="" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="MainThread.cpp" FORMNAME="" UNITNAME="MainThread" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Timer.h" FORMNAME="" UNITNAME="Timer.h" CONTAINERID="" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="TEdit.h" FORMNAME="" UNITNAME="TEdit.h" CONTAINERID="" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Chip.cpp" FORMNAME="" UNITNAME="Chip" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Array.cpp" FORMNAME="" UNITNAME="Array" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="DataMan.cpp" FORMNAME="" UNITNAME="DataMan" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="IoState.cpp" FORMNAME="" UNITNAME="IoState" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="UserINI.cpp" FORMNAME="" UNITNAME="UserINI" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="UserFile.cpp" FORMNAME="" UNITNAME="UserFile" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="FrmMain.cpp" FORMNAME="FormMain" UNITNAME="FrmMain" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="FrmOperation.cpp" FORMNAME="FormOperation" UNITNAME="FrmOperation" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="FrmManual.cpp" FORMNAME="FormManual" UNITNAME="FrmManual" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="FrmDevice.cpp" FORMNAME="FormDevice" UNITNAME="FrmDevice" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="FrmDeviceSet.cpp" FORMNAME="FormDeviceSet" UNITNAME="FrmDeviceSet" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="FrmMotorPos.cpp" FORMNAME="FormMotorPos" UNITNAME="FrmMotorPos" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="FrmInOutState.cpp" FORMNAME="FormInOutState" UNITNAME="FrmInOutState" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="FrmLotOpen.cpp" FORMNAME="FormLotOpen" UNITNAME="FrmLotOpen" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="FrmSPC.cpp" FORMNAME="FormSPC" UNITNAME="FrmSPC" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="FrmOption.cpp" FORMNAME="FormOption" UNITNAME="FrmOption" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="FrmLimitCnt.cpp" FORMNAME="FormLimitCnt" UNITNAME="FrmLimitCnt" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="FrmVisionRlstSet.cpp" FORMNAME="FormVisionRlstSet" UNITNAME="FrmVisionRlstSet" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="FrmRsltBig.cpp" FORMNAME="FormRsltBig" UNITNAME="FrmRsltBig" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="FrmMaster.cpp" FORMNAME="FormMaster" UNITNAME="FrmMaster" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="FlmMotr.cpp" FORMNAME="FrameMotr" UNITNAME="FlmMotr" CONTAINERID="CCompiler" DESIGNCLASS="TFrame" LOCALCOMMAND=""/>
+      <FILE FILENAME="FlmCyl.cpp" FORMNAME="FrameCyl" UNITNAME="FlmCyl" CONTAINERID="CCompiler" DESIGNCLASS="TFrame" LOCALCOMMAND=""/>
+      <FILE FILENAME="bin\Util\Input.INI" FORMNAME="" UNITNAME="Input.INI" CONTAINERID="" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="bin\Util\Output.INI" FORMNAME="" UNITNAME="Output.INI" CONTAINERID="" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="bin\Util\Err.INI" FORMNAME="" UNITNAME="Err.INI" CONTAINERID="" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="bin\Util\Actuator.INI" FORMNAME="" UNITNAME="Actuator.INI" CONTAINERID="" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="UtilDefine.h" FORMNAME="" UNITNAME="UtilDefine.h" CONTAINERID="" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="PstnMan.cpp" FORMNAME="" UNITNAME="PstnMan" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="OptionMan.cpp" FORMNAME="" UNITNAME="OptionMan" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Sequence.cpp" FORMNAME="" UNITNAME="Sequence" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Loader.cpp" FORMNAME="" UNITNAME="Loader" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="PreBuff.cpp" FORMNAME="" UNITNAME="PreBuff" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Rail.cpp" FORMNAME="" UNITNAME="Rail" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Head.cpp" FORMNAME="" UNITNAME="Head" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="PstBuff.cpp" FORMNAME="" UNITNAME="PstBuff" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="UnLoader.cpp" FORMNAME="" UNITNAME="UnLoader" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="LotUnit.cpp" FORMNAME="" UNITNAME="LotUnit" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="SPCUnit.cpp" FORMNAME="" UNITNAME="SPCUnit" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="VisnComUnit.cpp" FORMNAME="" UNITNAME="VisnComUnit" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="ManualMan.cpp" FORMNAME="" UNITNAME="ManualMan" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Memo.Txt" FORMNAME="" UNITNAME="Memo.Txt" CONTAINERID="" DESIGNCLASS="" LOCALCOMMAND=""/>
+  </FILELIST>
+  <BUILDTOOLS>
+  </BUILDTOOLS>
+
+  <IDEOPTIONS>
+[Version Info]
+IncludeVerInfo=0
+AutoIncBuild=0
+MajorVer=1
+MinorVer=0
+Release=0
+Build=0
+Debug=0
+PreRelease=0
+Special=0
+Private=0
+DLL=0
+Locale=1042
+CodePage=949
+
+[Version Info Keys]
+CompanyName=
+FileDescription=
+FileVersion=1.0.0.0
+InternalName=
+LegalCopyright=
+LegalTrademarks=
+OriginalFilename=
+ProductName=
+ProductVersion=1.0.0.0
+Comments=
+
+[HistoryLists\hlIncludePath]
+Count=8
+Item0=..;C:\Program Files\Borland\CBuilder6\Projects;$(BCB)\include;$(BCB)\include\vcl;include\Hanra;include\AXL
+Item1=..;C:\Program Files\Borland\CBuilder6\Projects;$(BCB)\include;$(BCB)\include\vcl;include\Hanra
+Item2=..;D:\Program Files\Borland\CBuilder6\Projects;D:\BC6Works\HRI - 550R;$(BCB)\include;$(BCB)\include\vcl;D:\BC6Works\HRI_550R\include\Hanra;C:\Users\k\Desktop\HRI_550R\include\Hanra;D:\Bc6Works\HVI_1200t\include\Hanra
+Item3=..;D:\Program Files\Borland\CBuilder6\Projects;D:\BC6Works\HRI - 550R;$(BCB)\include;$(BCB)\include\vcl;D:\BC6Works\HRI_550R\include\Hanra;C:\Users\k\Desktop\HRI_550R\include\Hanra
+Item4=..;D:\Program Files\Borland\CBuilder6\Projects;D:\BC6Works\HRI - 550R;$(BCB)\include;$(BCB)\include\vcl;D:\BC6Works\HRI_550R\include\Hanra
+Item5=..\;D:\Program Files\Borland\CBuilder6\Projects;D:\BC6Works\HRI - 550R;$(BCB)\include;$(BCB)\include\vcl;D:\BC6Works\HRI_550R\include\Hanra
+Item6=D:\Program Files\Borland\CBuilder6\Projects;D:\BC6Works\HRI - 550R;$(BCB)\include;$(BCB)\include\vcl;D:\BC6Works\HRI_550R\include\Hanra
+Item7=D:\Program Files\Borland\CBuilder6\Projects;D:\BC6Works\HRI - 550R;$(BCB)\include;$(BCB)\include\vcl
+
+[HistoryLists\hlLibraryPath]
+Count=9
+Item0=..;$(BCB)\lib\obj;$(BCB)\lib;D:\BC6Works\HRI_550R\lib\Hanra;lib\Hanra;lib\AXT;lib\AXL;bin;include\AXL
+Item1=..;$(BCB)\lib\obj;$(BCB)\lib;D:\BC6Works\HRI_550R\lib\Hanra;lib\Hanra;lib\AXT;lib\AXL;bin
+Item2=..;$(BCB)\lib\obj;$(BCB)\lib;D:\BC6Works\HRI_550R\lib\Hanra;lib\Hanra;lib\AXT;lib\AXL
+Item3=..;$(BCB)\lib\obj;$(BCB)\lib;D:\BC6Works\HRI_550R\lib\Hanra;lib\Hanra
+Item4=..;D:\Program Files\Borland\CBuilder6\Projects;D:\BC6Works\HRI - 550R;$(BCB)\lib\obj;$(BCB)\lib;D:\BC6Works\HRI_550R\lib\Hanra;C:\Users\k\Desktop\HRI_550R\lib\Hanra
+Item5=..;D:\Program Files\Borland\CBuilder6\Projects;D:\BC6Works\HRI - 550R;$(BCB)\lib\obj;$(BCB)\lib;D:\BC6Works\HRI_550R\lib\Hanra
+Item6=..\;D:\Program Files\Borland\CBuilder6\Projects;D:\BC6Works\HRI - 550R;$(BCB)\lib\obj;$(BCB)\lib;D:\BC6Works\HRI_550R\lib\Hanra
+Item7=D:\Program Files\Borland\CBuilder6\Projects;D:\BC6Works\HRI - 550R;$(BCB)\lib\obj;$(BCB)\lib;D:\BC6Works\HRI_550R\lib\Hanra
+Item8=D:\Program Files\Borland\CBuilder6\Projects;D:\BC6Works\HRI - 550R;$(BCB)\lib\obj;$(BCB)\lib
+
+[HistoryLists\hlDebugSourcePath]
+Count=1
+Item0=$(BCB)\source\vcl
+
+[HistoryLists\hlConditionals]
+Count=1
+Item0=_DEBUG
+
+[HistoryLists\hlIntOutputDir]
+Count=1
+Item0=OBJ
+
+[HistoryLists\hlFinalOutputDir]
+Count=1
+Item0=BIN\
+
+[HistoryLists\hIBPIOutputDir]
+Count=1
+Item0=lib
+
+[Debugging]
+DebugSourceDirs=$(BCB)\source\vcl
+
+[Parameters]
+RunParams=
+Launcher=
+UseLauncher=0
+DebugCWD=
+HostApplication=
+RemoteHost=
+RemotePath=
+RemoteLauncher=
+RemoteCWD=
+RemoteDebug=0
+
+[Compiler]
+ShowInfoMsgs=0
+LinkDebugVcl=0
+LinkCGLIB=0
+
+[Language]
+ActiveLang=
+ProjectLang=
+RootDir=
+  </IDEOPTIONS>
+</PROJECT>

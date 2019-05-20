@@ -1,0 +1,4 @@
+Serial,Time,Number,Angle,FA R,FA T,3Beam Tilt,Beam Size,GT shift,Area,Peak Ratio,Parallelism,Absolute Center X,Absolute Center Y,Beam Center X,Beam Center Y,Peak Center X,Peak Center Y,Distance,Beam Shift R(x),Beam Shift T(y),HRim Loc X,HRim Loc Y,VRim Loc X,VRim Loc Y,HRim Value,VRim Value,Error
+,13:35:54,0,42.857,42.857,-0.168,359.775, 2.183,-0.045, 3.668,60.013,95.964, 0.000, 0.000, 0.690, 0.082, 0.787,-0.037, 0.155, 0.098,-0.120,295, 528,113, 344,39.885,48.491,1
+,13:37:07,0,42.857,42.857,-0.168,359.775, 2.183,-0.045, 3.668,60.013,95.964, 0.000, 0.000, 0.690, 0.082, 0.787,-0.037, 0.155, 0.098,-0.120,295, 528,113, 344,39.885,48.491,1
+,13:37:17,0,40.000,40.000, 0.000, 0.000, 2.183,-0.038, 3.679,60.239,96.413, 0.000, 0.000, 0.645, 0.082, 0.727,-0.030, 0.140, 0.082,-0.112,289, 522,112, 345,41.533,49.360,1

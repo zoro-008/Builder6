@@ -1,0 +1,39 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: C6202AO_SSI_Source - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\DAVID~1.SHI\LOCALS~1\Temp\RSP97.tmp" with contents
+[
+/nologo /MD /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /Fp"Release/C6202AO_SSI_Source.pch" /Yu"stdafx.h" /Fo"Release/" /Fd"Release/" /FD /c 
+"C:\ADLINK\PCIS-DASK\Samples\6202\C6202AO_SSI_Source\C6202AO_SSI_Source.cpp"
+"C:\ADLINK\PCIS-DASK\Samples\6202\C6202AO_SSI_Source\C6202AO_SSI_SourceDlg.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\DAVID~1.SHI\LOCALS~1\Temp\RSP97.tmp" 
+Creating temporary file "C:\DOCUME~1\DAVID~1.SHI\LOCALS~1\Temp\RSP98.tmp" with contents
+[
+/nologo /subsystem:windows /incremental:no /pdb:"Release/C6202AO_SSI_Source.pdb" /machine:I386 /out:"Release/C6202AO_SSI_Source.exe" 
+".\Release\C6202AO_SSI_Source.obj"
+".\Release\C6202AO_SSI_SourceDlg.obj"
+".\Release\StdAfx.obj"
+".\Release\C6202AO_SSI_Source.res"
+"..\..\..\Lib\PCI-Dask.lib"
+]
+Creating command line "link.exe @C:\DOCUME~1\DAVID~1.SHI\LOCALS~1\Temp\RSP98.tmp"
+<h3>Output Window</h3>
+Compiling...
+C6202AO_SSI_Source.cpp
+C6202AO_SSI_SourceDlg.cpp
+Generating Code...
+Linking...
+
+
+
+<h3>Results</h3>
+C6202AO_SSI_Source.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

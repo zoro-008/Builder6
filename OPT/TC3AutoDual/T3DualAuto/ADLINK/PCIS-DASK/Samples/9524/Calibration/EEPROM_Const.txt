@@ -1,0 +1,82 @@
+Group:0  Gain:0  Speed:0  CalDate:20080331  CalTemp:53.032551  ADC_offset:16776908  ADC_gain:4543893  Residual_offset: -0.365666667  Residual_scaling: 0.0000000238
+Group:0  Gain:0  Speed:1  CalDate:20080331  CalTemp:53.032551  ADC_offset:16776931  ADC_gain:4543915  Residual_offset:  0.176333333  Residual_scaling: 0.0000000238
+Group:0  Gain:0  Speed:2  CalDate:20080331  CalTemp:53.032551  ADC_offset:16776929  ADC_gain:4543936  Residual_offset:  0.594666667  Residual_scaling: 0.0000000238
+Group:0  Gain:0  Speed:3  CalDate:20080331  CalTemp:53.032551  ADC_offset:16776913  ADC_gain:4840772  Residual_offset: -1.924000000  Residual_scaling: 0.0000000224
+Group:0  Gain:0  Speed:4  CalDate:20080331  CalTemp:53.032551  ADC_offset:16776942  ADC_gain:5014417  Residual_offset: -0.486666667  Residual_scaling: 0.0000000230
+Group:0  Gain:0  Speed:5  CalDate:20080331  CalTemp:53.032551  ADC_offset:16776927  ADC_gain:4927554  Residual_offset: -0.213333333  Residual_scaling: 0.0000000235
+Group:0  Gain:0  Speed:6  CalDate:20080331  CalTemp:53.032551  ADC_offset:16776927  ADC_gain:4887675  Residual_offset: -0.120000000  Residual_scaling: 0.0000000236
+Group:0  Gain:0  Speed:7  CalDate:20080331  CalTemp:53.032551  ADC_offset:16776853  ADC_gain:3883817  Residual_offset: -0.150000000  Residual_scaling: 0.0000000238
+Group:0  Gain:0  Speed:8  CalDate:20080331  CalTemp:53.032551  ADC_offset:16776914  ADC_gain:4657534  Residual_offset: -0.333333333  Residual_scaling: 0.0000000238
+Group:0  Gain:0  Speed:9  CalDate:20080331  CalTemp:53.032551  ADC_offset:16776844  ADC_gain:3880626  Residual_offset: -0.533333333  Residual_scaling: 0.0000000238
+Group:0  Gain:0  Speed:10  CalDate:20080331  CalTemp:53.032551  ADC_offset:16776912  ADC_gain:4655296  Residual_offset: -0.133333333  Residual_scaling: 0.0000000238
+Group:0  Gain:0  Speed:11  CalDate:20080331  CalTemp:53.032551  ADC_offset:16776847  ADC_gain:3879062  Residual_offset: -0.733333333  Residual_scaling: 0.0000000238
+Group:0  Gain:0  Speed:12  CalDate:20080331  CalTemp:53.032551  ADC_offset:16776909  ADC_gain:4654042  Residual_offset: -0.200000000  Residual_scaling: 0.0000000238
+Group:0  Gain:0  Speed:13  CalDate:20080331  CalTemp:53.032551  ADC_offset:16776757  ADC_gain:3102459  Residual_offset: -1.000000000  Residual_scaling: 0.0000000238
+Group:0  Gain:0  Speed:14  CalDate:20080331  CalTemp:53.032551  ADC_offset:16776755  ADC_gain:3102202  Residual_offset:  0.000000000  Residual_scaling: 0.0000000238
+Group:0  Gain:0  Speed:15  CalDate:20080331  CalTemp:53.032551  ADC_offset:16776759  ADC_gain:3102076  Residual_offset: -0.500000000  Residual_scaling: 0.0000000238
+Group:1  Gain:1  Speed:0  CalDate:20080331  CalTemp:53.032551  ADC_offset:16777189  ADC_gain:5086184  Residual_offset:-67.458000000  Residual_scaling: 0.0000013246
+Group:1  Gain:1  Speed:1  CalDate:20080331  CalTemp:53.032551  ADC_offset:16777180  ADC_gain:5086226  Residual_offset:-45.584333333  Residual_scaling: 0.0000013245
+Group:1  Gain:1  Speed:2  CalDate:20080331  CalTemp:53.032551  ADC_offset:16777159  ADC_gain:5086221  Residual_offset:  6.225333333  Residual_scaling: 0.0000013246
+Group:1  Gain:1  Speed:3  CalDate:20080331  CalTemp:53.032551  ADC_offset:16777169  ADC_gain:5086207  Residual_offset:-17.578666667  Residual_scaling: 0.0000013246
+Group:1  Gain:1  Speed:4  CalDate:20080331  CalTemp:53.032551  ADC_offset:16777164  ADC_gain:5425307  Residual_offset:  1.578333333  Residual_scaling: 0.0000013246
+Group:1  Gain:1  Speed:5  CalDate:20080331  CalTemp:53.032551  ADC_offset:16777168  ADC_gain:5424193  Residual_offset: -9.010000000  Residual_scaling: 0.0000013246
+Group:1  Gain:1  Speed:6  CalDate:20080331  CalTemp:53.032551  ADC_offset:16777164  ADC_gain:5423647  Residual_offset:  1.283333333  Residual_scaling: 0.0000013245
+Group:1  Gain:1  Speed:7  CalDate:20080331  CalTemp:53.032551  ADC_offset:16777152  ADC_gain:4338913  Residual_offset: -0.650000000  Residual_scaling: 0.0000013245
+Group:1  Gain:1  Speed:8  CalDate:20080331  CalTemp:53.032551  ADC_offset:16777161  ADC_gain:5206704  Residual_offset:  1.833333333  Residual_scaling: 0.0000013245
+Group:1  Gain:1  Speed:9  CalDate:20080331  CalTemp:53.032551  ADC_offset:16777149  ADC_gain:4338701  Residual_offset:  4.883333333  Residual_scaling: 0.0000013245
+Group:1  Gain:1  Speed:10  CalDate:20080331  CalTemp:53.032551  ADC_offset:16777163  ADC_gain:5206439  Residual_offset: -2.866666667  Residual_scaling: 0.0000013245
+Group:1  Gain:1  Speed:11  CalDate:20080331  CalTemp:53.032551  ADC_offset:16777151  ADC_gain:4338699  Residual_offset: -0.366666667  Residual_scaling: 0.0000013245
+Group:1  Gain:1  Speed:12  CalDate:20080331  CalTemp:53.032551  ADC_offset:16777162  ADC_gain:5206443  Residual_offset: -0.133333333  Residual_scaling: 0.0000013245
+Group:1  Gain:1  Speed:13  CalDate:20080331  CalTemp:53.032551  ADC_offset:16777136  ADC_gain:3470959  Residual_offset: -0.800000000  Residual_scaling: 0.0000013245
+Group:1  Gain:1  Speed:14  CalDate:20080331  CalTemp:53.032551  ADC_offset:16777134  ADC_gain:3470960  Residual_offset:  1.800000000  Residual_scaling: 0.0000013245
+Group:1  Gain:1  Speed:15  CalDate:20080331  CalTemp:53.032551  ADC_offset:16777137  ADC_gain:3470960  Residual_offset: -1.750000000  Residual_scaling: 0.0000013245
+Group:1  Gain:2  Speed:0  CalDate:20080331  CalTemp:53.032551  ADC_offset:16777123  ADC_gain:5086514  Residual_offset: 27.543333333  Residual_scaling: 0.0000006623
+Group:1  Gain:2  Speed:1  CalDate:20080331  CalTemp:53.032551  ADC_offset:16777142  ADC_gain:5086485  Residual_offset:-20.078666667  Residual_scaling: 0.0000006623
+Group:1  Gain:2  Speed:2  CalDate:20080331  CalTemp:53.032551  ADC_offset:16777143  ADC_gain:5086491  Residual_offset:-18.916000000  Residual_scaling: 0.0000006623
+Group:1  Gain:2  Speed:3  CalDate:20080331  CalTemp:53.032551  ADC_offset:16777147  ADC_gain:5086472  Residual_offset:-29.848000000  Residual_scaling: 0.0000006623
+Group:1  Gain:2  Speed:4  CalDate:20080331  CalTemp:53.032551  ADC_offset:16777146  ADC_gain:5425590  Residual_offset:-15.366666667  Residual_scaling: 0.0000006623
+Group:1  Gain:2  Speed:5  CalDate:20080331  CalTemp:53.032551  ADC_offset:16777141  ADC_gain:5424494  Residual_offset: -4.430000000  Residual_scaling: 0.0000006623
+Group:1  Gain:2  Speed:6  CalDate:20080331  CalTemp:53.032551  ADC_offset:16777131  ADC_gain:5423947  Residual_offset: 21.053333333  Residual_scaling: 0.0000006623
+Group:1  Gain:2  Speed:7  CalDate:20080331  CalTemp:53.032551  ADC_offset:16777118  ADC_gain:4339155  Residual_offset:  5.150000000  Residual_scaling: 0.0000006623
+Group:1  Gain:2  Speed:8  CalDate:20080331  CalTemp:53.032551  ADC_offset:16777136  ADC_gain:5206982  Residual_offset: -0.366666667  Residual_scaling: 0.0000006623
+Group:1  Gain:2  Speed:9  CalDate:20080331  CalTemp:53.032551  ADC_offset:16777118  ADC_gain:4338932  Residual_offset:  2.400000000  Residual_scaling: 0.0000006623
+Group:1  Gain:2  Speed:10  CalDate:20080331  CalTemp:53.032551  ADC_offset:16777136  ADC_gain:5206716  Residual_offset: -0.400000000  Residual_scaling: 0.0000006623
+Group:1  Gain:2  Speed:11  CalDate:20080331  CalTemp:53.032551  ADC_offset:16777119  ADC_gain:4338933  Residual_offset:  0.766666667  Residual_scaling: 0.0000006623
+Group:1  Gain:2  Speed:12  CalDate:20080331  CalTemp:53.032551  ADC_offset:16777136  ADC_gain:5206719  Residual_offset:  0.466666667  Residual_scaling: 0.0000006623
+Group:1  Gain:2  Speed:13  CalDate:20080331  CalTemp:53.032551  ADC_offset:16777097  ADC_gain:3471147  Residual_offset: -2.900000000  Residual_scaling: 0.0000006623
+Group:1  Gain:2  Speed:14  CalDate:20080331  CalTemp:53.032551  ADC_offset:16777097  ADC_gain:3471145  Residual_offset: -0.200000000  Residual_scaling: 0.0000006623
+Group:1  Gain:2  Speed:15  CalDate:20080331  CalTemp:53.032551  ADC_offset:16777097  ADC_gain:3471148  Residual_offset: -1.750000000  Residual_scaling: 0.0000006622
+Group:1  Gain:3  Speed:0  CalDate:20080331  CalTemp:53.032551  ADC_offset:16777067  ADC_gain:5086593  Residual_offset: 32.787666667  Residual_scaling: 0.0000003311
+Group:1  Gain:3  Speed:1  CalDate:20080331  CalTemp:53.032551  ADC_offset:16777078  ADC_gain:5086610  Residual_offset:  2.975333333  Residual_scaling: 0.0000003311
+Group:1  Gain:3  Speed:2  CalDate:20080331  CalTemp:53.032551  ADC_offset:16777089  ADC_gain:5086531  Residual_offset:-20.140000000  Residual_scaling: 0.0000003311
+Group:1  Gain:3  Speed:3  CalDate:20080331  CalTemp:53.032551  ADC_offset:16777072  ADC_gain:5086575  Residual_offset: 17.482666667  Residual_scaling: 0.0000003311
+Group:1  Gain:3  Speed:4  CalDate:20080331  CalTemp:53.032551  ADC_offset:16777087  ADC_gain:5425678  Residual_offset:  1.923333333  Residual_scaling: 0.0000003311
+Group:1  Gain:3  Speed:5  CalDate:20080331  CalTemp:53.032551  ADC_offset:16777099  ADC_gain:5424541  Residual_offset:-29.470000000  Residual_scaling: 0.0000003311
+Group:1  Gain:3  Speed:6  CalDate:20080331  CalTemp:53.032551  ADC_offset:16777091  ADC_gain:5423997  Residual_offset: -9.203333333  Residual_scaling: 0.0000003311
+Group:1  Gain:3  Speed:7  CalDate:20080331  CalTemp:53.032551  ADC_offset:16777057  ADC_gain:4339204  Residual_offset: -2.900000000  Residual_scaling: 0.0000003311
+Group:1  Gain:3  Speed:8  CalDate:20080331  CalTemp:53.032551  ADC_offset:16777085  ADC_gain:5207041  Residual_offset: -5.800000000  Residual_scaling: 0.0000003311
+Group:1  Gain:3  Speed:9  CalDate:20080331  CalTemp:53.032551  ADC_offset:16777056  ADC_gain:4338983  Residual_offset: -1.033333333  Residual_scaling: 0.0000003311
+Group:1  Gain:3  Speed:10  CalDate:20080331  CalTemp:53.032551  ADC_offset:16777083  ADC_gain:5206778  Residual_offset: -1.333333333  Residual_scaling: 0.0000003311
+Group:1  Gain:3  Speed:11  CalDate:20080331  CalTemp:53.032551  ADC_offset:16777057  ADC_gain:4338983  Residual_offset: -2.933333333  Residual_scaling: 0.0000003311
+Group:1  Gain:3  Speed:12  CalDate:20080331  CalTemp:53.032551  ADC_offset:16777083  ADC_gain:5206781  Residual_offset: -1.933333333  Residual_scaling: 0.0000003311
+Group:1  Gain:3  Speed:13  CalDate:20080331  CalTemp:53.032551  ADC_offset:16777017  ADC_gain:3471187  Residual_offset: -2.200000000  Residual_scaling: 0.0000003311
+Group:1  Gain:3  Speed:14  CalDate:20080331  CalTemp:53.032551  ADC_offset:16777016  ADC_gain:3471187  Residual_offset:  1.200000000  Residual_scaling: 0.0000003311
+Group:1  Gain:3  Speed:15  CalDate:20080331  CalTemp:53.032551  ADC_offset:16777017  ADC_gain:3471187  Residual_offset: -1.750000000  Residual_scaling: 0.0000003311
+Group:1  Gain:4  Speed:0  CalDate:20080331  CalTemp:53.032551  ADC_offset:16776950  ADC_gain:5086074  Residual_offset: 49.081000000  Residual_scaling: 0.0000001656
+Group:1  Gain:4  Speed:1  CalDate:20080331  CalTemp:53.032551  ADC_offset:16776984  ADC_gain:5086023  Residual_offset:-33.083666667  Residual_scaling: 0.0000001656
+Group:1  Gain:4  Speed:2  CalDate:20080331  CalTemp:53.032551  ADC_offset:16776958  ADC_gain:5086067  Residual_offset: 33.553333333  Residual_scaling: 0.0000001656
+Group:1  Gain:4  Speed:3  CalDate:20080331  CalTemp:53.032551  ADC_offset:16776971  ADC_gain:5086012  Residual_offset: -0.385333333  Residual_scaling: 0.0000001656
+Group:1  Gain:4  Speed:4  CalDate:20080331  CalTemp:53.032551  ADC_offset:16776991  ADC_gain:5425099  Residual_offset:-12.958333333  Residual_scaling: 0.0000001656
+Group:1  Gain:4  Speed:5  CalDate:20080331  CalTemp:53.032551  ADC_offset:16776986  ADC_gain:5424001  Residual_offset: -1.430000000  Residual_scaling: 0.0000001656
+Group:1  Gain:4  Speed:6  CalDate:20080331  CalTemp:53.032551  ADC_offset:16776982  ADC_gain:5423448  Residual_offset: 10.863333333  Residual_scaling: 0.0000001656
+Group:1  Gain:4  Speed:7  CalDate:20080331  CalTemp:53.032551  ADC_offset:16776927  ADC_gain:4338751  Residual_offset:  2.633333333  Residual_scaling: 0.0000001656
+Group:1  Gain:4  Speed:8  CalDate:20080331  CalTemp:53.032551  ADC_offset:16776976  ADC_gain:5206501  Residual_offset: -2.933333333  Residual_scaling: 0.0000001656
+Group:1  Gain:4  Speed:9  CalDate:20080331  CalTemp:53.032551  ADC_offset:16776926  ADC_gain:4338535  Residual_offset:  2.816666667  Residual_scaling: 0.0000001656
+Group:1  Gain:4  Speed:10  CalDate:20080331  CalTemp:53.032551  ADC_offset:16776976  ADC_gain:5206236  Residual_offset: -2.000000000  Residual_scaling: 0.0000001656
+Group:1  Gain:4  Speed:11  CalDate:20080331  CalTemp:53.032551  ADC_offset:16776929  ADC_gain:4338530  Residual_offset: -3.800000000  Residual_scaling: 0.0000001656
+Group:1  Gain:4  Speed:12  CalDate:20080331  CalTemp:53.032551  ADC_offset:16776975  ADC_gain:5206236  Residual_offset:  1.600000000  Residual_scaling: 0.0000001656
+Group:1  Gain:4  Speed:13  CalDate:20080331  CalTemp:53.032551  ADC_offset:16776857  ADC_gain:3470822  Residual_offset: -3.200000000  Residual_scaling: 0.0000001656
+Group:1  Gain:4  Speed:14  CalDate:20080331  CalTemp:53.032551  ADC_offset:16776858  ADC_gain:3470825  Residual_offset: -3.600000000  Residual_scaling: 0.0000001656
+Group:1  Gain:4  Speed:15  CalDate:20080331  CalTemp:53.032551  ADC_offset:16776858  ADC_gain:3470825  Residual_offset: -1.000000000  Residual_scaling: 0.0000001656
+Channel:0  CalDate:20080331  CalTemp:53.032551  DAC_offset:0x76  DAC_linearity:0xcf  Gain_factor:0.995422
+Channel:1  CalDate:20080331  CalTemp:53.032551  DAC_offset:0x73  DAC_linearity:0x76  Gain_factor:0.995850

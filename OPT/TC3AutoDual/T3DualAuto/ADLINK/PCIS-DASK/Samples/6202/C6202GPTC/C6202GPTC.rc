@@ -1,0 +1,275 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Chinese (Taiwan) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHT)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_TRADITIONAL
+#pragma code_page(950)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\C6202GPTC.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON    DISCARDABLE     "res\\C6202GPTC.ico"
+#endif    // Chinese (Taiwan) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG DISCARDABLE  0, 0, 235, 55
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About C6202GPTC"
+FONT 8, "MS Sans Serif"
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20
+    LTEXT           "C6202GPTC Version 1.0",IDC_STATIC,40,10,119,8,
+                    SS_NOPREFIX
+    LTEXT           "Copyright (C) 2007",IDC_STATIC,40,25,119,8
+    DEFPUSHBUTTON   "OK",IDOK,178,7,50,14,WS_GROUP
+END
+
+IDD_C6202GPTC_DIALOG DIALOGEX 0, 0, 320, 200
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "C6202GPTC"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "Exit",IDOK,123,179,50,14
+    LTEXT           "The timer/counter number:",IDC_STATIC,7,7,76,8
+    LTEXT           "The timer/counter mode.",IDC_STATIC,155,7,70,8
+    COMBOBOX        IDC_COMBO_MODE,203,20,100,120,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_COMBO_TC_NUM,61,22,48,30,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "Setup T/C",IDC_BTN_SETUP,24,65,50,14
+    PUSHBUTTON      "Start T/C",IDC_BTN_START,23,92,50,14
+    PUSHBUTTON      "Stop T/C",IDC_BTN_STOP,24,118,50,14
+    GROUPBOX        "T/C Value",IDC_STATIC,231,71,70,74
+    EDITTEXT        IDC_EDIT_VALUE,241,84,40,14,ES_AUTOHSCROLL | ES_READONLY
+    PUSHBUTTON      "Read",IDC_BTN_READ,238,109,50,14
+    PUSHBUTTON      "Set IntGate",IDC_BTN_SET_INT_GATE,119,75,50,14
+    PUSHBUTTON      "Reset IntGate",IDC_BTN_RESET_INT_GATE,120,102,50,14
+END
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904B0"
+        BEGIN
+            VALUE "CompanyName", "\0"
+            VALUE "FileDescription", "C6202GPTC MFC Application\0"
+            VALUE "FileVersion", "1, 0, 0, 1\0"
+            VALUE "InternalName", "C6202GPTC\0"
+            VALUE "LegalCopyright", "Copyright (C) 2007\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "C6202GPTC.EXE\0"
+            VALUE "ProductName", "C6202GPTC Application\0"
+            VALUE "ProductVersion", "1, 0, 0, 1\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 48
+    END
+
+    IDD_C6202GPTC_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 313
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 193
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_C6202GPTC_DIALOG DLGINIT
+BEGIN
+    IDC_COMBO_MODE, 0x403, 20, 0
+0x6953, 0x706d, 0x656c, 0x6147, 0x6574, 0x4564, 0x6576, 0x746e, 0x4e43, 
+0x0054, 
+    IDC_COMBO_MODE, 0x403, 16, 0
+0x6953, 0x676e, 0x656c, 0x6550, 0x6972, 0x646f, 0x534d, 0x0052, 
+    IDC_COMBO_MODE, 0x403, 20, 0
+0x6953, 0x676e, 0x656c, 0x7550, 0x736c, 0x5765, 0x6469, 0x6874, 0x534d, 
+0x0052, 
+    IDC_COMBO_MODE, 0x403, 20, 0
+0x6953, 0x676e, 0x656c, 0x6147, 0x6574, 0x5064, 0x6c75, 0x6573, 0x6547, 
+0x006e, 
+    IDC_COMBO_MODE, 0x403, 19, 0
+0x6953, 0x676e, 0x656c, 0x7254, 0x6769, 0x7550, 0x736c, 0x4765, 0x6e65, 
+"\000" 
+    IDC_COMBO_MODE, 0x403, 21, 0
+0x6552, 0x7274, 0x6769, 0x6953, 0x676e, 0x656c, 0x7550, 0x736c, 0x4765, 
+0x6e65, "\000" 
+    IDC_COMBO_MODE, 0x403, 23, 0
+0x6953, 0x676e, 0x656c, 0x7254, 0x6769, 0x6f43, 0x746e, 0x7550, 0x736c, 
+0x4765, 0x6e65, "\000" 
+    IDC_COMBO_MODE, 0x403, 13, 0
+0x6f43, 0x746e, 0x7550, 0x736c, 0x4765, 0x6e65, "\000" 
+    IDC_COMBO_MODE, 0x403, 18, 0
+0x6445, 0x6567, 0x6553, 0x6170, 0x6172, 0x6974, 0x6e6f, 0x534d, 0x0052, 
+
+    IDC_COMBO_MODE, 0x403, 26, 0
+0x6953, 0x676e, 0x656c, 0x7254, 0x6769, 0x6f43, 0x746e, 0x7550, 0x736c, 
+0x4765, 0x6e65, 0x5750, 0x004d, 
+    IDC_COMBO_MODE, 0x403, 16, 0
+0x6f43, 0x746e, 0x7550, 0x736c, 0x4765, 0x6e65, 0x5750, 0x004d, 
+    IDC_COMBO_TC_NUM, 0x403, 6, 0
+0x2f54, 0x2043, 0x0030, 
+    IDC_COMBO_TC_NUM, 0x403, 6, 0
+0x2f54, 0x2043, 0x0031, 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_ABOUTBOX            "&About C6202GPTC..."
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif //_WIN32
+#include "res\C6202GPTC.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

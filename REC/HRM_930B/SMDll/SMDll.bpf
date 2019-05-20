@@ -1,0 +1,11 @@
+USEFORM("FormDllMain.cpp", FrmDllMain);
+USEFORM("FormErr.cpp", FrmErr);
+USEFORM("FormMsgTime.cpp", FrmMsgTime);
+USEFORM("FormMsgOk.cpp", FrmMsgOk);
+USEFORM("FormPassword.cpp", FrmPassword);
+USEFORM("FormMsgYesNo.cpp", FrmMsgYesNo);
+USEFORM("FormUpdate.cpp", FrmUpdate);
+//---------------------------------------------------------------------------
+This file is used by the project manager only and should be treated like the project file
+
+DllEntryPoint

@@ -1,0 +1,1443 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Korean resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_KOR)
+#ifdef _WIN32
+LANGUAGE LANG_KOREAN, SUBLANG_DEFAULT
+#pragma code_page(949)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_KOR)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 18, 1\r\n"
+    "#pragma code_page(949)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\HVSystem.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""l.kor\\afxres.rc""          // Standard components\r\n"
+    "#include ""l.kor\\afxprint.rc""        // printing/print preview resources\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON    DISCARDABLE     "res\\HVSystem.ico"
+IDR_HVSYSTTYPE          ICON    DISCARDABLE     "res\\HVSystemDoc.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDR_MAINFRAME           BITMAP  MOVEABLE PURE   "res\\Toolbar.bmp"
+IDB_SAVEU               BITMAP  DISCARDABLE     "bmp\\button_save\\ctlsaveu_256.bmp"
+IDB_SAVEN               BITMAP  DISCARDABLE     "bmp\\button_save\\ctlsaven_256.bmp"
+IDB_SAVEI               BITMAP  DISCARDABLE     "bmp\\button_save\\ctlsavei_256.bmp"
+IDB_SAVED               BITMAP  DISCARDABLE     "bmp\\button_save\\ctlsaved_256.bmp"
+IDB_LIVED               BITMAP  DISCARDABLE     "bmp\\button_live\\ctllived_256.bmp"
+IDB_LIVEI               BITMAP  DISCARDABLE     "bmp\\button_live\\ctllivei_256.bmp"
+IDB_LIVEN               BITMAP  DISCARDABLE     "bmp\\button_live\\ctlliven_256.bmp"
+IDB_LIVEU               BITMAP  DISCARDABLE     "bmp\\button_live\\ctlliveu_256.bmp"
+IDB_BTN_MASK13045       BITMAP  DISCARDABLE     "bmp\\EDITBOX\\edit_btnmask.bmp"
+IDB_CTRLSTAGE_AUTO      BITMAP  DISCARDABLE     "bmp\\EDITBOX\\auto.bmp"
+IDB_CTRLSTAGE_MANUAL    BITMAP  DISCARDABLE     "bmp\\EDITBOX\\manual.bmp"
+IDB_EXITD               BITMAP  DISCARDABLE     "bmp\\CTRLBTN_EXIT\\exitd_256.bmp"
+IDB_EXITI               BITMAP  DISCARDABLE     "bmp\\CTRLBTN_EXIT\\exiti_256.bmp"
+IDB_EXITN               BITMAP  DISCARDABLE     "bmp\\CTRLBTN_EXIT\\exitn_256.bmp"
+IDB_EXITU               BITMAP  DISCARDABLE     "bmp\\CTRLBTN_EXIT\\exitu_256.bmp"
+IDB_GRABD               BITMAP  DISCARDABLE     "bmp\\button_grab\\ctlgrabd_256.bmp"
+IDB_GRABI               BITMAP  DISCARDABLE     "bmp\\button_grab\\ctlgrabi_256.bmp"
+IDB_GRABN               BITMAP  DISCARDABLE     "bmp\\button_grab\\ctlgrabn_256.bmp"
+IDB_GRABU               BITMAP  DISCARDABLE     "bmp\\button_grab\\ctlgrabu_256.bmp"
+IDB_IOMASK              BITMAP  DISCARDABLE     "bmp\\IO\\iomask.bmp"
+IDB_IOOFF               BITMAP  DISCARDABLE     "bmp\\IO\\iooff_256.bmp"
+IDB_IOON                BITMAP  DISCARDABLE     "bmp\\IO\\ioon_256.bmp"
+IDB_TESTN               BITMAP  DISCARDABLE     "bmp\\button_test\\ctltestn_256.bmp"
+IDB_TESTU               BITMAP  DISCARDABLE     "bmp\\button_test\\ctltestu_256.bmp"
+IDB_TESTD               BITMAP  DISCARDABLE     "bmp\\button_test\\ctltestd_256.bmp"
+IDB_TESTI               BITMAP  DISCARDABLE     "bmp\\button_test\\ctltesti_256.bmp"
+IDB_TITLE_SYSMENU       BITMAP  DISCARDABLE     "bmp\\title_sysmenu\\sysmenun_256.bmp"
+IDB_TITLE_SYSMENUMASK   BITMAP  DISCARDABLE     "bmp\\title_sysmenu\\sysmenun_mask.bmp"
+IDB_TITLE_SYSMENUD      BITMAP  DISCARDABLE     "bmp\\title_sysmenu\\sysmenud_256.bmp"
+IDB_AUTON               BITMAP  DISCARDABLE     "bmp\\button_auto\\ctlauton_256.bmp"
+IDB_AUTOI               BITMAP  DISCARDABLE     "bmp\\button_auto\\ctlautoi_256.bmp"
+IDB_AUTOD               BITMAP  DISCARDABLE     "bmp\\button_auto\\ctlautod_256.bmp"
+IDB_AUTOU               BITMAP  DISCARDABLE     "bmp\\button_auto\\ctlautou_256.bmp"
+IDB_HANRALOGO           BITMAP  DISCARDABLE     "bmp\\hanralogo_256.bmp"
+IDB_HANRALOGOMASK       BITMAP  DISCARDABLE     "bmp\\hanralogomask_256.bmp"
+IDB_SLEDM               BITMAP  DISCARDABLE     "bmp\\NEWLED\\ledbuttonm_256.bmp"
+IDB_SLEDD               BITMAP  DISCARDABLE     "bmp\\NEWLED\\ledbuttonO_256.bmp"
+IDB_SLEDN               BITMAP  DISCARDABLE     "bmp\\NEWLED\\ledbuttonX_256.bmp"
+IDB_DATATABD            BITMAP  DISCARDABLE     "bmp\\tabbutton\\datad_256.bmp"
+IDB_DATATABN            BITMAP  DISCARDABLE     "bmp\\tabbutton\\datan_256.bmp"
+IDB_SETUPTABN           BITMAP  DISCARDABLE     "bmp\\tabbutton\\setupdatan_256.bmp"
+IDB_SETUPTABD           BITMAP  DISCARDABLE     "bmp\\tabbutton\\setupdatad_256.bmp"
+IDB_RESETN              BITMAP  DISCARDABLE     "bmp\\button_reset\\ctlresetn_256.bmp"
+IDB_RESETD              BITMAP  DISCARDABLE     "bmp\\button_reset\\ctlresetd_256.bmp"
+IDB_RESETI              BITMAP  DISCARDABLE     "bmp\\button_reset\\ctlreseti_256.bmp"
+IDB_RESETU              BITMAP  DISCARDABLE     "bmp\\button_reset\\ctlresetu_256.bmp"
+IDB_CTRLBTNMASK2        BITMAP  DISCARDABLE     "bmp\\CTRLBTN_EXIT\\ctlbuttonmask_256.bmp"
+IDB_TITLE_SYSMENUCHECK  BITMAP  DISCARDABLE     "bmp\\title_sysmenu\\sysmenucheck_256.bmp"
+IDB_MOTIONTABM          BITMAP  DISCARDABLE     "bmp\\tabbutton\\motionm_256.bmp"
+IDB_OKNG_MASK           BITMAP  DISCARDABLE     "bmp\\okng\\mask.bmp"
+IDB_LOKN                BITMAP  DISCARDABLE     "bmp\\okng\\lokn_256.bmp"
+IDB_LNGN                BITMAP  DISCARDABLE     "bmp\\okng\\lng_256.bmp"
+IDB_AOKN                BITMAP  DISCARDABLE     "bmp\\okng\\aokn_256.bmp"
+IDB_ANGN                BITMAP  DISCARDABLE     "bmp\\okng\\Ang_256.bmp"
+IDB_TOKN                BITMAP  DISCARDABLE     "bmp\\okng\\tokn_256.bmp"
+IDB_TNGN                BITMAP  DISCARDABLE     "bmp\\okng\\tng_256.bmp"
+IDB_SETUP_APPLYN        BITMAP  DISCARDABLE     "bmp\\tabsetupwindow\\applyn_256.bmp"
+IDB_SETUP_APPLYD        BITMAP  DISCARDABLE     "bmp\\tabsetupwindow\\applyd_256.bmp"
+IDB_SETUP_APPLYU        BITMAP  DISCARDABLE     "bmp\\tabsetupwindow\\applyu_256.bmp"
+IDB_SETUP_BTNMASK       BITMAP  DISCARDABLE     "bmp\\tabsetupwindow\\setupbntmask_256.bmp"
+IDB_PASSWDN             BITMAP  DISCARDABLE     "bmp\\tabsetupwindow\\passwdn_256.bmp"
+IDB_PASSWDD             BITMAP  DISCARDABLE     "bmp\\tabsetupwindow\\passwdd_256.bmp"
+IDB_SETUP_SAVEN         BITMAP  DISCARDABLE     "bmp\\tabsetupwindow\\saven_256.bmp"
+IDB_SETUP_SAVED         BITMAP  DISCARDABLE     "bmp\\tabsetupwindow\\saved_256.bmp"
+IDB_SETUP_SAVEU         BITMAP  DISCARDABLE     "bmp\\tabsetupwindow\\saveu_256.bmp"
+IDB_3DSAVEM             BITMAP  DISCARDABLE     "bmp\\button_3dsave\\save_mask_256.bmp"
+IDB_3DSAVED             BITMAP  DISCARDABLE     "bmp\\button_3dsave\\saved_256.bmp"
+IDB_3DSAVEN             BITMAP  DISCARDABLE     "bmp\\button_3dsave\\saven_256.bmp"
+IDB_CDATATABD           BITMAP  DISCARDABLE     "bmp\\tabbutton\\cdatad_256.bmp"
+IDB_CDATATABN           BITMAP  DISCARDABLE     "bmp\\tabbutton\\Cdatan_256.bmp"
+IDB_3DMODELD            BITMAP  DISCARDABLE     "bmp\\tabbutton\\3dModeld_256.bmp"
+IDB_3DMODELN            BITMAP  DISCARDABLE     "bmp\\tabbutton\\3dmodeln_256.bmp"
+IDB_RNG                 BITMAP  DISCARDABLE     "bmp\\okng\\rng_256.bmp"
+IDB_ROK                 BITMAP  DISCARDABLE     "bmp\\okng\\rok_256.bmp"
+IDB_SNG                 BITMAP  DISCARDABLE     "bmp\\okng\\sng_256.bmp"
+IDB_SOK                 BITMAP  DISCARDABLE     "bmp\\okng\\sok_256.bmp"
+IDB_PNG                 BITMAP  DISCARDABLE     "bmp\\okng\\png_256.bmp"
+IDB_POK                 BITMAP  DISCARDABLE     "bmp\\okng\\pok_256.bmp"
+IDB_HNG                 BITMAP  DISCARDABLE     "bmp\\okng\\hng_256.bmp"
+IDB_HOK                 BITMAP  DISCARDABLE     "bmp\\okng\\hok_256.bmp"
+IDB_ABCENTERD           BITMAP  DISCARDABLE     "bmp\\tabbutton\\acenterSetd_256.bmp"
+IDB_ABCENTERN           BITMAP  DISCARDABLE     "bmp\\tabbutton\\acenterSetn_256.bmp"
+IDB_MASN                BITMAP  DISCARDABLE     "bmp\\tabbutton\\Masn_256.bmp"
+IDB_MASD                BITMAP  DISCARDABLE     "bmp\\tabbutton\\Masd_256.bmp"
+IDB_OKCANCELMASK        BITMAP  DISCARDABLE     "bmp\\button_okcancel80x30\\okancelmask_256.bmp"
+IDB_OKN                 BITMAP  DISCARDABLE     "bmp\\button_okcancel80x30\\okn_256.bmp"
+IDB_OKD                 BITMAP  DISCARDABLE     "bmp\\button_okcancel80x30\\okd_256.bmp"
+IDB_CANCELN             BITMAP  DISCARDABLE     "bmp\\button_okcancel80x30\\canceln_256.bmp"
+IDB_CANCELD             BITMAP  DISCARDABLE     "bmp\\button_okcancel80x30\\canceld_256.bmp"
+IDB_DEFAULTN            BITMAP  DISCARDABLE     "bmp\\button_default\\defaultn_256.bmp"
+IDB_DEFAULTD            BITMAP  DISCARDABLE     "bmp\\button_default\\defaultd_256.bmp"
+IDB_MASKARROW           BITMAP  DISCARDABLE     "bmp\\arrow\\mask.bmp"
+IDB_DOWNARROWD          BITMAP  DISCARDABLE     "bmp\\arrow\\Downd_256.bmp"
+IDB_DOWNARROWN          BITMAP  DISCARDABLE     "bmp\\arrow\\Downn_256.bmp"
+IDB_DOWNARROWU          BITMAP  DISCARDABLE     "bmp\\arrow\\Downu_256.bmp"
+IDB_LEFTARROWD          BITMAP  DISCARDABLE     "bmp\\arrow\\Leftd_256.bmp"
+IDB_LEFTARROWN          BITMAP  DISCARDABLE     "bmp\\arrow\\Leftn_256.bmp"
+IDB_LEFTARROWU          BITMAP  DISCARDABLE     "bmp\\arrow\\Leftu_256.bmp"
+IDB_RIGHTARROWD         BITMAP  DISCARDABLE     "bmp\\arrow\\rightd_256.bmp"
+IDB_RIGHTARROWN         BITMAP  DISCARDABLE     "bmp\\arrow\\rightn_256.bmp"
+IDB_RIGHTARROWU         BITMAP  DISCARDABLE     "bmp\\arrow\\rightu_256.bmp"
+IDB_STOPARROWD          BITMAP  DISCARDABLE     "bmp\\arrow\\Stopd_256.bmp"
+IDB_STOPARROWN          BITMAP  DISCARDABLE     "bmp\\arrow\\Stopn_256.bmp"
+IDB_STOPARROWU          BITMAP  DISCARDABLE     "bmp\\arrow\\Stopu_256.bmp"
+IDB_UPARROWD            BITMAP  DISCARDABLE     "bmp\\arrow\\Upd_256.bmp"
+IDB_UPARROWN            BITMAP  DISCARDABLE     "bmp\\arrow\\Upn_256.bmp"
+IDB_UPARROWU            BITMAP  DISCARDABLE     "bmp\\arrow\\Upu_256.bmp"
+IDB_RSAVEI              BITMAP  DISCARDABLE     "bmp\\button_rsave\\ctlrsavei.bmp"
+IDB_RSAVEN              BITMAP  DISCARDABLE     "bmp\\button_rsave\\ctlrsaven.bmp"
+IDB_RSAVED              BITMAP  DISCARDABLE     "bmp\\button_rsave\\ctlrsaved.bmp"
+IDB_RSAVEU              BITMAP  DISCARDABLE     "bmp\\button_rsave\\ctlrsaveu.bmp"
+IDB_AOP                 BITMAP  DISCARDABLE     "bmp\\tabbutton\\aon.bmp"
+IDB_MOP                 BITMAP  DISCARDABLE     "bmp\\tabbutton\\aopd.bmp"
+IDB_ETCD                BITMAP  DISCARDABLE     "bmp\\tabbutton\\etcd.bmp"
+IDB_ETCN                BITMAP  DISCARDABLE     "bmp\\tabbutton\\etcn.bmp"
+IDB_MASK100x50          BITMAP  DISCARDABLE     "bmp\\button_master\\mask100x50.bmp"
+IDB_MASTERD             BITMAP  DISCARDABLE     "bmp\\button_master\\masterd.bmp"
+IDB_MASTERN             BITMAP  DISCARDABLE     "bmp\\button_master\\mastern.bmp"
+IDB_OCMASK100x50        BITMAP  DISCARDABLE     "bmp\\okcancel100x50\\mask_256.bmp"
+IDB_CANCELD100x50       BITMAP  DISCARDABLE     "bmp\\okcancel100x50\\canceld_256.bmp"
+IDB_CANCELN100x50       BITMAP  DISCARDABLE     "bmp\\okcancel100x50\\canceln_256.bmp"
+IDB_CANCELU100x50       BITMAP  DISCARDABLE     "bmp\\okcancel100x50\\cancelu_256.bmp"
+IDB_OKD100x50           BITMAP  DISCARDABLE     "bmp\\okcancel100x50\\okd_256.bmp"
+IDB_OKN100x50           BITMAP  DISCARDABLE     "bmp\\okcancel100x50\\okn_256.bmp"
+IDB_OKU100x50           BITMAP  DISCARDABLE     "bmp\\okcancel100x50\\oku_256.bmp"
+IDB_LINKM               BITMAP  DISCARDABLE     "bmp\\button_link90x44\\mask.bmp"
+IDB_LINKN               BITMAP  DISCARDABLE     "bmp\\button_link90x44\\Linkn.bmp"
+IDB_LINKD               BITMAP  DISCARDABLE     "bmp\\button_link90x44\\Linkd.bmp"
+IDB_SUBN                BITMAP  DISCARDABLE     "bmp\\button_subbeam\\subn.bmp"
+IDB_SUBD                BITMAP  DISCARDABLE     "bmp\\button_subbeam\\subd.bmp"
+IDB_SUBM                BITMAP  DISCARDABLE     "bmp\\button_subbeam\\subm.bmp"
+IDB_B80X40U             BITMAP  DISCARDABLE     "bmp\\button80x40\\80x40u.bmp"
+IDB_B80X40D             BITMAP  DISCARDABLE     "bmp\\button80x40\\80x40d.bmp"
+IDB_B80X40IM            BITMAP  DISCARDABLE     "bmp\\button80x40\\80x40i.bmp"
+IDB_B80X40M             BITMAP  DISCARDABLE     "bmp\\button80x40\\80x40m.bmp"
+IDB_B80X40N             BITMAP  DISCARDABLE     "bmp\\button80x40\\80x40n.bmp"
+IDB_M_MOTION_UNCLICKED  BITMAP  DISCARDABLE     "bmp\\Motion_Window\\MotionUn.bmp"
+IDB_M_IO_CLICKED        BITMAP  DISCARDABLE     "bmp\\Motion_Window\\IO_256.bmp"
+IDB_M_IO_UNCLICKED      BITMAP  DISCARDABLE     "bmp\\Motion_Window\\IOUn.bmp"
+IDB_M_MOTION_CLICKED    BITMAP  DISCARDABLE     "bmp\\Motion_Window\\Motion_256.bmp"
+IDB_IO_BTN_MASK         BITMAP  DISCARDABLE     "guiimage\\IOWindowBtnMask.bmp"
+IDB_IO_BTN              BITMAP  DISCARDABLE     "guiimage\\IOWindowBtn.bmp"
+IDB_IO_BTN_CLICK        BITMAP  DISCARDABLE     "guiimage\\IOWindowBtnClick.bmp"
+IDB_IO_APC_BTN_MASK     BITMAP  DISCARDABLE     "guiimage\\IOWindowBtnAPCMask.bmp"
+IDB_IO_APC_BTN          BITMAP  DISCARDABLE     "guiimage\\IOWindowBtnAPC.bmp"
+IDB_IO_APC_BTN_CLICKED  BITMAP  DISCARDABLE     "guiimage\\IOWindowBtnAPCClicked.bmp"
+IDB_IO_APC_POWER_BTN    BITMAP  DISCARDABLE     "guiimage\\IOWindowBtnAPCPower.bmp"
+IDB_TITLE_LEFT          BITMAP  DISCARDABLE     "guiimage\\titlebar_TableLeft.bmp"
+IDB_TITLE_RIGHT         BITMAP  DISCARDABLE     "guiimage\\titlebar_TableRight.bmp"
+IDB_TITLE_M             BITMAP  DISCARDABLE     "guiimage\\titlebar_TableM.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+IDR_MAINFRAME TOOLBAR DISCARDABLE  16, 15
+BEGIN
+    BUTTON      ID_FILE_NEW
+    BUTTON      ID_FILE_OPEN
+    BUTTON      ID_FILE_SAVE
+    SEPARATOR
+    BUTTON      ID_EDIT_CUT
+    BUTTON      ID_EDIT_COPY
+    BUTTON      ID_EDIT_PASTE
+    SEPARATOR
+    BUTTON      ID_FILE_PRINT
+    SEPARATOR
+    BUTTON      ID_APP_ABOUT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU PRELOAD DISCARDABLE 
+BEGIN
+    POPUP "파일(&F)"
+    BEGIN
+        MENUITEM "새 파일(&N)\tCtrl+N",         ID_FILE_NEW
+        MENUITEM "열기(&O)...\tCtrl+O",         ID_FILE_OPEN
+        MENUITEM "저장(&S)\tCtrl+S",            ID_FILE_SAVE
+        MENUITEM "다른 이름으로 저장(&A)...",   ID_FILE_SAVE_AS
+        MENUITEM SEPARATOR
+        MENUITEM "인쇄(&P)...\tCtrl+P",         ID_FILE_PRINT
+        MENUITEM "인쇄 미리 보기(&V)",          ID_FILE_PRINT_PREVIEW
+        MENUITEM "인쇄 설정(&R)...",            ID_FILE_PRINT_SETUP
+        MENUITEM SEPARATOR
+        MENUITEM "최근 파일",                   ID_FILE_MRU_FILE1, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "종료(&X)",                    ID_APP_EXIT
+    END
+    POPUP "편집(&E)"
+    BEGIN
+        MENUITEM "취소(&U)\tCtrl+Z",            ID_EDIT_UNDO
+        MENUITEM SEPARATOR
+        MENUITEM "잘라내기(&T)\tCtrl+X",        ID_EDIT_CUT
+        MENUITEM "복사(&C)\tCtrl+C",            ID_EDIT_COPY
+        MENUITEM "붙여넣기(&P)\tCtrl+V",        ID_EDIT_PASTE
+    END
+    POPUP "보기(&V)"
+    BEGIN
+        MENUITEM "도구 모음(&T)",               ID_VIEW_TOOLBAR
+        MENUITEM "상태 표시줄(&S)",             ID_VIEW_STATUS_BAR
+    END
+    POPUP "도움말(&H)"
+    BEGIN
+        MENUITEM "HVSystem 정보(&A)...",        ID_APP_ABOUT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MAINFRAME ACCELERATORS PRELOAD MOVEABLE PURE 
+BEGIN
+    "N",            ID_FILE_NEW,            VIRTKEY, CONTROL
+    "O",            ID_FILE_OPEN,           VIRTKEY, CONTROL
+    "S",            ID_FILE_SAVE,           VIRTKEY, CONTROL
+    "P",            ID_FILE_PRINT,          VIRTKEY, CONTROL
+    "Z",            ID_EDIT_UNDO,           VIRTKEY, CONTROL
+    "X",            ID_EDIT_CUT,            VIRTKEY, CONTROL
+    "C",            ID_EDIT_COPY,           VIRTKEY, CONTROL
+    "V",            ID_EDIT_PASTE,          VIRTKEY, CONTROL
+    VK_BACK,        ID_EDIT_UNDO,           VIRTKEY, ALT
+    VK_DELETE,      ID_EDIT_CUT,            VIRTKEY, SHIFT
+    VK_INSERT,      ID_EDIT_COPY,           VIRTKEY, CONTROL
+    VK_INSERT,      ID_EDIT_PASTE,          VIRTKEY, SHIFT
+    VK_F6,          ID_NEXT_PANE,           VIRTKEY 
+    VK_F6,          ID_PREV_PANE,           VIRTKEY, SHIFT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG DISCARDABLE  0, 0, 235, 55
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "HVSystem 정보"
+FONT 9, "굴림"
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20
+    LTEXT           "HVSystem 버전 1.0",IDC_STATIC,40,10,119,8,SS_NOPREFIX
+    LTEXT           "Copyright (C) 2002",IDC_STATIC,40,25,119,8
+    DEFPUSHBUTTON   "확인",IDOK,178,7,50,14,WS_GROUP
+END
+
+IDD_HVSYSTEM_FORM DIALOG DISCARDABLE  0, 0, 320, 200
+STYLE WS_CHILD
+FONT 9, "굴림"
+BEGIN
+END
+
+IDD_TITLE_BAR DIALOG DISCARDABLE  0, 0, 378, 23
+STYLE WS_POPUP | WS_VISIBLE
+FONT 10, "System"
+BEGIN
+    CONTROL         "",IDC_TITLE_BUTTON1,"Button",BS_AUTOCHECKBOX | 
+                    BS_PUSHLIKE | WS_TABSTOP,6,8,16,8
+    CONTROL         "",IDC_TITLE_BUTTON2,"Button",BS_AUTOCHECKBOX | 
+                    BS_PUSHLIKE | WS_TABSTOP,27,9,16,8
+    CONTROL         "",IDC_TITLE_BUTTON3,"Button",BS_AUTOCHECKBOX | 
+                    BS_PUSHLIKE | WS_TABSTOP,50,9,16,8
+    CONTROL         "",IDC_TITLE_BUTTON4,"Button",BS_AUTOCHECKBOX | 
+                    BS_PUSHLIKE | WS_TABSTOP,345,9,16,8
+END
+
+IDD_IO_CONTROL DIALOG DISCARDABLE  0, 0, 305, 160
+STYLE WS_POPUP | WS_VISIBLE
+FONT 10, "System"
+BEGIN
+    CONTROL         "",IDC_IO_OUT0,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,210,
+                    96,16,8
+    CONTROL         "",IDC_IO_OUT1,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,210,
+                    103,16,8
+    CONTROL         "",IDC_IO_OUT2,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,210,
+                    110,16,8
+    CONTROL         "",IDC_IO_OUT3,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,210,
+                    117,16,8
+    CONTROL         "",IDC_IO_OUT4,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,210,
+                    124,16,8
+    CONTROL         "",IDC_IO_OUT5,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,210,
+                    131,16,8
+    CONTROL         "",IDC_IO_OUT6,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,210,
+                    138,16,8
+    CONTROL         "",IDC_IO_OUT7,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,210,
+                    145,16,8
+    CONTROL         "",IDC_IO_IN0,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,253,
+                    95,16,8
+    CONTROL         "",IDC_IO_IN1,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,253,
+                    103,16,8
+    CONTROL         "",IDC_IO_IN2,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,253,
+                    110,16,8
+    CONTROL         "",IDC_IO_IN3,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,253,
+                    117,16,8
+    CONTROL         "",IDC_IO_IN4,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,253,
+                    125,16,8
+    CONTROL         "",IDC_IO_IN5,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,253,
+                    132,16,8
+    CONTROL         "",IDC_IO_IN6,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,253,
+                    138,16,8
+    CONTROL         "",IDC_IO_IN7,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,253,
+                    146,16,8
+    CONTROL         "",IDC_IO_OUT8,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,231,
+                    96,16,8
+    CONTROL         "",IDC_IO_OUT9,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,231,
+                    103,16,8
+    CONTROL         "",IDC_IO_OUT10,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    231,110,16,8
+    CONTROL         "",IDC_IO_OUT11,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    231,117,16,8
+    CONTROL         "",IDC_IO_OUT12,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    231,124,16,8
+    CONTROL         "",IDC_IO_OUT13,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    231,131,16,8
+    CONTROL         "",IDC_IO_OUT14,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    231,138,16,8
+    CONTROL         "",IDC_IO_OUT15,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    231,145,16,8
+    CONTROL         "",IDC_IO_IN8,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,274,
+                    95,16,8
+    CONTROL         "",IDC_IO_IN9,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,274,
+                    103,16,8
+    CONTROL         "",IDC_IO_IN10,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,274,
+                    110,16,8
+    CONTROL         "",IDC_IO_IN11,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,274,
+                    117,16,8
+    CONTROL         "",IDC_IO_IN12,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,274,
+                    125,16,8
+    CONTROL         "",IDC_IO_IN13,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,274,
+                    132,16,8
+    CONTROL         "",IDC_IO_IN14,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,274,
+                    138,16,8
+    CONTROL         "",IDC_IO_IN15,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,274,
+                    146,16,8
+    CONTROL         "",IDC_BUTTON_LINK,"Button",BS_AUTOCHECKBOX | 
+                    BS_PUSHLIKE | WS_TABSTOP,288,152,16,8
+    PUSHBUTTON      "UI Show",IDC_BTN_UI_SHOW,6,1,36,25
+    PUSHBUTTON      "All Home",IDC_BTN_ALL_HOME,46,1,36,25
+    PUSHBUTTON      "Reset",IDC_BTN_RESET,86,1,36,25
+    PUSHBUTTON      "Left",IDC_BTN_APC_LEFT,126,5,28,17
+    PUSHBUTTON      "Right",IDC_BTN_APC_RIGHT,156,5,28,17
+    PUSHBUTTON      "UP",IDC_BTN_APC_UP,189,5,28,17
+    PUSHBUTTON      "Down",IDC_BTN_APC_DOWN,219,5,28,17
+END
+
+IDD_DISPLAY_COMM DIALOG DISCARDABLE  0, 0, 187, 101
+STYLE WS_POPUP | WS_VISIBLE
+FONT 12, "System"
+BEGIN
+    CONTROL         "List1",IDC_LIST_COMM_EVENT,"SysListView32",LVS_REPORT | 
+                    WS_BORDER | WS_TABSTOP,12,12,60,50
+    PUSHBUTTON      "",IDC_BUTTON_SYSMENU_COMM,99,69,14,15
+END
+
+IDD_BOTTOM_BAR DIALOG DISCARDABLE  0, 0, 294, 19
+STYLE WS_POPUP | WS_VISIBLE
+FONT 10, "System"
+BEGIN
+    PUSHBUTTON      "",IDC_BUTTON_HANRALOGO,75,5,50,14,BS_FLAT
+END
+
+IDD_CNTWIN DIALOG DISCARDABLE  0, 0, 192, 121
+STYLE WS_POPUP | WS_VISIBLE
+FONT 10, "System"
+BEGIN
+    CTEXT           "",IDC_CNT_NAME1,2,6,20,8,SS_CENTERIMAGE | SS_SUNKEN
+    CTEXT           "",IDC_CNT_NAME2,28,6,19,8,SS_CENTERIMAGE | SS_SUNKEN
+    CTEXT           "",IDC_CNT_NAME3,88,20,26,8,SS_CENTERIMAGE | SS_SUNKEN
+    CTEXT           "",IDC_CNT_NAME4,82,7,19,8,SS_CENTERIMAGE | SS_SUNKEN
+    CTEXT           "",IDC_CNT_DATA1,5,18,20,8,SS_CENTERIMAGE | SS_SUNKEN
+    CTEXT           "",IDC_CNT_DATA2,25,17,19,8,SS_CENTERIMAGE | SS_SUNKEN
+    CTEXT           "",IDC_CNT_DATA3,51,19,31,8,SS_CENTERIMAGE | SS_SUNKEN
+    CTEXT           "",IDC_CNT_DATA4,51,6,24,8,SS_CENTERIMAGE | SS_SUNKEN
+    CTEXT           "",IDC_CNT_NAME5,6,32,20,8,SS_CENTERIMAGE | SS_SUNKEN
+    CTEXT           "",IDC_CNT_NAME6,32,32,19,8,SS_CENTERIMAGE | SS_SUNKEN
+    CTEXT           "",IDC_CNT_NAME7,92,46,26,8,SS_CENTERIMAGE | SS_SUNKEN
+    CTEXT           "",IDC_CNT_NAME8,86,33,19,8,SS_CENTERIMAGE | SS_SUNKEN
+    CTEXT           "",IDC_CNT_DATA5,7,40,20,8,SS_CENTERIMAGE | SS_SUNKEN
+    CTEXT           "",IDC_CNT_DATA6,29,43,19,8,SS_CENTERIMAGE | SS_SUNKEN
+    CTEXT           "",IDC_CNT_DATA7,55,45,31,8,SS_CENTERIMAGE | SS_SUNKEN
+    CTEXT           "",IDC_CNT_DATA8,55,32,24,8,SS_CENTERIMAGE | SS_SUNKEN
+    CTEXT           "",IDC_CNT_NAME9,4,9,20,8,SS_CENTERIMAGE | SS_SUNKEN
+END
+
+IDD_DIALOG_TABDATA DIALOG DISCARDABLE  0, 0, 187, 100
+STYLE WS_POPUP | WS_VISIBLE | WS_BORDER
+FONT 10, "System"
+BEGIN
+    CONTROL         "List1",IDC_LIST_DATADISPLAY,"SysListView32",LVS_REPORT | 
+                    WS_BORDER | WS_TABSTOP,7,6,78,80
+END
+
+IDD_DIALOG_TABSETUP DIALOG DISCARDABLE  0, 0, 273, 273
+STYLE WS_POPUP | WS_VISIBLE | WS_BORDER
+FONT 10, "System"
+BEGIN
+    LTEXT           "",IDC_ST_MINUTE,11,12,8,8
+    EDITTEXT        IDC_EDIT_MINUTE,22,12,25,14,ES_AUTOHSCROLL
+    CONTROL         "Spin1",IDC_SPIN_MINUTE,"msctls_updown32",UDS_ARROWKEYS,
+                    47,13,8,14
+    LTEXT           "",IDC_ST_PIXEL,56,13,8,8
+    EDITTEXT        IDC_EDIT_PIXEL,67,13,25,14,ES_AUTOHSCROLL
+    CONTROL         "Spin1",IDC_SPIN_PIXEL,"msctls_updown32",UDS_ARROWKEYS,
+                    92,14,8,14
+    LTEXT           "",IDC_ST_DISPTYPE,102,13,8,8
+    EDITTEXT        IDC_EDIT_DISPTYPE,113,13,25,14,ES_AUTOHSCROLL
+    CONTROL         "Spin1",IDC_SPIN_DISPTYPE,"msctls_updown32",
+                    UDS_ARROWKEYS,138,14,8,14
+    LTEXT           "",IDC_ST_TDIR,147,13,8,8
+    EDITTEXT        IDC_EDIT_TDIR,158,13,25,14,ES_AUTOHSCROLL
+    CONTROL         "Spin1",IDC_SPIN_TDIR,"msctls_updown32",UDS_ARROWKEYS,
+                    183,14,8,14
+    LTEXT           "",IDC_ST_RDIR,11,31,8,8
+    EDITTEXT        IDC_EDIT_RDIR,22,31,25,14,ES_AUTOHSCROLL
+    CONTROL         "Spin1",IDC_SPIN_RDIR,"msctls_updown32",UDS_ARROWKEYS,47,
+                    32,8,14
+    LTEXT           "",IDC_ST_ERROR,56,32,8,8
+    EDITTEXT        IDC_EDIT_ERROR,67,32,25,14,ES_AUTOHSCROLL
+    CONTROL         "Spin1",IDC_SPIN_ERROR,"msctls_updown32",UDS_ARROWKEYS,
+                    92,33,8,14
+    LTEXT           "",IDC_ST_DECKTHR,103,52,8,8
+    EDITTEXT        IDC_EDIT_DECKTHR,113,50,25,14,ES_AUTOHSCROLL
+    CONTROL         "Spin1",IDC_SPIN_DECKTHR,"msctls_updown32",UDS_ARROWKEYS,
+                    138,51,8,14
+    LTEXT           "",IDC_ST_PDIST,147,51,8,8
+    EDITTEXT        IDC_EDIT_PDIST,158,50,25,14,ES_AUTOHSCROLL
+    CONTROL         "Spin1",IDC_SPIN_PDIST,"msctls_updown32",UDS_ARROWKEYS,
+                    183,51,8,14
+    PUSHBUTTON      "",IDC_BUTTON_SETUP_APPLY,22,253,50,14
+    PUSHBUTTON      "",IDC_BUTTON_SETUP_SAVE,77,253,50,14
+    PUSHBUTTON      "",IDC_BUTTON_PASSWD,135,253,50,14
+    LTEXT           "",IDC_ST_LOC,10,67,8,8
+    EDITTEXT        IDC_EDIT_LOC,21,67,25,14,ES_AUTOHSCROLL
+    CONTROL         "Spin1",IDC_SPIN_LOC,"msctls_updown32",UDS_ARROWKEYS,46,
+                    68,8,14
+    LTEXT           "",IDC_ST_BTHR,55,68,8,8
+    EDITTEXT        IDC_EDIT_BTHR,66,68,25,14,ES_AUTOHSCROLL
+    CONTROL         "Spin1",IDC_SPIN_BTHR,"msctls_updown32",UDS_ARROWKEYS,91,
+                    69,8,14
+    LTEXT           "",IDC_ST_PARA,101,68,8,8
+    EDITTEXT        IDC_EDIT_PARA,112,68,25,14,ES_AUTOHSCROLL
+    CONTROL         "Spin1",IDC_SPIN_PARA,"msctls_updown32",UDS_ARROWKEYS,
+                    137,69,8,14
+    LTEXT           "",IDC_ST_BDISP,146,68,8,8
+    EDITTEXT        IDC_EDIT_BDISP,157,68,25,14,ES_AUTOHSCROLL
+    CONTROL         "Spin1",IDC_SPIN_BDISP,"msctls_updown32",UDS_ARROWKEYS,
+                    182,69,8,14
+    LTEXT           "",IDC_ST_DIAMETER,10,92,8,8
+    EDITTEXT        IDC_EDIT_DIAC,21,92,25,14,ES_AUTOHSCROLL
+    CONTROL         "Spin1",IDC_SPIN_DIAC,"msctls_updown32",UDS_ARROWKEYS,46,
+                    93,8,14
+    EDITTEXT        IDC_EDIT_DIAL,54,93,25,14,ES_AUTOHSCROLL
+    CONTROL         "Spin1",IDC_SPIN_DIAL,"msctls_updown32",UDS_ARROWKEYS,79,
+                    94,8,14
+    EDITTEXT        IDC_EDIT_DIAH,86,94,25,14,ES_AUTOHSCROLL
+    CONTROL         "Spin1",IDC_SPIN_DIAH,"msctls_updown32",UDS_ARROWKEYS,
+                    111,95,8,14
+    LTEXT           "",IDC_ST_TILT,9,111,8,8
+    EDITTEXT        IDC_EDIT_TILTC,20,111,25,14,ES_AUTOHSCROLL
+    CONTROL         "Spin1",IDC_SPIN_TILTC,"msctls_updown32",UDS_ARROWKEYS,
+                    45,112,8,14
+    EDITTEXT        IDC_EDIT_TILTL,53,112,25,14,ES_AUTOHSCROLL
+    CONTROL         "Spin1",IDC_SPIN_TILTL,"msctls_updown32",UDS_ARROWKEYS,
+                    78,113,8,14
+    EDITTEXT        IDC_EDIT_TILTH,85,113,25,14,ES_AUTOHSCROLL
+    CONTROL         "Spin1",IDC_SPIN_TILTH,"msctls_updown32",UDS_ARROWKEYS,
+                    110,114,8,14
+    LTEXT           "",IDC_ST_BSIZE,8,142,8,8
+    EDITTEXT        IDC_EDIT_BSIZE,19,142,25,14,ES_AUTOHSCROLL
+    CONTROL         "Spin1",IDC_SPIN_BSIZE,"msctls_updown32",UDS_ARROWKEYS,
+                    44,143,8,14
+    LTEXT           "",IDC_ST_BPIXEL,57,144,8,8
+    EDITTEXT        IDC_EDIT_BPIXEL,68,144,25,14,ES_AUTOHSCROLL
+    CONTROL         "Spin1",IDC_SPIN_BPIXEL,"msctls_updown32",UDS_ARROWKEYS,
+                    93,145,8,14
+    LTEXT           "",IDC_ST_RIMP,105,146,8,8
+    EDITTEXT        IDC_EDIT_RIMP,116,146,25,14,ES_AUTOHSCROLL
+    CONTROL         "Spin1",IDC_SPIN_RIMP,"msctls_updown32",UDS_ARROWKEYS,
+                    141,147,8,14
+    LTEXT           "",IDC_ST_PTHR,158,145,8,8
+    EDITTEXT        IDC_EDIT_PTHR,169,145,25,14,ES_AUTOHSCROLL
+    CONTROL         "Spin1",IDC_SPIN_PTHR,"msctls_updown32",UDS_ARROWKEYS,
+                    194,146,8,14
+    LTEXT           "",IDC_ST_WIDTHCORRECT,15,172,8,8
+    EDITTEXT        IDC_EDIT_WIDTHCORRECT,26,172,25,14,ES_AUTOHSCROLL
+    CONTROL         "Spin1",IDC_SPIN_WIDTHCORRECT,"msctls_updown32",
+                    UDS_ARROWKEYS,51,173,8,14
+    LTEXT           "",IDC_ST_DATATHR,62,175,8,8
+    EDITTEXT        IDC_EDIT_DATATHR,73,175,25,14,ES_AUTOHSCROLL
+    CONTROL         "Spin1",IDC_SPIN_DATATHR,"msctls_updown32",UDS_ARROWKEYS,
+                    98,176,8,14
+    LTEXT           "",IDC_ST_RIMLOCATE,19,193,8,8
+    EDITTEXT        IDC_EDIT_RIMLOCATE,30,193,25,14,ES_AUTOHSCROLL
+    CONTROL         "Spin1",IDC_SPIN_RIMLOCATE,"msctls_updown32",
+                    UDS_ARROWKEYS,55,194,8,14
+    LTEXT           "",IDC_ST_RIMINSPECT,66,196,8,8
+    EDITTEXT        IDC_EDIT_RIMINSPECT,77,196,25,14,ES_AUTOHSCROLL
+    CONTROL         "Spin1",IDC_SPIN_RIMINSPECT,"msctls_updown32",
+                    UDS_ARROWKEYS,102,197,8,14
+    LTEXT           "",IDC_ST_OLSIZE,23,213,8,8
+    EDITTEXT        IDC_EDIT_OLSIZE,34,213,25,14,ES_AUTOHSCROLL
+    CONTROL         "Spin1",IDC_SPIN_OLSIZE,"msctls_updown32",UDS_ARROWKEYS,
+                    59,214,8,14
+    LTEXT           "",IDC_ST_PDATA,70,216,8,8
+    EDITTEXT        IDC_EDIT_PDATA,81,216,25,14,ES_AUTOHSCROLL
+    CONTROL         "Spin1",IDC_SPIN_PDATA,"msctls_updown32",UDS_ARROWKEYS,
+                    106,217,8,14
+    CONTROL         "",IDC_CHECK_BUTTON_ALIMIT,"Button",BS_AUTOCHECKBOX | 
+                    BS_PUSHLIKE | WS_TABSTOP,249,149,9,8
+    CONTROL         "",IDC_CHECK_BUTTON_DISTANCE,"Button",BS_AUTOCHECKBOX | 
+                    BS_PUSHLIKE | WS_TABSTOP,249,158,9,8
+    CONTROL         "",IDC_CHECK_BUTTON_PARALLELISM,"Button",BS_AUTOCHECKBOX | 
+                    BS_PUSHLIKE | WS_TABSTOP,249,167,9,8
+    CONTROL         "",IDC_CHECK_BUTTON_RIM,"Button",BS_AUTOCHECKBOX | 
+                    BS_PUSHLIKE | WS_TABSTOP,249,176,9,8
+    CONTROL         "",IDC_CHECK_BUTTON_DIAMETER,"Button",BS_AUTOCHECKBOX | 
+                    BS_PUSHLIKE | WS_TABSTOP,249,185,9,8
+    CONTROL         "",IDC_CHECK_BUTTON_TILT,"Button",BS_AUTOCHECKBOX | 
+                    BS_PUSHLIKE | WS_TABSTOP,249,193,9,8
+    CONTROL         "",IDC_CHECK_BUTTON_PDIST,"Button",BS_AUTOCHECKBOX | 
+                    BS_PUSHLIKE | WS_TABSTOP,249,201,9,8
+    CONTROL         "",IDC_CHECK_BUTTON_RIM2,"Button",BS_AUTOCHECKBOX | 
+                    BS_PUSHLIKE | WS_TABSTOP,249,209,9,8
+    EDITTEXT        IDC_EDIT_WIDTHCORRECT2,187,188,25,14,ES_AUTOHSCROLL
+    CONTROL         "Spin1",IDC_SPIN_WIDTHCORRECT2,"msctls_updown32",
+                    UDS_ARROWKEYS,212,189,8,14
+    EDITTEXT        IDC_EDIT_PDIST2,192,51,25,14,ES_AUTOHSCROLL
+    CONTROL         "Spin1",IDC_SPIN_PDIST2,"msctls_updown32",UDS_ARROWKEYS,
+                    217,52,8,14
+    PUSHBUTTON      "",IDC_BUTTON_SETUP_DEFAULT,188,211,23,14
+    EDITTEXT        IDC_EDIT_ERROR2,101,33,25,14,ES_AUTOHSCROLL
+    CONTROL         "Spin1",IDC_SPIN_ERROR2,"msctls_updown32",UDS_ARROWKEYS,
+                    126,34,9,14
+    EDITTEXT        IDC_EDIT_ERROR3,134,33,25,14,ES_AUTOHSCROLL
+    CONTROL         "Spin1",IDC_SPIN_ERROR3,"msctls_updown32",UDS_ARROWKEYS,
+                    159,34,9,14
+    EDITTEXT        IDC_EDIT_ERROR4,168,32,25,14,ES_AUTOHSCROLL
+    CONTROL         "Spin1",IDC_SPIN_ERROR4,"msctls_updown32",UDS_ARROWKEYS,
+                    193,33,9,14
+    LTEXT           "",IDC_ST_ERROR5,29,232,8,8
+    EDITTEXT        IDC_EDIT_ERROR5,41,232,25,14,ES_AUTOHSCROLL
+    CONTROL         "Spin1",IDC_SPIN_ERROR5,"msctls_updown32",UDS_ARROWKEYS,
+                    66,233,9,14
+    EDITTEXT        IDC_EDIT_ERROR6,75,233,25,14,ES_AUTOHSCROLL
+    CONTROL         "Spin1",IDC_SPIN_ERROR6,"msctls_updown32",UDS_ARROWKEYS,
+                    100,234,9,14
+    EDITTEXT        IDC_EDIT_ERROR7,108,233,25,14,ES_AUTOHSCROLL
+    CONTROL         "Spin1",IDC_SPIN_ERROR7,"msctls_updown32",UDS_ARROWKEYS,
+                    133,234,9,14
+    EDITTEXT        IDC_EDIT_ERROR8,142,232,25,14,ES_AUTOHSCROLL
+    CONTROL         "Spin1",IDC_SPIN_ERROR8,"msctls_updown32",UDS_ARROWKEYS,
+                    167,233,9,14
+END
+
+IDD_DIALOG_3DDISPLAY DIALOGEX 0, 0, 218, 279
+STYLE WS_POPUP | WS_VISIBLE
+EXSTYLE WS_EX_CLIENTEDGE
+FONT 10, "System", 0, 0, 0x1
+BEGIN
+END
+
+IDD_DIALOG_OKNG DIALOG DISCARDABLE  0, 0, 187, 99
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE
+FONT 10, "System"
+BEGIN
+    CONTROL         "",IDC_CHECK_LOCATION,"Button",BS_AUTOCHECKBOX | 
+                    BS_PUSHLIKE | WS_TABSTOP,18,36,25,11
+    CONTROL         "",IDC_CHECK_ANGLE,"Button",BS_AUTOCHECKBOX | 
+                    BS_PUSHLIKE | WS_TABSTOP,45,37,25,11
+    CONTROL         "",IDC_CHECK_TILT,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | 
+                    WS_TABSTOP,75,37,25,11
+    CONTROL         "",IDC_CHECK_RIM,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | 
+                    WS_TABSTOP,24,55,25,11
+    CONTROL         "",IDC_CHECK_SIZE,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | 
+                    WS_TABSTOP,54,55,25,11
+    CONTROL         "",IDC_CHECK_PARALLELISM,"Button",BS_AUTOCHECKBOX | 
+                    BS_PUSHLIKE | WS_TABSTOP,93,52,25,11
+    CONTROL         "",IDC_CHECK_PEAK,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | 
+                    WS_TABSTOP,130,54,25,11
+END
+
+IDD_DIALOG_3DMODEL DIALOG DISCARDABLE  0, 0, 87, 242
+STYLE WS_POPUP | WS_VISIBLE
+FONT 10, "System"
+BEGIN
+    PUSHBUTTON      "",IDC_BUTTON_SYSMENU_3DMODEL,0,1,50,14
+    LTEXT           " ",IDC_ST_3DSET1,1,22,20,8
+    EDITTEXT        IDC_EDIT_3DSET1,24,21,28,12,ES_AUTOHSCROLL
+    CONTROL         "Spin1",IDC_SPIN_3DSET1,"msctls_updown32",UDS_ARROWKEYS,
+                    51,21,8,14
+    LTEXT           " ",IDC_ST_3DSET2,1,36,20,8
+    EDITTEXT        IDC_EDIT_3DSET2,24,35,28,12,ES_AUTOHSCROLL
+    CONTROL         "Spin1",IDC_SPIN_3DSET2,"msctls_updown32",UDS_ARROWKEYS,
+                    51,35,8,14
+    LTEXT           " ",IDC_ST_3DSET3,1,50,20,8
+    EDITTEXT        IDC_EDIT_3DSET3,24,49,28,12,ES_AUTOHSCROLL
+    CONTROL         "Spin1",IDC_SPIN_3DSET3,"msctls_updown32",UDS_ARROWKEYS,
+                    51,49,8,14
+    LTEXT           " ",IDC_ST_3DSET4,1,65,20,8
+    EDITTEXT        IDC_EDIT_3DSET4,24,64,28,12,ES_AUTOHSCROLL
+    CONTROL         "Spin1",IDC_SPIN_3DSET4,"msctls_updown32",UDS_ARROWKEYS,
+                    51,64,8,14
+    LTEXT           " ",IDC_ST_3DSET5,2,77,20,8
+    EDITTEXT        IDC_EDIT_3DSET5,25,76,28,12,ES_AUTOHSCROLL
+    CONTROL         "Spin1",IDC_SPIN_3DSET5,"msctls_updown32",UDS_ARROWKEYS,
+                    52,76,8,14
+    LTEXT           " ",IDC_ST_3DSET6,2,91,20,8
+    EDITTEXT        IDC_EDIT_3DSET6,25,90,28,12,ES_AUTOHSCROLL
+    CONTROL         "Spin1",IDC_SPIN_3DSET6,"msctls_updown32",UDS_ARROWKEYS,
+                    52,90,8,14
+    LTEXT           " ",IDC_ST_3DSET7,2,105,20,8
+    EDITTEXT        IDC_EDIT_3DSET7,25,104,28,12,ES_AUTOHSCROLL
+    CONTROL         "Spin1",IDC_SPIN_3DSET7,"msctls_updown32",UDS_ARROWKEYS,
+                    52,104,8,14
+    LTEXT           " ",IDC_ST_3DSET8,2,120,20,8
+    EDITTEXT        IDC_EDIT_3DSET8,25,119,28,12,ES_AUTOHSCROLL
+    CONTROL         "Spin1",IDC_SPIN_3DSET8,"msctls_updown32",UDS_ARROWKEYS,
+                    52,119,8,14
+    LTEXT           " ",IDC_ST_3DSET9,2,136,20,8
+    EDITTEXT        IDC_EDIT_3DSET9,25,135,28,12,ES_AUTOHSCROLL
+    CONTROL         "Spin1",IDC_SPIN_3DSET9,"msctls_updown32",UDS_ARROWKEYS,
+                    52,135,8,14
+    LTEXT           " ",IDC_ST_3DSET10,2,150,20,8
+    EDITTEXT        IDC_EDIT_3DSET10,25,149,28,12,ES_AUTOHSCROLL
+    CONTROL         "Spin1",IDC_SPIN_3DSET10,"msctls_updown32",UDS_ARROWKEYS,
+                    52,149,8,14
+    LTEXT           " ",IDC_ST_3DSET11,2,164,20,8
+    EDITTEXT        IDC_EDIT_3DSET11,25,163,28,12,ES_AUTOHSCROLL
+    CONTROL         "Spin1",IDC_SPIN_3DSET11,"msctls_updown32",UDS_ARROWKEYS,
+                    52,163,8,14
+    LTEXT           " ",IDC_ST_3DSET12,2,179,20,8
+    EDITTEXT        IDC_EDIT_3DSET12,25,178,28,12,ES_AUTOHSCROLL
+    CONTROL         "Spin1",IDC_SPIN_3DSET12,"msctls_updown32",UDS_ARROWKEYS,
+                    52,178,8,14
+    LTEXT           " ",IDC_ST_3DSET13,2,194,20,8
+    EDITTEXT        IDC_EDIT_3DSET13,25,193,28,12,ES_AUTOHSCROLL
+    CONTROL         "Spin1",IDC_SPIN_3DSET13,"msctls_updown32",UDS_ARROWKEYS,
+                    52,193,8,14
+    PUSHBUTTON      "",IDC_3DMODEL_SAVE,8,219,50,14
+END
+
+IDD_IMG_DISPLAY DIALOG DISCARDABLE  0, 0, 187, 98
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE
+FONT 10, "System"
+BEGIN
+END
+
+IDD_DIALOG_HPROJ DIALOG DISCARDABLE  0, 0, 187, 98
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE
+FONT 10, "System"
+BEGIN
+END
+
+IDD_DIALOG_VPROJ DIALOG DISCARDABLE  0, 0, 187, 98
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE
+FONT 10, "System"
+BEGIN
+END
+
+IDD_DIALOG_ANGLE DIALOG DISCARDABLE  0, 0, 187, 98
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE
+FONT 10, "System"
+BEGIN
+END
+
+IDD_DIALOG_TABCDATA DIALOG DISCARDABLE  0, 0, 211, 201
+STYLE WS_POPUP | WS_VISIBLE | WS_BORDER
+FONT 10, "System"
+BEGIN
+    CONTROL         "List1",IDC_LIST_GNERALDATA1,"SysListView32",LVS_REPORT | 
+                    WS_BORDER | WS_TABSTOP,8,3,167,22
+    CONTROL         "List1",IDC_LIST_PEAKDATA,"SysListView32",LVS_REPORT | 
+                    WS_BORDER | WS_TABSTOP,11,101,168,22
+    CONTROL         "List1",IDC_LIST_RIMDATA,"SysListView32",LVS_REPORT | 
+                    WS_BORDER | WS_TABSTOP,10,128,168,22
+    CONTROL         "List1",IDC_LIST_GNERALDATA2,"SysListView32",LVS_REPORT | 
+                    WS_BORDER | WS_TABSTOP,11,43,167,22
+END
+
+IDD_DIALOG_PASSINPUT DIALOG DISCARDABLE  0, 0, 187, 98
+STYLE DS_MODALFRAME | WS_POPUP
+FONT 10, "System"
+BEGIN
+    EDITTEXT        IDC_EDIT_PASSINPUT,24,26,40,14,ES_PASSWORD | 
+                    ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "",IDOK,28,66,50,14
+    PUSHBUTTON      "",IDCANCEL,90,66,50,14
+END
+
+IDD_DIALOG_PASSMODIFY DIALOG DISCARDABLE  0, 0, 187, 98
+STYLE DS_MODALFRAME | WS_POPUP
+FONT 10, "System"
+BEGIN
+    EDITTEXT        IDC_EDIT_PASSNEW,24,8,40,14,ES_PASSWORD | ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_PASSCONFIRM,24,27,40,14,ES_PASSWORD | 
+                    ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "",IDOK,47,65,50,14
+    PUSHBUTTON      "",IDCANCEL,102,61,50,14
+END
+
+IDD_DIALOG_MOVE DIALOG DISCARDABLE  0, 0, 180, 77
+STYLE WS_POPUP | WS_VISIBLE
+FONT 10, "System"
+BEGIN
+    PUSHBUTTON      "",IDC_BUTTONUP,65,8,50,14
+    PUSHBUTTON      "",IDC_BUTTONCENTER,65,30,50,14
+    PUSHBUTTON      "",IDC_BUTTONDOWN,65,52,50,14
+    PUSHBUTTON      "",IDC_BUTTONRIGHT,123,30,50,14
+    PUSHBUTTON      "",IDC_BUTTONLEFT,5,31,50,14
+    CONTROL         "",IDC_BUTTON_SYSMENU_MOVE,"Button",BS_AUTOCHECKBOX | 
+                    BS_PUSHLIKE | WS_TABSTOP,0,9,16,8
+END
+
+IDD_CONTROL_PANEL DIALOG DISCARDABLE  0, 0, 187, 153
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE
+FONT 10, "System"
+BEGIN
+    PUSHBUTTON      "",IDC_BUTTON_EXIT,126,44,22,19
+    PUSHBUTTON      "",IDC_BUTTON_GRAB,23,7,22,19
+    PUSHBUTTON      "",IDC_BUTTON_SAVE,78,6,22,19
+    PUSHBUTTON      "",IDC_BUTTON_SYSMENU_CONTROL,15,75,50,14
+    CONTROL         "",IDC_BUTTON_AUTO,"Button",BS_AUTOCHECKBOX | 
+                    BS_PUSHLIKE | WS_TABSTOP,108,13,16,8
+    PUSHBUTTON      "",IDC_BUTTON_RESET,51,45,22,19
+    CONTROL         "",IDC_BUTTON_TEST,"Button",BS_AUTOCHECKBOX | 
+                    BS_PUSHLIKE | WS_TABSTOP,20,48,16,8
+    PUSHBUTTON      "",IDC_BUTTON_RSAVE,76,44,22,19
+    LTEXT           "",IDC_STATIC_BCODE,9,102,8,8
+    EDITTEXT        IDC_EDIT_BCODE,27,100,124,14,ES_AUTOHSCROLL
+    CONTROL         "",IDC_BUTTON_LIVE,"Button",BS_AUTOCHECKBOX | 
+                    BS_PUSHLIKE | WS_TABSTOP,53,14,16,8
+    PUSHBUTTON      "",IDC_BUTTON_SYSMENU_CONTROL2,145,76,18,14
+END
+
+IDD_DIALOG_TABWIN DIALOG DISCARDABLE  0, 0, 187, 101
+STYLE WS_POPUP | WS_VISIBLE
+FONT 10, "System"
+BEGIN
+    CONTROL         "",IDC_BUTTON_TABSYSMENU,"Button",BS_AUTOCHECKBOX | 
+                    BS_PUSHLIKE | WS_TABSTOP,2,3,16,8
+    CONTROL         "",IDC_BUTTON_MOTIONTAB1,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,9,28,16,8
+    CONTROL         "",IDC_BUTTON_MOTIONTAB2,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,12,39,16,8
+    CONTROL         "",IDC_BUTTON_MOTIONTAB3,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,11,48,16,8
+    CONTROL         "",IDC_BUTTON_MOTIONTAB4,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,11,55,16,8
+    CONTROL         "",IDC_BUTTON_ABCENTER,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,10,63,16,8
+    CONTROL         "",IDC_BUTTON_MANUALOPT,"Button",BS_AUTOCHECKBOX | 
+                    WS_DISABLED | WS_TABSTOP,17,70,16,8
+    CONTROL         "",IDC_BUTTON_AMOPT,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,25,84,16,8
+    CONTROL         "",IDC_BUTTON_RTOFFSET,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,41,86,16,8
+END
+
+IDD_IMG2_DISPLAY DIALOG DISCARDABLE  0, 0, 187, 98
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE
+FONT 10, "System"
+BEGIN
+END
+
+IDD_DIALOG_TABETC DIALOG DISCARDABLE  0, 0, 187, 279
+STYLE DS_MODALFRAME | WS_POPUP
+FONT 10, "System"
+BEGIN
+    LTEXT           "",IDC_STATIC_TAB_ROFFSET,14,12,8,8,SS_SUNKEN
+    EDITTEXT        IDC_EDIT_TAB_ROFFSET,38,10,40,14,ES_AUTOHSCROLL
+    CONTROL         "Spin1",IDC_SPIN_TAB_ROFFSET,"msctls_updown32",
+                    UDS_ARROWKEYS,79,10,9,14
+    CONTROL         "",IDC_STATIC_TAB_TOFFSET,"Static",SS_LEFTNOWORDWRAP | 
+                    SS_SUNKEN | WS_GROUP,99,14,8,8
+    EDITTEXT        IDC_EDIT_TAB_TOFFSET,108,10,40,14,ES_AUTOHSCROLL
+    CONTROL         "Spin1",IDC_SPIN_TAB_TOFFSET,"msctls_updown32",
+                    UDS_ARROWKEYS,149,10,9,14
+    CONTROL         "",IDC_STATIC_TAB_FRAME,"Static",SS_WHITEFRAME,13,225,75,
+                    20
+    PUSHBUTTON      "",IDC_BUTTON_TAB_ETCSAVE,17,250,50,14
+    PUSHBUTTON      "",IDC_BUTTON_TAB_ETCAPPLY,71,250,50,14
+    CONTROL         "",IDC_BUTTON_MASTERMODE,"Button",BS_AUTOCHECKBOX | 
+                    BS_PUSHLIKE | WS_TABSTOP,105,227,16,8
+    LTEXT           "",IDC_STATIC_ETC1,13,48,8,8,SS_SUNKEN
+    EDITTEXT        IDC_EDIT_ETC1,37,45,40,14,ES_AUTOHSCROLL
+    CONTROL         "Spin1",IDC_SPIN_ETC1,"msctls_updown32",UDS_ARROWKEYS,78,
+                    45,9,14
+    CONTROL         "",IDC_STATIC_ETC2,"Static",SS_LEFTNOWORDWRAP | 
+                    SS_SUNKEN | WS_GROUP,96,49,8,8
+    EDITTEXT        IDC_EDIT_ETC2,105,45,40,14,ES_AUTOHSCROLL
+    CONTROL         "Spin1",IDC_SPIN_ETC2,"msctls_updown32",UDS_ARROWKEYS,
+                    146,45,9,14
+    LTEXT           "",IDC_STATIC_ETC3,13,66,8,8,SS_SUNKEN
+    EDITTEXT        IDC_EDIT_ETC3,37,63,40,14,ES_AUTOHSCROLL
+    CONTROL         "Spin1",IDC_SPIN_ETC3,"msctls_updown32",UDS_ARROWKEYS,78,
+                    63,9,14
+    CONTROL         "",IDC_STATIC_ETC4,"Static",SS_LEFTNOWORDWRAP | 
+                    SS_SUNKEN | WS_GROUP,96,67,8,8
+    EDITTEXT        IDC_EDIT_ETC4,105,63,40,14,ES_AUTOHSCROLL
+    CONTROL         "Spin1",IDC_SPIN_ETC4,"msctls_updown32",UDS_ARROWKEYS,
+                    146,63,9,14
+    LTEXT           "",IDC_STATIC_ETC5,13,83,8,8,SS_SUNKEN
+    EDITTEXT        IDC_EDIT_ETC5,37,80,40,14,ES_AUTOHSCROLL
+    CONTROL         "Spin1",IDC_SPIN_ETC5,"msctls_updown32",UDS_ARROWKEYS,78,
+                    80,9,14
+    CONTROL         "",IDC_STATIC_ETC6,"Static",SS_LEFTNOWORDWRAP | 
+                    SS_SUNKEN | WS_GROUP,96,84,8,8
+    EDITTEXT        IDC_EDIT_ETC6,105,80,40,14,ES_AUTOHSCROLL
+    CONTROL         "Spin1",IDC_SPIN_ETC6,"msctls_updown32",UDS_ARROWKEYS,
+                    146,80,9,14
+    LTEXT           "",IDC_STATIC_ETC7,12,99,8,8,SS_SUNKEN
+    EDITTEXT        IDC_EDIT_ETC7,36,97,40,14,ES_AUTOHSCROLL
+    CONTROL         "Spin1",IDC_SPIN_ETC7,"msctls_updown32",UDS_ARROWKEYS,77,
+                    97,9,14
+    CONTROL         "",IDC_CHECK_ETC_ROI,"Button",BS_AUTOCHECKBOX | 
+                    BS_PUSHLIKE | WS_TABSTOP,20,209,16,8
+    EDITTEXT        IDC_EDIT_ETC8,101,97,40,14,ES_AUTOHSCROLL
+    CONTROL         "Spin1",IDC_SPIN_ETC8,"msctls_updown32",UDS_ARROWKEYS,
+                    142,97,9,14
+    LTEXT           "",IDC_STATIC_ETC8,11,115,8,9,SS_SUNKEN
+    COMBOBOX        IDC_COMBO1,50,181,48,30,CBS_DROPDOWN | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "",IDC_STATIC_ETC9,13,128,8,9,SS_SUNKEN
+    COMBOBOX        IDC_COMBO2,50,195,48,30,CBS_DROPDOWN | WS_VSCROLL | 
+                    WS_TABSTOP
+    EDITTEXT        IDC_EDIT_ETC9,37,113,40,14,ES_AUTOHSCROLL
+    CONTROL         "Spin1",IDC_SPIN_ETC9,"msctls_updown32",UDS_ARROWKEYS,78,
+                    113,9,14
+    EDITTEXT        IDC_EDIT_ETC10,102,113,40,14,ES_AUTOHSCROLL
+    CONTROL         "Spin1",IDC_SPIN_ETC10,"msctls_updown32",UDS_ARROWKEYS,
+                    143,113,9,14
+    LTEXT           "",IDC_STATIC_ETC10,21,185,8,9,SS_SUNKEN
+    LTEXT           "",IDC_STATIC_ETC11,20,198,8,9,SS_SUNKEN
+    EDITTEXT        IDC_EDIT_ETC11,38,128,40,14,ES_AUTOHSCROLL
+    CONTROL         "Spin1",IDC_SPIN_ETC11,"msctls_updown32",UDS_ARROWKEYS,
+                    79,128,9,14
+    EDITTEXT        IDC_EDIT_ETC12,103,128,40,14,ES_AUTOHSCROLL
+    CONTROL         "Spin1",IDC_SPIN_ETC12,"msctls_updown32",UDS_ARROWKEYS,
+                    144,128,9,14
+    LTEXT           "",IDC_STATIC_ETC12,11,143,8,9,SS_SUNKEN
+    EDITTEXT        IDC_EDIT_ETC13,36,143,40,14,ES_AUTOHSCROLL
+    CONTROL         "Spin1",IDC_SPIN_ETC13,"msctls_updown32",UDS_ARROWKEYS,
+                    77,143,9,14
+    EDITTEXT        IDC_EDIT_ETC14,101,143,40,14,ES_AUTOHSCROLL
+    CONTROL         "Spin1",IDC_SPIN_ETC14,"msctls_updown32",UDS_ARROWKEYS,
+                    142,143,9,14
+    LTEXT           "",IDC_STATIC_ETC13,12,159,8,9,SS_SUNKEN
+    EDITTEXT        IDC_EDIT_ETC15,37,159,40,14,ES_AUTOHSCROLL
+    CONTROL         "Spin1",IDC_SPIN_ETC15,"msctls_updown32",UDS_ARROWKEYS,
+                    78,159,9,14
+    EDITTEXT        IDC_EDIT_ETC16,102,159,40,14,ES_AUTOHSCROLL
+    CONTROL         "Spin1",IDC_SPIN_ETC16,"msctls_updown32",UDS_ARROWKEYS,
+                    143,159,9,14
+END
+
+IDD_DIALOG_MESSAGE DIALOG DISCARDABLE  0, 0, 187, 98
+STYLE WS_POPUP | WS_VISIBLE
+FONT 10, "System"
+BEGIN
+    DEFPUSHBUTTON   "",IDOK,20,68,50,14
+    PUSHBUTTON      "",IDCANCEL,91,70,50,14
+    LTEXT           "",IDC_STATIC_MESSAGE,17,13,133,50
+END
+
+IDD_IMG3_DISPLAY DIALOG DISCARDABLE  0, 0, 187, 94
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE
+FONT 10, "System"
+BEGIN
+END
+
+IDD_DIALOG_TAB_M_BASE DIALOG DISCARDABLE  0, 0, 281, 243
+STYLE WS_POPUP | WS_VISIBLE
+FONT 10, "System"
+BEGIN
+    CONTROL         "",IDC_TAB_BTN_MOTION,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,7,7,8,8
+    CONTROL         "",IDC_TAB_BTN_IO,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    7,19,8,8
+END
+
+IDD_DIALOG_TAB_M_IO DIALOG DISCARDABLE  0, 0, 300, 230
+STYLE WS_POPUP | WS_BORDER
+FONT 10, "System"
+BEGIN
+    COMBOBOX        IDC_COMBO1,186,7,107,98,CBS_DROPDOWN | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    CTEXT           "",IDC_LABEL_IO,7,7,178,13,SS_CENTERIMAGE
+    CONTROL         "0",IDC_IO_OUT0,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,5,
+                    129,8,8
+    CONTROL         "1",IDC_IO_OUT1,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,5,
+                    141,8,8
+    CONTROL         "2",IDC_IO_OUT2,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,5,
+                    153,8,8
+    CONTROL         "3",IDC_IO_OUT3,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,5,
+                    165,8,8
+    CONTROL         "4",IDC_IO_OUT4,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,5,
+                    177,8,8
+    CONTROL         "5",IDC_IO_OUT5,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,5,
+                    189,8,8
+    CONTROL         "6",IDC_IO_OUT6,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,5,
+                    201,8,8
+    CONTROL         "7",IDC_IO_OUT7,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,5,
+                    213,8,8
+    CONTROL         "0",IDC_IO_IN0,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,5,
+                    29,8,8
+    CONTROL         "1",IDC_IO_IN1,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,5,
+                    41,8,8
+    CONTROL         "2",IDC_IO_IN2,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,5,
+                    53,8,8
+    CONTROL         "3",IDC_IO_IN3,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,5,
+                    65,8,8
+    CONTROL         "4",IDC_IO_IN4,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,5,
+                    77,8,8
+    CONTROL         "5",IDC_IO_IN5,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,5,
+                    89,8,8
+    CONTROL         "6",IDC_IO_IN6,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,5,
+                    101,8,8
+    CONTROL         "7",IDC_IO_IN7,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,5,
+                    113,8,8
+    CONTROL         "8",IDC_IO_OUT8,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    151,129,8,8
+    CONTROL         "9",IDC_IO_OUT9,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    151,141,8,8
+    CONTROL         "10",IDC_IO_OUT10,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    151,153,8,8
+    CONTROL         "11",IDC_IO_OUT11,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    151,165,8,8
+    CONTROL         "12",IDC_IO_OUT12,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    151,177,8,8
+    CONTROL         "13",IDC_IO_OUT13,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    151,189,8,8
+    CONTROL         "14",IDC_IO_OUT14,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    151,201,8,8
+    CONTROL         "15",IDC_IO_OUT15,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    151,213,8,8
+    CONTROL         "8",IDC_IO_IN8,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,151,
+                    29,8,8
+    CONTROL         "9",IDC_IO_IN9,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,151,
+                    41,8,8
+    CONTROL         "10",IDC_IO_IN10,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    151,53,8,8
+    CONTROL         "11",IDC_IO_IN11,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    151,65,8,8
+    CONTROL         "12",IDC_IO_IN12,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    151,77,8,8
+    CONTROL         "13",IDC_IO_IN13,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    151,89,8,8
+    CONTROL         "14",IDC_IO_IN14,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    151,101,8,8
+    CONTROL         "15",IDC_IO_IN15,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    151,113,8,8
+    CTEXT           "",IDC_LABEL_INPUT1,16,41,125,9,SS_CENTERIMAGE
+    CTEXT           "",IDC_LABEL_INPUT2,16,53,125,9,SS_CENTERIMAGE
+    CTEXT           "",IDC_LABEL_INPUT3,16,65,125,9,SS_CENTERIMAGE
+    CTEXT           "",IDC_LABEL_INPUT4,16,77,125,9,SS_CENTERIMAGE
+    CTEXT           "",IDC_LABEL_INPUT5,16,89,125,9,SS_CENTERIMAGE
+    CTEXT           "",IDC_LABEL_INPUT6,16,101,125,9,SS_CENTERIMAGE
+    CTEXT           "",IDC_LABEL_INPUT7,16,113,125,9,SS_CENTERIMAGE
+    CTEXT           "",IDC_LABEL_INPUT8,162,29,125,9,SS_CENTERIMAGE
+    CTEXT           "",IDC_LABEL_INPUT9,162,41,125,9,SS_CENTERIMAGE
+    CTEXT           "",IDC_LABEL_INPUT10,162,53,125,9,SS_CENTERIMAGE
+    CTEXT           "",IDC_LABEL_INPUT11,162,65,125,9,SS_CENTERIMAGE
+    CTEXT           "",IDC_LABEL_INPUT12,162,77,125,9,SS_CENTERIMAGE
+    CTEXT           "",IDC_LABEL_INPUT13,162,89,125,9,SS_CENTERIMAGE
+    CTEXT           "",IDC_LABEL_INPUT14,162,101,125,9,SS_CENTERIMAGE
+    CTEXT           "",IDC_LABEL_INPUT15,162,113,125,9,SS_CENTERIMAGE
+    CTEXT           "",IDC_LABEL_INPUT0,16,29,125,9,SS_CENTERIMAGE
+    CTEXT           "",IDC_LABEL_OUTPUT15,162,213,125,9,SS_CENTERIMAGE
+    CTEXT           "",IDC_LABEL_OUTPUT1,16,141,125,9,SS_CENTERIMAGE
+    CTEXT           "",IDC_LABEL_OUTPUT2,16,153,125,9,SS_CENTERIMAGE
+    CTEXT           "",IDC_LABEL_OUTPUT3,16,165,125,9,SS_CENTERIMAGE
+    CTEXT           "",IDC_LABEL_OUTPUT4,16,177,125,9,SS_CENTERIMAGE
+    CTEXT           "",IDC_LABEL_OUTPUT5,16,189,125,9,SS_CENTERIMAGE
+    CTEXT           "",IDC_LABEL_OUTPUT6,16,201,125,9,SS_CENTERIMAGE
+    CTEXT           "",IDC_LABEL_OUTPUT7,16,213,125,9,SS_CENTERIMAGE
+    CTEXT           "",IDC_LABEL_OUTPUT8,162,129,125,9,SS_CENTERIMAGE
+    CTEXT           "",IDC_LABEL_OUTPUT9,162,141,125,9,SS_CENTERIMAGE
+    CTEXT           "",IDC_LABEL_OUTPUT10,162,153,125,9,SS_CENTERIMAGE
+    CTEXT           "",IDC_LABEL_OUTPUT11,162,165,125,9,SS_CENTERIMAGE
+    CTEXT           "",IDC_LABEL_OUTPUT12,162,177,125,9,SS_CENTERIMAGE
+    CTEXT           "",IDC_LABEL_OUTPUT13,162,189,125,9,SS_CENTERIMAGE
+    CTEXT           "",IDC_LABEL_OUTPUT14,162,201,125,9,SS_CENTERIMAGE
+    CTEXT           "",IDC_LABEL_OUTPUT0,16,129,125,9,SS_CENTERIMAGE
+END
+
+IDD_DIALOG_TAB_M_MOTION DIALOG DISCARDABLE  0, 0, 300, 230
+STYLE WS_POPUP | WS_VISIBLE | WS_BORDER
+FONT 10, "System"
+BEGIN
+    COMBOBOX        IDC_COMBO1,245,211,48,30,CBS_DROPDOWN | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    CTEXT           "300*230",IDC_LABEL_IO,7,7,286,12,SS_CENTERIMAGE | 
+                    WS_BORDER
+END
+
+IDD_CAMERA_CONTROL DIALOGEX 0, 0, 231, 94
+STYLE DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Camera control"
+FONT 10, "System", 0, 0, 0x1
+BEGIN
+    LTEXT           "CAMERA ID",IDC_STATIC_SELECT_CAMERA,2,3,63,14,
+                    SS_CENTERIMAGE,WS_EX_DLGMODALFRAME
+    LTEXT           "BRIGHTNESS",IDC_STATIC_CAMCTL1,2,20,63,14,
+                    SS_CENTERIMAGE,WS_EX_DLGMODALFRAME
+    LTEXT           "SHARPNESS",IDC_STATIC_CAMCTL2,2,35,63,14,SS_CENTERIMAGE,
+                    WS_EX_DLGMODALFRAME
+    LTEXT           "GAMMA",IDC_STATIC_CAMCTL3,2,49,63,14,SS_CENTERIMAGE,
+                    WS_EX_DLGMODALFRAME
+    LTEXT           "SHUTTER",IDC_STATIC_CAMCTL4,2,63,63,14,SS_CENTERIMAGE,
+                    WS_EX_DLGMODALFRAME
+    LTEXT           "GAIN",IDC_STATIC_CAMCTL5,2,77,63,14,SS_CENTERIMAGE,
+                    WS_EX_DLGMODALFRAME
+    LTEXT           "",IDC_STATIC_CAMCTLEX1,66,20,63,14,SS_CENTERIMAGE | 
+                    SS_SUNKEN
+    LTEXT           "",IDC_STATIC_CAMCTLEX2,66,35,63,14,SS_CENTERIMAGE | 
+                    SS_SUNKEN
+    LTEXT           "",IDC_STATIC_CAMCTLEX3,66,49,63,14,SS_CENTERIMAGE | 
+                    SS_SUNKEN
+    LTEXT           "",IDC_STATIC_CAMCTLEX4,66,63,63,14,SS_CENTERIMAGE | 
+                    SS_SUNKEN
+    LTEXT           "",IDC_STATIC_CAMCTLEX5,66,77,63,14,SS_CENTERIMAGE | 
+                    SS_SUNKEN
+    COMBOBOX        IDC_COMBO_CAMERA,65,3,66,12,CBS_DROPDOWN | WS_VSCROLL | 
+                    WS_TABSTOP
+    EDITTEXT        IDC_EDIT_CAMCTRL1,130,20,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_CAMCTRL2,130,35,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_CAMCTRL3,130,49,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_CAMCTRL4,130,63,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_CAMCTRL5,130,77,40,14,ES_AUTOHSCROLL
+    CONTROL         "Spin1",IDC_SPIN_CAMCTRL1,"msctls_updown32",
+                    UDS_ARROWKEYS,170,20,10,14
+    CONTROL         "Spin1",IDC_SPIN_CAMCTRL2,"msctls_updown32",
+                    UDS_ARROWKEYS,170,35,10,14
+    CONTROL         "Spin1",IDC_SPIN_CAMCTRL3,"msctls_updown32",
+                    UDS_ARROWKEYS,170,49,10,14
+    CONTROL         "Spin1",IDC_SPIN_CAMCTRL4,"msctls_updown32",
+                    UDS_ARROWKEYS,170,63,10,14
+    CONTROL         "Spin1",IDC_SPIN_CAMCTRL5,"msctls_updown32",
+                    UDS_ARROWKEYS,170,77,10,14
+    PUSHBUTTON      "DEFAULT",IDC_BUTTON_SETDEFAULT1,179,20,50,14
+    PUSHBUTTON      "DEFAULT",IDC_BUTTON_SETDEFAULT2,179,35,50,14
+    PUSHBUTTON      "DEFAULT",IDC_BUTTON_SETDEFAULT3,179,49,50,14
+    PUSHBUTTON      "DEFAULT",IDC_BUTTON_SETDEFAULT4,179,63,50,14
+    PUSHBUTTON      "DEFAULT",IDC_BUTTON_SETDEFAULT5,179,77,50,14
+END
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,2
+ PRODUCTVERSION 1,0,0,2
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "041204b0"
+        BEGIN
+            VALUE "Comments", "\0"
+            VALUE "CompanyName", "Hanra Precision Co.,LTD.\0"
+            VALUE "FileDescription", "HVSystem MFC 응용 프로그램\0"
+            VALUE "FileVersion", "1, 0, 0, 2\0"
+            VALUE "InternalName", "HVSystem\0"
+            VALUE "LegalCopyright", "Copyright (C) 2002\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "HVSystem.EXE\0"
+            VALUE "PrivateBuild", "\0"
+            VALUE "ProductName", "HVSystem 응용 프로그램\0"
+            VALUE "ProductVersion", "1, 0, 0, 2\0"
+            VALUE "SpecialBuild", "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x412, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 48
+    END
+
+    IDD_DIALOG_TABSETUP, DIALOG
+    BEGIN
+        LEFTMARGIN, 2
+    END
+
+    IDD_DIALOG_MOVE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 173
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 70
+    END
+
+    IDD_DIALOG_MESSAGE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 180
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 91
+    END
+
+    IDD_IMG3_DISPLAY, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 180
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 87
+    END
+
+    IDD_DIALOG_TAB_M_BASE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 274
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 236
+    END
+
+    IDD_DIALOG_TAB_M_IO, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 293
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 223
+    END
+
+    IDD_DIALOG_TAB_M_MOTION, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 293
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 223
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_DIALOG_TABETC DLGINIT
+BEGIN
+    IDC_COMBO1, 0x403, 5, 0
+0x4f4e, 0x454e, "\000" 
+    IDC_COMBO1, 0x403, 4, 0
+0x454b, 0x0059, 
+    IDC_COMBO1, 0x403, 5, 0
+0x4f43, 0x314d, "\000" 
+    IDC_COMBO1, 0x403, 5, 0
+0x4f43, 0x324d, "\000" 
+    IDC_COMBO1, 0x403, 5, 0
+0x4f43, 0x334d, "\000" 
+    IDC_COMBO1, 0x403, 5, 0
+0x4f43, 0x344d, "\000" 
+    IDC_COMBO1, 0x403, 5, 0
+0x4f43, 0x354d, "\000" 
+    IDC_COMBO1, 0x403, 5, 0
+0x4f43, 0x364d, "\000" 
+    IDC_COMBO2, 0x403, 9, 0
+0x6641, 0x6574, 0x2072, 0x5655, "\000" 
+    IDC_COMBO2, 0x403, 10, 0
+0x6542, 0x6f66, 0x6572, 0x5520, 0x0056, 
+    IDC_COMBO2, 0x403, 5, 0
+0x6f42, 0x6874, "\000" 
+    0
+END
+
+IDD_CAMERA_CONTROL DLGINIT
+BEGIN
+    IDC_COMBO_CAMERA, 0x403, 10, 0
+0x6542, 0x6d61, 0x4120, 0x6978, 0x0073, 
+    IDC_COMBO_CAMERA, 0x403, 18, 0
+0x6542, 0x6d61, 0x4420, 0x7369, 0x7274, 0x6269, 0x7475, 0x6f69, 0x006e, 
+
+    IDC_COMBO_CAMERA, 0x403, 15, 0
+0x6e49, 0x696c, 0x656e, 0x5020, 0x7461, 0x6574, 0x6e72, "\000" 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE PRELOAD DISCARDABLE 
+BEGIN
+    IDR_MAINFRAME           "HVSystem\n\nHVSyst\n\n\nHVSystem.Document\nHVSyst Document"
+END
+
+STRINGTABLE PRELOAD DISCARDABLE 
+BEGIN
+    AFX_IDS_APP_TITLE       "HVSystem"
+    AFX_IDS_IDLEMESSAGE     "준비"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_INDICATOR_EXT        "EXT"
+    ID_INDICATOR_CAPS       "CAP"
+    ID_INDICATOR_NUM        "NUM"
+    ID_INDICATOR_SCRL       "SCRL"
+    ID_INDICATOR_OVR        "OVR"
+    ID_INDICATOR_REC        "REC"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_FILE_NEW             "새 문서를 작성합니다\n새 파일"
+    ID_FILE_OPEN            "기존 문서를 엽니다\n열기"
+    ID_FILE_CLOSE           "현재 열린 문서를 닫습니다\n닫기"
+    ID_FILE_SAVE            "현재 열린 문서를 저장합니다\n저장"
+    ID_FILE_SAVE_AS         "현재 열린 문서를 다른 이름으로 저장합니다\n다른 이름으로 저장"
+    ID_FILE_PAGE_SETUP      "인쇄 옵션을 변경합니다\n쪽 설정"
+    ID_FILE_PRINT_SETUP     "프린터와 인쇄 옵션을 변경합니다\n인쇄 설정"
+    ID_FILE_PRINT           "현재 열린 문서를 인쇄합니다\n인쇄"
+    ID_FILE_PRINT_PREVIEW   "쪽 전체를 표시합니다\n인쇄 미리 보기"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_APP_ABOUT            "프로그램 정보와 버전 정보, 저작권 정보를 표시합니다\n정보"
+    ID_APP_EXIT             "응용 프로그램을 종료하기 위해 문서를 저장할 것인지 묻습니다\n종료"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_FILE_MRU_FILE1       "이 문서를 엽니다"
+    ID_FILE_MRU_FILE2       "이 문서를 엽니다"
+    ID_FILE_MRU_FILE3       "이 문서를 엽니다"
+    ID_FILE_MRU_FILE4       "이 문서를 엽니다"
+    ID_FILE_MRU_FILE5       "이 문서를 엽니다"
+    ID_FILE_MRU_FILE6       "이 문서를 엽니다"
+    ID_FILE_MRU_FILE7       "이 문서를 엽니다"
+    ID_FILE_MRU_FILE8       "이 문서를 엽니다"
+    ID_FILE_MRU_FILE9       "이 문서를 엽니다"
+    ID_FILE_MRU_FILE10      "이 문서를 엽니다"
+    ID_FILE_MRU_FILE11      "이 문서를 엽니다"
+    ID_FILE_MRU_FILE12      "이 문서를 엽니다"
+    ID_FILE_MRU_FILE13      "이 문서를 엽니다"
+    ID_FILE_MRU_FILE14      "이 문서를 엽니다"
+    ID_FILE_MRU_FILE15      "이 문서를 엽니다"
+    ID_FILE_MRU_FILE16      "이 문서를 엽니다"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_NEXT_PANE            "다음 창으로 전환합니다\n다음 창"
+    ID_PREV_PANE            "이전 창으로 전환합니다\n이전 창"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_WINDOW_SPLIT         "현재 열린 창을 나눕니다\n나누기"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_EDIT_CLEAR           "선택 부분을 지웁니다\n지우기"
+    ID_EDIT_CLEAR_ALL       "모든 것을 지웁니다\n모두 지우기"
+    ID_EDIT_COPY            "선택 부분을 복사하여 클립보드에 넣습니다\n복사"
+    ID_EDIT_CUT             "선택 부분을 잘라내어 클립보드에 넣습니다\n잘라내기"
+    ID_EDIT_FIND            "지정한 문자열을 찾습니다\n찾기"
+    ID_EDIT_PASTE           "클립보드의 내용을 붙여 넣습니다\n붙여넣기"
+    ID_EDIT_REPEAT          "마지막으로 실행한 동작을 반복합니다\n반복"
+    ID_EDIT_REPLACE         "지정한 문자열을 다른 문자열로 바꿉니다\n바꾸기"
+    ID_EDIT_SELECT_ALL      "문서 전체를 선택합니다\n전체 선택"
+    ID_EDIT_UNDO            "마지막으로 한 동작을 취소합니다\n실행 취소"
+    ID_EDIT_REDO            "이전에 취소한 동작을 다시 수행합니다\n다시 실행"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_VIEW_TOOLBAR         "도구 모음을 보이거나 감춥니다\n도구 모음 전환"
+    ID_VIEW_STATUS_BAR      "상태 표시줄을 표시하거나 감춥니다\n상태 표시줄 전환"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    AFX_IDS_SCSIZE          "창의 크기를 변경합니다"
+    AFX_IDS_SCMOVE          "창의 위치를 변경합니다"
+    AFX_IDS_SCMINIMIZE      "창을 아이콘으로 줄여서 표시합니다"
+    AFX_IDS_SCMAXIMIZE      "창을 최대 크기로 확장합니다"
+    AFX_IDS_SCNEXTWINDOW    "다음 문서 창으로 전환합니다"
+    AFX_IDS_SCPREVWINDOW    "이전 문서 창으로 전환합니다"
+    AFX_IDS_SCCLOSE         "현재 열린 창을 닫고 문서를 저장할 것인지를 묻습니다"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    AFX_IDS_SCRESTORE       "창을 원래 크기로 복원합니다"
+    AFX_IDS_SCTASKLIST      "작업 목록을 활성화합니다"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    AFX_IDS_PREVIEW_CLOSE   "인쇄 미리 보기 모드를 닫습니다\n미리 보기 취소"
+END
+
+#endif    // Korean resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_KOR)
+#ifdef _WIN32
+LANGUAGE 18, 1
+#pragma code_page(949)
+#endif //_WIN32
+#include "res\HVSystem.rc2"  // non-Microsoft Visual C++ edited resources
+#include "l.kor\afxres.rc"          // Standard components
+#include "l.kor\afxprint.rc"        // printing/print preview resources
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

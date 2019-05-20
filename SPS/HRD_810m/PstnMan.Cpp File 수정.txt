@@ -1,0 +1,33 @@
+
+PstnMan.Cpp File
+
+void CPstnMan::UpdatePstn(bool _bToTable)
+{
+    if(_bToTable) {
+        for(int m = 0 ; m < MAX_MOTR ; m++) {
+            for(int i = 0 ; i < PSTN_CNT[m] ; i++) {
+                m_pPstnList[m] -> Cells[0][i] = (Value[m][i].sName != ""  ) ?             Value[m][i].sName  : "NoName"+(AnsiString)i;
+                m_pPstnList[m] -> Cells[1][i] = (Value[m][i].dValue != 0.0) ? (AnsiString)Value[m][i].dValue : (AnsiString)"0.0"     ;
+            }
+        }
+    }
+
+    else {
+        for(int m = 0 ; m < MAX_MOTR ; m++) {
+            for(int i = 0 ; i < PSTN_CNT[m] ; i++) {
+                if(Value[m][i].iType != vtOffset){
+                         if(m_pPstnList[m] -> Cells[1][i].ToDouble() > MT_GetMaxPos(m)){ FM_MsgOk("Warnning" , "Motor Max Position is larger than Move Position.");}
+                    else if(m_pPstnList[m] -> Cells[1][i].ToDouble() < MT_GetMinPos(m)){ FM_MsgOk("Warnning" , "Motor Min Position is small than Move Position." );}
+                    else {
+                        Value[m][i].sName  = m_pPstnList[m] -> Cells[0][i]           ;
+                        Value[m][i].dValue = m_pPstnList[m] -> Cells[1][i].ToDouble();
+                    }
+                }
+                else {
+                    Value[m][i].sName  = m_pPstnList[m] -> Cells[0][i]           ;
+                    Value[m][i].dValue = m_pPstnList[m] -> Cells[1][i].ToDouble();
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,25 @@
+//---------------------------------------------------------------------------
+
+#ifndef FormInformH
+#define FormInformH
+//---------------------------------------------------------------------------
+#include <Classes.hpp>
+#include <Controls.hpp>
+#include <StdCtrls.hpp>
+#include <Forms.hpp>
+#include <ExtCtrls.hpp>
+#include <Graphics.hpp>
+//---------------------------------------------------------------------------
+class TFrmInform : public TForm
+{
+__published:	// IDE-managed Components
+    TImage *Image1;
+    TLabel *lbExplain;
+private:	// User declarations
+public:		// User declarations
+        __fastcall TFrmInform(TComponent* Owner);
+};
+//---------------------------------------------------------------------------
+extern PACKAGE TFrmInform *FrmMapPara;
+//---------------------------------------------------------------------------
+#endif

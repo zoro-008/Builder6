@@ -1,0 +1,227 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<!-- C++Builder XML Project -->
+<PROJECT>
+  <MACROS>
+    <VERSION value="BCB.06.00"/>
+    <PROJECT value=".\bin\TCosmos3_Motion.exe"/>
+    <OBJFILES value="obj\TCosmos3_Motion.obj obj\Axt_DIO.obj obj\IOs.obj obj\Actuators.obj 
+      obj\Axt_FS20.obj obj\Motors.obj obj\UserIni.obj obj\UserFile.obj 
+      obj\ErrMan.obj obj\FormMain.obj obj\FormErr.obj obj\FormPassword.obj 
+      obj\FormMsgOk.obj obj\FormMsgYesNo.obj obj\FormMode.obj 
+      obj\FormErrList.obj obj\FormDisplay.obj obj\FormUpdate.obj 
+      obj\UtilEnums.obj obj\DpDataUnit.obj obj\TimeProc.obj obj\PstnMan.obj 
+      obj\OptionMan.obj obj\WorkTable.obj obj\Sequence.obj obj\uRs232c.obj 
+      obj\LogUnit.obj"/>
+    <RESFILES value="TCosmos3_Motion.res led.res"/>
+    <DEFFILE value=""/>
+    <RESDEPEN value="$(RESFILES) FormMain.dfm FormErr.dfm FormPassword.dfm FormMsgOk.dfm 
+      FormMsgYesNo.dfm FormMode.dfm FormErrList.dfm FormDisplay.dfm FormUpdate.dfm"/>
+    <LIBFILES value="Library\AXTLIB.lib Lib\Hanra\SLDll.lib"/>
+    <LIBRARIES value=""/>
+    <SPARELIBS value="vcl.lib rtl.lib vclx.lib visualclx.lib"/>
+    <PACKAGES value="vcl.bpi rtl.bpi vclx.bpi bcbsmp.bpi dbrtl.bpi adortl.bpi vcldb.bpi 
+      qrpt.bpi bdertl.bpi vcldbx.bpi dsnap.bpi cds.bpi bdecds.bpi teeui.bpi 
+      teedb.bpi tee.bpi teeqr.bpi ibxpress.bpi visualclx.bpi visualdbclx.bpi 
+      vclie.bpi xmlrtl.bpi inet.bpi inetdbbde.bpi inetdbxpress.bpi inetdb.bpi 
+      nmfast.bpi bcbie.bpi soaprtl.bpi dclocx.bpi dbexpress.bpi dbxcds.bpi 
+      indy.bpi bcb2kaxserver.bpi"/>
+    <PATHCPP value=".;"/>
+    <PATHPAS value=".;"/>
+    <PATHRC value=".;"/>
+    <PATHASM value=".;"/>
+    <DEBUGLIBPATH value="$(BCB)\lib\debug"/>
+    <RELEASELIBPATH value="$(BCB)\lib\release"/>
+    <LINKER value="ilink32"/>
+    <USERDEFINES value="_DEBUG"/>
+    <SYSDEFINES value="_RTLDLL;NO_STRICT;USEPACKAGES"/>
+    <MAINSOURCE value="TCosmos3_Motion.cpp"/>
+    <INCLUDEPATH value="..;Bin\Util;Include\Hanra;Lib\Hanra;&quot;C:\Program Files\Borland\CBuilder6\Projects&quot;;D:\BC6Works\TCm3_Motion;$(BCB)\include;$(BCB)\include\vcl;D:\BC6Works\TCm3_Motion\Include\AXT"/>
+    <LIBPATH value="..;Bin\Util;Include\Hanra;Lib\Hanra;&quot;C:\Program Files\Borland\CBuilder6\Projects&quot;;D:\BC6Works\TCm3_Motion;$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib;D:\BC6Works\TCm3_Motion\Lib\AXT;D:\BC6Works\TCm3_Motion\Lib"/>
+    <WARNINGS value="-w-par"/>
+    <OTHERFILES value=""/>
+  </MACROS>
+  <OPTIONS>
+    <CFLAG1 value="-Od -H=$(BCB)\lib\vcl60.csm -Hc -Vx -Ve -X- -r- -a8 -b- -k -y -v -vi- -c 
+      -tW -tWM"/>
+    <PFLAGS value="-N2.\obj -N0.\obj -$YD -$W -$O- -$A8 -v -JPHNE -M"/>
+    <RFLAGS value=""/>
+    <AFLAGS value="/mx /w2 /zd"/>
+    <LFLAGS value="-I.\obj -D&quot;&quot; -aa -Tpe -x -Gn -v"/>
+    <OTHERFILES value=""/>
+  </OPTIONS>
+  <LINKER>
+    <ALLOBJ value="c0w32.obj $(PACKAGES) Memmgr.Lib sysinit.obj $(OBJFILES)"/>
+    <ALLRES value="$(RESFILES)"/>
+    <ALLLIB value="$(LIBFILES) $(LIBRARIES) import32.lib cp32mti.lib"/>
+    <OTHERFILES value=""/>
+  </LINKER>
+  <FILELIST>
+      <FILE FILENAME="TCosmos3_Motion.res" FORMNAME="" UNITNAME="TCosmos3_Motion.res" CONTAINERID="ResTool" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="TCosmos3_Motion.cpp" FORMNAME="" UNITNAME="TCosmos3_Motion" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Library\AXTLIB.lib" FORMNAME="" UNITNAME="AXTLIB.lib" CONTAINERID="LibTool" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Lib\Hanra\SLDll.lib" FORMNAME="" UNITNAME="SLDll.lib" CONTAINERID="LibTool" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Include\Hanra\SLogUnit.h" FORMNAME="" UNITNAME="SLogUnit.h" CONTAINERID="" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="led.res" FORMNAME="" UNITNAME="led.res" CONTAINERID="ResTool" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Timer.h" FORMNAME="" UNITNAME="Timer.h" CONTAINERID="" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Axt_DIO.cpp" FORMNAME="" UNITNAME="Axt_DIO" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="IOs.cpp" FORMNAME="" UNITNAME="IOs" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Actuators.cpp" FORMNAME="" UNITNAME="Actuators" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Axt_FS20.cpp" FORMNAME="" UNITNAME="Axt_FS20" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Motors.cpp" FORMNAME="" UNITNAME="Motors" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="UserIni.cpp" FORMNAME="" UNITNAME="UserIni.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="UserFile.cpp" FORMNAME="" UNITNAME="UserFile.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="ErrMan.cpp" FORMNAME="" UNITNAME="ErrMan" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="TEdit.h" FORMNAME="" UNITNAME="TEdit.h" CONTAINERID="" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="FormMain.cpp" FORMNAME="FrmMain" UNITNAME="FormMain" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="FormErr.cpp" FORMNAME="FrmErr" UNITNAME="FormErr" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="FormPassword.cpp" FORMNAME="FrmPassword" UNITNAME="FormPassword" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="FormMsgOk.cpp" FORMNAME="FrmMsgOk" UNITNAME="FormMsgOk" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="FormMsgYesNo.cpp" FORMNAME="FrmMsgYesNo" UNITNAME="FormMsgYesNo" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="FormMode.cpp" FORMNAME="FrmMode" UNITNAME="FormMode" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="FormErrList.cpp" FORMNAME="FrmErrList" UNITNAME="FormErrList" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="FormDisplay.cpp" FORMNAME="FrmDisplay" UNITNAME="FormDisplay" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="FormUpdate.cpp" FORMNAME="FrmUpdate" UNITNAME="FormUpdate" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="UtilEnums.h" FORMNAME="" UNITNAME="UtilEnums" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="DpDataUnit.cpp" FORMNAME="" UNITNAME="DpDataUnit" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="TimeProc.cpp" FORMNAME="" UNITNAME="TimeProc.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="PstnMan.cpp" FORMNAME="" UNITNAME="PstnMan" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="OptionMan.cpp" FORMNAME="" UNITNAME="OptionMan" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="WorkTable.cpp" FORMNAME="" UNITNAME="WorkTable" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Sequence.cpp" FORMNAME="" UNITNAME="Sequence.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="uRs232c.cpp" FORMNAME="" UNITNAME="uRs232c" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="LogUnit.cpp" FORMNAME="" UNITNAME="LogUnit" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Bin\Util\Actuator.INI" FORMNAME="" UNITNAME="Actuator.INI" CONTAINERID="" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Bin\Util\Err.INI" FORMNAME="" UNITNAME="Err.INI" CONTAINERID="" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Bin\Util\Input.INI" FORMNAME="" UNITNAME="Input.INI" CONTAINERID="" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Bin\Util\Output.INI" FORMNAME="" UNITNAME="Output.INI" CONTAINERID="" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Bin\Util\Motor_0_Para.INI" FORMNAME="" UNITNAME="Motor_0_Para.INI" CONTAINERID="" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Bin\Util\Motor_1_Para.INI" FORMNAME="" UNITNAME="Motor_1_Para.INI" CONTAINERID="" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Bin\Util\Motor_2_Para.INI" FORMNAME="" UNITNAME="Motor_2_Para.INI" CONTAINERID="" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Bin\Util\Motor_3_Para.INI" FORMNAME="" UNITNAME="Motor_3_Para.INI" CONTAINERID="" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Bin\Util\Motor_4_Para.INI" FORMNAME="" UNITNAME="Motor_4_Para.INI" CONTAINERID="" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Bin\Util\Motor_5_Para.INI" FORMNAME="" UNITNAME="Motor_5_Para.INI" CONTAINERID="" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Bin\Util\DmnVar.INI" FORMNAME="" UNITNAME="DmnVar.INI" CONTAINERID="" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Bin\Util\RS_232.INI" FORMNAME="" UNITNAME="RS_232.INI" CONTAINERID="" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Bin\JobFile\None\Left_Table_In_Pos.INI" FORMNAME="" UNITNAME="Left_Table_In_Pos.INI" CONTAINERID="" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Bin\JobFile\None\Left_Table_Y_Pos.INI" FORMNAME="" UNITNAME="Left_Table_Y_Pos.INI" CONTAINERID="" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Bin\JobFile\None\Right_Table_In_Pos.INI" FORMNAME="" UNITNAME="Right_Table_In_Pos.INI" CONTAINERID="" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Bin\JobFile\None\Right_Table_Y_Pos.INI" FORMNAME="" UNITNAME="Right_Table_Y_Pos.INI" CONTAINERID="" DESIGNCLASS="" LOCALCOMMAND=""/>
+  </FILELIST>
+  <BUILDTOOLS>
+  </BUILDTOOLS>
+
+  <IDEOPTIONS>
+[Version Info]
+IncludeVerInfo=1
+AutoIncBuild=1
+MajorVer=1
+MinorVer=3
+Release=0
+Build=0
+Debug=0
+PreRelease=0
+Special=0
+Private=0
+DLL=0
+Locale=1042
+CodePage=949
+
+[Version Info Keys]
+CompanyName=
+FileDescription=
+FileVersion=1.3.0.0
+InternalName=
+LegalCopyright=
+LegalTrademarks=
+OriginalFilename=
+ProductName=
+ProductVersion=1.0.0.0
+Comments=
+
+[HistoryLists\hlIncludePath]
+Count=14
+Item0=..;Bin\Util;Include\Hanra;Lib\Hanra;C:\Program Files\Borland\CBuilder6\Projects;D:\BC6Works\TCm3_Motion;$(BCB)\include;$(BCB)\include\vcl;D:\BC6Works\TCm3_Motion\Include\AXT
+Item1=..;D:\Works\JAI2007;Bin\Util;D:\Works\Eagle\BMP;Include\Hanra;Lib\Hanra;C:\Program Files\Borland\CBuilder6\Projects;D:\BC6Works\TCm3_Motion;$(BCB)\include;$(BCB)\include\vcl;D:\BC6Works\TCm3_Motion\Include\AXT
+Item2=..\;D:\Works\JAI2007;Bin\Util;D:\Works\Eagle\BMP;Include\Hanra;Lib\Hanra;C:\Program Files\Borland\CBuilder6\Projects;D:\BC6Works\TCm3_Motion;$(BCB)\include;$(BCB)\include\vcl;D:\BC6Works\TCm3_Motion\Include\AXT
+Item3=D:\Works\JAI2007;Bin\Util;D:\Works\Eagle\BMP;Include\Hanra;Lib\Hanra;C:\Program Files\Borland\CBuilder6\Projects;D:\BC6Works\TCm3_Motion;$(BCB)\include;$(BCB)\include\vcl;D:\BC6Works\TCm3_Motion\Include\AXT
+Item4=Bin\Util;D:\Works\Eagle\BMP;Include\Hanra;Lib\Hanra;C:\Program Files\Borland\CBuilder6\Projects;D:\BC6Works\TCm3_Motion;$(BCB)\include;$(BCB)\include\vcl;D:\BC6Works\TCm3_Motion\Include\AXT
+Item5=D:\Works\Eagle\BMP;Include\Hanra;Lib\Hanra;C:\Program Files\Borland\CBuilder6\Projects;D:\BC6Works\TCm3_Motion;$(BCB)\include;$(BCB)\include\vcl;D:\BC6Works\TCm3_Motion\Include\AXT
+Item6=Include\Hanra;Lib\Hanra;C:\Program Files\Borland\CBuilder6\Projects;D:\BC6Works\TCm3_Motion;$(BCB)\include;$(BCB)\include\vcl;D:\BC6Works\TCm3_Motion\Include\AXT;D:\BC6Works\TCm3_Motion\Include\Hanra
+Item7=C:\Documents and Settings\선계원\바탕 화면;Include\Hanra;Lib\Hanra;C:\Program Files\Borland\CBuilder6\Projects;D:\BC6Works\TCm3_Motion;$(BCB)\include;$(BCB)\include\vcl;D:\BC6Works\TCm3_Motion\Include\AXT;D:\BC6Works\TCm3_Motion\Include\Hanra
+Item8=C:\Program Files\Borland\CBuilder6\Projects;D:\BC6Works\TCm3_Motion;$(BCB)\include;$(BCB)\include\vcl;D:\BC6Works\TCm3_Motion\Include\AXT;D:\BC6Works\TCm3_Motion\Include\Hanra
+Item9=C:\Program Files\Borland\CBuilder6\Projects;D:\BC6Works\TCm3_Motion;$(BCB)\include;$(BCB)\include\vcl;D:\BC6Works\TCm3_Motion\Include\AXT
+Item10=C:\Program Files\Borland\CBuilder6\Projects;D:\BC6Works\TCm3_Motion;$(BCB)\include;$(BCB)\include\vcl;D:\BC6Works\TCm3_Motion\include
+Item11=C:\Program Files\Borland\CBuilder6\Projects;D:\Works\TCm3_Motion;$(BCB)\include;$(BCB)\include\vcl;D:\Works\TCm3_Motion\include
+Item12=C:\Program Files\Borland\CBuilder6\Projects;D:\Works\AjinLibTest;$(BCB)\include;$(BCB)\include\vcl;D:\Works\AjinLibTest\include
+Item13=C:\Program Files\Borland\CBuilder6\Projects;D:\Works\AjinLibTest;$(BCB)\include;$(BCB)\include\vcl
+
+[HistoryLists\hlLibraryPath]
+Count=15
+Item0=..;Bin\Util;Include\Hanra;Lib\Hanra;C:\Program Files\Borland\CBuilder6\Projects;D:\BC6Works\TCm3_Motion;$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib;D:\BC6Works\TCm3_Motion\Lib\AXT;D:\BC6Works\TCm3_Motion\Lib
+Item1=..;D:\Works\JAI2007;Bin\Util;Include\Hanra;Lib\Hanra;C:\Program Files\Borland\CBuilder6\Projects;D:\BC6Works\TCm3_Motion;$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib;D:\BC6Works\TCm3_Motion\Lib\AXT;D:\BC6Works\TCm3_Motion\Lib
+Item2=..\;D:\Works\JAI2007;Bin\Util;Include\Hanra;Lib\Hanra;C:\Program Files\Borland\CBuilder6\Projects;D:\BC6Works\TCm3_Motion;$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib;D:\BC6Works\TCm3_Motion\Lib\AXT;D:\BC6Works\TCm3_Motion\Lib
+Item3=D:\Works\JAI2007;Bin\Util;Include\Hanra;Lib\Hanra;C:\Program Files\Borland\CBuilder6\Projects;D:\BC6Works\TCm3_Motion;$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib;D:\BC6Works\TCm3_Motion\Lib\AXT;D:\BC6Works\TCm3_Motion\Lib
+Item4=Bin\Util;Include\Hanra;Lib\Hanra;C:\Program Files\Borland\CBuilder6\Projects;D:\BC6Works\TCm3_Motion;$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib;D:\BC6Works\TCm3_Motion\Lib\AXT;D:\BC6Works\TCm3_Motion\Lib
+Item5=Bin\Util;D:\Works\Eagle\BMP;Include\Hanra;Lib\Hanra;C:\Program Files\Borland\CBuilder6\Projects;D:\BC6Works\TCm3_Motion;$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib;D:\BC6Works\TCm3_Motion\Lib\AXT
+Item6=D:\Works\Eagle\BMP;Include\Hanra;Lib\Hanra;C:\Program Files\Borland\CBuilder6\Projects;D:\BC6Works\TCm3_Motion;$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib;D:\BC6Works\TCm3_Motion\Lib\AXT
+Item7=Include\Hanra;Lib\Hanra;C:\Program Files\Borland\CBuilder6\Projects;D:\BC6Works\TCm3_Motion;$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib;D:\BC6Works\TCm3_Motion\Lib\AXT;D:\BC6Works\TCm3_Motion\Lib\Hanra
+Item8=C:\Documents and Settings\선계원\바탕 화면;Include\Hanra;Lib\Hanra;C:\Program Files\Borland\CBuilder6\Projects;D:\BC6Works\TCm3_Motion;$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib;D:\BC6Works\TCm3_Motion\Lib\AXT;D:\BC6Works\TCm3_Motion\Lib\Hanra
+Item9=C:\Program Files\Borland\CBuilder6\Projects;D:\BC6Works\TCm3_Motion;$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib;D:\BC6Works\TCm3_Motion\Lib\AXT;D:\BC6Works\TCm3_Motion\Lib\Hanra
+Item10=C:\Program Files\Borland\CBuilder6\Projects;D:\BC6Works\TCm3_Motion;$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib;D:\BC6Works\TCm3_Motion\Lib\AXT
+Item11=C:\Program Files\Borland\CBuilder6\Projects;D:\BC6Works\TCm3_Motion;$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib;D:\BC6Works\TCm3_Motion\Library
+Item12=C:\Program Files\Borland\CBuilder6\Projects;D:\Works\TCm3_Motion;$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib;D:\Works\TCm3_Motion\Library
+Item13=C:\Program Files\Borland\CBuilder6\Projects;D:\Works\AjinLibTest;$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib;D:\Works\AjinLibTest\Library
+Item14=C:\Program Files\Borland\CBuilder6\Projects;D:\Works\AjinLibTest;$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib
+
+[HistoryLists\hlDebugSourcePath]
+Count=1
+Item0=$(BCB)\source\vcl
+
+[HistoryLists\hlConditionals]
+Count=2
+Item0=_DEBUG
+Item1=_DEBUG;_INIT_INI_
+
+[HistoryLists\hlIntOutputDir]
+Count=4
+Item0=.\obj
+Item1=D:\BC6Works\TCm3_Motion\obj
+Item2=D:\Works\TCm3_Motion\obj
+Item3=D:\Works\AjinLibTest\obj
+
+[HistoryLists\hlFinalOutputDir]
+Count=7
+Item0=.\bin\
+Item1=.\bin
+Item2=D:\BC6Works\TCm3_Motion\bin\
+Item3=D:\Works\TCm3_Motion\bin\
+Item4=D:\Works\TCm3_Motion\bin
+Item5=D:\Works\AjinLibTest\bin\
+Item6=D:\Works\AjinLibTest\bin
+
+[Debugging]
+DebugSourceDirs=$(BCB)\source\vcl
+
+[Parameters]
+RunParams=
+Launcher=
+UseLauncher=0
+DebugCWD=
+HostApplication=
+RemoteHost=
+RemotePath=
+RemoteLauncher=
+RemoteCWD=
+RemoteDebug=0
+
+[Compiler]
+ShowInfoMsgs=0
+LinkDebugVcl=0
+LinkCGLIB=0
+
+[Language]
+ActiveLang=
+ProjectLang=
+RootDir=
+  </IDEOPTIONS>
+</PROJECT>

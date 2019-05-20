@@ -1,0 +1,190 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: HVSystem - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x412 /fo"Release/HVSystem.res" /d "NDEBUG" "D:\VC6Works\T3DualAuto\LDAnalysis_T_COSMOS3_Dual_Auto\HVSystem.rc"" 
+Creating temporary file "C:\DOCUME~1\sun\LOCALS~1\Temp\RSPC5.tmp" with contents
+[
+/nologo /MT /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_MBCS" /D "COMPILING_KFITTINGLL" /FR"Release/" /Fp"Release/HVSystem.pch" /Yu"stdafx.h" /Fo"Release/" /Fd"Release/" /FD /c 
+"D:\VC6Works\T3DualAuto\LDAnalysis_T_COSMOS3_Dual_Auto\DialogMessage.cpp"
+"D:\VC6Works\T3DualAuto\LDAnalysis_T_COSMOS3_Dual_Auto\HVSystem.cpp"
+"D:\VC6Works\T3DualAuto\LDAnalysis_T_COSMOS3_Dual_Auto\HVSystemDoc.cpp"
+"D:\VC6Works\T3DualAuto\LDAnalysis_T_COSMOS3_Dual_Auto\HVSystemView.cpp"
+"D:\VC6Works\T3DualAuto\LDAnalysis_T_COSMOS3_Dual_Auto\HVSystemView_Comm.cpp"
+"D:\VC6Works\T3DualAuto\LDAnalysis_T_COSMOS3_Dual_Auto\LogUnit.cpp"
+"D:\VC6Works\T3DualAuto\LDAnalysis_T_COSMOS3_Dual_Auto\MainFrm.cpp"
+"D:\VC6Works\T3DualAuto\GuiSrc\DisplayToGDI.cpp"
+"D:\VC6Works\T3DualAuto\GuiSrc\ListCtrlStyled.cpp"
+"D:\VC6Works\T3DualAuto\GuiSrc\StaticSkin.cpp"
+"D:\VC6Works\T3DualAuto\GuiSrc\xSkinButton.cpp"
+"D:\VC6Works\T3DualAuto\LDAnalysis_T_COSMOS3_Dual_Auto\HProjection.cpp"
+"D:\VC6Works\T3DualAuto\LDAnalysis_T_COSMOS3_Dual_Auto\ImgDisplay.cpp"
+"D:\VC6Works\T3DualAuto\LDAnalysis_T_COSMOS3_Dual_Auto\ImgDisplay2.cpp"
+"D:\VC6Works\T3DualAuto\LDAnalysis_T_COSMOS3_Dual_Auto\ImgDisplay3.cpp"
+"D:\VC6Works\T3DualAuto\LDAnalysis_T_COSMOS3_Dual_Auto\VProjection.cpp"
+"D:\VC6Works\T3DualAuto\LDAnalysis_T_COSMOS3_Dual_Auto\PasswdInput.cpp"
+"D:\VC6Works\T3DualAuto\LDAnalysis_T_COSMOS3_Dual_Auto\PasswdModify.cpp"
+"D:\VC6Works\T3DualAuto\LDAnalysis_T_COSMOS3_Dual_Auto\BottomBar.cpp"
+"D:\VC6Works\T3DualAuto\LDAnalysis_T_COSMOS3_Dual_Auto\CtrlWindow.cpp"
+"D:\VC6Works\T3DualAuto\LDAnalysis_T_COSMOS3_Dual_Auto\TitleBar.cpp"
+"D:\VC6Works\T3DualAuto\LDAnalysis_T_COSMOS3_Dual_Auto\xSkinButtonEx.cpp"
+"D:\VC6Works\T3DualAuto\LDAnalysis_T_COSMOS3_Dual_Auto\EtcWindow.cpp"
+"D:\VC6Works\T3DualAuto\LDAnalysis_T_COSMOS3_Dual_Auto\SetupWin.cpp"
+"D:\VC6Works\T3DualAuto\LDAnalysis_T_COSMOS3_Dual_Auto\3DModelWindow.cpp"
+"D:\VC6Works\T3DualAuto\LDAnalysis_T_COSMOS3_Dual_Auto\OpenGl3D.cpp"
+"D:\VC6Works\T3DualAuto\LDAnalysis_T_COSMOS3_Dual_Auto\TabWindow.cpp"
+"D:\VC6Works\T3DualAuto\LDAnalysis_T_COSMOS3_Dual_Auto\IoWindow.cpp"
+"D:\VC6Works\T3DualAuto\LDAnalysis_T_COSMOS3_Dual_Auto\AngleWindow.cpp"
+"D:\VC6Works\T3DualAuto\LDAnalysis_T_COSMOS3_Dual_Auto\CounterWindow.cpp"
+"D:\VC6Works\T3DualAuto\LDAnalysis_T_COSMOS3_Dual_Auto\CurrentData.cpp"
+"D:\VC6Works\T3DualAuto\LDAnalysis_T_COSMOS3_Dual_Auto\DataDisplay.cpp"
+"D:\VC6Works\T3DualAuto\LDAnalysis_T_COSMOS3_Dual_Auto\DisplayComm.cpp"
+"D:\VC6Works\T3DualAuto\LDAnalysis_T_COSMOS3_Dual_Auto\MoveArea.cpp"
+"D:\VC6Works\T3DualAuto\LDAnalysis_T_COSMOS3_Dual_Auto\OkNgWindow.cpp"
+"D:\VC6Works\T3DualAuto\GuiSrc\LineProc.cpp"
+"D:\VC6Works\T3DualAuto\LDAnalysis_T_COSMOS3_Dual_Auto\LineRoi.cpp"
+"D:\VC6Works\T3DualAuto\LDAnalysis_T_COSMOS3_Dual_Auto\PointRoi.cpp"
+"D:\VC6Works\T3DualAuto\LDAnalysis_T_COSMOS3_Dual_Auto\ROISet.cpp"
+"D:\VC6Works\T3DualAuto\LDAnalysis_T_COSMOS3_Dual_Auto\CommThread.cpp"
+"D:\VC6Works\T3DualAuto\LDAnalysis_T_COSMOS3_Dual_Auto\DialogTabMBase.cpp"
+"D:\VC6Works\T3DualAuto\LDAnalysis_T_COSMOS3_Dual_Auto\DialogTabMIO.cpp"
+"D:\VC6Works\T3DualAuto\LDAnalysis_T_COSMOS3_Dual_Auto\DialogTabMMotion.cpp"
+"D:\VC6Works\T3DualAuto\LDAnalysis_T_COSMOS3_Dual_Auto\iniPara.cpp"
+"D:\VC6Works\T3DualAuto\LDAnalysis_T_COSMOS3_Dual_Auto\SystemData.cpp"
+"D:\VC6Works\T3DualAuto\LDAnalysis_T_COSMOS3_Dual_Auto\CameraControl.cpp"
+"D:\VC6Works\T3DualAuto\LDAnalysis_T_COSMOS3_Dual_Auto\ImiTech.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\sun\LOCALS~1\Temp\RSPC5.tmp" 
+Creating temporary file "C:\DOCUME~1\sun\LOCALS~1\Temp\RSPC6.tmp" with contents
+[
+/nologo /MT /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_MBCS" /D "COMPILING_KFITTINGLL" /FR"Release/" /Fp"Release/HVSystem.pch" /Yc"stdafx.h" /Fo"Release/" /Fd"Release/" /FD /c 
+"D:\VC6Works\T3DualAuto\LDAnalysis_T_COSMOS3_Dual_Auto\StdAfx.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\sun\LOCALS~1\Temp\RSPC6.tmp" 
+Creating temporary file "C:\DOCUME~1\sun\LOCALS~1\Temp\RSPC7.tmp" with contents
+[
+/nologo /stack:0x1f3fc18 /subsystem:windows /incremental:no /pdb:"Release/TCosmos3DualAuto_Vision.pdb" /machine:I386 /out:"Release/TCosmos3DualAuto_Vision.exe" 
+.\Release\DialogMessage.obj
+.\Release\HVSystem.obj
+.\Release\HVSystemDoc.obj
+.\Release\HVSystemView.obj
+.\Release\HVSystemView_Comm.obj
+.\Release\LogUnit.obj
+.\Release\MainFrm.obj
+.\Release\DisplayToGDI.obj
+.\Release\ListCtrlStyled.obj
+.\Release\StaticSkin.obj
+.\Release\xSkinButton.obj
+.\Release\HProjection.obj
+.\Release\ImgDisplay.obj
+.\Release\ImgDisplay2.obj
+.\Release\ImgDisplay3.obj
+.\Release\VProjection.obj
+.\Release\PasswdInput.obj
+.\Release\PasswdModify.obj
+.\Release\BottomBar.obj
+.\Release\CtrlWindow.obj
+.\Release\TitleBar.obj
+.\Release\xSkinButtonEx.obj
+.\Release\EtcWindow.obj
+.\Release\SetupWin.obj
+.\Release\3DModelWindow.obj
+.\Release\OpenGl3D.obj
+.\Release\TabWindow.obj
+.\Release\IoWindow.obj
+.\Release\AngleWindow.obj
+.\Release\CounterWindow.obj
+.\Release\CurrentData.obj
+.\Release\DataDisplay.obj
+.\Release\DisplayComm.obj
+.\Release\MoveArea.obj
+.\Release\OkNgWindow.obj
+.\Release\StdAfx.obj
+.\Release\LineProc.obj
+.\Release\LineRoi.obj
+.\Release\PointRoi.obj
+.\Release\ROISet.obj
+.\Release\CommThread.obj
+.\Release\DialogTabMBase.obj
+.\Release\DialogTabMIO.obj
+.\Release\DialogTabMMotion.obj
+.\Release\iniPara.obj
+.\Release\SystemData.obj
+.\Release\CameraControl.obj
+.\Release\ImiTech.obj
+.\Release\HVSystem.res
+]
+Creating command line "link.exe @C:\DOCUME~1\sun\LOCALS~1\Temp\RSPC7.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+StdAfx.cpp
+Compiling...
+DialogMessage.cpp
+HVSystem.cpp
+HVSystemDoc.cpp
+HVSystemView.cpp
+D:\VC6Works\T3DualAuto\LDAnalysis_T_COSMOS3_Dual_Auto\HVSystemView.cpp(335) : warning C4101: 'stream' : unreferenced local variable
+D:\VC6Works\T3DualAuto\LDAnalysis_T_COSMOS3_Dual_Auto\HVSystemView.cpp(336) : warning C4101: 'LockKey' : unreferenced local variable
+D:\VC6Works\T3DualAuto\LDAnalysis_T_COSMOS3_Dual_Auto\HVSystemView.cpp(337) : warning C4101: 'numread' : unreferenced local variable
+HVSystemView_Comm.cpp
+LogUnit.cpp
+MainFrm.cpp
+DisplayToGDI.cpp
+ListCtrlStyled.cpp
+StaticSkin.cpp
+xSkinButton.cpp
+HProjection.cpp
+ImgDisplay.cpp
+ImgDisplay2.cpp
+ImgDisplay3.cpp
+VProjection.cpp
+PasswdInput.cpp
+PasswdModify.cpp
+BottomBar.cpp
+CtrlWindow.cpp
+Generating Code...
+Compiling...
+TitleBar.cpp
+xSkinButtonEx.cpp
+EtcWindow.cpp
+SetupWin.cpp
+3DModelWindow.cpp
+OpenGl3D.cpp
+TabWindow.cpp
+IoWindow.cpp
+AngleWindow.cpp
+CounterWindow.cpp
+CurrentData.cpp
+DataDisplay.cpp
+DisplayComm.cpp
+MoveArea.cpp
+OkNgWindow.cpp
+LineProc.cpp
+LineRoi.cpp
+PointRoi.cpp
+ROISet.cpp
+CommThread.cpp
+Generating Code...
+Compiling...
+DialogTabMBase.cpp
+DialogTabMIO.cpp
+DialogTabMMotion.cpp
+iniPara.cpp
+SystemData.cpp
+CameraControl.cpp
+ImiTech.cpp
+Generating Code...
+Linking...
+
+
+
+<h3>Results</h3>
+TCosmos3DualAuto_Vision.exe - 0 error(s), 3 warning(s)
+</pre>
+</body>
+</html>

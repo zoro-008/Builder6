@@ -1,0 +1,73 @@
+//---------------------------------------------------------------------------
+
+#include <system.hpp>
+#pragma hdrstop
+
+#include "SAInterface.h"
+
+//---------------------------------------------------------------------------
+
+#pragma package(smart_init)
+PSV_InitVisn      SV_InitVisn      = NULL;
+PSV_DelVisn       SV_DelVisn       = NULL;
+PSV_SetImgForm    SV_SetImgForm    = NULL;
+PSV_LoadJobFile   SV_LoadJobFile   = NULL;
+PSV_Grab          SV_Grab          = NULL;
+PSV_Live          SV_Live          = NULL;
+PSV_GetGrabEnd    SV_GetGrabEnd    = NULL;
+PSV_SetLight      SV_SetLight      = NULL;
+PSV_Inspect       SV_Inspect       = NULL;
+PSV_GetInspEnd    SV_GetInspEnd    = NULL;
+PSV_GetRslt       SV_GetRslt       = NULL;
+PSV_SetLevel      SV_SetLevel      = NULL;
+PSV_SetAutorun    SV_SetAutorun    = NULL;
+PSV_SetActiveVisn SV_SetActiveVisn = NULL;
+
+HINSTANCE g_hVInst = NULL ;
+bool LoadSVA(char * _pFileName)
+{
+    // DLL 로드
+    g_hVInst = LoadLibrary  (_pFileName);
+
+    if(!g_hVInst) return false ;
+
+    // 클래스 적재 함수 받음
+    SV_InitVisn       = (PSV_InitVisn     )GetProcAddress(g_hVInst, TEXT("InitVisn"     )); if(!SV_InitVisn     )return false ;
+    SV_DelVisn        = (PSV_DelVisn      )GetProcAddress(g_hVInst, TEXT("DelVisn"      )); if(!SV_DelVisn      )return false ;
+    SV_SetImgForm     = (PSV_SetImgForm   )GetProcAddress(g_hVInst, TEXT("SetImgForm"   )); if(!SV_SetImgForm   )return false ;
+    SV_LoadJobFile    = (PSV_LoadJobFile  )GetProcAddress(g_hVInst, TEXT("LoadJobFile"  )); if(!SV_LoadJobFile  )return false ;
+    SV_Grab           = (PSV_Grab         )GetProcAddress(g_hVInst, TEXT("Grab"         )); if(!SV_Grab         )return false ;
+    SV_Live           = (PSV_Live         )GetProcAddress(g_hVInst, TEXT("Live"         )); if(!SV_Live         )return false ;
+    SV_GetGrabEnd     = (PSV_GetGrabEnd   )GetProcAddress(g_hVInst, TEXT("GetGrabEnd"   )); if(!SV_GetGrabEnd   )return false ;
+    SV_SetLight       = (PSV_SetLight     )GetProcAddress(g_hVInst, TEXT("SetLight"     )); if(!SV_SetLight     )return false ;
+    SV_Inspect        = (PSV_Inspect      )GetProcAddress(g_hVInst, TEXT("Inspect"      )); if(!SV_Inspect      )return false ;
+    SV_GetInspEnd     = (PSV_GetInspEnd   )GetProcAddress(g_hVInst, TEXT("GetInspEnd"   )); if(!SV_GetInspEnd   )return false ;
+    SV_GetRslt        = (PSV_GetRslt      )GetProcAddress(g_hVInst, TEXT("GetRslt"      )); if(!SV_GetRslt      )return false ;
+    SV_SetLevel       = (PSV_SetLevel     )GetProcAddress(g_hVInst, TEXT("SetLevel"     )); if(!SV_SetLevel     )return false ;
+    SV_SetAutorun     = (PSV_SetAutorun   )GetProcAddress(g_hVInst, TEXT("SetAutorun"   )); if(!SV_SetAutorun   )return false ;
+    SV_SetActiveVisn  = (PSV_SetActiveVisn)GetProcAddress(g_hVInst, TEXT("SetActiveVisn")); if(!SV_SetActiveVisn)return false ;
+
+    return true ;
+}
+
+bool FreeSVA()
+{
+    return FreeLibrary(g_hVInst);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

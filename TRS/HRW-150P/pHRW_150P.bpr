@@ -1,0 +1,217 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<!-- C++Builder XML Project -->
+<PROJECT>
+  <MACROS>
+    <VERSION value="BCB.06.00"/>
+    <PROJECT value="Bin\pHRW_150P.exe"/>
+    <OBJFILES value="Obj\pHRW_150P.obj Obj\UserIni.obj Obj\global.obj Obj\PaixMotion.obj 
+      Obj\UserFile.obj Obj\FormMain.obj Obj\FormMaster.obj Obj\FormOperation.obj 
+      Obj\FormValve.obj Obj\FormMsgOk.obj Obj\FormSpinMotor.obj 
+      Obj\FormDevice.obj Obj\FormSetting.obj Obj\FormTiltMotor.obj 
+      Obj\OptionMan.obj Obj\SEQUnit.obj Obj\MainThread.obj Obj\FormMsgYesNo.obj"/>
+    <RESFILES value="pHRW_150P.res"/>
+    <DEFFILE value=""/>
+    <RESDEPEN value="$(RESFILES) Motion\FormMain.dfm Motion\FormMaster.dfm 
+      Motion\FormOperation.dfm Motion\FormValve.dfm Motion\FormMsgOk.dfm 
+      Motion\FormSpinMotor.dfm Motion\FormDevice.dfm Motion\FormSetting.dfm 
+      Motion\FormTiltMotor.dfm Motion\FormMsgYesNo.dfm"/>
+    <LIBFILES value="include\Hanra\SLDll.lib lib\Paix\NMC2b.lib"/>
+    <LIBRARIES value=""/>
+    <SPARELIBS value="vcl.lib rtl.lib vclx.lib bcbsmp.lib"/>
+    <PACKAGES value="vcl.bpi rtl.bpi vclx.bpi bcbsmp.bpi dbrtl.bpi adortl.bpi vcldb.bpi 
+      qrpt.bpi bdertl.bpi vcldbx.bpi dsnap.bpi cds.bpi bdecds.bpi teeui.bpi 
+      teedb.bpi tee.bpi teeqr.bpi ibxpress.bpi visualclx.bpi visualdbclx.bpi 
+      vclie.bpi xmlrtl.bpi inet.bpi inetdbbde.bpi inetdbxpress.bpi inetdb.bpi 
+      nmfast.bpi bcbie.bpi soaprtl.bpi dclocx.bpi dbexpress.bpi dbxcds.bpi 
+      indy.bpi bcb2kaxserver.bpi"/>
+    <PATHCPP value=".;Motion;Motion;Motion;Motion;Motion;Motion;Motion;Motion;Motion;Motion;Motion;Motion;Motion;Motion;Motion;Motion;Motion"/>
+    <PATHPAS value=".;"/>
+    <PATHRC value=".;"/>
+    <PATHASM value=".;"/>
+    <DEBUGLIBPATH value="$(BCB)\lib\debug"/>
+    <RELEASELIBPATH value="$(BCB)\lib\release"/>
+    <LINKER value="ilink32"/>
+    <USERDEFINES value="_DEBUG"/>
+    <SYSDEFINES value="_RTLDLL;NO_STRICT;USEPACKAGES"/>
+    <MAINSOURCE value="pHRW_150P.cpp"/>
+    <INCLUDEPATH value="..;include\Paix;Motion;&quot;C:\Program Files\Borland\CBuilder6\Projects&quot;;$(BCB)\include;$(BCB)\include\vcl;include\Hanra"/>
+    <LIBPATH value="..;lib\Paix;Motion;&quot;C:\Program Files\Borland\CBuilder6\Projects&quot;;$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib"/>
+    <WARNINGS value="-w-par"/>
+    <OTHERFILES value=""/>
+  </MACROS>
+  <OPTIONS>
+    <CFLAG1 value="-Od -H=$(BCB)\lib\vcl60.csm -Hc -Vx -Ve -X- -r- -a8 -b- -k -y -v -vi- -c 
+      -tW -tWM"/>
+    <PFLAGS value="-N2Obj -N0Obj -$Y+ -$W -$O- -$A8 -v -JPHNE -M"/>
+    <RFLAGS value=""/>
+    <AFLAGS value="/mx /w2 /zi"/>
+    <LFLAGS value="-llib -IObj -D&quot;&quot; -aa -Tpe -GD -s -Gn -M -v"/>
+    <OTHERFILES value=""/>
+  </OPTIONS>
+  <LINKER>
+    <ALLOBJ value="c0w32.obj $(PACKAGES) Memmgr.Lib sysinit.obj $(OBJFILES)"/>
+    <ALLRES value="$(RESFILES)"/>
+    <ALLLIB value="$(LIBFILES) $(LIBRARIES) import32.lib cp32mti.lib"/>
+    <OTHERFILES value=""/>
+  </LINKER>
+  <FILELIST>
+      <FILE FILENAME="bin\SLDll.dll" FORMNAME="" UNITNAME="SLDll.dll" CONTAINERID="" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="include\Hanra\SLDll.lib" FORMNAME="" UNITNAME="SLDll.lib" CONTAINERID="LibTool" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="include\Hanra\SLogUnit.h" FORMNAME="" UNITNAME="SLogUnit.h" CONTAINERID="" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="lib\Paix\nmc2.h" FORMNAME="" UNITNAME="nmc2.h" CONTAINERID="" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="lib\Paix\NMC2b.lib" FORMNAME="" UNITNAME="NMC2b.lib" CONTAINERID="LibTool" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="pHRW_150P.res" FORMNAME="" UNITNAME="pHRW_150P.res" CONTAINERID="ResTool" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="pHRW_150P.cpp" FORMNAME="" UNITNAME="pHRW_150P" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="pHRW_150P.todo" FORMNAME="" UNITNAME="pHRW_150P" CONTAINERID="ToDo" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Motion\UserIni.cpp" FORMNAME="" UNITNAME="UserIni.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Motion\global.cpp" FORMNAME="" UNITNAME="global" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Motion\PaixMotion.cpp" FORMNAME="" UNITNAME="PaixMotion.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Motion\UserFile.cpp" FORMNAME="" UNITNAME="UserFile.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Motion\FormMain.cpp" FORMNAME="FrmMain" UNITNAME="FormMain" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Motion\FormMaster.cpp" FORMNAME="FrmMaster" UNITNAME="FormMaster" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Motion\FormOperation.cpp" FORMNAME="FrmOperation" UNITNAME="FormOperation" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Motion\FormValve.cpp" FORMNAME="FrmValve" UNITNAME="FormValve" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Motion\FormMsgOk.cpp" FORMNAME="FrmMsgOk" UNITNAME="FormMsgOk" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Motion\FormSpinMotor.cpp" FORMNAME="FrmSpinMT" UNITNAME="FormSpinMotor" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Motion\FormDevice.cpp" FORMNAME="FrmDevice" UNITNAME="FormDevice" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Motion\FormSetting.cpp" FORMNAME="FrmSetting" UNITNAME="FormSetting" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Motion\FormTiltMotor.cpp" FORMNAME="FrmTiltMT" UNITNAME="FormTiltMotor" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Motion\OptionMan.cpp" FORMNAME="" UNITNAME="OptionMan" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Motion\UtilDefine.h" FORMNAME="" UNITNAME="UtilDefine.h" CONTAINERID="" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Motion\Timer.h" FORMNAME="" UNITNAME="Timer.h" CONTAINERID="" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Motion\SEQUnit.cpp" FORMNAME="" UNITNAME="SEQUnit" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Motion\MainThread.cpp" FORMNAME="" UNITNAME="MainThread" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Motion\FormMsgYesNo.cpp" FORMNAME="FrmMsgYesNo" UNITNAME="FormMsgYesNo" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+  </FILELIST>
+  <BUILDTOOLS>
+  </BUILDTOOLS>
+
+  <IDEOPTIONS>
+[Version Info]
+IncludeVerInfo=1
+AutoIncBuild=1
+MajorVer=1
+MinorVer=0
+Release=1
+Build=0
+Debug=0
+PreRelease=0
+Special=0
+Private=0
+DLL=0
+Locale=1042
+CodePage=949
+
+[Version Info Keys]
+CompanyName=
+FileDescription=
+FileVersion=1.0.1.0
+InternalName=
+LegalCopyright=
+LegalTrademarks=
+OriginalFilename=
+ProductName=
+ProductVersion=1.0.0.0
+Comments=
+
+[HistoryLists\hlIncludePath]
+Count=25
+Item0=..;include\Paix;Motion;C:\Program Files\Borland\CBuilder6\Projects;$(BCB)\include;$(BCB)\include\vcl;include\Hanra
+Item1=..\;..;include\Paix;Motion;C:\Program Files\Borland\CBuilder6\Projects;$(BCB)\include;$(BCB)\include\vcl;include\Hanra
+Item2=..\;..;include\Paix;Motion;C:\Program Files\Borland\CBuilder6\Projects;$(BCB)\include;$(BCB)\include\vcl
+Item3=..;include\Paix;Motion;C:\Program Files\Borland\CBuilder6\Projects;$(BCB)\include;$(BCB)\include\vcl
+Item4=..\;include\Paix;..;Motion;C:\Program Files\Borland\CBuilder6\Projects;$(BCB)\include;$(BCB)\include\vcl
+Item5=include\Paix;..;Motion;C:\Program Files\Borland\CBuilder6\Projects;$(BCB)\include;$(BCB)\include\vcl
+Item6=..;Motion;C:\Program Files\Borland\CBuilder6\Projects;$(BCB)\include;$(BCB)\include\vcl;\include\Paix;D:\BC6Works\HRW-150P\include\Paix
+Item7=..\;Motion;C:\Program Files\Borland\CBuilder6\Projects;$(BCB)\include;$(BCB)\include\vcl;\include\Paix;D:\BC6Works\HRW-150P\include\Paix
+Item8=Motion;C:\Program Files\Borland\CBuilder6\Projects;$(BCB)\include;$(BCB)\include\vcl;\include\Paix;D:\BC6Works\HRW-150P\include\Paix
+Item9=Motion;C:\Program Files\Borland\CBuilder6\Projects;$(BCB)\include;$(BCB)\include\vcl;\include\Paix
+Item10=Motion;C:\Program Files\Borland\CBuilder6\Projects;$(BCB)\include;$(BCB)\include\vcl;..\include\Paix
+Item11=Motion;..\Rotor_Kaist\Vision;..\Rotor_Kaist;SVDll;D:\BC6Works\Rotor_Kaist\include\Hanra;include;Vision;C:\Program Files\Borland\CBuilder6\Projects;$(BCB)\include;$(BCB)\include\vcl;D:\BC6Works\Rotor_Kaist\SVDll;D:\BC6Works\Rotor_Kaist\include\Imi;D:\BC6Works\Rotor_Kaist\include\Euresys;D:\BC6Works\Rotor_Kaist\bin
+Item12=D:\BC6Works\Rotor_Kaist\include\Hanra;include;Vision;C:\Program Files\Borland\CBuilder6\Projects;$(BCB)\include;$(BCB)\include\vcl;D:\BC6Works\Rotor_Kaist\SVDll;D:\BC6Works\Rotor_Kaist\include\Imi;D:\BC6Works\Rotor_Kaist\include\Euresys;D:\BC6Works\Rotor_Kaist\bin
+Item13=include;Vision;C:\Program Files\Borland\CBuilder6\Projects;$(BCB)\include;$(BCB)\include\vcl;D:\BC6Works\Rotor_Kaist\SVDll;D:\BC6Works\Rotor_Kaist\include\Imi;D:\BC6Works\Rotor_Kaist\include\Euresys;D:\BC6Works\Rotor_Kaist\include\Hanra;D:\BC6Works\Rotor_Kaist\bin
+Item14=include;Vision;C:\Program Files\Borland\CBuilder6\Projects;$(BCB)\include;$(BCB)\include\vcl;D:\BC6Works\Rotor_Kaist\SVDll;D:\BC6Works\Rotor_Kaist\include\Imi;D:\BC6Works\Rotor_Kaist\include\Euresys;D:\BC6Works\Rotor_Kaist\include\Hanra
+Item15=include;Vision;C:\Program Files\Borland\CBuilder6\Projects;$(BCB)\include;$(BCB)\include\vcl;D:\BC6Works\Rotor_Kaist\SVDll;D:\BC6Works\Rotor_Kaist\include\Imi;D:\BC6Works\Rotor_Kaist\include\Euresys
+Item16=Vision;include;C:\Program Files\Borland\CBuilder6\Projects;$(BCB)\include;$(BCB)\include\vcl;D:\BC6Works\Rotor_Kaist\SVDll;D:\BC6Works\Rotor_Kaist\include\Imi;D:\BC6Works\Rotor_Kaist\include\Euresys
+Item17=Vision;include;C:\Program Files\Borland\CBuilder6\Projects;$(BCB)\include;$(BCB)\include\vcl;C:\Program Files\Basler\Pylon 2.3\pylonc\include;D:\BC6Works\Rotor_Kaist\SVDll;D:\BC6Works\Rotor_Kaist\include\Imi;D:\BC6Works\Rotor_Kaist\include\Euresys
+Item18=Vision;include;C:\Program Files\Borland\CBuilder6\Projects;$(BCB)\include;$(BCB)\include\vcl;C:\Program Files\Basler\Pylon 2.3\pylonc\include;D:\BC6Works\Rotor_Kaist\SVDll
+Item19=Vision;include;C:\Program Files\Borland\CBuilder6\Projects;$(BCB)\include;$(BCB)\include\vcl;C:\Program Files\Basler\Pylon 2.3\pylonc\include
+Item20=include;C:\Program Files\Borland\CBuilder6\Projects;$(BCB)\include;$(BCB)\include\vcl;C:\Program Files\Basler\Pylon 2.3\pylonc\include
+Item21=include;C:\Program Files\Borland\CBuilder6\Projects;$(BCB)\include;$(BCB)\include\vcl
+Item22=D:\BC6Works\Rotor\Inlucde;C:\Program Files\Borland\CBuilder6\Projects;$(BCB)\include;$(BCB)\include\vcl;C:\Program Files\Basler\Pylon 2.3\pylonc\include
+Item23=D:\BC6Works\Rotor\Inlucde;C:\Program Files\Borland\CBuilder6\Projects;$(BCB)\include;$(BCB)\include\vcl
+Item24=CreateAvi;C:\Program Files\Borland\CBuilder6\Projects;D:\BC6Works\Bmp_Avi;$(BCB)\include;$(BCB)\include\vcl
+
+[HistoryLists\hlLibraryPath]
+Count=19
+Item0=..;lib\Paix;Motion;C:\Program Files\Borland\CBuilder6\Projects;$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib
+Item1=..\;..;lib\Paix;Motion;C:\Program Files\Borland\CBuilder6\Projects;$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib
+Item2=..\;lib\Paix;..;Motion;C:\Program Files\Borland\CBuilder6\Projects;$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib
+Item3=lib\Paix;..;Motion;C:\Program Files\Borland\CBuilder6\Projects;$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib
+Item4=..;Motion;C:\Program Files\Borland\CBuilder6\Projects;$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib;D:\BC6Works\HRW-150P\lib\Paix
+Item5=..;Motion;C:\Program Files\Borland\CBuilder6\Projects;$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib;lib\Paix
+Item6=..;Motion;C:\Program Files\Borland\CBuilder6\Projects;$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib;..\lib\Paix
+Item7=..\;Motion;C:\Program Files\Borland\CBuilder6\Projects;$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib;..\lib\Paix
+Item8=Motion;C:\Program Files\Borland\CBuilder6\Projects;$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib;..\lib\Paix
+Item9=C:\Program Files\Borland\CBuilder6\Projects;$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib;..\lib\Paix
+Item10=Motion;..\Rotor_Kaist\Vision;..\Rotor_Kaist;SVDll;Vision;C:\Program Files\Borland\CBuilder6\Projects;$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib;D:\BC6Works\Rotor_Kaist\SVDll;D:\BC6Works\Rotor_Kaist\bin
+Item11=Vision;C:\Program Files\Borland\CBuilder6\Projects;$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib;D:\BC6Works\Rotor_Kaist\SVDll;D:\BC6Works\Rotor_Kaist\bin
+Item12=Vision;C:\Program Files\Borland\CBuilder6\Projects;$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib;D:\BC6Works\Rotor_Kaist\SVDll
+Item13=Vision;D:\BC6Works\Rotor\lib;C:\Program Files\Borland\CBuilder6\Projects;$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib;D:\BC6Works\Rotor_Kaist\SVDll
+Item14=Vision;D:\BC6Works\Rotor\lib;C:\Program Files\Borland\CBuilder6\Projects;$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib
+Item15=D:\BC6Works\Rotor\lib;C:\Program Files\Borland\CBuilder6\Projects;$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib
+Item16=D:\BC6Works\Rotor\lib;C:\Program Files\Borland\CBuilder6\Projects;D:\BC6Works\Bmp_Avi;$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib
+Item17=D:\BC6Works\Rotor\lib;C:\Program Files\Borland\CBuilder6\Projects;D:\BC6Works\Bmp_Avi;$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib;D:\BC6Works\Rotor\Inlucde
+Item18=CreateAvi;C:\Program Files\Borland\CBuilder6\Projects;D:\BC6Works\Bmp_Avi;$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib
+
+[HistoryLists\hlDebugSourcePath]
+Count=1
+Item0=$(BCB)\source\vcl
+
+[HistoryLists\hlConditionals]
+Count=1
+Item0=_DEBUG
+
+[HistoryLists\hlIntOutputDir]
+Count=3
+Item0=Obj
+Item1=D:\BC6Works\works\Rotor\Obj
+Item2=lib
+
+[HistoryLists\hlFinalOutputDir]
+Count=4
+Item0=Bin\
+Item1=Bin
+Item2=D:\BC6Works\works\Rotor\bin\
+Item3=D:\BC6Works\works\Rotor\bin
+
+[HistoryLists\hIBPIOutputDir]
+Count=1
+Item0=lib
+
+[Debugging]
+DebugSourceDirs=$(BCB)\source\vcl
+
+[Parameters]
+RunParams=
+Launcher=
+UseLauncher=0
+DebugCWD=
+HostApplication=
+RemoteHost=
+RemotePath=
+RemoteLauncher=
+RemoteCWD=
+RemoteDebug=0
+
+[Compiler]
+ShowInfoMsgs=0
+LinkDebugVcl=0
+LinkCGLIB=0
+
+[Language]
+ActiveLang=
+ProjectLang=
+RootDir=
+  </IDEOPTIONS>
+</PROJECT>

@@ -1,0 +1,15 @@
+USEFORM("Form3d.cpp", Frm3d);
+USEFORM("FormHisto.cpp", FrmHisto);
+USEFORM("FormPixel.cpp", FrmPixel);
+USEFORM("FormMag.cpp", FrmMag);
+USEFORM("FormTrainChk.cpp", FrmTrainChk);
+USEFORM("FormAlgoPara.cpp", FrmAlgoPara);
+USEFORM("FormImage.cpp", FrmImage);
+USEFORM("FormJob.cpp", FrmJob);
+USEFORM("FormCamLightPara.cpp", FrmCamLightPara);
+USEFORM("FormVisnMain.cpp", FrmVisnMain);
+USEFORM("FormPackage.cpp", FrmPackage);
+//---------------------------------------------------------------------------
+This file is used by the project manager only and should be treated like the project file
+
+DllEntryPoint

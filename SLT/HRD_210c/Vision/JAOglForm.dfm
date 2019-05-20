@@ -1,0 +1,32 @@
+object FOpenGL: TFOpenGL
+  Left = 302
+  Top = 88
+  Width = 581
+  Height = 516
+  Caption = 'OpenGL'
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Arial'
+  Font.Style = []
+  FormStyle = fsStayOnTop
+  OldCreateOrder = False
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  OnKeyDown = FormKeyDown
+  OnResize = FormResize
+  PixelsPerInch = 96
+  TextHeight = 14
+  object PView: TPanel
+    Left = 0
+    Top = 0
+    Width = 473
+    Height = 361
+    BevelOuter = bvNone
+    TabOrder = 0
+    OnMouseDown = PViewMouseDown
+    OnMouseMove = PViewMouseMove
+    OnMouseUp = PViewMouseUp
+  end
+end

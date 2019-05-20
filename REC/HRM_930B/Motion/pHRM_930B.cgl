@@ -1,0 +1,9 @@
+Error 00116. 0x100400 (Thread 0x17EC):
+Access in invalid memory: Attempt to access 4 byte(s) at 0x00000000.
+Call Tree:
+   0x00428006(=pHRM_930B.exe:0x01:027006) D:\BC6Works\REC\HRM_930B_작업중(중간원본2)\Motion\FormMaster.cpp#45
+   0x400F59A4(=vcl60.bpl:0x01:0449A4)
+   0x00401E83(=pHRM_930B.exe:0x01:000E83) D:\BC6Works\REC\HRM_930B_작업중(중간원본2)\Motion\pHRM_930B.cpp#63
+   0x3267DB63(=CC3260MT.DLL:0x01:07CB63)
+
+------------------------------------------

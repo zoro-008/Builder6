@@ -1,0 +1,144 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<!-- C++Builder XML Project -->
+<PROJECT>
+  <MACROS>
+    <VERSION value="BCB.06.00"/>
+    <PROJECT value="bin\pBC6TsaiCal.lib"/>
+    <OBJFILES value="obj\MATRIX.obj obj\LMDIF.obj obj\LMPAR.obj obj\DPMPAR.obj obj\ENORM.obj 
+      obj\FDJAC2.obj obj\QRFAC.obj obj\QRSOLV.obj obj\Cal_main.obj 
+      obj\CAL_TRAN.obj obj\stop_mod.obj"/>
+    <RESFILES value=""/>
+    <DEFFILE value=""/>
+    <RESDEPEN value="$(RESFILES)"/>
+    <LIBFILES value=""/>
+    <LIBRARIES value=""/>
+    <PACKAGES value=""/>
+    <PATHCPP value=".;MATRIX;MINPACK;MINPACK;MINPACK;MINPACK;MINPACK;MINPACK;MINPACK"/>
+    <PATHPAS value=".;"/>
+    <PATHRC value=".;"/>
+    <PATHASM value=".;"/>
+    <LINKER value="TLib"/>
+    <USERDEFINES value=""/>
+    <SYSDEFINES value="_RTLDLL;NO_STRICT"/>
+    <MAINSOURCE value="pBC6TsaiCal.bpf"/>
+    <INCLUDEPATH value="MINPACK;MATRIX;$(BCB)\include;$(BCB)\include\vcl"/>
+    <LIBPATH value="MINPACK;MATRIX;$(BCB)\lib\obj;$(BCB)\lib"/>
+    <WARNINGS value="-w-par"/>
+    <LISTFILE value=""/>
+    <OTHERFILES value=""/>
+  </MACROS>
+  <OPTIONS>
+    <CFLAG1 value="-O2 -H=$(BCB)\lib\vcl60.csm -Hc -Vx -Ve -X- -a8 -6 -b- -k- -vi -c -tW -tWM"/>
+    <PFLAGS value="-N2obj -N0obj -$Y- -$L- -$D- -$A8 -v -JPHNE -M"/>
+    <AFLAGS value="/mx /w2 /zn"/>
+    <LFLAGS value=""/>
+    <OTHERFILES value=""/>
+  </OPTIONS>
+  <LINKER>
+    <ALLOBJ value="$(OBJFILES)"/>
+    <ALLLIB value="cg32.lib"/>
+    <OTHERFILES value=""/>
+  </LINKER>
+  <FILELIST>
+      <FILE FILENAME="pBC6TsaiCal.bpf" FORMNAME="" UNITNAME="pBC6TsaiCal" CONTAINERID="BPF" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="MINPACK\F2C.H" FORMNAME="" UNITNAME="F2C.H" CONTAINERID="" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="MATRIX\MATRIX.C" FORMNAME="" UNITNAME="MATRIX" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="MINPACK\LMDIF.C" FORMNAME="" UNITNAME="LMDIF.C" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="MINPACK\LMPAR.C" FORMNAME="" UNITNAME="LMPAR.C" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="MINPACK\DPMPAR.C" FORMNAME="" UNITNAME="DPMPAR.C" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="MINPACK\ENORM.C" FORMNAME="" UNITNAME="ENORM.C" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="MINPACK\FDJAC2.C" FORMNAME="" UNITNAME="FDJAC2.C" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="MINPACK\QRFAC.C" FORMNAME="" UNITNAME="QRFAC.C" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="MINPACK\QRSOLV.C" FORMNAME="" UNITNAME="QRSOLV.C" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Cal_main.c" FORMNAME="" UNITNAME="Cal_main.c" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="CAL_TRAN.C" FORMNAME="" UNITNAME="CAL_TRAN.C" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="stop_mod.c" FORMNAME="" UNITNAME="stop_mod.c" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="include\CalibStruct.h" FORMNAME="" UNITNAME="CalibStruct.h" CONTAINERID="" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="include\TsaiCalibrator.h" FORMNAME="" UNITNAME="TsaiCalibrator.h" CONTAINERID="" DESIGNCLASS="" LOCALCOMMAND=""/>
+  </FILELIST>
+  <BUILDTOOLS>
+  </BUILDTOOLS>
+
+  <IDEOPTIONS>
+[Version Info]
+IncludeVerInfo=0
+AutoIncBuild=0
+MajorVer=1
+MinorVer=0
+Release=0
+Build=0
+Debug=0
+PreRelease=0
+Special=0
+Private=0
+DLL=0
+Locale=1042
+CodePage=949
+
+[Version Info Keys]
+CompanyName=
+FileDescription=
+FileVersion=1.0.0.0
+InternalName=
+LegalCopyright=
+LegalTrademarks=
+OriginalFilename=
+ProductName=
+ProductVersion=1.0.0.0
+Comments=
+
+[HistoryLists\hlIncludePath]
+Count=3
+Item0=MINPACK;MATRIX;$(BCB)\include;$(BCB)\include\vcl
+Item1=MINPACK;MATRIX;D:\0.TESTSource\Calibration\BC6TsaiCalPorting;$(BCB)\include;$(BCB)\include\vcl
+Item2=D:\0.TESTSource\Calibration\BC6TsaiCalPorting;$(BCB)\include;$(BCB)\include\vcl
+
+[HistoryLists\hlLibraryPath]
+Count=3
+Item0=MINPACK;MATRIX;$(BCB)\lib\obj;$(BCB)\lib
+Item1=MINPACK;MATRIX;D:\0.TESTSource\Calibration\BC6TsaiCalPorting;$(BCB)\lib\obj;$(BCB)\lib
+Item2=D:\0.TESTSource\Calibration\BC6TsaiCalPorting;$(BCB)\lib\obj;$(BCB)\lib
+
+[HistoryLists\hlDebugSourcePath]
+Count=1
+Item0=$(BCB)\source\vcl
+
+[HistoryLists\hlConditionals]
+Count=1
+Item0=_DEBUG
+
+[HistoryLists\hlIntOutputDir]
+Count=1
+Item0=obj
+
+[HistoryLists\hlFinalOutputDir]
+Count=2
+Item0=bin\
+Item1=bin
+
+[Debugging]
+DebugSourceDirs=$(BCB)\source\vcl
+
+[Parameters]
+RunParams=
+Launcher=
+UseLauncher=0
+DebugCWD=
+HostApplication=
+RemoteHost=
+RemotePath=
+RemoteLauncher=
+RemoteCWD=
+RemoteDebug=0
+
+[Compiler]
+ShowInfoMsgs=0
+LinkDebugVcl=0
+LinkCGLIB=0
+
+[Language]
+ActiveLang=
+ProjectLang=
+RootDir=
+  </IDEOPTIONS>
+</PROJECT>

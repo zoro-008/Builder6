@@ -1,0 +1,64 @@
+#ifndef VISNDEFINEH
+#define VISNDEFINEH
+#include <system.hpp>
+
+extern AnsiString g_sJobFileName ;
+extern AnsiString g_sJobFilePath ;
+
+
+//카메라의 갯수.
+enum EN_CAM_ID {
+    ciWfr  = 0    , //웨이퍼 비젼.
+
+    MAX_CAM_ID
+};
+
+//조명 컨트롤러 갯수.
+enum EN_LIGHT_ID {
+    liWfr = 0 ,    //동축 3채널 1개로 다씀.
+
+    MAX_LIGHT_ID
+};
+
+enum EN_VISN_ID {
+    viNone       =-1 ,
+    viWfr        = 0 , //칩
+    viWfo            , //피니셜마크
+    viWfp            , //펜 검사.
+    viCal            , //캘리브레이션.
+
+    MAX_VISN_ID
+};
+//extern AnsiString g_sVisnName[MAX_VISN_ID];
+
+enum EN_VIEW_MODE {
+    vmNone  = -1 , //아무그림도 안그림 이미지만 뜸.
+    vmCal   = -2 , //켈리브레이션 이미지.
+    vmAll   = -3 , //모든 검사 결과값만 디스플레이.
+    vmRslt  =  0   //0~~ 0이상은 각 ProcPkg 순서대로 간다.
+};
+
+//
+
+struct TRetResult {
+    bool  bInspEnd ; //검사 끝남 변수.
+
+    EN_VISN_ERR_ID iRet   ;  //결과 값...
+    float fRsltX ;  //보정 X값.
+    float fRsltY ;  //보정 Y값.
+    float fRsltT ;  //보정 T값.
+};
+
+
+
+
+
+
+
+
+
+
+#endif
+
+
+

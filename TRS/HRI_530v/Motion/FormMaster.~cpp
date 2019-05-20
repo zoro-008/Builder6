@@ -1,0 +1,323 @@
+//---------------------------------------------------------------------------
+
+#include <vcl.h>
+#pragma hdrstop
+
+#include "FormMaster.h"
+#include "UtilDefine.h"
+#include "OptionMan.h"
+#include "ManualMan.h"
+#include "Sequence.h"
+//---------------------------------------------------------------------------
+#include "Loader.h"
+#include "LoaderSupply.h"
+#include "LoaderStock.h"
+#include "Stage.h"
+#include "StageVT.h"
+#include "StageOST.h"
+#include "StageVision.h"
+#include "Sort.h"
+
+#include "Unloader.h"
+#include "UnloaderSupply.h"
+#include "UnloaderStock.h"
+//---------------------------------------------------------------------------
+#pragma package(smart_init)
+#pragma resource "*.dfm"
+TFrmMaster *FrmMaster;
+//---------------------------------------------------------------------------
+__fastcall TFrmMaster::TFrmMaster(TComponent* Owner)
+    : TForm(Owner)
+{
+
+    sgCycleStep -> RowCount = MAX_PART + 1 ;
+    sgCycleStep -> ColWidths[0,0] = 100;
+    sgCycleStep -> Cells[1][0] = "Home    " ;
+    sgCycleStep -> Cells[2][0] = "ToStart " ;
+    sgCycleStep -> Cells[3][0] = "Seq     " ;
+    sgCycleStep -> Cells[4][0] = "Cycle   " ;
+    sgCycleStep -> Cells[5][0] = "ToStop  " ;
+    sgCycleStep -> Cells[6][0] = "Pre Time" ;
+
+    const int iCheckBoxGap = 25 ;
+    for(int i= 0 ; i < MAX_PART ; i++) {
+        cbPart[i] = new TCheckBox (this);
+        cbPart[i] -> Parent = GroupBox8 ;
+        cbPart[i] -> Left   = 10        ;
+        cbPart[i] -> Top    = 20 + iCheckBoxGap * i ;
+        cbPart[i] -> Caption = SEQ.m_pPart[i]->GetPartName();
+        sgCycleStep -> Cells[0][i+1]  = SEQ.m_pPart[i]->GetPartName();
+    }
+
+
+    for(int i= 0 ; i < MAX_PART ; i++) {
+        sgCycleStep -> Cells[0][i+1]  = SEQ.m_pPart[i]->GetPartName();
+    }
+
+    cbPartSel -> Clear() ;
+    for(int i = 0 ; i < MAX_PART ; i++) {
+        cbPartSel -> AddItem(SEQ.m_pPart[i]->GetPartName(),NULL) ;
+    }
+    cbPartSel -> ItemIndex = 0 ;
+
+
+
+
+}
+//---------------------------------------------------------------------------
+void __fastcall TFrmMaster::btSaveMotorClick(TObject *Sender)
+{
+    UpdateMstOptn (toBuff);
+    UpdateEqpOptn (toBuff);
+    OM.SaveMstOptn(      );
+    OM.SaveEqpOptn(      );
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TFrmMaster::FormShow(TObject *Sender)
+{
+    OM.LoadMstOptn(      );
+    OM.LoadEqpOptn(      );
+    UpdateMstOptn (toTabl);
+    UpdateEqpOptn (toTabl);
+
+    UpdateTimeName();
+    tmUpdate -> Enabled = true ;
+}
+//---------------------------------------------------------------------------
+void __fastcall TFrmMaster::UpdateMstOptn(bool bTable)
+{
+    if(bTable){
+        cbDebugMode        -> Checked = OM.MstOptn.bDebugMode         ;
+        cbVacErrIgnr       -> Checked = OM.MstOptn.bVacErrIgnr        ;
+        edInspRandMask     -> Text    = OM.MstOptn.iInspRandMask      ;
+
+
+        edTrigerOffset     -> Text    = OM.MstOptn.dTrigerOffset      ;
+
+        edVisnRsltFile1    -> Text    = OM.MstOptn.sVisnRsltFile1     ;
+        edVisnRsltFile2    -> Text    = OM.MstOptn.sVisnRsltFile2     ;
+        edVisnDeviceFile   -> Text    = OM.MstOptn.sVisnDeviceFile    ;
+        edVisnDeviceFile   -> Text    = OM.MstOptn.sVisnLotNoFile     ;
+        edVTDataFile1      -> Text    = OM.MstOptn.sVTDataFile1       ;
+        edVTDataFile2      -> Text    = OM.MstOptn.sVTDataFile2       ;
+        edVTDataFile3      -> Text    = OM.MstOptn.sVTDataFile3       ;
+        edVTDataFile4      -> Text    = OM.MstOptn.sVTDataFile4       ;
+
+
+
+    }
+    else{
+        OM.MstOptn.bDebugMode         = cbDebugMode         -> Checked ;
+        OM.MstOptn.bVacErrIgnr        = cbVacErrIgnr        -> Checked ;
+        OM.MstOptn.sVisnRsltFile1     = edVisnRsltFile1     -> Text    ;
+        OM.MstOptn.sVisnRsltFile2     = edVisnRsltFile2     -> Text    ;
+        OM.MstOptn.sVisnDeviceFile    = edVisnDeviceFile    -> Text    ;
+        OM.MstOptn.sVisnLotNoFile     = edVisnLotNoFile     -> Text    ;  
+        OM.MstOptn.sVTDataFile1       = edVTDataFile1       -> Text    ;
+        OM.MstOptn.sVTDataFile2       = edVTDataFile2       -> Text    ;
+        OM.MstOptn.sVTDataFile3       = edVTDataFile3       -> Text    ;
+        OM.MstOptn.sVTDataFile4       = edVTDataFile4       -> Text    ;
+
+        OM.MstOptn.dTrigerOffset      = StrToFloatDef(edTrigerOffset -> Text,0.0) ;
+        OM.MstOptn.iInspRandMask      = StrToIntDef  (edInspRandMask -> Text,0  ) ;
+
+
+    }
+}
+//---------------------------------------------------------------------------
+void __fastcall TFrmMaster::UpdateEqpOptn(bool bTable)
+{
+    if(bTable){
+    }
+    else{
+    }
+}
+void __fastcall TFrmMaster::FormClose(TObject *Sender,
+      TCloseAction &Action)
+{
+    tmUpdate -> Enabled = false ;
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TFrmMaster::tmUpdateTimer(TObject *Sender)
+{
+
+    lbMan -> Caption = "<Man No = " + AnsiString(MM.GetManNo()) + "> <Man.m_iStep = " + MM.GetManStep() ;
+    //LDR
+
+    for(int i= 0 ; i < MAX_PART ; i++) {
+        sgCycleStep->Cells[1][i+1]=SEQ.m_pPart[i]->GetHomeStep   ();
+        sgCycleStep->Cells[2][i+1]=SEQ.m_pPart[i]->GetToStartStep();
+        sgCycleStep->Cells[3][i+1]=SEQ.m_pPart[i]->GetCycleName  (SEQ.m_pPart[i]->GetSeqStep());
+        sgCycleStep->Cells[4][i+1]=SEQ.m_pPart[i]->GetCycleStep  ();
+        sgCycleStep->Cells[5][i+1]=SEQ.m_pPart[i]->GetToStopStep ();
+        sgCycleStep->Cells[6][i+1]=SEQ.m_pPart[i]->GetCycleTime  (SEQ.m_pPart[i]->GetSeqStep());
+    }
+
+    for(int i=0; i< SEQ.m_pPart[cbPartSel -> ItemIndex]->GetCycleMaxCnt(); i++ ) {
+        sgTime -> Cells[1][i] = SEQ.m_pPart[cbPartSel -> ItemIndex]->GetCycleTime(i);
+    }
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TFrmMaster::btPartAutorunClick(TObject *Sender)
+{
+
+    for(int i= 0 ; i < MAX_PART ; i++) {
+        if(cbPart[i] -> Checked) SEQ.m_pPart[i] -> Autorun() ;
+    }
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TFrmMaster::btPartResetClick(TObject *Sender)
+{
+    for(int i= 0 ; i < MAX_PART ; i++) {
+        if(cbPart[i] -> Checked) SEQ.m_pPart[i] -> Reset() ;
+    }
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TFrmMaster::btAllResetClick(TObject *Sender)
+{
+    SEQ.Reset();
+}
+//---------------------------------------------------------------------------
+
+
+
+
+
+void __fastcall TFrmMaster::btVisnRsltFile1Click(TObject *Sender)
+{
+    if(!dgFilePath->Execute())    return ;
+    edVisnRsltFile1->Text = dgFilePath->FileName;
+
+
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TFrmMaster::Button1Click(TObject *Sender)
+{
+    if(!dgFilePath->Execute())    return ;
+    edVTDataFile1 ->Text = dgFilePath->FileName;
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TFrmMaster::btPartHomeClick(TObject *Sender)
+{
+    //for(int i= 0 ; i < MAX_PART ; i++) {
+    //    if(cbPart[i] -> Checked) SEQ.m_pPart[i] -> Reset() ;
+    //}
+
+
+    //하... 좀 고민 해보자..
+    if(cbPart[piLSP] -> Checked) {MM.SetManCycle(mcLSP_Home);}
+    if(cbPart[piLDR] -> Checked) {MM.SetManCycle(mcLDR_Home);}
+    if(cbPart[piLST] -> Checked) {MM.SetManCycle(mcLST_Home);}
+    if(cbPart[piSRT] -> Checked) {MM.SetManCycle(mcSRT_Home);}
+    if(cbPart[piSTG] -> Checked) {MM.SetManCycle(mcSTG_Home);}
+    if(cbPart[piOST] -> Checked) {MM.SetManCycle(mcOST_Home);}
+    if(cbPart[piVTI] -> Checked) {MM.SetManCycle(mcVTI_Home);}
+    if(cbPart[piVSN] -> Checked) {MM.SetManCycle(mcVSN_Home);}
+    if(cbPart[piUSP] -> Checked) {MM.SetManCycle(mcUSP_Home);}
+    if(cbPart[piULD] -> Checked) {MM.SetManCycle(mcULD_Home);}
+    if(cbPart[piUST] -> Checked) {MM.SetManCycle(mcUST_Home);}
+
+}
+//---------------------------------------------------------------------------
+
+
+void __fastcall TFrmMaster::Button3Click(TObject *Sender)
+{
+    IO_SetY(yVSN_TrgRellay1 , true);
+    IO_SetY(yVSN_TrgRellay2 , true);
+
+    ::Sleep(100);
+
+    MT_OneShotAxtTrg(miSTG_YVisn , true , 1000);
+
+    IO_SetY(yVSN_TrgRellay1 , false);
+    IO_SetY(yVSN_TrgRellay2 , false);
+}
+//---------------------------------------------------------------------------
+
+
+void __fastcall TFrmMaster::Button2Click(TObject *Sender)
+{
+    if(!dgFilePath->Execute())    return ;
+    edVisnDeviceFile->Text = dgFilePath->FileName;
+}
+//---------------------------------------------------------------------------
+
+
+
+
+
+void TFrmMaster::UpdateTimeName()
+{
+    sgTime-> RowCount = SEQ.m_pPart[cbPartSel -> ItemIndex]->GetCycleMaxCnt() ;
+    for(int i=0; i< sgTime->RowCount; i++ ) {
+        sgTime->Rows[i]->Clear();
+    }
+    for(int i=0; i< SEQ.m_pPart[cbPartSel -> ItemIndex]->GetCycleMaxCnt(); i++ ) {
+        sgTime -> Cells[0][i] = SEQ.m_pPart[cbPartSel -> ItemIndex]->GetCycleName(i);
+    }
+}
+void __fastcall TFrmMaster::cbPartSelChange(TObject *Sender)
+{
+    UpdateTimeName();
+}
+//---------------------------------------------------------------------------
+
+
+
+
+
+void __fastcall TFrmMaster::btAllCheckClick(TObject *Sender)
+{
+    bool bChecked = cbPart[0] -> Checked ;
+    for(int i = 0 ; i < MAX_PART ; i++) {
+        cbPart[i] -> Checked = !bChecked ;
+    }
+}
+//---------------------------------------------------------------------------
+
+
+
+void __fastcall TFrmMaster::btVisnRsltFile2Click(TObject *Sender)
+{
+    if(!dgFilePath->Execute())    return ;
+    edVisnRsltFile2->Text = dgFilePath->FileName;
+
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TFrmMaster::Button21Click(TObject *Sender)
+{
+    if(!dgFilePath->Execute())    return ;
+    edVTDataFile2 ->Text = dgFilePath->FileName;
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TFrmMaster::Button22Click(TObject *Sender)
+{
+    if(!dgFilePath->Execute())    return ;
+    edVTDataFile3 ->Text = dgFilePath->FileName;
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TFrmMaster::Button23Click(TObject *Sender)
+{
+    if(!dgFilePath->Execute())    return ;
+    edVTDataFile4 ->Text = dgFilePath->FileName;
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TFrmMaster::Button4Click(TObject *Sender)
+{
+    if(!dgFilePath->Execute())    return ;
+    edVisnLotNoFile->Text = dgFilePath->FileName;        
+}
+//---------------------------------------------------------------------------
+

@@ -1,0 +1,217 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<!-- C++Builder XML Project -->
+<PROJECT>
+  <MACROS>
+    <VERSION value="BCB.06.00"/>
+    <PROJECT value="..\bin\pSVApp.dll"/>
+    <OBJFILES value="obj\SVInterface.obj obj\ApiImport.obj obj\Tracker.obj obj\CamUnit.obj 
+      obj\LightUnit.obj obj\UserINI.obj obj\UserFile.obj obj\uRs232c.obj 
+      obj\Form3d.obj obj\FormHisto.obj obj\FormPixel.obj obj\FormMag.obj 
+      obj\FormTrainChk.obj obj\FormAlgoPara.obj obj\FormImage.obj 
+      obj\FormJob.obj obj\ParaUnit.obj obj\VisionBase.obj 
+      obj\FormCamLightPara.obj obj\FormVisnMain.obj obj\Common.obj 
+      obj\VOptnMan.obj obj\Orientation.obj obj\FormOri.obj obj\VisionMan.obj 
+      obj\SVApp.obj obj\SAInterface.obj"/>
+    <RESFILES value="pSVApp.res Cursor.res"/>
+    <DEFFILE value="include\Euresys\MultiCam.def"/>
+    <RESDEPEN value="$(RESFILES) Form3d.dfm FormHisto.dfm FormPixel.dfm FormMag.dfm 
+      FormTrainChk.dfm FormAlgoPara.dfm FormImage.dfm FormJob.dfm 
+      FormCamLightPara.dfm FormVisnMain.dfm FormOri.dfm"/>
+    <LIBFILES value="include\Hanra\SLDll.lib"/>
+    <LIBRARIES value="visualclx.lib vclx.lib bcbsmp.lib"/>
+    <SPARELIBS value="vcl.lib rtl.lib bcbsmp.lib vclx.lib visualclx.lib"/>
+    <PACKAGES value="vcl.bpi rtl.bpi"/>
+    <PATHCPP value=".;..\SVDll;include\Imi"/>
+    <PATHPAS value=".;"/>
+    <PATHRC value=".;"/>
+    <PATHASM value=".;"/>
+    <DEBUGLIBPATH value="$(BCB)\lib\debug"/>
+    <RELEASELIBPATH value="$(BCB)\lib\release"/>
+    <LINKER value="ilink32"/>
+    <USERDEFINES value="_DEBUG"/>
+    <SYSDEFINES value="NO_STRICT;_RTLDLL;USEPACKAGES"/>
+    <MAINSOURCE value="pSVApp.bpf"/>
+    <INCLUDEPATH value="..\SVDll;..\Motion;$(BCB)\include;$(BCB)\include\vcl;.\include\Imi;.\include\Euresys;.\include\Hanra"/>
+    <LIBPATH value="..\app;..\Motion;..\include\Imi;&quot;C:\Program Files\Borland\CBuilder6\Projects&quot;;$(BCB)\lib\obj;$(BCB)\lib;include\Euresys;include\Imi;..\SVDll"/>
+    <WARNINGS value="-w-par"/>
+    <OTHERFILES value=""/>
+  </MACROS>
+  <OPTIONS>
+    <CFLAG1 value="-WD -Od -H=$(BCB)\lib\vcl60.csm -Hc -Vx -Ve -X- -r- -a8 -b- -k -y -v -vi- 
+      -tWD -tWM -c"/>
+    <PFLAGS value="-N2obj -N0obj -$YD -$W -$O- -$A8 -v -JPHNE -M"/>
+    <RFLAGS value=""/>
+    <AFLAGS value="/mx /w2 /zd"/>
+    <LFLAGS value="-Iobj -D&quot;&quot; -aa -Tpd -GD -s -Gn -Gi -v"/>
+    <OTHERFILES value=""/>
+  </OPTIONS>
+  <LINKER>
+    <ALLOBJ value="c0d32.obj $(PACKAGES) Memmgr.Lib sysinit.obj $(OBJFILES)"/>
+    <ALLRES value="$(RESFILES)"/>
+    <ALLLIB value="$(LIBFILES) $(LIBRARIES) import32.lib cp32mti.lib"/>
+    <OTHERFILES value=""/>
+  </LINKER>
+  <FILELIST>
+      <FILE FILENAME="pSVApp.res" FORMNAME="" UNITNAME="pSVApp.res" CONTAINERID="ResTool" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="pSVApp.bpf" FORMNAME="" UNITNAME="pSVApp" CONTAINERID="BPF" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\SVDll\SVInterface.cpp" FORMNAME="" UNITNAME="SVInterface" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Cursor.res" FORMNAME="" UNITNAME="Cursor.res" CONTAINERID="ResTool" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="include\Hanra\SLogUnit.h" FORMNAME="" UNITNAME="SLogUnit.h" CONTAINERID="" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="include\Hanra\SLDll.lib" FORMNAME="" UNITNAME="SLDll.lib" CONTAINERID="LibTool" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="include\Euresys\MultiCam.def" FORMNAME="" UNITNAME="MultiCam.def" CONTAINERID="DefTool" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="include\Imi\ApiImport.cpp" FORMNAME="" UNITNAME="ApiImport" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Tracker.cpp" FORMNAME="" UNITNAME="Tracker.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="CamUnit.cpp" FORMNAME="" UNITNAME="CamUnit.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="LightUnit.cpp" FORMNAME="" UNITNAME="LightUnit.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="UserINI.cpp" FORMNAME="" UNITNAME="UserINI.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="UserFile.cpp" FORMNAME="" UNITNAME="UserFile.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="uRs232c.cpp" FORMNAME="" UNITNAME="uRs232c.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Form3d.cpp" FORMNAME="Frm3d" UNITNAME="Form3d" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="FormHisto.cpp" FORMNAME="FrmHisto" UNITNAME="FormHisto" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="FormPixel.cpp" FORMNAME="FrmPixel" UNITNAME="FormPixel" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="FormMag.cpp" FORMNAME="FrmMag" UNITNAME="FormMag" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="FormTrainChk.cpp" FORMNAME="FrmTrainChk" UNITNAME="FormTrainChk" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="FormAlgoPara.cpp" FORMNAME="FrmAlgoPara" UNITNAME="FormAlgoPara" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="FormImage.cpp" FORMNAME="FrmImage" UNITNAME="FormImage" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="FormJob.cpp" FORMNAME="FrmJob" UNITNAME="FormJob" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="ParaUnit.cpp" FORMNAME="" UNITNAME="ParaUnit" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="VisionBase.cpp" FORMNAME="" UNITNAME="VisionBase" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="FormCamLightPara.cpp" FORMNAME="FrmCamLightPara" UNITNAME="FormCamLightPara" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="FormVisnMain.cpp" FORMNAME="FrmVisnMain" UNITNAME="FormVisnMain" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\app\---------------------------------------------" FORMNAME="" UNITNAME="---------------------------------------------" CONTAINERID="" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Common.cpp" FORMNAME="" UNITNAME="Common" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="VisnDefine.h" FORMNAME="" UNITNAME="VisnDefine.h" CONTAINERID="" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="VOptnMan.cpp" FORMNAME="" UNITNAME="VOptnMan.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Orientation.cpp" FORMNAME="" UNITNAME="Orientation" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="FormOri.cpp" FORMNAME="FrmOri" UNITNAME="FormOri" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="VisionMan.cpp" FORMNAME="" UNITNAME="VisionMan.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="SVApp.cpp" FORMNAME="" UNITNAME="SVApp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="SAInterface.cpp" FORMNAME="" UNITNAME="SAInterface" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+  </FILELIST>
+  <BUILDTOOLS>
+  </BUILDTOOLS>
+
+  <IDEOPTIONS>
+[Version Info]
+IncludeVerInfo=0
+AutoIncBuild=0
+MajorVer=1
+MinorVer=0
+Release=0
+Build=0
+Debug=0
+PreRelease=0
+Special=0
+Private=0
+DLL=0
+Locale=1042
+CodePage=949
+
+[Version Info Keys]
+CompanyName=
+FileDescription=
+FileVersion=1.0.0.0
+InternalName=
+LegalCopyright=
+LegalTrademarks=
+OriginalFilename=
+ProductName=
+ProductVersion=1.0.0.0
+Comments=
+
+[Excluded Packages]
+c:\program files\borland\cbuilder6\Bin\dclite60.bpl=Borland Integrated Translation Environment
+
+[HistoryLists\hlIncludePath]
+Count=30
+Item0=..\Motion;$(BCB)\include;$(BCB)\include\vcl;.\include\Imi;.\include\Euresys;.\include\Hanra
+Item1=..\app;..\Motion;..\include\Imi;..\SVDll;$(BCB)\include;$(BCB)\include\vcl;.\include\Imi;.\include\Euresys;.\include\Hanra
+Item2=..\app;..\Motion;..\include\Imi;..\SVDll;$(BCB)\include;$(BCB)\include\vcl;.\include\Imi;.\include\Euresys;.\include\Hanra;D:\BC6Works\SSC\HRT_450T\Vision\include\Neptune
+Item3=..\app;..\Motion;..\include\Imi;..\SVDll;$(BCB)\include;$(BCB)\include\vcl;.\include\Imi;.\include\Euresys;.\include\Hanra;\include\Neptune
+Item4=..\app;..\Motion;..\include\Imi;..\SVDll;$(BCB)\include;$(BCB)\include\vcl;.\include\Imi;.\include\Euresys;.\include\Hanra;D:\BC6Works\SSC\HRT_450T\Vision\include\Neptune;.\include\Neptune
+Item5=..\app;..\Motion;..\include\Imi;..\SVDll;$(BCB)\include;$(BCB)\include\vcl;.\include\Imi;.\include\Euresys;.\include\Hanra;.\include\Neptune
+Item6=..\app;..\Motion;..\include\Imi;..\SVDll;$(BCB)\include;$(BCB)\include\vcl;.\include\Imi;.\include\Euresys;.\include\Hanra;.\include\Neptune;D:\BC6Works\SSC\HRT_450T\Vision\include\Neptune
+Item7=..\include\Imi;..\SVDll;$(BCB)\include;$(BCB)\include\vcl;.\include\Imi;.\include\Euresys;.\include\Hanra
+Item8=..\include\Imi;..\SVDll;$(BCB)\include;$(BCB)\include\vcl;.\include\Imi;.\include\Euresys
+Item9=$(BCB)\include;$(BCB)\include\vcl;.\include\Imi;.\include\Euresys
+Item10=C:\Program Files\Borland\CBuilder6\Projects;..;$(BCB)\include;$(BCB)\include\vcl;include\Euresys;include\Imi;..\SVDll;..\include\Imi
+Item11=C:\Program Files\Borland\CBuilder6\Projects;..;$(BCB)\include;$(BCB)\include\vcl;include\Euresys;include\Imi;..\SVDll;..\include\Imi;.\include\Imi
+Item12=..\include\Imi;C:\Program Files\Borland\CBuilder6\Projects;..;$(BCB)\include;$(BCB)\include\vcl;include\Euresys;include\Imi;..\SVDll
+Item13=C:\Program Files\Borland\CBuilder6\Projects;..;$(BCB)\include;$(BCB)\include\vcl;include\Euresys;include\Imi;..\SVDll
+Item14=..\include\Imi;Vision\include\Imi;..\Vision;C:\Program Files\Borland\CBuilder6\Projects;\include\Imi;..;$(BCB)\include;$(BCB)\include\vcl;include\Euresys;include\Imi;..\SVDll
+Item15=Vision\include\Imi;..\Vision;C:\Program Files\Borland\CBuilder6\Projects;\include\Imi;..;$(BCB)\include;$(BCB)\include\vcl;include\Euresys;include\Imi;..\SVDll
+Item16=..\include\Imi;..\Vision;C:\Program Files\Borland\CBuilder6\Projects;\include\Imi;..;$(BCB)\include;$(BCB)\include\vcl;include\Euresys;include\Imi;..\SVDll
+Item17=..\Vision;C:\Program Files\Borland\CBuilder6\Projects;\include\Imi;..;$(BCB)\include;$(BCB)\include\vcl;include\Euresys;include\Imi;..\SVDll
+Item18=..\Vision;..\App;C:\Program Files\Borland\CBuilder6\Projects;..\include\Imi;..;$(BCB)\include;$(BCB)\include\vcl;include\Euresys;include\Imi;..\SVDll;..\include\Hanra
+Item19=..\..\HRD_810m\Vision;..\..\HRD_810m\App;C:\Program Files\Borland\CBuilder6\Projects;..\include\Imi;..;$(BCB)\include;$(BCB)\include\vcl;include\Euresys;include\Imi;..\SVDll;..\include\Hanra
+Item20=C:\Documents and Settings\sun\바탕 화면;..\..\HRD_810m\Vision;..\..\HRD_810m\App;C:\Program Files\Borland\CBuilder6\Projects;..\include\Imi;..;$(BCB)\include;$(BCB)\include\vcl;include\Euresys;include\Imi;..\SVDll;..\include\Hanra
+Item21=..\include\Imi;..;$(BCB)\include;$(BCB)\include\vcl;include\Euresys;include\Imi;..\SVDll;..\include\Hanra
+Item22=..;$(BCB)\include;$(BCB)\include\vcl;include\Euresys;include\Imi;..\SVDll;..\include\Hanra
+Item23=..;$(BCB)\include;$(BCB)\include\vcl;include\Euresys;include\Imi;D:\BC6Works\HRD_210c_MotionBefore\SVDll;..\include\Hanra
+Item24=..;$(BCB)\include;$(BCB)\include\vcl;include\Euresys;include\Imi;D:\BC6Works\HRD_210c_MotionBefore\SVDll;..\include\Hanra;..\SVDll
+Item25=..;$(BCB)\include;$(BCB)\include\vcl;include\Euresys;include\Imi;..\SVDll;..\include\Hanra;D:\BC6Works\HRD_210c_MotionBefore\SVDll
+Item26=..;$(BCB)\include;$(BCB)\include\vcl;include\Euresys;include\Imi;..\SVDll
+Item27=..;$(BCB)\include;$(BCB)\include\vcl;include\Euresys;include\Imi
+Item28=..\;$(BCB)\include;$(BCB)\include\vcl;include\Euresys;include\Imi
+Item29=..\;$(BCB)\include;$(BCB)\include\vcl
+
+[HistoryLists\hlLibraryPath]
+Count=14
+Item0=..\app;..\Motion;..\include\Imi;C:\Program Files\Borland\CBuilder6\Projects;$(BCB)\lib\obj;$(BCB)\lib;include\Euresys;include\Imi;..\SVDll
+Item1=..\app;..\Motion;..\include\Imi;C:\Program Files\Borland\CBuilder6\Projects;$(BCB)\lib\obj;$(BCB)\lib;include\Euresys;include\Imi;..\SVDll;Include\Neptune
+Item2=..\app;..\Motion;..\include\Imi;C:\Program Files\Borland\CBuilder6\Projects;$(BCB)\lib\obj;$(BCB)\lib;include\Euresys;include\Imi;..\SVDll;\lib\Neptune
+Item3=..\include\Imi;C:\Program Files\Borland\CBuilder6\Projects;$(BCB)\lib\obj;$(BCB)\lib;include\Euresys;include\Imi;..\SVDll
+Item4=C:\Program Files\Borland\CBuilder6\Projects;$(BCB)\lib\obj;$(BCB)\lib;include\Euresys;include\Imi;..\SVDll
+Item5=C:\Program Files\Borland\CBuilder6\Projects;$(BCB)\lib\obj;$(BCB)\lib;include\Euresys;include\Imi;..\SVDll;..\include\Imi
+Item6=..\Vision;..\App;C:\Program Files\Borland\CBuilder6\Projects;..\include\Imi;..\SVDll;..;$(BCB)\lib\obj;$(BCB)\lib;include\Euresys;include\Imi
+Item7=..\..\HRD_810m\Vision;..\..\HRD_810m\App;C:\Program Files\Borland\CBuilder6\Projects;..\include\Imi;..\SVDll;..;$(BCB)\lib\obj;$(BCB)\lib;include\Euresys;include\Imi
+Item8=C:\Documents and Settings\sun\바탕 화면;..\..\HRD_810m\Vision;..\..\HRD_810m\App;C:\Program Files\Borland\CBuilder6\Projects;..\include\Imi;..\SVDll;..;$(BCB)\lib\obj;$(BCB)\lib;include\Euresys;include\Imi
+Item9=..\include\Imi;..\SVDll;..;$(BCB)\lib\obj;$(BCB)\lib;include\Euresys;include\Imi
+Item10=..\SVDll;..;$(BCB)\lib\obj;$(BCB)\lib;include\Euresys;include\Imi
+Item11=..;$(BCB)\lib\obj;$(BCB)\lib;include\Euresys;include\Imi
+Item12=..\;$(BCB)\lib\obj;$(BCB)\lib;include\Euresys;include\Imi
+Item13=..\;$(BCB)\lib\obj;$(BCB)\lib
+
+[HistoryLists\hlDebugSourcePath]
+Count=1
+Item0=$(BCB)\source\vcl
+
+[HistoryLists\hlConditionals]
+Count=1
+Item0=_DEBUG
+
+[HistoryLists\hlIntOutputDir]
+Count=1
+Item0=obj
+
+[HistoryLists\hlFinalOutputDir]
+Count=2
+Item0=..\bin\
+Item1=..\bin
+
+[Debugging]
+DebugSourceDirs=$(BCB)\source\vcl
+
+[Parameters]
+RunParams=
+Launcher=
+UseLauncher=0
+DebugCWD=
+HostApplication=
+RemoteHost=
+RemotePath=
+RemoteLauncher=
+RemoteCWD=
+RemoteDebug=0
+
+[Compiler]
+ShowInfoMsgs=0
+LinkDebugVcl=0
+LinkCGLIB=0
+
+[Linker]
+LibPrefix=
+LibSuffix=
+LibVersion=
+  </IDEOPTIONS>
+</PROJECT>
