@@ -99,6 +99,9 @@ void __fastcall TFrmOption::UpdateComOptn(bool _bToTable)
         edTopUVLimitTime       -> Text      = OM.CmnOptn.iTopUVLimitTime       ;
         edBtmUVLimitTime       -> Text      = OM.CmnOptn.iBtmUVLimitTime       ;
 
+        cbCheckVisnPos         -> Checked   = OM.CmnOptn.bCheckVisnPos         ;
+
+
     }
     else {
         OM.CmnOptn.iWorkMode             = cbWorkMode         -> ItemIndex ;
@@ -128,6 +131,8 @@ void __fastcall TFrmOption::UpdateComOptn(bool _bToTable)
 
         OM.CmnOptn.iTopUVLimitTime       = StrToIntDef  (edTopUVLimitTime       -> Text,OM.CmnOptn.iTopUVLimitTime      );
         OM.CmnOptn.iBtmUVLimitTime       = StrToIntDef  (edBtmUVLimitTime       -> Text,OM.CmnOptn.iBtmUVLimitTime      );
+
+        OM.CmnOptn.bCheckVisnPos         = cbCheckVisnPos         -> Checked   ;
 
         UpdateComOptn(toTabl);
     }

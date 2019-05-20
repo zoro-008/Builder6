@@ -6,7 +6,7 @@ object FrmMain: TFrmMain
   ClientHeight = 1002
   ClientWidth = 1280
   Color = clBtnFace
-  Constraints.MaxHeight = 1040
+  Constraints.MaxHeight = 1041
   Constraints.MaxWidth = 1296
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -1254,7 +1254,7 @@ object FrmMain: TFrmMain
       Tag = 3
       Left = 1120
       Top = 74
-      Width = 149
+      Width = 137
       Height = 29
       Caption = #50724#54980' 02:24:34'
       Font.Charset = ANSI_CHARSET

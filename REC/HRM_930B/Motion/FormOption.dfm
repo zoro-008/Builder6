@@ -1,6 +1,6 @@
 object FrmOption: TFrmOption
-  Left = -204
-  Top = 81
+  Left = 794
+  Top = 227
   BorderStyle = bsNone
   ClientHeight = 848
   ClientWidth = 1280
@@ -224,6 +224,23 @@ object FrmOption: TFrmOption
       ParentColor = False
       ParentFont = False
       TabOrder = 9
+    end
+    object cbCheckVisnPos: TCheckBox
+      Tag = 1
+      Left = 9
+      Top = 272
+      Width = 266
+      Height = 22
+      Caption = 'Check Vision Position'
+      Color = clScrollBar
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -16
+      Font.Name = 'Arial'
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+      TabOrder = 10
     end
   end
   object btSave: TBitBtn

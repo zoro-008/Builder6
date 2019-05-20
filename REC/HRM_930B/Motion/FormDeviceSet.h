@@ -218,7 +218,6 @@ __published:	// IDE-managed Components
         TLabel *Label1;
         TPanel *Panel5;
         TEdit *edDispZOfs;
-        TCheckBox *cbUseDispRear;
         TEdit *edDispAccDcc;
         TPanel *Panel9;
         TLabel *lbPickerTolXY;
@@ -352,15 +351,6 @@ __published:	// IDE-managed Components
         TEdit *edUVTestDist;
         TLabel *Label8;
         TLabel *Label68;
-        TLabel *lbDSP_MinAmnt;
-        TLabel *Label78;
-        TLabel *Label22;
-        TLabel *Label23;
-        TLabel *Label24;
-        TLabel *Label25;
-        TEdit *edDspMinAmount;
-        TEdit *edDspPrsPres;
-        TEdit *edDspVacPres;
         TButton *btSttCadPos;
         TButton *btRttCadPos;
         TCheckBox *cbUseSTG_Vac1Frst;
@@ -391,12 +381,10 @@ __published:	// IDE-managed Components
         TCheckBox *cbNotUseRotate;
         TPanel *Panel10;
         TPanel *Panel13;
-        TLabel *lbPLC_ZOfs;
         TLabel *lbAtachSpd1;
         TLabel *lbAtachSpd2;
         TLabel *lbAtachForce;
         TLabel *lbAttchFOfs;
-        TLabel *Label47;
         TLabel *Label48;
         TLabel *Label49;
         TLabel *Label50;
@@ -407,7 +395,6 @@ __published:	// IDE-managed Components
         TEdit *edAttachForce;
         TEdit *edAttachSpeed2;
         TEdit *edAttachSpeed1;
-        TEdit *edPlaceZOfs;
         TEdit *edAttachDelay;
         TCheckBox *cbUsePush;
         TLabel *Label27;
@@ -439,7 +426,6 @@ __published:	// IDE-managed Components
         TEdit *edRHgtTolZ;
         TLabel *Label87;
         TLabel *Label88;
-        TCheckBox *cbEpoxyFirst;
         TButton *Button1;
         TLabel *Label89;
         TLabel *Label90;
@@ -473,8 +459,6 @@ __published:	// IDE-managed Components
         TButton *btULDPitchUp;
         TButton *btCmsPitchDn;
         TButton *btCmsPitchUp;
-        TComboBox *cbDispSeq;
-        TLabel *Label105;
         TComboBox *cbFirstDisp;
         TComboBox *cbSecDisp;
         TCheckBox *cbUseFstDisp;
@@ -490,6 +474,10 @@ __published:	// IDE-managed Components
         TEdit *edEpoxyDispCntR;
         TPanel *Panel16;
         TEdit *edUvCntScnd;
+        TEdit *edLengthTol;
+        TLabel *Label22;
+        TLabel *Label23;
+        TCheckBox *cbStgMxErrSkip;
     void __fastcall btSavePosClick(TObject *Sender);
     void __fastcall tmUpdateTimerTimer(TObject *Sender);
     void __fastcall FormDestroy(TObject *Sender);

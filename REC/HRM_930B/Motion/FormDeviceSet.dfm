@@ -1,6 +1,6 @@
 object FrmDeviceSet: TFrmDeviceSet
-  Left = 533
-  Top = 131
+  Left = 2484
+  Top = 92
   BorderStyle = bsNone
   Caption = 'FrmDeviceSet'
   ClientHeight = 919
@@ -95,7 +95,7 @@ object FrmDeviceSet: TFrmDeviceSet
     Top = 0
     Width = 1272
     Height = 919
-    ActivePage = tsRight_Tool
+    ActivePage = tsOption
     Align = alClient
     Font.Charset = ARABIC_CHARSET
     Font.Color = clWindowText
@@ -105,7 +105,7 @@ object FrmDeviceSet: TFrmDeviceSet
     ParentFont = False
     Style = tsButtons
     TabHeight = 35
-    TabIndex = 7
+    TabIndex = 8
     TabOrder = 0
     TabWidth = 123
     OnChange = pcDeviceSetChange
@@ -6288,7 +6288,7 @@ object FrmDeviceSet: TFrmDeviceSet
         object Label76: TLabel
           Left = 248
           Top = 18
-          Width = 111
+          Width = 109
           Height = 15
           Caption = #9664'START  POSITION'
           Font.Charset = ANSI_CHARSET
@@ -6749,7 +6749,7 @@ object FrmDeviceSet: TFrmDeviceSet
         object Label77: TLabel
           Left = 248
           Top = 18
-          Width = 111
+          Width = 109
           Height = 15
           Caption = #9664'START  POSITION'
           Font.Charset = ANSI_CHARSET
@@ -7201,7 +7201,7 @@ object FrmDeviceSet: TFrmDeviceSet
         object Label79: TLabel
           Left = 248
           Top = 18
-          Width = 111
+          Width = 109
           Height = 15
           Caption = #9664'START  POSITION'
           Font.Charset = ANSI_CHARSET
@@ -9606,99 +9606,6 @@ object FrmDeviceSet: TFrmDeviceSet
       Font.Style = []
       ImageIndex = 8
       ParentFont = False
-      object lbDSP_MinAmnt: TLabel
-        Left = 802
-        Top = 842
-        Width = 217
-        Height = 22
-        AutoSize = False
-        Caption = 'Dispenser Min Amount'
-        Color = clInactiveBorder
-        Font.Charset = ANSI_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -16
-        Font.Name = 'Arial'
-        Font.Style = [fsBold]
-        ParentColor = False
-        ParentFont = False
-        Visible = False
-      end
-      object Label78: TLabel
-        Left = 1088
-        Top = 842
-        Width = 16
-        Height = 19
-        Caption = '%'
-        Font.Charset = ANSI_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -16
-        Font.Name = 'Arial'
-        Font.Style = [fsBold]
-        ParentFont = False
-        Visible = False
-      end
-      object Label22: TLabel
-        Left = 1193
-        Top = 834
-        Width = 28
-        Height = 16
-        Caption = 'kPa'
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -13
-        Font.Name = 'MS Sans Serif'
-        Font.Style = [fsBold]
-        ParentFont = False
-        Visible = False
-      end
-      object Label23: TLabel
-        Left = 1182
-        Top = 837
-        Width = 32
-        Height = 16
-        Caption = ' kPa'
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -13
-        Font.Name = 'MS Sans Serif'
-        Font.Style = [fsBold]
-        ParentFont = False
-        Visible = False
-      end
-      object Label24: TLabel
-        Left = 898
-        Top = 840
-        Width = 217
-        Height = 22
-        AutoSize = False
-        Caption = 'Dispensor Vacuum   '
-        Color = clInactiveBorder
-        Font.Charset = ANSI_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -16
-        Font.Name = 'Arial'
-        Font.Style = [fsBold]
-        ParentColor = False
-        ParentFont = False
-        Visible = False
-      end
-      object Label25: TLabel
-        Left = 898
-        Top = 827
-        Width = 217
-        Height = 22
-        AutoSize = False
-        Caption = 'Dispensor Pressure                '
-        Color = clInactiveBorder
-        Font.Charset = ANSI_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -16
-        Font.Name = 'Arial'
-        Font.Style = [fsBold]
-        ParentColor = False
-        ParentFont = False
-        Visible = False
-      end
       object Panel4: TPanel
         Left = 402
         Top = 0
@@ -9887,21 +9794,6 @@ object FrmDeviceSet: TFrmDeviceSet
           TabOrder = 1
           Text = '1'
         end
-        object cbUseDispRear: TCheckBox
-          Left = 322
-          Top = 254
-          Width = 217
-          Height = 22
-          Caption = 'Use Rear Dispensor'
-          Font.Charset = ANSI_CHARSET
-          Font.Color = clWindowText
-          Font.Height = -16
-          Font.Name = 'Arial'
-          Font.Style = [fsBold]
-          ParentFont = False
-          TabOrder = 2
-          Visible = False
-        end
         object edDispAccDcc: TEdit
           Left = 242
           Top = 177
@@ -9914,7 +9806,7 @@ object FrmDeviceSet: TFrmDeviceSet
           Font.Style = []
           ImeName = 'Microsoft Office IME 2007'
           ParentFont = False
-          TabOrder = 3
+          TabOrder = 2
           Text = '1'
         end
         object edEpoxyDispCntF: TEdit
@@ -9929,7 +9821,7 @@ object FrmDeviceSet: TFrmDeviceSet
           Font.Style = []
           ImeName = 'Microsoft Office IME 2007'
           ParentFont = False
-          TabOrder = 4
+          TabOrder = 3
           Text = '1'
         end
         object btFtDispChSetting: TButton
@@ -9938,7 +9830,7 @@ object FrmDeviceSet: TFrmDeviceSet
           Width = 111
           Height = 25
           Caption = 'Ch Setting'
-          TabOrder = 5
+          TabOrder = 4
           OnClick = btFtDispChSettingClick
         end
         object btRrDispChSetting: TButton
@@ -9947,7 +9839,7 @@ object FrmDeviceSet: TFrmDeviceSet
           Width = 111
           Height = 25
           Caption = 'Ch Setting'
-          TabOrder = 6
+          TabOrder = 5
           OnClick = btRrDispChSettingClick
         end
         object cbDspChFt: TComboBox
@@ -9964,7 +9856,7 @@ object FrmDeviceSet: TFrmDeviceSet
           ImeName = 'Microsoft IME 2010'
           ItemHeight = 18
           ParentFont = False
-          TabOrder = 7
+          TabOrder = 6
           Text = '1'
           OnChange = cbDspChFtChange
           Items.Strings = (
@@ -10012,7 +9904,7 @@ object FrmDeviceSet: TFrmDeviceSet
           ImeName = 'Microsoft IME 2010'
           ItemHeight = 18
           ParentFont = False
-          TabOrder = 8
+          TabOrder = 7
           Text = '1'
           OnChange = cbDspChRrChange
           Items.Strings = (
@@ -10060,7 +9952,7 @@ object FrmDeviceSet: TFrmDeviceSet
           ImeName = 'Microsoft Office IME 2007'
           ItemHeight = 19
           ParentFont = False
-          TabOrder = 9
+          TabOrder = 8
           Text = 'Rear'
           OnSelect = cbFirstDispSelect
           Items.Strings = (
@@ -10080,7 +9972,7 @@ object FrmDeviceSet: TFrmDeviceSet
           ImeName = 'Microsoft Office IME 2007'
           ItemHeight = 19
           ParentFont = False
-          TabOrder = 10
+          TabOrder = 9
           Text = 'Front'
           OnSelect = cbSecDispSelect
           Items.Strings = (
@@ -10099,7 +9991,7 @@ object FrmDeviceSet: TFrmDeviceSet
           Font.Name = 'Arial'
           Font.Style = [fsBold]
           ParentFont = False
-          TabOrder = 11
+          TabOrder = 10
         end
         object cbUseSecDisp: TCheckBox
           Left = 17
@@ -10113,7 +10005,7 @@ object FrmDeviceSet: TFrmDeviceSet
           Font.Name = 'Arial'
           Font.Style = [fsBold]
           ParentFont = False
-          TabOrder = 12
+          TabOrder = 11
         end
         object edEpoxyDispCntR: TEdit
           Left = 242
@@ -10127,7 +10019,7 @@ object FrmDeviceSet: TFrmDeviceSet
           Font.Style = []
           ImeName = 'Microsoft Office IME 2007'
           ParentFont = False
-          TabOrder = 13
+          TabOrder = 12
           Text = '1'
         end
       end
@@ -10135,7 +10027,7 @@ object FrmDeviceSet: TFrmDeviceSet
         Left = 401
         Top = 265
         Width = 402
-        Height = 244
+        Height = 273
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
         Font.Height = -20
@@ -10346,6 +10238,35 @@ object FrmDeviceSet: TFrmDeviceSet
           Font.Style = [fsBold]
           ParentFont = False
         end
+        object Label22: TLabel
+          Left = 359
+          Top = 243
+          Width = 28
+          Height = 19
+          Caption = 'mm'
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -16
+          Font.Name = 'Arial'
+          Font.Style = [fsBold]
+          ParentFont = False
+        end
+        object Label23: TLabel
+          Left = 10
+          Top = 240
+          Width = 279
+          Height = 22
+          AutoSize = False
+          Caption = 'Motor-Vision LengthTolerance'
+          Color = clInactiveBorder
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -16
+          Font.Name = 'Arial'
+          Font.Style = [fsBold]
+          ParentColor = False
+          ParentFont = False
+        end
         object Panel12: TPanel
           Left = 1
           Top = 1
@@ -10466,6 +10387,21 @@ object FrmDeviceSet: TFrmDeviceSet
           ImeName = 'Microsoft Office IME 2007'
           ParentFont = False
           TabOrder = 7
+          Text = '1'
+        end
+        object edLengthTol: TEdit
+          Left = 297
+          Top = 238
+          Width = 60
+          Height = 26
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -16
+          Font.Name = 'Arial'
+          Font.Style = []
+          ImeName = 'Microsoft Office IME 2007'
+          ParentFont = False
+          TabOrder = 8
           Text = '1'
         end
       end
@@ -10936,23 +10872,6 @@ object FrmDeviceSet: TFrmDeviceSet
           Font.Style = [fsBold]
           ParentFont = False
         end
-        object Label105: TLabel
-          Left = 274
-          Top = 212
-          Width = 191
-          Height = 22
-          AutoSize = False
-          Caption = 'Dispensor Sequence'
-          Color = clInactiveBorder
-          Font.Charset = ANSI_CHARSET
-          Font.Color = clWindowText
-          Font.Height = -16
-          Font.Name = 'Arial'
-          Font.Style = [fsBold]
-          ParentColor = False
-          ParentFont = False
-          Visible = False
-        end
         object Panel3: TPanel
           Left = 1
           Top = 1
@@ -11059,12 +10978,12 @@ object FrmDeviceSet: TFrmDeviceSet
           TabOrder = 6
           Text = '1'
         end
-        object cbEpoxyFirst: TCheckBox
-          Left = 306
-          Top = 241
-          Width = 270
+        object cbStgMxErrSkip: TCheckBox
+          Left = 10
+          Top = 209
+          Width = 375
           Height = 22
-          Caption = 'Epoxy First ('#49440#50640#54253#49884' '#51089#50629')'
+          Caption = 'Stage Height Check skip('#49828#53580#51060#51648' '#45458#51060#52769#51221' '#49828#53429')'
           Font.Charset = ANSI_CHARSET
           Font.Color = clWindowText
           Font.Height = -16
@@ -11072,29 +10991,6 @@ object FrmDeviceSet: TFrmDeviceSet
           Font.Style = [fsBold]
           ParentFont = False
           TabOrder = 7
-          Visible = False
-        end
-        object cbDispSeq: TComboBox
-          Left = 296
-          Top = 216
-          Width = 153
-          Height = 31
-          Font.Charset = ANSI_CHARSET
-          Font.Color = clWindowText
-          Font.Height = -20
-          Font.Name = 'Arial'
-          Font.Style = []
-          ImeName = 'Microsoft Office IME 2007'
-          ItemHeight = 23
-          ItemIndex = 0
-          ParentFont = False
-          TabOrder = 8
-          Text = 'Not Use'
-          Visible = False
-          Items.Strings = (
-            'Not Use'
-            'Epoxy First'
-            'Epoxy Second')
         end
       end
       object Panel1: TPanel
@@ -11978,7 +11874,7 @@ object FrmDeviceSet: TFrmDeviceSet
         object Label83: TLabel
           Left = 16
           Top = 40
-          Width = 226
+          Width = 170
           Height = 16
           Caption = #44221#54868#49884' '#53952#50612#51648#45716' '#50577#50640' '#45824#54620' '#50724#54532#49489
           Font.Charset = ANSI_CHARSET
@@ -12107,7 +12003,7 @@ object FrmDeviceSet: TFrmDeviceSet
         object Label82: TLabel
           Left = 16
           Top = 359
-          Width = 302
+          Width = 230
           Height = 16
           Caption = #46020#47732#50724#52264#47484' '#48372#50756' '#54616#45716' '#50724#54532#49489' +'#44032' '#44036#44201#51012' '#46916#50880
           Font.Charset = ANSI_CHARSET
@@ -12120,7 +12016,7 @@ object FrmDeviceSet: TFrmDeviceSet
         object Label84: TLabel
           Left = 16
           Top = 280
-          Width = 331
+          Width = 247
           Height = 16
           Caption = #49828#53580#51060#51648#50640#49436' '#48372#51221#49884#50640' '#44036#49453#50504#48155#44172' '#46916#50612#45459#45716' '#44144#47532
           Font.Charset = ANSI_CHARSET
@@ -12191,7 +12087,7 @@ object FrmDeviceSet: TFrmDeviceSet
         object Label93: TLabel
           Left = 16
           Top = 431
-          Width = 354
+          Width = 266
           Height = 16
           Caption = #52649#46028#44048#51648#50857' '#51088#51228#50659#51648#50752' '#50641#54000#48652#50640#47532#50500' '#44036#51032' '#44144#47532'('#50577#49688')'
           Font.Charset = ANSI_CHARSET
@@ -12204,7 +12100,7 @@ object FrmDeviceSet: TFrmDeviceSet
         object Label94: TLabel
           Left = 16
           Top = 447
-          Width = 365
+          Width = 273
           Height = 16
           Caption = #48708#51260#44208#44284#44050#51012' '#51088#51228' '#50641#54000#48652#50640#47532#50612#47196' '#54620#44221#50864' '#45347#50612#51480#50556#54632'.'
           Font.Charset = ANSI_CHARSET
@@ -12442,76 +12338,21 @@ object FrmDeviceSet: TFrmDeviceSet
           Text = '1'
         end
       end
-      object edDspMinAmount: TEdit
-        Left = 1026
-        Top = 840
-        Width = 60
-        Height = 26
-        Font.Charset = ANSI_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -16
-        Font.Name = 'Arial'
-        Font.Style = []
-        ImeName = 'Microsoft Office IME 2007'
-        ParentFont = False
-        TabOrder = 7
-        Text = '1'
-        Visible = False
-      end
-      object edDspPrsPres: TEdit
-        Left = 1119
-        Top = 826
-        Width = 69
-        Height = 25
-        AutoSize = False
-        ImeName = 'Microsoft IME 2010'
-        TabOrder = 8
-        Text = '0'
-        Visible = False
-      end
-      object edDspVacPres: TEdit
-        Left = 1119
-        Top = 839
-        Width = 69
-        Height = 25
-        AutoSize = False
-        ImeName = 'Microsoft IME 2010'
-        TabOrder = 9
-        Text = '0'
-        Visible = False
-      end
       object Panel10: TPanel
         Left = 401
-        Top = 508
+        Top = 537
         Width = 402
-        Height = 309
+        Height = 280
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
         Font.Height = -20
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
-        TabOrder = 10
-        object lbPLC_ZOfs: TLabel
-          Left = -22
-          Top = 272
-          Width = 247
-          Height = 22
-          AutoSize = False
-          Caption = 'Place Z Offset'
-          Color = clInactiveBorder
-          Font.Charset = ANSI_CHARSET
-          Font.Color = clWindowText
-          Font.Height = -16
-          Font.Name = 'Arial'
-          Font.Style = [fsBold]
-          ParentColor = False
-          ParentFont = False
-          Visible = False
-        end
+        TabOrder = 7
         object lbAtachSpd1: TLabel
           Left = 10
-          Top = 92
+          Top = 95
           Width = 247
           Height = 22
           AutoSize = False
@@ -12527,7 +12368,7 @@ object FrmDeviceSet: TFrmDeviceSet
         end
         object lbAtachSpd2: TLabel
           Left = 10
-          Top = 140
+          Top = 143
           Width = 247
           Height = 22
           AutoSize = False
@@ -12543,7 +12384,7 @@ object FrmDeviceSet: TFrmDeviceSet
         end
         object lbAtachForce: TLabel
           Left = 10
-          Top = 172
+          Top = 175
           Width = 247
           Height = 22
           AutoSize = False
@@ -12559,7 +12400,7 @@ object FrmDeviceSet: TFrmDeviceSet
         end
         object lbAttchFOfs: TLabel
           Left = 10
-          Top = 204
+          Top = 207
           Width = 247
           Height = 22
           AutoSize = False
@@ -12573,23 +12414,9 @@ object FrmDeviceSet: TFrmDeviceSet
           ParentColor = False
           ParentFont = False
         end
-        object Label47: TLabel
-          Left = 305
-          Top = 272
-          Width = 28
-          Height = 19
-          Caption = 'mm'
-          Font.Charset = ANSI_CHARSET
-          Font.Color = clWindowText
-          Font.Height = -16
-          Font.Name = 'Arial'
-          Font.Style = [fsBold]
-          ParentFont = False
-          Visible = False
-        end
         object Label48: TLabel
           Left = 337
-          Top = 92
+          Top = 95
           Width = 59
           Height = 19
           Caption = 'mm/sec'
@@ -12602,7 +12429,7 @@ object FrmDeviceSet: TFrmDeviceSet
         end
         object Label49: TLabel
           Left = 337
-          Top = 140
+          Top = 143
           Width = 59
           Height = 19
           Caption = 'mm/sec'
@@ -12615,7 +12442,7 @@ object FrmDeviceSet: TFrmDeviceSet
         end
         object Label50: TLabel
           Left = 337
-          Top = 172
+          Top = 175
           Width = 10
           Height = 19
           Caption = 'g'
@@ -12628,7 +12455,7 @@ object FrmDeviceSet: TFrmDeviceSet
         end
         object Label51: TLabel
           Left = 337
-          Top = 204
+          Top = 207
           Width = 10
           Height = 19
           Caption = 'g'
@@ -12641,7 +12468,7 @@ object FrmDeviceSet: TFrmDeviceSet
         end
         object lbAtachDelay: TLabel
           Left = 10
-          Top = 236
+          Top = 239
           Width = 247
           Height = 22
           AutoSize = False
@@ -12657,7 +12484,7 @@ object FrmDeviceSet: TFrmDeviceSet
         end
         object Label17: TLabel
           Left = 337
-          Top = 236
+          Top = 239
           Width = 27
           Height = 19
           Caption = 'sec'
@@ -12670,8 +12497,8 @@ object FrmDeviceSet: TFrmDeviceSet
         end
         object Label87: TLabel
           Left = 8
-          Top = 74
-          Width = 365
+          Top = 77
+          Width = 273
           Height = 16
           Caption = #53944#47116#49828#54140' '#54540#47112#51060#49828' '#54252#51648#49496#50640#49436' '#52395#48512#54616' '#48155#51012#46412#44620#51648' '#49549#46020
           Font.Charset = ANSI_CHARSET
@@ -12683,8 +12510,8 @@ object FrmDeviceSet: TFrmDeviceSet
         end
         object Label88: TLabel
           Left = 8
-          Top = 122
-          Width = 173
+          Top = 125
+          Width = 149
           Height = 16
           Caption = 'Attach Force'#44620#51648' '#44032#45716' '#49549#46020
           Font.Charset = ANSI_CHARSET
@@ -12713,7 +12540,7 @@ object FrmDeviceSet: TFrmDeviceSet
         end
         object edAttachForceOfs: TEdit
           Left = 267
-          Top = 202
+          Top = 205
           Width = 60
           Height = 26
           Font.Charset = ANSI_CHARSET
@@ -12728,7 +12555,7 @@ object FrmDeviceSet: TFrmDeviceSet
         end
         object edAttachForce: TEdit
           Left = 267
-          Top = 170
+          Top = 173
           Width = 60
           Height = 26
           Font.Charset = ANSI_CHARSET
@@ -12743,7 +12570,7 @@ object FrmDeviceSet: TFrmDeviceSet
         end
         object edAttachSpeed2: TEdit
           Left = 267
-          Top = 138
+          Top = 141
           Width = 60
           Height = 26
           Font.Charset = ANSI_CHARSET
@@ -12758,7 +12585,7 @@ object FrmDeviceSet: TFrmDeviceSet
         end
         object edAttachSpeed1: TEdit
           Left = 267
-          Top = 90
+          Top = 93
           Width = 60
           Height = 26
           Font.Charset = ANSI_CHARSET
@@ -12771,9 +12598,9 @@ object FrmDeviceSet: TFrmDeviceSet
           TabOrder = 4
           Text = '1'
         end
-        object edPlaceZOfs: TEdit
-          Left = 235
-          Top = 270
+        object edAttachDelay: TEdit
+          Left = 267
+          Top = 237
           Width = 60
           Height = 26
           Font.Charset = ANSI_CHARSET
@@ -12785,26 +12612,10 @@ object FrmDeviceSet: TFrmDeviceSet
           ParentFont = False
           TabOrder = 5
           Text = '1'
-          Visible = False
-        end
-        object edAttachDelay: TEdit
-          Left = 267
-          Top = 234
-          Width = 60
-          Height = 26
-          Font.Charset = ANSI_CHARSET
-          Font.Color = clWindowText
-          Font.Height = -16
-          Font.Name = 'Arial'
-          Font.Style = []
-          ImeName = 'Microsoft Office IME 2007'
-          ParentFont = False
-          TabOrder = 6
-          Text = '1'
         end
         object cbUsePush: TCheckBox
           Left = 10
-          Top = 43
+          Top = 46
           Width = 217
           Height = 22
           Caption = 'Use CMOS Push'
@@ -12814,7 +12625,7 @@ object FrmDeviceSet: TFrmDeviceSet
           Font.Name = 'Arial'
           Font.Style = [fsBold]
           ParentFont = False
-          TabOrder = 7
+          TabOrder = 6
         end
       end
     end

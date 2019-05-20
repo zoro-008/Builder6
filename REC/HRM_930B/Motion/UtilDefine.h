@@ -473,6 +473,7 @@ enum EN_PSTN_VALUE {
     pvRTL_YTrsfCheck           , //
     pvRTL_YTrsfRoatator        , //
     pvRTL_YTrsfRotatorRvs      , // 로테이터에서 뒤집힌 자제 집는 위치.
+    poRTL_YTrsfPlaceOfs        , // 2430FCA 자재(Die Attach + Butting) 작업 시 트랜스퍼 Y축Place 전에 먹이는 옵셋
     MAX_PSTN_MOTR9             ,
 
     // miSTG_XStage = 10 , // X Linear Bottom Stage
@@ -910,5 +911,4 @@ enum EN_TOOL_ID{
 //W-Ceph 디바이스 추가
 
 #endif
-
 

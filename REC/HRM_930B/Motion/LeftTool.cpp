@@ -23,6 +23,7 @@
 #include "ManualMan.h"
 
 #include "Rs232Keyence.h"
+#include "Sequence.h"
 
 //---------------------------------------------------------------------------
 
@@ -473,7 +474,7 @@ bool CLeftTool::Autorun(void) //오토런닝시에 계속 타는 함수.
         
         bool isCycleMidSupply = !OM.CmnOptn.bFLoadingStop &&
                                 MT_CmprPos(miLDR_ZElevF , LDR_F.GetMotrPos(miLDR_ZElevF , piLDR_ZElevFPick )) &&
-                                RTL.GetSeqStep() == CRightTool::scIdle &&
+                               (RTL.GetSeqStep() == CRightTool::scIdle || RTL.GetSeqStep() == CRightTool::scOut)&&
                                 DM.ARAY[riPTL].CheckAllStat(csNone  )&&
                                 DM.ARAY[riWKO].CheckAllStat(csNone  )&&
                                 DM.ARAY[riSTG].CheckAllStat(csNone  )&&
@@ -721,7 +722,9 @@ bool CLeftTool::CycleMidSupply(void)
                   return true ;
 
 
-        case 10: RTL.ToolVoid(true);
+        case 10: if(RTL.GetSeqStep() != CRightTool::scOut){
+                     RTL.ToolVoid(true);
+                 }
                  HexaPot.MoveAbsRes(paX, HEX_X_WAIT);
                  HexaPot.MoveAbsRes(paY, HEX_Y_WAIT);
                  HexaPot.MoveAbsRes(paZ, HEX_Z_WAIT);
@@ -734,7 +737,9 @@ bool CLeftTool::CycleMidSupply(void)
                  Step.iCycle++;
                  return false ;
 
-        case 11: if(!RTL.ToolVoid()) return false ;
+        case 11: if(RTL.GetSeqStep() != CRightTool::scOut){
+                     if(!RTL.ToolVoid()) return false ;
+                 }
                  if(!HexaPot.GetStopInpos()) return false ;
                  if(!MoveActr(aiLTL_GriperFwBW , ccBwd)) return false ;
                  MoveMotr(miLTL_ZDispr , piLTL_ZDispWait);
@@ -1751,7 +1756,7 @@ bool CLeftTool::CycleCmsLDisp(void)
                  //        (DM.ARAY[riSTG].GetCntStat(csCmsLDisp2) && OM.DevOptn.bUseSecDisp   && OM.DevOptn.iSecDisp == 1) ) SetCadOfsGain(tlLDspR );
 
                  MT_GoAbsRun(miLTL_XGenRr , pCadDspCmd->GetPosX(0)+g_tMidPosOfs.dX);
-                 MT_GoAbsRun(miLTL_YDispr , pCadDspCmd->GetPosY(0)+g_tMidPosOfs.dY);
+                 MT_GoAbsRun(miLTL_YDispr , pCadDspCmd->GetPosY(0)-g_tMidPosOfs.dY);
 
                  Step.iCycle++;
                  return false ;
@@ -2076,7 +2081,8 @@ bool CLeftTool::CycleTopLUV()
                  dMotorPos[2] = PM.GetValue(miLTL_ZDispr , pvLTL_ZDispUVWork);
 
                  //UV 켜기.
-                 Rs232UV.SetCuringOnOff(uvCh5, true );
+                 //Rs232UV.SetCuringOnOff(uvCh5, true );
+                 Rs232UV.SetCuringOnOff(uvCh5, pCadDspCmd->GetDispOn(m_iCrntUvNode));
 
                  m_iLastTopUVSttTime = GetTime() ;
 
@@ -2459,6 +2465,15 @@ bool CLeftTool::CycleCmsLAlign()
                      *_pRetY += _dCntrY ;
                  */
 
+
+                 //한번 검사하고 멈추는 옵션.
+                 if(OM.CmnOptn.bCheckVisnPos && !Stat.bMsgChecked)
+                 {
+                     Stat.bMsgChecked  = true ;
+                     Stat.bShowVisnMsg = true ;
+                     SEQ ._bBtnStop    = true ;
+                 }
+
                  //계산상의 좌표는 4사분면을 쓴다.
                  //비전 결가값 4사분면이기 때문..
                  //상대값을 찾기위해 돌리 포인트를 0,0으로 넣고  현재 위치에서 스테이지 센터
@@ -2501,6 +2516,8 @@ bool CLeftTool::CycleCmsLAlign()
                  if(WorkInfo.iRow==0 && WorkInfo.iCol==0){ //첫장은 정규 사이즈로 붙이고
                      HexaPot.MoveIncRes(paZ , STG.PkgStat.dMidTopHeight -  STG.PkgStat.dHexaTopHeight + OM.DevOptn.dMidCmsGapFrst);
                      Trace("HexaDown Frst" , String(STG.PkgStat.dMidTopHeight -  STG.PkgStat.dHexaTopHeight + OM.DevOptn.dMidCmsGapFrst).c_str());
+
+
                  }
                  else { //둘째장은 높게붙여야 틸트 보정이 된다.
                      Trace("HexaDown" , String(STG.PkgStat.dMidTopHeight -  STG.PkgStat.dHexaTopHeight + OM.DevOptn.dMidCmsGap).c_str());

@@ -263,20 +263,22 @@ bool CIndex::Autorun(void) //오토런닝시에 계속 타는 함수.
 
 
             int r,c ;
+
+/*   20181029 오성철과장 인덱스에서 충돌감지로 에러 몇번 떳을때 인덱스 Get조건이 안되는 문제로 업데이트.
             bool isWorking = STG.GetWorkingRC(r,c);
 
             int  iMaxModuleCnt    = OM.DevInfo.iMidColCnt * OM.DevInfo.iMidRowCnt ;
             int  iMidHeightCnt    = DM.ARAY[riSTG].GetCntStat(csMidREndHeight ); //1장작업 종료 상태.
             int  iCmsREndAlignCnt = DM.ARAY[riSTG].GetCntStat(csCmsREndAlign  );
+
             //Epoxy First 체크박스에서 콤보박스로 옵션 변경 진섭
-            //int  iWorkWaitCnt     = OM.DevOptn.bEpoxyFirst ? DM.ARAY[riSTG].GetCntStat(csCmsLDisp )+DM.ARAY[riSTG].GetCntStat(csCmsRNeed) : DM.ARAY[riSTG].GetCntStat(csCmsRNeed) ;
             int  iWorkWaitCnt     = OM.DevOptn.bUseFstDisp ? DM.ARAY[riSTG].GetCntStat(csCmsLDisp1 )+DM.ARAY[riSTG].GetCntStat(csCmsRNeed) : DM.ARAY[riSTG].GetCntStat(csCmsRNeed) ;
-            //int  iWorkWaitCnt     = DM.ARAY[riSTG].GetCntStat(csCmsRNeed) ;
 
             //2번째장 작업 부터는 그전 작업하던 것이 탑유부이 작업 할때쯤 꺼내오면 렉타임 없음.
             bool bNeedNext        =  DM.ARAY[riSTG].GetCntStat(csCmsRNeed) &&
                                    ((iMidHeightCnt + iWorkWaitCnt + iCmsREndAlignCnt)==iMaxModuleCnt);//나중에 스킵 켜고 진행 할 경우.
-                                                                                                      //Fix 나 TopUV일경우로바꿔야 한다.
+                                                                                                      //Fix 나 TopUV일경우로바꿔야 한다
+
             bool isCycleGet     =  !OM.CmnOptn.bRLoadingStop &&
                                    MT_CmprPos(miLDR_ZElevR , LDR_R.GetMotrPos(miLDR_ZElevR , piLDR_ZElevRPick )) &&
                                   (DM.ARAY[riSTG  ].CheckAllStat(csNone) || bNeedNext  ) &&
@@ -289,7 +291,34 @@ bool CIndex::Autorun(void) //오토런닝시에 계속 타는 함수.
             bool isCyclePlace   = MT_CmprPos(miLDR_ZElevR , LDR_R.GetMotrPos(miLDR_ZElevR , piLDR_ZElevRPlce )) &&
                                   DM.ARAY[riRTT  ].CheckAllStat(csWorkEnd) &&
                                   LDR_R.GetSeqStep() == CLoaderRear::scIdle ;
+*/
+//20181029 새버전... 홀드 보안.
+            bool isWorking = STG.GetWorkingRC(r,c);
 
+            int  iMidREndHeightCnt = DM.ARAY[riSTG].GetCntStat(csMidREndHeight ); //1장작업 종료 상태.
+            int  iCmsREndAlignCnt  = DM.ARAY[riSTG].GetCntStat(csCmsREndAlign  ); //거의 막바지작업때(얼라인확인 Or 높이화인)에 인덱스로 로더리어에서 꺼내오게함.
+            int  iWorkWaitCnt      = DM.ARAY[riSTG].GetCntStat(csCmsLDisp1 )+DM.ARAY[riSTG].GetCntStat(csCmsRNeed);
+
+
+            bool bStgNeedModule   =  DM.ARAY[riSTG].GetCntStat(csCmsRNeed) && //RNeed는 꼭있어야 함. 이거 없으면 마지막미들블럭 작업하고 찝으러감.
+                                   ((iMidREndHeightCnt + iWorkWaitCnt + iCmsREndAlignCnt)==OM.DevInfo.iMidColCnt * OM.DevInfo.iMidRowCnt);//다른상태는 무시하고 마지막(얼라인확인 Or 높이화인)만걸러냄.
+
+            //미들블럭이 로더에 남아있거나 프리레일에 작업할게 있는경우.
+            bool bExistMidBfStg =  DM.ARAY[riLDR_F].GetCntStat(csUnkwn   ) ||
+                                   DM.ARAY[riPRL  ].GetCntStat(csUnkwn   ) ;
+
+            bool isCycleGet     =  !OM.CmnOptn.bRLoadingStop &&
+                                   MT_CmprPos(miLDR_ZElevR , LDR_R.GetMotrPos(miLDR_ZElevR , piLDR_ZElevRPick )) &&
+                                  (bExistMidBfStg   || bStgNeedModule  )      &&
+                                   DM.ARAY[riTRF  ].CheckAllStat(csNone)      &&
+                                   DM.ARAY[riIDX  ].CheckAllStat(csNone)      &&
+                                   DM.ARAY[riRTT  ].CheckAllStat(csNone)      &&
+                                   DM.ARAY[riLDR_R].GetCntStat  (csUnkwn)     &&
+                                   DM.ARAY[riLDR_R].GetCntStat  (csDetect) ==0&& //처음에로더 자제유무 센싱시퀜스.
+                                   LDR_R.GetSeqStep() == CLoaderRear::scIdle ;//  !IO_GetX(xIDX_Detect)    ;
+            bool isCyclePlace   = MT_CmprPos(miLDR_ZElevR , LDR_R.GetMotrPos(miLDR_ZElevR , piLDR_ZElevRPlce )) &&
+                                  DM.ARAY[riRTT  ].CheckAllStat(csWorkEnd) &&
+                                  LDR_R.GetSeqStep() == CLoaderRear::scIdle ;
 
     //다시 해야함..
     //bool isCycleRotator =  DM.ARAY[riIDX].CheckAllStat(csVisnAt) && DM.ARAY[riRTT].CheckAllStat(csNone) &&  IO_GetX(xIDX_RotatorDn) ;

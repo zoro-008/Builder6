@@ -23,6 +23,9 @@
 #include "LotUnit.h"
 
 #include "Stage.h"
+#include "LeftTool.h"
+#include "RightTool.h"
+
 #include<stdio.h>
 #include<string.h>
 //---------------------------------------------------------------------------
@@ -295,6 +298,30 @@ void __fastcall TFrmMain::tmUpdateTimer(TObject *Sender)
     if(FrmSubErr -> Showing && !EM_IsErr()) FrmSubErr -> Close();
 
     lbCrntTime -> Caption = Now().CurrentTime();
+
+
+    //20180919 오성철과장 요청 비전검사하면 옵션처리로 물어보고 진행.
+    if(LTL.GetStat().bShowVisnMsg){
+        //플레그 초기화.
+        CLeftTool::SStat Stat ;
+        Stat = LTL.GetStat();
+        Stat.bShowVisnMsg = false ;
+
+        LTL.SetStat(Stat);
+        FM_MsgOk("Confirm","좌측비전을 확인하고 Start 하세요.");
+    }
+    if(RTL.GetStat().bShowVisnMsg){
+        //플레그 초기화.
+        CRightTool::SStat Stat ;
+        Stat = RTL.GetStat();
+        Stat.bShowVisnMsg = false ;
+
+        RTL.SetStat(Stat);
+        FM_MsgOk("Confirm","우측비전을 확인하고 Start 하세요.");
+    }
+
+
+
 
 
     Trace("<@SETBUFF>","0,FormMainTimer End");

@@ -59,7 +59,7 @@ void CPstnMan::Init()
     memset( Value    , 0 , sizeof(SValue) * MAX_MOTR * MAX_PSTN );
 
     // 0. miLTL_XGenRr
-    Value[miLTL_XGenRr][pvLTL_XWait           ].sName = "Wait           " ; Value[miLTL_XGenRr][pvLTL_XWait           ].bCommon=true  ;
+    Value[miLTL_XGenRr][pvLTL_XWait           ].sName = "Wait           " ; Value[miLTL_XGenRr][pvLTL_XWait           ].bCommon=false ;
     Value[miLTL_XGenRr][pvLTL_XGripGrip1      ].sName = "GripGrip1      " ; Value[miLTL_XGenRr][pvLTL_XGripGrip1      ].bCommon=false ;
     Value[miLTL_XGenRr][pvLTL_XGripGrip2      ].sName = "GripGrip2      " ; Value[miLTL_XGenRr][pvLTL_XGripGrip2      ].bCommon=false ;
     Value[miLTL_XGenRr][pvLTL_XGripPull       ].sName = "GripPull       " ; Value[miLTL_XGenRr][pvLTL_XGripPull       ].bCommon=false ;
@@ -94,7 +94,7 @@ void CPstnMan::Init()
     Value[miLTL_ZDispr][pvLTL_ZDispUVTest     ].sName = "ZDispUVTest    " ; Value[miLTL_ZDispr][pvLTL_ZDispUVTest     ].bCommon=true  ;
 
     // 4. miRTL_XGenRr
-    Value[miRTL_XGenRr][pvRTL_XWait           ].sName = "Wait           " ; Value[miRTL_XGenRr][pvRTL_XWait           ].bCommon=true  ;
+    Value[miRTL_XGenRr][pvRTL_XWait           ].sName = "Wait           " ; Value[miRTL_XGenRr][pvRTL_XWait           ].bCommon=false ;
     Value[miRTL_XGenRr][pvRTL_XLIdxOutStt     ].sName = "LIdxOutStt     " ; Value[miRTL_XGenRr][pvRTL_XLIdxOutStt     ].bCommon=false ;
     Value[miRTL_XGenRr][pvRTL_XLIdxOutEnd     ].sName = "LIdxOutEnd     " ; Value[miRTL_XGenRr][pvRTL_XLIdxOutEnd     ].bCommon=false ;
     Value[miRTL_XGenRr][pvRTL_XRIdxOutStt     ].sName = "RIdxOutStt     " ; Value[miRTL_XGenRr][pvRTL_XRIdxOutStt     ].bCommon=false ;
@@ -137,6 +137,7 @@ void CPstnMan::Init()
     Value[miRTL_YTrspr][pvRTL_YTrsfCheck      ].sName = "TrsfCheck      " ; Value[miRTL_YTrspr][pvRTL_YTrsfCheck      ].bCommon=true  ;
     Value[miRTL_YTrspr][pvRTL_YTrsfRoatator   ].sName = "TrsfRoatator   " ; Value[miRTL_YTrspr][pvRTL_YTrsfRoatator   ].bCommon=false ;
     Value[miRTL_YTrspr][pvRTL_YTrsfRotatorRvs ].sName = "TrsfRotatorRvs " ; Value[miRTL_YTrspr][pvRTL_YTrsfRotatorRvs ].bCommon=false ;
+    Value[miRTL_YTrspr][poRTL_YTrsfPlaceOfs   ].sName = "TrsfPlaceOffset" ; Value[miRTL_YTrspr][poRTL_YTrsfPlaceOfs   ].bCommon=false ; Value[miRTL_YTrspr][poRTL_YTrsfPlaceOfs].iType = vtOffset ;
 
     // 10. miSTG_XStage
     Value[miSTG_XStage][pvSTG_XStageWait      ].sName = "StageWait      " ; Value[miSTG_XStage][pvSTG_XStageWait      ].bCommon=true  ;

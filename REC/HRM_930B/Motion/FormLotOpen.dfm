@@ -1,5 +1,5 @@
 object FrmLotOpen: TFrmLotOpen
-  Left = 758
+  Left = 480
   Top = 90
   BorderStyle = bsNone
   Caption = 'FrmLotOpen'

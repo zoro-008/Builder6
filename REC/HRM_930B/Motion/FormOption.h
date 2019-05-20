@@ -73,6 +73,7 @@ __published:	// IDE-managed Components
         TPanel *Panel12;
         TButton *Button1;
         TButton *Button2;
+        TCheckBox *cbCheckVisnPos;
     void __fastcall btSaveClick(TObject *Sender);
     void __fastcall FormShow(TObject *Sender);
         void __fastcall Button1Click(TObject *Sender);

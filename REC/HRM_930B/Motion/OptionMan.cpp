@@ -247,7 +247,9 @@ void COptionMan::LoadDevOptn(AnsiString _sDevName)
     UserINI.Load(sPath.c_str() , "DevOptn" , "iFstDisp         " , DevOptn.iFstDisp         );
     UserINI.Load(sPath.c_str() , "DevOptn" , "iSecDisp         " , DevOptn.iSecDisp         );
 
-
+    UserINI.Load(sPath.c_str() , "DevOptn" , "dLengthTol       " , DevOptn.dLengthTol       );
+    //스테이지 혼용 방지 에러 스킵하도록 옵션 처리 진섭
+    UserINI.Load(sPath.c_str() , "DevOptn" , "bStgMxErrSkip    " , DevOptn.bStgMxErrSkip    );
 }
 
 void COptionMan::SaveDevOptn(AnsiString _sDevName)
@@ -372,6 +374,9 @@ void COptionMan::SaveDevOptn(AnsiString _sDevName)
     UserINI.Save(sPath.c_str() , "DevOptn" , "iFstDisp         " , DevOptn.iFstDisp         );
     UserINI.Save(sPath.c_str() , "DevOptn" , "iSecDisp         " , DevOptn.iSecDisp         );
 
+    UserINI.Save(sPath.c_str() , "DevOptn" , "dLengthTol       " , DevOptn.dLengthTol       );
+    //스테이지 혼용 방지 에러 스킵하도록 옵션 처리 진섭
+    UserINI.Save(sPath.c_str() , "DevOptn" , "bStgMxErrSkip    " , DevOptn.bStgMxErrSkip    );
 }
 
 void COptionMan::LoadCmnOptn()
@@ -411,6 +416,7 @@ void COptionMan::LoadCmnOptn()
 
     UserINI.Load(sPath.c_str()  , "CmnOptn"  , "iTopUVLimitTime"    , CmnOptn.iTopUVLimitTime   );
     UserINI.Load(sPath.c_str()  , "CmnOptn"  , "iBtmUVLimitTime"    , CmnOptn.iBtmUVLimitTime   );
+    UserINI.Load(sPath.c_str()  , "CmnOptn"  , "bCheckVisnPos"      , CmnOptn.bCheckVisnPos     );
 
 
 }
@@ -451,6 +457,7 @@ void COptionMan::SaveCmnOptn()
 
     UserINI.Save(sPath.c_str()  , "CmnOptn"  , "iTopUVLimitTime"    , CmnOptn.iTopUVLimitTime   );
     UserINI.Save(sPath.c_str()  , "CmnOptn"  , "iBtmUVLimitTime"    , CmnOptn.iBtmUVLimitTime   );
+    UserINI.Save(sPath.c_str()  , "CmnOptn"  , "bCheckVisnPos"      , CmnOptn.bCheckVisnPos     );
 }
 
 void COptionMan::LoadMstOptn()

@@ -161,6 +161,15 @@ struct CDevOptn {   //Device에 따라 바뀌는 옵션.
     int          iFstDisp          ; //디스펜싱 1에 사용할 툴 (Front/Rear)
     int          iSecDisp          ; //디스펜싱 2에 사용할 툴 (Front/Rear)
 
+    double       dLengthTol        ; //2018.08.08
+                                     //CMOS 접합 전에 Vision 검사 한 결과의 길이가
+                                     //원래 모터 포지션 길이보다 심하게 크거나 작으면 에러 띄우도록 하기위한 옵션
+                                     //모터포지션 길이 - Vision 검사 결과 길이 < dLengthTol ||
+                                     //모터포지션 길이 - Vision 검사 결과 길이 > dLengthTol
+                                     //NG
+    //스테이지 혼용 방지 에러 스킵하도록 옵션 처리 진섭
+    bool         bStgMxErrSkip     ;
+
     EN_DISP_MODE GetDispMode(){
         if( bUseFstDisp && bUseSecDisp) return dmBoth ;
         if( bUseFstDisp &&!bUseSecDisp) return dmFrst ;
@@ -202,6 +211,8 @@ struct CCmnOptn {   //장비 공용 옵션.
     int     iTopUVLimitTime   ; //UV 라이프 타임 에러.
     int     iBtmUVLimitTime   ;
 
+    bool    bCheckVisnPos     ; //비전검사후 모션보정전에 한번씩 스탑하면서 물어보는창 띄우기.
+
     EN_WORK_MODE iWorkMode    ;
 } ;
 
@@ -225,6 +236,12 @@ struct CEqpOptn {   //모델별 하드웨어 옵션.  화면상에 없고 텍스트 파일에 있음.
 } ;
 
 
+//저장 안함.
+struct CEqpStat {
+    //bool bShowVisnMsg ; //비전검사하고 모션 이동전에 메세지 확인 하는 것.
+}   ;
+
+
 //---------------------------------------------------------------------------
 class COptionMan
 {
@@ -245,7 +262,7 @@ class COptionMan
         CCmnOptn   CmnOptn  ;
         CMstOptn   MstOptn  ;
         CEqpOptn   EqpOptn  ;
-
+        CEqpStat   EqpStat  ;
 
 
         String GetCrntDev () { return m_sCrntDev ; }
