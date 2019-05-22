@@ -1,6 +1,6 @@
 object FrmDeviceSet: TFrmDeviceSet
-  Left = 502
-  Top = 20
+  Left = 2338
+  Top = 31
   BorderStyle = bsNone
   Caption = 'FrmDeviceSet'
   ClientHeight = 919
@@ -95,7 +95,7 @@ object FrmDeviceSet: TFrmDeviceSet
     Top = 0
     Width = 1272
     Height = 919
-    ActivePage = tsOption
+    ActivePage = tsRight_Tool
     Align = alClient
     Font.Charset = ARABIC_CHARSET
     Font.Color = clWindowText
@@ -105,7 +105,7 @@ object FrmDeviceSet: TFrmDeviceSet
     ParentFont = False
     Style = tsButtons
     TabHeight = 35
-    TabIndex = 8
+    TabIndex = 7
     TabOrder = 0
     TabWidth = 123
     OnChange = pcDeviceSetChange
@@ -10977,6 +10977,20 @@ object FrmDeviceSet: TFrmDeviceSet
           ParentFont = False
           TabOrder = 6
           Text = '1'
+        end
+        object cbStgMxErrSkip: TCheckBox
+          Left = 10
+          Top = 209
+          Width = 375
+          Height = 22
+          Caption = 'Stage Height Check skip('#49828#53580#51060#51648' '#45458#51060#52769#51221' '#49828#53429')'
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -16
+          Font.Name = 'Arial'
+          Font.Style = [fsBold]
+          ParentFont = False
+          TabOrder = 7
         end
       end
       object Panel1: TPanel

@@ -477,6 +477,7 @@ __published:	// IDE-managed Components
         TEdit *edLengthTol;
         TLabel *Label22;
         TLabel *Label23;
+        TCheckBox *cbStgMxErrSkip;
     void __fastcall btSavePosClick(TObject *Sender);
     void __fastcall tmUpdateTimerTimer(TObject *Sender);
     void __fastcall FormDestroy(TObject *Sender);

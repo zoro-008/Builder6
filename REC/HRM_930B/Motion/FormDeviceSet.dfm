@@ -1,6 +1,6 @@
 object FrmDeviceSet: TFrmDeviceSet
-  Left = 2484
-  Top = 92
+  Left = 2338
+  Top = 31
   BorderStyle = bsNone
   Caption = 'FrmDeviceSet'
   ClientHeight = 919

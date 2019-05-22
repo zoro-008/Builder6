@@ -2082,7 +2082,7 @@ bool CLeftTool::CycleTopLUV()
 
                  //UV 켜기.
                  //Rs232UV.SetCuringOnOff(uvCh5, true );
-                 Rs232UV.SetCuringOnOff(uvCh5, pCadDspCmd->GetDispOn(m_iCrntDispNode));
+                 Rs232UV.SetCuringOnOff(uvCh5, pCadDspCmd->GetDispOn(m_iCrntUvNode));
 
                  m_iLastTopUVSttTime = GetTime() ;
 
@@ -2516,6 +2516,8 @@ bool CLeftTool::CycleCmsLAlign()
                  if(WorkInfo.iRow==0 && WorkInfo.iCol==0){ //첫장은 정규 사이즈로 붙이고
                      HexaPot.MoveIncRes(paZ , STG.PkgStat.dMidTopHeight -  STG.PkgStat.dHexaTopHeight + OM.DevOptn.dMidCmsGapFrst);
                      Trace("HexaDown Frst" , String(STG.PkgStat.dMidTopHeight -  STG.PkgStat.dHexaTopHeight + OM.DevOptn.dMidCmsGapFrst).c_str());
+
+
                  }
                  else { //둘째장은 높게붙여야 틸트 보정이 된다.
                      Trace("HexaDown" , String(STG.PkgStat.dMidTopHeight -  STG.PkgStat.dHexaTopHeight + OM.DevOptn.dMidCmsGap).c_str());

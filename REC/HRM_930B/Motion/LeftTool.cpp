@@ -1778,6 +1778,11 @@ bool CLeftTool::CycleCmsLDisp(void)
                  return false ;
 
         case 25: if(!MT_GetStopInpos(miLTL_ZDispr))return false ;
+                 if(pCadDspCmd->GetPosZ(0) >= MT_GetMaxPos(miLTL_ZDispr)){
+                     EM_SetErrMsg(eiMTR_PosLim , "Dispensing Z축 모터가 소프트웨어 리밋을 벗어났습니다.");
+                     Step.iCycle = 0;
+                     return true;
+                 }
                  m_iCrntDispNode = 0 ;
 
                  //직선 보간 맵핑 설정.
