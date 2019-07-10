@@ -8,44 +8,42 @@ File_5=SourceModule,'D:\BC6Works\REC\HRD_220A\Motion\FormMaster.cpp',0,1,102,36,
 File_6=SourceModule,'D:\BC6Works\REC\HRD_220A\Motion\OptionMan.cpp',0,1,334,69,328,0,0
 
 [Modules]
-Module0=D:\BC6Works\REC\HRD_220A\Motion\FormArrayInfo.cpp
-Module1=D:\BC6Works\REC\HRD_220A\Motion\FormDevice.cpp
+Module0=D:\BC6Works\REC\HRD_220A\Vision\SVision.cpp
+Module1=D:\BC6Works\REC\HRD_220A\Motion\FormOperation.cpp
 Module2=D:\BC6Works\REC\HRD_220A\Motion\FormDeviceSet.cpp
-Module3=D:\BC6Works\REC\HRD_220A\Motion\FormOperation.cpp
-Module4=D:\BC6Works\REC\HRD_220A\SMDll\SMInterfaceUnit.cpp
-Module5=D:\BC6Works\REC\HRD_220A\bin\Util\Output.INI
-Module6=D:\BC6Works\REC\HRD_220A\Motion\Sequence.cpp
-Module7=D:\BC6Works\REC\HRD_220A\Motion\PstnMan.cpp
-Module8=D:\BC6Works\REC\HRD_220A\Motion\UserINI.cpp
-Module9=D:\BC6Works\REC\HRD_220A\Motion\UtilDefine.h
-Module10=D:\BC6Works\REC\HRD_220A\Motion\MainThread.cpp
-Module11=D:\BC6Works\REC\HRD_220A\Vision\SVision.cpp
-Module12=D:\BC6Works\REC\HRD_220A\Vision\SVInterface.cpp
-Module13=D:\BC6Works\REC\HRD_220A\Motion\Loader.cpp
-Module14=D:\BC6Works\REC\HRD_220A\Motion\Stage.cpp
-Module15=D:\BC6Works\REC\HRD_220A\Motion\UnLoader.cpp
-Module16=D:\BC6Works\REC\HRD_220A\Vision\UnitImage.cpp
-Module17=c:\program files\borland\cbuilder6\include\vcl\dstring.h
-Module18=D:\BC6Works\REC\HRD_220A\Vision\UnitVision.cpp
-Module19=D:\BC6Works\REC\HRD_220A\Vision\PkgCamera.cpp
-Module20=D:\BC6Works\REC\HRD_220A\SMDll\IOs.cpp
-Module21=D:\BC6Works\REC\HRD_220A\SMDll\SMInterfaceUnit.h
-Module22=D:\BC6Works\REC\HRD_220A\Motion\Dispensor.cpp
-Module23=D:\BC6Works\REC\HRD_220A\Motion\FormMain.cpp
-Module24=D:\BC6Works\REC\HRD_220A\Motion\Rs232Temp.cpp
-Module25=D:\BC6Works\REC\HRD_220A\Motion\Rs232Keyence.cpp
-Module26=D:\BC6Works\REC\HRD_220A\Motion\FormLoading.cpp
-Module27=D:\BC6Works\REC\HRD_220A\Motion\ManualMan.cpp
-Module28=D:\BC6Works\REC\HRD_220A\Motion\Picker.cpp
-Count=29
+Module3=D:\BC6Works\REC\HRD_220A\Motion\FormDevice.cpp
+Module4=D:\BC6Works\REC\HRD_220A\Motion\FormArrayInfo.cpp
+Module5=D:\BC6Works\REC\HRD_220A\Vision\SVInterface.cpp
+Module6=D:\BC6Works\REC\HRD_220A\SMDll\SMInterfaceUnit.cpp
+Module7=D:\BC6Works\REC\HRD_220A\Motion\Sequence.cpp
+Module8=D:\BC6Works\REC\HRD_220A\Motion\PstnMan.cpp
+Module9=D:\BC6Works\REC\HRD_220A\Motion\UserINI.cpp
+Module10=D:\BC6Works\REC\HRD_220A\Motion\UtilDefine.h
+Module11=D:\BC6Works\REC\HRD_220A\Motion\MainThread.cpp
+Module12=D:\BC6Works\REC\HRD_220A\Motion\Loader.cpp
+Module13=D:\BC6Works\REC\HRD_220A\Motion\Stage.cpp
+Module14=D:\BC6Works\REC\HRD_220A\Motion\UnLoader.cpp
+Module15=D:\BC6Works\REC\HRD_220A\Vision\UnitImage.cpp
+Module16=D:\BC6Works\REC\HRD_220A\Vision\UnitVision.cpp
+Module17=D:\BC6Works\REC\HRD_220A\Vision\PkgCamera.cpp
+Module18=D:\BC6Works\REC\HRD_220A\SMDll\IOs.cpp
+Module19=D:\BC6Works\REC\HRD_220A\SMDll\SMInterfaceUnit.h
+Module20=D:\BC6Works\REC\HRD_220A\Motion\Dispensor.cpp
+Module21=D:\BC6Works\REC\HRD_220A\Motion\FormMain.cpp
+Module22=D:\BC6Works\REC\HRD_220A\Motion\Rs232Temp.cpp
+Module23=D:\BC6Works\REC\HRD_220A\Motion\Rs232Keyence.cpp
+Module24=D:\BC6Works\REC\HRD_220A\Motion\FormLoading.cpp
+Module25=D:\BC6Works\REC\HRD_220A\Motion\ManualMan.cpp
+Module26=D:\BC6Works\REC\HRD_220A\Motion\Picker.cpp
+Count=27
 EditWindowCount=1
 
-[D:\BC6Works\REC\HRD_220A\Motion\FormArrayInfo.cpp]
+[D:\BC6Works\REC\HRD_220A\Vision\SVision.cpp]
 ModuleType=SourceModule
-FormState=1
+FormState=0
 FormOnTop=0
 
-[D:\BC6Works\REC\HRD_220A\Motion\FormDevice.cpp]
+[D:\BC6Works\REC\HRD_220A\Motion\FormOperation.cpp]
 ModuleType=SourceModule
 FormState=1
 FormOnTop=0
@@ -55,17 +53,22 @@ ModuleType=SourceModule
 FormState=1
 FormOnTop=0
 
-[D:\BC6Works\REC\HRD_220A\Motion\FormOperation.cpp]
+[D:\BC6Works\REC\HRD_220A\Motion\FormDevice.cpp]
 ModuleType=SourceModule
 FormState=1
 FormOnTop=0
 
-[D:\BC6Works\REC\HRD_220A\SMDll\SMInterfaceUnit.cpp]
+[D:\BC6Works\REC\HRD_220A\Motion\FormArrayInfo.cpp]
+ModuleType=SourceModule
+FormState=1
+FormOnTop=0
+
+[D:\BC6Works\REC\HRD_220A\Vision\SVInterface.cpp]
 ModuleType=SourceModule
 FormState=0
 FormOnTop=0
 
-[D:\BC6Works\REC\HRD_220A\bin\Util\Output.INI]
+[D:\BC6Works\REC\HRD_220A\SMDll\SMInterfaceUnit.cpp]
 ModuleType=SourceModule
 FormState=0
 FormOnTop=0
@@ -95,16 +98,6 @@ ModuleType=SourceModule
 FormState=0
 FormOnTop=0
 
-[D:\BC6Works\REC\HRD_220A\Vision\SVision.cpp]
-ModuleType=SourceModule
-FormState=0
-FormOnTop=0
-
-[D:\BC6Works\REC\HRD_220A\Vision\SVInterface.cpp]
-ModuleType=SourceModule
-FormState=0
-FormOnTop=0
-
 [D:\BC6Works\REC\HRD_220A\Motion\Loader.cpp]
 ModuleType=SourceModule
 FormState=0
@@ -121,11 +114,6 @@ FormState=0
 FormOnTop=0
 
 [D:\BC6Works\REC\HRD_220A\Vision\UnitImage.cpp]
-ModuleType=SourceModule
-FormState=0
-FormOnTop=0
-
-[c:\program files\borland\cbuilder6\include\vcl\dstring.h]
 ModuleType=SourceModule
 FormState=0
 FormOnTop=0
@@ -185,33 +173,33 @@ ModuleType=SourceModule
 FormState=0
 FormOnTop=0
 
-[D:\BC6Works\REC\HRD_220A\gHRD_220a.bpg]
+[D:\Bc6Works\REC\HRD_220A\gHRD_220a.bpg]
 FormState=0
 FormOnTop=0
 
-[D:\BC6Works\REC\HRD_220A\SMDll\SMDll.bpr]
+[D:\Bc6Works\REC\HRD_220A\SMDll\SMDll.bpr]
 FormState=0
 FormOnTop=0
 
-[D:\BC6Works\REC\HRD_220A\Vision\TsaiCal\pBC6TsaiCal.bpr]
+[D:\Bc6Works\REC\HRD_220A\Vision\TsaiCal\pBC6TsaiCal.bpr]
 FormState=0
 FormOnTop=0
 
-[D:\BC6Works\REC\HRD_220A\Vision\pSVision.bpr]
+[D:\Bc6Works\REC\HRD_220A\Vision\pSVision.bpr]
 FormState=0
 FormOnTop=0
 
-[D:\BC6Works\REC\HRD_220A\Motion\pHRD_220a.bpr]
+[D:\Bc6Works\REC\HRD_220A\Motion\pHRD_220a.bpr]
 FormState=0
 FormOnTop=0
 
-[D:\BC6Works\REC\HRD_220A\Motion\pHRD_220a.todo]
+[D:\Bc6Works\REC\HRD_220A\Motion\pHRD_220a.todo]
 FormState=0
 FormOnTop=0
 
 [EditWindow0]
-ViewCount=29
-CurrentView=19
+ViewCount=27
+CurrentView=20
 View0=0
 View1=1
 View2=2
@@ -239,8 +227,6 @@ View23=23
 View24=24
 View25=25
 View26=26
-View27=27
-View28=28
 CodeExplorer=CodeExplorer@EditWindow0
 MessageView=MessageView@EditWindow0
 ClassHierarchy=ClassHierarchy@EditWindow0
@@ -252,14 +238,14 @@ Top=64
 Width=1536
 Height=960
 MaxLeft=-8
-MaxTop=106
+MaxTop=107
 MaxWidth=1936
-MaxHeight=942
+MaxHeight=941
 ClientWidth=1920
-ClientHeight=904
+ClientHeight=902
 LeftPanelSize=349
 LeftPanelClients=CodeExplorer@EditWindow0,ProjectManager
-LeftPanelData=00000400010000000C000000436F64654578706C6F7265723902000000000000015D010000000000000100000000390200001200000050726F6A6563744D616E61676572466F726D01000000005003000000000000FFFFFFFF
+LeftPanelData=00000400010000000C000000436F64654578706C6F7265723702000000000000015D010000000000000100000000370200001200000050726F6A6563744D616E61676572466F726D01000000005003000000000000FFFFFFFF
 RightPanelSize=0
 BottomPanelSize=332
 BottomPanelClients=WatchWindow,MessageView@EditWindow0
@@ -364,104 +350,90 @@ TopLine=279
 LeftCol=1
 
 [View14]
-Module=c:\program files\borland\cbuilder6\include\vcl\dstring.h
-CursorX=1
-CursorY=161
-TopLine=138
-LeftCol=1
-
-[View15]
 Module=D:\BC6Works\REC\HRD_220A\Vision\UnitImage.cpp
 CursorX=48
 CursorY=354
 TopLine=333
 LeftCol=1
 
-[View16]
+[View15]
 Module=D:\BC6Works\REC\HRD_220A\Motion\UnLoader.cpp
 CursorX=23
 CursorY=303
 TopLine=287
 LeftCol=1
 
-[View17]
+[View16]
 Module=D:\BC6Works\REC\HRD_220A\Motion\Stage.cpp
 CursorX=68
 CursorY=972
 TopLine=964
 LeftCol=1
 
-[View18]
+[View17]
 Module=D:\BC6Works\REC\HRD_220A\Motion\Loader.cpp
 CursorX=52
 CursorY=82
 TopLine=238
 LeftCol=1
 
-[View19]
+[View18]
 Module=D:\BC6Works\REC\HRD_220A\Motion\FormArrayInfo.cpp
 CursorX=39
 CursorY=19
 TopLine=1
 LeftCol=1
 
-[View20]
+[View19]
 Module=D:\BC6Works\REC\HRD_220A\Vision\SVInterface.cpp
 CursorX=23
 CursorY=56
 TopLine=40
 LeftCol=1
 
-[View21]
+[View20]
 Module=D:\BC6Works\REC\HRD_220A\Vision\SVision.cpp
-CursorX=35
-CursorY=308
-TopLine=298
+CursorX=28
+CursorY=120
+TopLine=103
 LeftCol=1
 
-[View22]
+[View21]
 Module=D:\BC6Works\REC\HRD_220A\Motion\MainThread.cpp
 CursorX=1
 CursorY=1
 TopLine=1
 LeftCol=1
 
-[View23]
+[View22]
 Module=D:\BC6Works\REC\HRD_220A\Motion\UtilDefine.h
 CursorX=1
 CursorY=340
 TopLine=492
 LeftCol=1
 
-[View24]
+[View23]
 Module=D:\BC6Works\REC\HRD_220A\Motion\UserINI.cpp
 CursorX=1
 CursorY=1
 TopLine=16
 LeftCol=1
 
-[View25]
+[View24]
 Module=D:\BC6Works\REC\HRD_220A\Motion\PstnMan.cpp
 CursorX=34
 CursorY=66
 TopLine=4
 LeftCol=1
 
-[View26]
+[View25]
 Module=D:\BC6Works\REC\HRD_220A\Motion\Sequence.cpp
 CursorX=17
 CursorY=239
 TopLine=223
 LeftCol=1
 
-[View27]
-Module=D:\BC6Works\REC\HRD_220A\bin\Util\Output.INI
-CursorX=24
-CursorY=209
-TopLine=193
-LeftCol=1
-
-[View28]
+[View26]
 Module=D:\BC6Works\REC\HRD_220A\SMDll\SMInterfaceUnit.cpp
 CursorX=1
 CursorY=1
@@ -482,14 +454,14 @@ Count=0
 Create=1
 Visible=1
 State=2
-Left=-1082
-Top=32
-Width=3002
-Height=122
+Left=0
+Top=0
+Width=1920
+Height=123
 MaxLeft=-1
 MaxTop=-1
 MaxWidth=1936
-MaxHeight=122
+MaxHeight=123
 ClientWidth=1920
 ClientHeight=84
 
@@ -500,11 +472,11 @@ State=0
 Left=0
 Top=12
 Width=349
-Height=557
+Height=555
 MaxLeft=-1
 MaxTop=-1
 ClientWidth=349
-ClientHeight=557
+ClientHeight=555
 TBDockHeight=662
 LRDockWidth=349
 Dockable=1
@@ -520,7 +492,7 @@ Height=353
 MaxLeft=-1
 MaxTop=-1
 ClientWidth=746
-ClientHeight=315
+ClientHeight=314
 DumpPane=79
 DisassemblyPane=141
 RegisterPane=231
@@ -537,7 +509,7 @@ Height=291
 MaxLeft=-1
 MaxTop=-1
 ClientWidth=401
-ClientHeight=257
+ClientHeight=252
 TBDockHeight=291
 LRDockWidth=417
 Dockable=1
@@ -553,7 +525,7 @@ Height=199
 MaxLeft=-1
 MaxTop=-1
 ClientWidth=413
-ClientHeight=165
+ClientHeight=160
 TBDockHeight=199
 LRDockWidth=429
 Dockable=1
@@ -569,7 +541,7 @@ Height=250
 MaxLeft=-1
 MaxTop=-1
 ClientWidth=454
-ClientHeight=216
+ClientHeight=211
 TBDockHeight=250
 LRDockWidth=470
 Dockable=1
@@ -609,7 +581,7 @@ Height=945
 MaxLeft=-1
 MaxTop=-1
 ClientWidth=629
-ClientHeight=911
+ClientHeight=906
 TBDockHeight=665
 LRDockWidth=981
 Dockable=1
@@ -621,7 +593,7 @@ State=0
 Left=200
 Top=114
 Width=156
-Height=84
+Height=89
 MaxLeft=-1
 MaxTop=-1
 ClientWidth=150
@@ -638,7 +610,7 @@ Height=559
 MaxLeft=-1
 MaxTop=-1
 ClientWidth=265
-ClientHeight=525
+ClientHeight=520
 TBDockHeight=559
 LRDockWidth=190
 Dockable=1
@@ -659,7 +631,7 @@ Height=197
 MaxLeft=-1
 MaxTop=-1
 ClientWidth=721
-ClientHeight=163
+ClientHeight=158
 TBDockHeight=197
 LRDockWidth=737
 Dockable=1
@@ -681,7 +653,7 @@ Height=374
 MaxLeft=-1
 MaxTop=-1
 ClientWidth=174
-ClientHeight=340
+ClientHeight=335
 TBDockHeight=374
 LRDockWidth=190
 Dockable=1
@@ -697,7 +669,7 @@ Height=190
 MaxLeft=-1
 MaxTop=-1
 ClientWidth=432
-ClientHeight=156
+ClientHeight=151
 TBDockHeight=190
 LRDockWidth=448
 Dockable=1
@@ -713,7 +685,7 @@ Height=284
 MaxLeft=-1
 MaxTop=-1
 ClientWidth=387
-ClientHeight=250
+ClientHeight=245
 TBDockHeight=284
 LRDockWidth=403
 Dockable=1
@@ -758,5 +730,5 @@ Dockable=1
 DockHostCount=0
 
 [ActiveProject]
-ActiveProject=4
+ActiveProject=3
 

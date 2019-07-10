@@ -22,9 +22,9 @@ object FrmMaster: TFrmMaster
     Top = 0
     Width = 1156
     Height = 514
-    ActivePage = TabSheet6
+    ActivePage = TabSheet2
     Align = alClient
-    TabIndex = 5
+    TabIndex = 2
     TabOrder = 0
     object TabSheet1: TTabSheet
       Caption = 'Master Main'

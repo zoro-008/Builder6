@@ -1,0 +1,211 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<!-- C++Builder XML Project -->
+<PROJECT>
+  <MACROS>
+    <VERSION value="BCB.06.00"/>
+    <PROJECT value="..\bin\pSVision.dll"/>
+    <OBJFILES value="obj\ApiImport.obj obj\NeptuneImport.obj obj\uRs232c.obj obj\UserINI.obj 
+      obj\UserFile.obj obj\LightUnit.obj obj\CamUnit.obj obj\UnitArea.obj 
+      obj\UnitImage.obj obj\BaseClass.obj obj\UnitGdi.obj obj\Tracker.obj 
+      obj\Form3d.obj obj\FormHisto.obj obj\FormJob.obj obj\FormMag.obj 
+      obj\FormPixel.obj obj\FormValueList.obj obj\FormTrainChk.obj 
+      obj\FormTrain.obj obj\FormImage.obj obj\BasePkg.obj obj\PkgCamera.obj 
+      obj\PkgMatch.obj obj\PkgThreshold.obj obj\UnitValueList.obj 
+      obj\UnitVision.obj obj\SVision.obj obj\SVInterface.obj"/>
+    <RESFILES value="pSVision.res Cursor.res"/>
+    <DEFFILE value=""/>
+    <RESDEPEN value="$(RESFILES) Form3d.dfm FormHisto.dfm FormJob.dfm FormMag.dfm FormPixel.dfm 
+      FormValueList.dfm FormTrainChk.dfm FormTrain.dfm FormImage.dfm"/>
+    <LIBFILES value="include\Hanra\SLDll.lib"/>
+    <LIBRARIES value=""/>
+    <SPARELIBS value="rtl.lib vcl.lib bcbsmp.lib vclx.lib"/>
+    <PACKAGES value="vcl.bpi rtl.bpi vclx.bpi bcbsmp.bpi dbrtl.bpi adortl.bpi vcldb.bpi 
+      qrpt.bpi bdertl.bpi vcldbx.bpi dsnap.bpi cds.bpi bdecds.bpi teeui.bpi 
+      teedb.bpi tee.bpi teeqr.bpi ibxpress.bpi visualclx.bpi visualdbclx.bpi 
+      vclie.bpi xmlrtl.bpi inet.bpi inetdbbde.bpi inetdbxpress.bpi inetdb.bpi 
+      nmfast.bpi bcbie.bpi soaprtl.bpi dclocx.bpi dbexpress.bpi dbxcds.bpi 
+      indy.bpi bcb2kaxserver.bpi"/>
+    <PATHCPP value=".;include\Imi"/>
+    <PATHPAS value=".;"/>
+    <PATHRC value=".;"/>
+    <PATHASM value=".;"/>
+    <DEBUGLIBPATH value="$(BCB)\lib\debug"/>
+    <RELEASELIBPATH value="$(BCB)\lib\release"/>
+    <LINKER value="ilink32"/>
+    <USERDEFINES value="_DEBUG"/>
+    <SYSDEFINES value="NO_STRICT;_RTLDLL;USEPACKAGES"/>
+    <MAINSOURCE value="pSVision.bpf"/>
+    <INCLUDEPATH value="..\..\HRT_430T\Vision;$(BCB)\include;$(BCB)\include\vcl;.\include\Euresys;.\include\Hanra;.\include\Imi;.\include\Neptune"/>
+    <LIBPATH value="..\..\HRT_430T\Vision;..\..\HRT_430T;$(BCB)\lib\obj;$(BCB)\lib;.\include\Hanra;.\include\Imi"/>
+    <WARNINGS value="-w-par"/>
+    <OTHERFILES value=""/>
+  </MACROS>
+  <OPTIONS>
+    <CFLAG1 value="-WD -Od -H=$(BCB)\lib\vcl60.csm -Hc -Vx -Ve -X- -r- -a8 -b- -k -y -v -vi- 
+      -tWD -tWM -c"/>
+    <PFLAGS value="-N2.\obj -N0.\obj -$YD -$W -$O- -$A8 -v -JPHNE -M"/>
+    <RFLAGS value=""/>
+    <AFLAGS value="/mx /w2 /zd"/>
+    <LFLAGS value="-l..\bin -I.\obj -D&quot;&quot; -aa -Tpd -x -Gn -Gi -v"/>
+    <OTHERFILES value=""/>
+  </OPTIONS>
+  <LINKER>
+    <ALLOBJ value="c0d32.obj $(PACKAGES) Memmgr.Lib sysinit.obj $(OBJFILES)"/>
+    <ALLRES value="$(RESFILES)"/>
+    <ALLLIB value="$(LIBFILES) $(LIBRARIES) import32.lib cp32mti.lib"/>
+    <OTHERFILES value=""/>
+  </LINKER>
+  <FILELIST>
+      <FILE FILENAME="pSVision.res" FORMNAME="" UNITNAME="pSVision.res" CONTAINERID="ResTool" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="pSVision.bpf" FORMNAME="" UNITNAME="pSVision" CONTAINERID="BPF" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="include\Hanra\SLDll.lib" FORMNAME="" UNITNAME="SLDll.lib" CONTAINERID="LibTool" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="include\Hanra\SLogUnit.h" FORMNAME="" UNITNAME="SLogUnit.h" CONTAINERID="" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="include\Imi\ApiImport.cpp" FORMNAME="" UNITNAME="ApiImport" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="include\Neptune\NeptuneDef.h" FORMNAME="" UNITNAME="NeptuneDef.h" CONTAINERID="" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="NeptuneImport.cpp" FORMNAME="" UNITNAME="NeptuneImport" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="include\Neptune\NeptuneFeature.h" FORMNAME="" UNITNAME="NeptuneFeature.h" CONTAINERID="" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Cursor.res" FORMNAME="" UNITNAME="Cursor.res" CONTAINERID="ResTool" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="uRs232c.cpp" FORMNAME="" UNITNAME="uRs232c.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="UserINI.cpp" FORMNAME="" UNITNAME="UserINI.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="UserFile.cpp" FORMNAME="" UNITNAME="UserFile.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="LightUnit.cpp" FORMNAME="" UNITNAME="LightUnit.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="CamUnit.cpp" FORMNAME="" UNITNAME="CamUnit.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="UnitArea.cpp" FORMNAME="" UNITNAME="UnitArea.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="UnitImage.cpp" FORMNAME="" UNITNAME="UnitImage.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="BaseClass.cpp" FORMNAME="" UNITNAME="BaseClass" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="UnitGdi.cpp" FORMNAME="" UNITNAME="UnitGdi.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Tracker.cpp" FORMNAME="" UNITNAME="Tracker.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="BaseDefine.h" FORMNAME="" UNITNAME="BaseDefine.h" CONTAINERID="" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="BaseMaths.h" FORMNAME="" UNITNAME="BaseMaths.h" CONTAINERID="" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Form3d.cpp" FORMNAME="Frm3d" UNITNAME="Form3d" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="FormHisto.cpp" FORMNAME="FrmHisto" UNITNAME="FormHisto" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="FormJob.cpp" FORMNAME="FrmJob" UNITNAME="FormJob" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="FormMag.cpp" FORMNAME="FrmMag" UNITNAME="FormMag" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="FormPixel.cpp" FORMNAME="FrmPixel" UNITNAME="FormPixel" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="FormValueList.cpp" FORMNAME="FrmValueList" UNITNAME="FormValueList" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="FormTrainChk.cpp" FORMNAME="FrmTrainChk" UNITNAME="FormTrainChk" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="FormTrain.cpp" FORMNAME="FrmTrain" UNITNAME="FormTrain" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="FormImage.cpp" FORMNAME="FrmImage" UNITNAME="FormImage" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="BasePkg.cpp" FORMNAME="" UNITNAME="BasePkg" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="PkgCamera.cpp" FORMNAME="" UNITNAME="PkgCamera.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="PkgMatch.cpp" FORMNAME="" UNITNAME="PkgMatch" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="PkgThreshold.cpp" FORMNAME="" UNITNAME="PkgThreshold" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="UnitValueList.cpp" FORMNAME="" UNITNAME="UnitValueList.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="UnitVision.cpp" FORMNAME="" UNITNAME="UnitVision.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="SVision.cpp" FORMNAME="" UNITNAME="SVision" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="SVInterface.cpp" FORMNAME="" UNITNAME="SVInterface" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+  </FILELIST>
+  <BUILDTOOLS>
+  </BUILDTOOLS>
+
+  <IDEOPTIONS>
+[Version Info]
+IncludeVerInfo=0
+AutoIncBuild=0
+MajorVer=1
+MinorVer=0
+Release=0
+Build=0
+Debug=0
+PreRelease=0
+Special=0
+Private=0
+DLL=0
+Locale=1042
+CodePage=949
+
+[Version Info Keys]
+CompanyName=
+FileDescription=
+FileVersion=1.0.0.0
+InternalName=
+LegalCopyright=
+LegalTrademarks=
+OriginalFilename=
+ProductName=
+ProductVersion=1.0.0.0
+Comments=
+
+[HistoryLists\hlIncludePath]
+Count=9
+Item0=..\..\HRT_430T\Vision;$(BCB)\include;$(BCB)\include\vcl;.\include\Euresys;.\include\Hanra;.\include\Imi;.\include\Neptune
+Item1=..\..\HRT_430T\Vision;$(BCB)\include;$(BCB)\include\vcl;.\include\Euresys;.\include\Hanra;.\include\Imi
+Item2=..\..\HRT_430T\Vision;..\..\HRT_430T;$(BCB)\include;$(BCB)\include\vcl;.\include\Euresys;.\include\Hanra;.\include\Imi
+Item3=..\..\HRT_430T\Vision;..\..\HRT_430T;$(BCB)\include;$(BCB)\include\vcl;.\include\Euresys;.\include\Hanra;include\Imi
+Item4=..\..\HRT_430T\Vision;..\..\HRT_430T;..\;$(BCB)\include;$(BCB)\include\vcl;.\include\Euresys;.\include\Hanra;.\include\Imi
+Item5=$(BCB)\include;$(BCB)\include\vcl;.\include\Euresys;.\include\Hanra;.\include\Imi
+Item6=$(BCB)\include;$(BCB)\include\vcl;include\Euresys;include\Hanra;include\Imi
+Item7=D:\BC6Works\ITW\VisionApp\Vision;$(BCB)\include;$(BCB)\include\vcl;include\Euresys;include\Hanra;include\Imi
+Item8=D:\BC6Works\ITW\VisionApp\Vision;$(BCB)\include;$(BCB)\include\vcl
+
+[HistoryLists\hlLibraryPath]
+Count=7
+Item0=..\..\HRT_430T\Vision;..\..\HRT_430T;$(BCB)\lib\obj;$(BCB)\lib;.\include\Hanra;.\include\Imi
+Item1=..\..\HRT_430T\Vision;..\..\HRT_430T;$(BCB)\lib\obj;$(BCB)\lib;.\include\Hanra;.\include\Imi;.\include\Euresys
+Item2=..\..\HRT_430T\Vision;..\..\HRT_430T;..\;$(BCB)\lib\obj;$(BCB)\lib;.\include\Hanra;.\include\Imi;.\include\Euresys
+Item3=$(BCB)\lib\obj;$(BCB)\lib;.\include\Hanra;.\include\Imi;.\include\Euresys
+Item4=$(BCB)\lib\obj;$(BCB)\lib;include\Euresys;\include\Hanra;include\Imi
+Item5=D:\BC6Works\ITW\VisionApp\Vision;$(BCB)\lib\obj;$(BCB)\lib;include\Euresys;\include\Hanra;include\Imi
+Item6=D:\BC6Works\ITW\VisionApp\Vision;$(BCB)\lib\obj;$(BCB)\lib
+
+[HistoryLists\hlDebugSourcePath]
+Count=1
+Item0=$(BCB)\source\vcl
+
+[HistoryLists\hlConditionals]
+Count=1
+Item0=_DEBUG
+
+[HistoryLists\hlIntOutputDir]
+Count=3
+Item0=.\obj
+Item1=D:\BC6Works\ITW\HRT_430T\HRT_430T\obj
+Item2=obj
+
+[HistoryLists\hlFinalOutputDir]
+Count=6
+Item0=..\bin\
+Item1=D:\BC6Works\ITW\HRT_430T\HRT_430T\bin\
+Item2=D:\BC6Works\ITW\HRT_430T\HRT_430T\bin
+Item3=bin\
+Item4=\bin\
+Item5=../bin\
+
+[HistoryLists\hIBPIOutputDir]
+Count=4
+Item0=..\bin
+Item1=D:\BC6Works\ITW\HRT_430T\HRT_430T\bin
+Item2=D:\BC6Works\ITW\HRT_430T\HRT_430T\bin\
+Item3=..\bin\
+
+[Debugging]
+DebugSourceDirs=$(BCB)\source\vcl
+
+[Parameters]
+RunParams=
+Launcher=
+UseLauncher=0
+DebugCWD=
+HostApplication=
+RemoteHost=
+RemotePath=
+RemoteLauncher=
+RemoteCWD=
+RemoteDebug=0
+
+[Compiler]
+ShowInfoMsgs=0
+LinkDebugVcl=0
+LinkCGLIB=0
+
+[Language]
+ActiveLang=
+ProjectLang=
+RootDir=
+
+[Linker]
+LibPrefix=
+LibSuffix=
+LibVersion=
+  </IDEOPTIONS>
+</PROJECT>

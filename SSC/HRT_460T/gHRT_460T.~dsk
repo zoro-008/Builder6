@@ -3,50 +3,83 @@ File_0=SourceModule,'D:\BC6Works\SSC\HRT-460T\HRT_460T\Motion\WorkZone.cpp',0,1,
 File_1=SourceModule,'D:\BC6Works\SSC\HRT-460T\HRT_460T\Motion\PostBuff.cpp',0,1,329,33,349,0,0
 
 [Modules]
-Module0=D:\BC6Works\SSC\HRT-460T\HRT_460T\Motion\FormDeviceSet.cpp
-Module1=D:\BC6Works\SSC\HRT-460T\HRT_460T\Motion\FormLoading.cpp
-Module2=D:\BC6Works\SSC\HRT-460T\HRT_460T\Motion\FormOperation.cpp
-Module3=D:\BC6Works\SSC\HRT-460T\HRT_460T\Motion\OptionMan.cpp
-Module4=D:\BC6Works\SSC\HRT-460T\HRT_460T\Motion\UserINI.h
-Module5=D:\BC6Works\SSC\HRT-460T\HRT_460T\Motion\UnLoader.cpp
-Module6=D:\BC6Works\SSC\HRT-460T\HRT_460T\SMDll\FormDllMain.cpp
-Module7=D:\BC6Works\SSC\HRT-460T\HRT_460T\Motion\FormConversion.cpp
-Module8=D:\BC6Works\SSC\HRT-460T\HRT_460T\Motion\FormLotOpen.cpp
-Module9=D:\BC6Works\SSC\HRT-460T\HRT_460T\Motion\FormOption.cpp
-Module10=D:\BC6Works\SSC\HRT-460T\HRT_460T\Motion\FormMaster.cpp
-Module11=D:\BC6Works\SSC\HRT-460T\HRT_460T\Motion\FormMain1.cpp
-Module12=D:\BC6Works\SSC\HRT-460T\HRT_460T\Motion\FormProbe.cpp
-Module13=D:\BC6Works\SSC\HRT-460T\HRT_460T\SMDll\FormErr.cpp
-Module14=D:\BC6Works\SSC\HRT-460T\HRT_460T\SMDll\SMDllDefine.h
-Module15=D:\BC6Works\SSC\HRT-460T\HRT_460T\Vision\UnitVision.cpp
-Module16=D:\BC6Works\SSC\HRT-460T\HRT_460T\Motion\FrameOutput.cpp
-Module17=D:\BC6Works\SSC\HRT-460T\HRT_460T\Motion\ProbeComUnit.cpp
-Module18=D:\BC6Works\SSC\HRT-460T\HRT_460T\SMDll\FormMsgOk.h
-Module19=D:\BC6Works\SSC\HRT-460T\HRT_460T\Motion\TempConUnit.cpp
-Module20=D:\BC6Works\SSC\HRT-460T\HRT_460T\Motion\uRs232c.cpp
-Module21=D:\BC6Works\SSC\HRT-460T\HRT_460T\SMDll\FormMsgTime.h
-Module22=c:\program files\borland\cbuilder6\include\vcl\StdCtrls.hpp
-Module23=c:\program files\borland\cbuilder6\include\vcl\Forms.hpp
-Module24=D:\BC6Works\SSC\HRT-460T\HRT_460T\Motion\UtilDefine.h
-Module25=D:\BC6Works\SSC\HRT-460T\HRT_460T\Motion\FrameCylOneBt.cpp
-Module26=D:\BC6Works\SSC\HRT-460T\HRT_460T\SMDll\SMInterfaceUnit.h
-Module27=D:\BC6Works\SSC\HRT-460T\HRT_460T\SMDll\SMInterfaceUnit.cpp
-Module28=D:\BC6Works\SSC\HRT-460T\HRT_460T\SMDll\SMDll.cpp
-Module29=D:\BC6Works\SSC\HRT-460T\HRT_460T\include\Hanra\SMInterfaceUnit.h
-Module30=D:\BC6Works\SSC\HRT-460T\HRT_460T\Motion\SPCUnit.cpp
-Module31=D:\BC6Works\SSC\HRT-460T\HRT_460T\Motion\Loader.cpp
-Module32=D:\BC6Works\SSC\HRT-460T\HRT_460T\Motion\FormSPC.cpp
-Module33=D:\BC6Works\SSC\HRT-460T\HRT_460T\Motion\PstnMan.cpp
-Module34=D:\BC6Works\SSC\HRT-460T\HRT_460T\pHRT_460.bpr
-Count=35
+Module0=D:\BC6Works\SSC\HRT-460T\HRT_460T\Motion\ManualMan.cpp
+Module1=D:\BC6Works\SSC\HRT-460T\HRT_460T\Motion\FormDeviceSet.cpp
+Module2=D:\BC6Works\SSC\HRT-460T\HRT_460T\Motion\Loader.cpp
+Module3=D:\BC6Works\SSC\HRT-460T\HRT_460T\Motion\SPCUnit.cpp
+Module4=D:\BC6Works\SSC\HRT-460T\HRT_460T\include\Hanra\SMInterfaceUnit.h
+Module5=D:\BC6Works\SSC\HRT-460T\HRT_460T\Motion\UtilDefine.h
+Module6=D:\BC6Works\SSC\HRT-460T\HRT_460T\pHRT_460.bpr
+Module7=D:\BC6Works\SSC\HRT-460T\HRT_460T\Motion\FormMain1.cpp
+Module8=D:\BC6Works\SSC\HRT-460T\HRT_460T\Motion\FormOperation.cpp
+Module9=D:\BC6Works\SSC\HRT-460T\HRT_460T\Motion\FormProbe.cpp
+Module10=D:\BC6Works\SSC\HRT-460T\HRT_460T\Motion\PreBuffer.cpp
+Module11=D:\BC6Works\SSC\HRT-460T\HRT_460T\Motion\LanguageUnit.cpp
+Module12=D:\BC6Works\SSC\HRT-460T\HRT_460T\Motion\FormMaster.cpp
+Module13=D:\BC6Works\SSC\HRT-460T\HRT_460T\Motion\FormOption.cpp
+Module14=D:\BC6Works\SSC\HRT-460T\HRT_460T\Motion\FormLotOpen.cpp
+Module15=D:\BC6Works\SSC\HRT-460T\HRT_460T\Motion\FormConversion.cpp
+Module16=D:\BC6Works\SSC\HRT-460T\HRT_460T\SMDll\FormDllMain.cpp
+Module17=D:\BC6Works\SSC\HRT-460T\HRT_460T\Motion\FormLoading.cpp
+Module18=D:\BC6Works\SSC\HRT-460T\HRT_460T\SMDll\FormErr.cpp
+Module19=D:\BC6Works\SSC\HRT-460T\HRT_460T\SMDll\SMDllDefine.h
+Module20=D:\BC6Works\SSC\HRT-460T\HRT_460T\Vision\UnitVision.cpp
+Module21=D:\BC6Works\SSC\HRT-460T\HRT_460T\Motion\FrameOutput.cpp
+Module22=D:\BC6Works\SSC\HRT-460T\HRT_460T\Motion\ProbeComUnit.cpp
+Module23=D:\BC6Works\SSC\HRT-460T\HRT_460T\SMDll\FormMsgOk.h
+Module24=D:\BC6Works\SSC\HRT-460T\HRT_460T\Motion\TempConUnit.cpp
+Module25=D:\BC6Works\SSC\HRT-460T\HRT_460T\Motion\uRs232c.cpp
+Module26=D:\BC6Works\SSC\HRT-460T\HRT_460T\SMDll\FormMsgTime.h
+Module27=c:\program files\borland\cbuilder6\include\vcl\StdCtrls.hpp
+Module28=c:\program files\borland\cbuilder6\include\vcl\Forms.hpp
+Module29=D:\BC6Works\SSC\HRT-460T\HRT_460T\Motion\FrameCylOneBt.cpp
+Module30=D:\BC6Works\SSC\HRT-460T\HRT_460T\SMDll\SMInterfaceUnit.h
+Module31=D:\BC6Works\SSC\HRT-460T\HRT_460T\SMDll\SMInterfaceUnit.cpp
+Module32=D:\BC6Works\SSC\HRT-460T\HRT_460T\Motion\OptionMan.cpp
+Module33=D:\BC6Works\SSC\HRT-460T\HRT_460T\SMDll\SMDll.cpp
+Module34=D:\BC6Works\SSC\HRT-460T\HRT_460T\Motion\UnLoader.cpp
+Module35=D:\BC6Works\SSC\HRT-460T\HRT_460T\Motion\UserINI.h
+Module36=D:\BC6Works\SSC\HRT-460T\HRT_460T\Motion\FormSPC.cpp
+Module37=D:\BC6Works\SSC\HRT-460T\HRT_460T\Motion\PstnMan.cpp
+Count=38
 EditWindowCount=1
+
+[D:\BC6Works\SSC\HRT-460T\HRT_460T\Motion\ManualMan.cpp]
+ModuleType=SourceModule
+FormState=0
+FormOnTop=0
 
 [D:\BC6Works\SSC\HRT-460T\HRT_460T\Motion\FormDeviceSet.cpp]
 ModuleType=SourceModule
 FormState=1
 FormOnTop=0
 
-[D:\BC6Works\SSC\HRT-460T\HRT_460T\Motion\FormLoading.cpp]
+[D:\BC6Works\SSC\HRT-460T\HRT_460T\Motion\Loader.cpp]
+ModuleType=SourceModule
+FormState=0
+FormOnTop=0
+
+[D:\BC6Works\SSC\HRT-460T\HRT_460T\Motion\SPCUnit.cpp]
+ModuleType=SourceModule
+FormState=0
+FormOnTop=0
+
+[D:\BC6Works\SSC\HRT-460T\HRT_460T\include\Hanra\SMInterfaceUnit.h]
+ModuleType=SourceModule
+FormState=0
+FormOnTop=0
+
+[D:\BC6Works\SSC\HRT-460T\HRT_460T\Motion\UtilDefine.h]
+ModuleType=SourceModule
+FormState=0
+FormOnTop=0
+
+[D:\BC6Works\SSC\HRT-460T\HRT_460T\pHRT_460.bpr]
+ModuleType=SourceModule
+FormState=0
+FormOnTop=0
+
+[D:\BC6Works\SSC\HRT-460T\HRT_460T\Motion\FormMain1.cpp]
 ModuleType=SourceModule
 FormState=1
 FormOnTop=0
@@ -54,29 +87,29 @@ FormOnTop=0
 [D:\BC6Works\SSC\HRT-460T\HRT_460T\Motion\FormOperation.cpp]
 ModuleType=SourceModule
 FormState=1
-FormOnTop=1
-
-[D:\BC6Works\SSC\HRT-460T\HRT_460T\Motion\OptionMan.cpp]
-ModuleType=SourceModule
-FormState=0
 FormOnTop=0
 
-[D:\BC6Works\SSC\HRT-460T\HRT_460T\Motion\UserINI.h]
-ModuleType=SourceModule
-FormState=0
-FormOnTop=0
-
-[D:\BC6Works\SSC\HRT-460T\HRT_460T\Motion\UnLoader.cpp]
-ModuleType=SourceModule
-FormState=0
-FormOnTop=0
-
-[D:\BC6Works\SSC\HRT-460T\HRT_460T\SMDll\FormDllMain.cpp]
+[D:\BC6Works\SSC\HRT-460T\HRT_460T\Motion\FormProbe.cpp]
 ModuleType=SourceModule
 FormState=1
 FormOnTop=1
 
-[D:\BC6Works\SSC\HRT-460T\HRT_460T\Motion\FormConversion.cpp]
+[D:\BC6Works\SSC\HRT-460T\HRT_460T\Motion\PreBuffer.cpp]
+ModuleType=SourceModule
+FormState=0
+FormOnTop=0
+
+[D:\BC6Works\SSC\HRT-460T\HRT_460T\Motion\LanguageUnit.cpp]
+ModuleType=SourceModule
+FormState=0
+FormOnTop=0
+
+[D:\BC6Works\SSC\HRT-460T\HRT_460T\Motion\FormMaster.cpp]
+ModuleType=SourceModule
+FormState=1
+FormOnTop=1
+
+[D:\BC6Works\SSC\HRT-460T\HRT_460T\Motion\FormOption.cpp]
 ModuleType=SourceModule
 FormState=1
 FormOnTop=0
@@ -86,24 +119,19 @@ ModuleType=SourceModule
 FormState=1
 FormOnTop=0
 
-[D:\BC6Works\SSC\HRT-460T\HRT_460T\Motion\FormOption.cpp]
+[D:\BC6Works\SSC\HRT-460T\HRT_460T\Motion\FormConversion.cpp]
 ModuleType=SourceModule
 FormState=1
 FormOnTop=0
 
-[D:\BC6Works\SSC\HRT-460T\HRT_460T\Motion\FormMaster.cpp]
+[D:\BC6Works\SSC\HRT-460T\HRT_460T\SMDll\FormDllMain.cpp]
 ModuleType=SourceModule
 FormState=1
 FormOnTop=1
 
-[D:\BC6Works\SSC\HRT-460T\HRT_460T\Motion\FormMain1.cpp]
+[D:\BC6Works\SSC\HRT-460T\HRT_460T\Motion\FormLoading.cpp]
 ModuleType=SourceModule
 FormState=1
-FormOnTop=0
-
-[D:\BC6Works\SSC\HRT-460T\HRT_460T\Motion\FormProbe.cpp]
-ModuleType=SourceModule
-FormState=3
 FormOnTop=0
 
 [D:\BC6Works\SSC\HRT-460T\HRT_460T\SMDll\FormErr.cpp]
@@ -161,11 +189,6 @@ ModuleType=SourceModule
 FormState=0
 FormOnTop=0
 
-[D:\BC6Works\SSC\HRT-460T\HRT_460T\Motion\UtilDefine.h]
-ModuleType=SourceModule
-FormState=0
-FormOnTop=0
-
 [D:\BC6Works\SSC\HRT-460T\HRT_460T\Motion\FrameCylOneBt.cpp]
 ModuleType=SourceModule
 FormState=0
@@ -181,22 +204,22 @@ ModuleType=SourceModule
 FormState=0
 FormOnTop=0
 
+[D:\BC6Works\SSC\HRT-460T\HRT_460T\Motion\OptionMan.cpp]
+ModuleType=SourceModule
+FormState=0
+FormOnTop=0
+
 [D:\BC6Works\SSC\HRT-460T\HRT_460T\SMDll\SMDll.cpp]
 ModuleType=SourceModule
 FormState=0
 FormOnTop=0
 
-[D:\BC6Works\SSC\HRT-460T\HRT_460T\include\Hanra\SMInterfaceUnit.h]
+[D:\BC6Works\SSC\HRT-460T\HRT_460T\Motion\UnLoader.cpp]
 ModuleType=SourceModule
 FormState=0
 FormOnTop=0
 
-[D:\BC6Works\SSC\HRT-460T\HRT_460T\Motion\SPCUnit.cpp]
-ModuleType=SourceModule
-FormState=0
-FormOnTop=0
-
-[D:\BC6Works\SSC\HRT-460T\HRT_460T\Motion\Loader.cpp]
+[D:\BC6Works\SSC\HRT-460T\HRT_460T\Motion\UserINI.h]
 ModuleType=SourceModule
 FormState=0
 FormOnTop=0
@@ -207,11 +230,6 @@ FormState=0
 FormOnTop=0
 
 [D:\BC6Works\SSC\HRT-460T\HRT_460T\Motion\PstnMan.cpp]
-ModuleType=SourceModule
-FormState=0
-FormOnTop=0
-
-[D:\BC6Works\SSC\HRT-460T\HRT_460T\pHRT_460.bpr]
 ModuleType=SourceModule
 FormState=0
 FormOnTop=0
@@ -233,8 +251,8 @@ FormState=0
 FormOnTop=0
 
 [EditWindow0]
-ViewCount=37
-CurrentView=17
+ViewCount=40
+CurrentView=20
 View0=0
 View1=1
 View2=2
@@ -272,6 +290,9 @@ View33=33
 View34=34
 View35=35
 View36=36
+View37=37
+View38=38
+View39=39
 CodeExplorer=CodeExplorer@EditWindow0
 MessageView=MessageView@EditWindow0
 ClassHierarchy=ClassHierarchy@EditWindow0
@@ -298,15 +319,15 @@ BottomPanelData=0000040000000000000000000000000000000000000000000001000000000000
 
 [View0]
 Module=D:\BC6Works\SSC\HRT-460T\HRT_460T\pHRT_460.cpp
-CursorX=27
-CursorY=72
+CursorX=35
+CursorY=32
 TopLine=25
 LeftCol=1
 
 [View1]
 Module=D:\BC6Works\SSC\HRT-460T\HRT_460T\Motion\FormMain1.cpp
-CursorX=1
-CursorY=226
+CursorX=2
+CursorY=230
 TopLine=216
 LeftCol=1
 
@@ -347,8 +368,8 @@ LeftCol=1
 
 [View7]
 Module=D:\BC6Works\SSC\HRT-460T\HRT_460T\Motion\Loader.cpp
-CursorX=19
-CursorY=597
+CursorX=50
+CursorY=580
 TopLine=574
 LeftCol=1
 
@@ -417,142 +438,163 @@ LeftCol=1
 
 [View17]
 Module=D:\BC6Works\SSC\HRT-460T\HRT_460T\Motion\FormDeviceSet.cpp
-CursorX=40
-CursorY=35
-TopLine=25
+CursorX=44
+CursorY=642
+TopLine=622
 LeftCol=1
 
 [View18]
 Module=D:\BC6Works\SSC\HRT-460T\HRT_460T\Motion\UtilDefine.h
-CursorX=16
-CursorY=606
-TopLine=584
+CursorX=23
+CursorY=645
+TopLine=615
 LeftCol=1
 
 [View19]
+Module=D:\BC6Works\SSC\HRT-460T\HRT_460T\Motion\PreBuffer.cpp
+CursorX=1
+CursorY=1
+TopLine=1
+LeftCol=1
+
+[View20]
+Module=D:\BC6Works\SSC\HRT-460T\HRT_460T\Motion\ManualMan.cpp
+CursorX=7
+CursorY=305
+TopLine=296
+LeftCol=1
+
+[View21]
 Module=c:\program files\borland\cbuilder6\include\vcl\Forms.hpp
 CursorX=1
 CursorY=364
 TopLine=344
 LeftCol=1
 
-[View20]
+[View22]
 Module=c:\program files\borland\cbuilder6\include\vcl\StdCtrls.hpp
 CursorX=1
 CursorY=340
 TopLine=320
 LeftCol=1
 
-[View21]
+[View23]
 Module=D:\BC6Works\SSC\HRT-460T\HRT_460T\SMDll\FormMsgTime.h
 CursorX=1
 CursorY=36
 TopLine=20
 LeftCol=1
 
-[View22]
+[View24]
 Module=D:\BC6Works\SSC\HRT-460T\HRT_460T\Motion\uRs232c.cpp
 CursorX=53
 CursorY=395
 TopLine=373
 LeftCol=1
 
-[View23]
+[View25]
 Module=D:\BC6Works\SSC\HRT-460T\HRT_460T\Motion\TempConUnit.cpp
 CursorX=22
 CursorY=50
 TopLine=31
 LeftCol=1
 
-[View24]
+[View26]
 Module=D:\BC6Works\SSC\HRT-460T\HRT_460T\SMDll\FormMsgOk.h
 CursorX=1
 CursorY=34
 TopLine=13
 LeftCol=1
 
-[View25]
+[View27]
 Module=D:\BC6Works\SSC\HRT-460T\HRT_460T\Motion\FormLoading.cpp
 CursorX=33
 CursorY=101
 TopLine=88
 LeftCol=1
 
-[View26]
+[View28]
 Module=D:\BC6Works\SSC\HRT-460T\HRT_460T\Motion\ProbeComUnit.cpp
 CursorX=43
 CursorY=1091
 TopLine=1083
 LeftCol=1
 
-[View27]
+[View29]
 Module=D:\BC6Works\SSC\HRT-460T\HRT_460T\Motion\FormLotOpen.cpp
 CursorX=1
 CursorY=216
 TopLine=189
 LeftCol=1
 
-[View28]
+[View30]
 Module=D:\BC6Works\SSC\HRT-460T\HRT_460T\Motion\FrameOutput.cpp
 CursorX=39
 CursorY=66
 TopLine=54
 LeftCol=1
 
-[View29]
+[View31]
 Module=D:\BC6Works\SSC\HRT-460T\HRT_460T\Motion\FormOperation.cpp
-CursorX=1
-CursorY=399
-TopLine=379
+CursorX=135
+CursorY=55
+TopLine=38
 LeftCol=1
 
-[View30]
+[View32]
+Module=D:\BC6Works\SSC\HRT-460T\HRT_460T\Motion\LanguageUnit.cpp
+CursorX=7
+CursorY=19
+TopLine=1
+LeftCol=1
+
+[View33]
 Module=D:\BC6Works\SSC\HRT-460T\HRT_460T\Motion\FormOption.cpp
 CursorX=1
 CursorY=199
 TopLine=179
 LeftCol=1
 
-[View31]
+[View34]
 Module=D:\BC6Works\SSC\HRT-460T\HRT_460T\Vision\UnitVision.cpp
 CursorX=1
 CursorY=54
 TopLine=34
 LeftCol=1
 
-[View32]
+[View35]
 Module=D:\BC6Works\SSC\HRT-460T\HRT_460T\SMDll\FormDllMain.cpp
 CursorX=31
 CursorY=413
 TopLine=408
 LeftCol=1
 
-[View33]
+[View36]
 Module=D:\BC6Works\SSC\HRT-460T\HRT_460T\SMDll\SMDllDefine.h
 CursorX=24
 CursorY=21
 TopLine=66
 LeftCol=1
 
-[View34]
+[View37]
 Module=D:\BC6Works\SSC\HRT-460T\HRT_460T\SMDll\FormErr.cpp
 CursorX=1
 CursorY=77
 TopLine=48
 LeftCol=1
 
-[View35]
+[View38]
 Module=D:\BC6Works\SSC\HRT-460T\HRT_460T\Motion\FormConversion.cpp
 CursorX=1
 CursorY=38
 TopLine=2
 LeftCol=1
 
-[View36]
+[View39]
 Module=D:\BC6Works\SSC\HRT-460T\HRT_460T\Motion\FormProbe.cpp
-CursorX=57
-CursorY=190
-TopLine=174
+CursorX=139
+CursorY=13
+TopLine=1
 LeftCol=1
 
 [Watches]
@@ -560,7 +602,7 @@ Count=1
 Watch0='i',256,0,18,1,0,'Watches'
 
 [Breakpoints]
-Count=9
+Count=8
 Breakpoint0='D:\BC6Works\SSC\HRT_450T\Vision\VisionMan.cpp',205,'',0,1,'',1,0,0,'',1,'','',''
 Breakpoint1='D:\BC6Works\SSC\HRT_450T\HRT_450T_Bin적용 최신\Motion\LotUnit.cpp',843,'',0,1,'',1,0,0,'',1,'','',''
 Breakpoint2='D:\BC6Works\SSC\HRT_450T\HRT_450T_Bin적용 최신\Motion\LotUnit.cpp',942,'',0,1,'',1,0,0,'',1,'','',''
@@ -569,7 +611,6 @@ Breakpoint4='D:\BC6Works\SSC\HRT_450T\HRT_450T_Bin적용 최신\Motion\LotUnit.cpp',
 Breakpoint5='D:\BC6Works\SSC\HRT_450T\HRT_450T_Bin적용 최신\Motion\LotUnit.cpp',1050,'',0,1,'',1,0,0,'',1,'','',''
 Breakpoint6='D:\BC6Works\SSC\HRT_450T\HRT_450T_Bin적용 최신\Motion\LotUnit.cpp',1178,'',0,1,'',1,0,0,'',1,'','',''
 Breakpoint7='D:\BC6Works\SSC\HRT-460T\HRT_460T\Motion\FormMain1.cpp',637,'',0,1,'',1,0,0,'',1,'','',''
-Breakpoint8='D:\BC6Works\SSC\HRT-460T\HRT_460T\Motion\FormMain1.cpp',236,'',0,1,'',1,0,0,'',1,'','',''
 
 [AddressBreakpoints]
 Count=0
@@ -596,11 +637,11 @@ State=0
 Left=0
 Top=12
 Width=373
-Height=797
+Height=796
 MaxLeft=-1
 MaxTop=-1
 ClientWidth=373
-ClientHeight=797
+ClientHeight=796
 TBDockHeight=305
 LRDockWidth=373
 Dockable=1
