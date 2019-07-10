@@ -1,0 +1,57 @@
+//---------------------------------------------------------------------------
+
+#include <vcl.h>
+#pragma hdrstop
+
+#include "FormVacErr.h"
+
+#include "Sequence.h"
+#include "WorkZone.h"
+#include "LotUnit.h"
+//#include "SortCmn.h"
+
+//---------------------------------------------------------------------------
+#pragma package(smart_init)
+#pragma resource "*.dfm"
+/*
+enum EN_VAC_ERR_STAT { //현재 랏 런 하고 있는 상태.
+    vsNomal            = 0 , //에러났던 곳을 다시 픽하고 안찝히면 다시 에러.
+    vsErrSkipPick      = 1 , //픽했던데 다시 픽하고 없으면 그냥 다음 픽으로 넘어감 -> vsNomal.
+    vsErrSkipRow       = 2 , //픽했던데 다시 픽하고 해당 에러열에서는 에러 스킵 -> vsNomal.
+    vsErrSkipTray      = 3 , //픽했던데 다시 픽하고 해당 트레이에서는 에러 스킵 -> vsNomal.
+    vsErrSkipRowOut    = 4 , //픽했던열 스킵으로 확인 하고 트레이 아웃.
+    vsErrSkipRowOutLE  = 5 , //픽했던열 스킵으로 확인하고 트레이 아웃후 랏엔드요청.
+
+    //이것은 클릭시에 바로 처리 되서 필요 없다.  vsTrayOut          = 6 , //현재 트레이 모두 Empty 시키기.
+    //이것은 클릭시에 바로 처리 되서 필요 없다.  vsTrayOutLE        = 7 , //트레이 아웃 시키고 랏앤드 요청.
+
+};
+
+*/
+TFrmVisnErr *FrmVisnErr;
+//---------------------------------------------------------------------------
+__fastcall TFrmVisnErr::TFrmVisnErr(TComponent* Owner)
+    : TForm(Owner)
+{
+
+
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TFrmVisnErr::btLDRRetryClick(TObject *Sender)
+{
+    WRK.m_iVisnErr = vsErrReTry;
+    SEQ.Reset();
+    Close();
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TFrmVisnErr::btLDRSkipThisPickClick(TObject *Sender)
+{
+    WRK.m_iVisnErr = vsErrSkip;
+    SEQ.Reset();
+    Close();
+}
+//---------------------------------------------------------------------------
+
+

@@ -1,0 +1,225 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<!-- C++Builder XML Project -->
+<PROJECT>
+  <MACROS>
+    <VERSION value="BCB.06.00"/>
+    <PROJECT value="..\bin\SMDll.dll"/>
+    <OBJFILES value="obj\SMDll.obj obj\UserFile.obj obj\UserINI.obj obj\Ajin_AIO.obj 
+      obj\Ajin_DIO.obj obj\IOs.obj obj\Actuators.obj obj\TowerLamp.obj 
+      obj\Ajin_Motion.obj obj\Motor.obj obj\Motors.obj obj\ErrMan.obj 
+      obj\FormDllMain.obj obj\FormErr.obj obj\FormMsgOk.obj obj\FormMsgTime.obj 
+      obj\FormMsgYesNo.obj obj\FormPassword.obj obj\FormUpdate.obj 
+      obj\SMInterfaceUnit.obj"/>
+    <RESFILES value="SMDll.res"/>
+    <DEFFILE value=""/>
+    <RESDEPEN value="$(RESFILES) FormDllMain.dfm FormErr.dfm FormMsgOk.dfm FormMsgTime.dfm 
+      FormMsgYesNo.dfm FormPassword.dfm FormUpdate.dfm"/>
+    <LIBFILES value="include\AXT\AXTLIB.lib lib\Hanra\SLDll.lib"/>
+    <LIBRARIES value="vclx.lib"/>
+    <SPARELIBS value="vcl.lib rtl.lib vclx.lib"/>
+    <PACKAGES value="vcl.bpi rtl.bpi"/>
+    <PATHCPP value=".;"/>
+    <PATHPAS value=".;"/>
+    <PATHRC value=".;"/>
+    <PATHASM value=".;"/>
+    <DEBUGLIBPATH value="$(BCB)\lib\debug"/>
+    <RELEASELIBPATH value="$(BCB)\lib\release"/>
+    <LINKER value="ilink32"/>
+    <USERDEFINES value="_DEBUG"/>
+    <SYSDEFINES value="NO_STRICT;_RTLDLL;USEPACKAGES"/>
+    <MAINSOURCE value="SMDll.bpf"/>
+    <INCLUDEPATH value="..;$(BCB)\include;include\AXT;$(BCB)\include\vcl;include\Hanra;include\AXL;include\AxtLib"/>
+    <LIBPATH value="..;include\AXL;$(BCB)\lib\obj;$(BCB)\lib;include\Hanra;include\AxtLib;include\AXT"/>
+    <WARNINGS value="-w-par"/>
+    <OTHERFILES value=""/>
+  </MACROS>
+  <OPTIONS>
+    <CFLAG1 value="-WD -Od -H=$(BCB)\lib\vcl60.csm -Hc -Vx -Ve -X- -r- -a8 -b- -k -y -v -vi- 
+      -tWD -tWM -c"/>
+    <PFLAGS value="-N2.\obj -N0.\obj -$YD -$W -$O- -$A8 -v -JPHNE -M"/>
+    <RFLAGS value=""/>
+    <AFLAGS value="/mx /w2 /zd"/>
+    <LFLAGS value="-l..\bin -I.\obj -D&quot;&quot; -aa -Tpd -x -Gn -Gi -v"/>
+    <OTHERFILES value=""/>
+  </OPTIONS>
+  <LINKER>
+    <ALLOBJ value="c0d32.obj $(PACKAGES) Memmgr.Lib sysinit.obj $(OBJFILES)"/>
+    <ALLRES value="$(RESFILES)"/>
+    <ALLLIB value="$(LIBFILES) $(LIBRARIES) import32.lib cp32mti.lib"/>
+    <OTHERFILES value=""/>
+  </LINKER>
+  <FILELIST>
+      <FILE FILENAME="SMDll.res" FORMNAME="" UNITNAME="SMDll.res" CONTAINERID="ResTool" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="SMDll.bpf" FORMNAME="" UNITNAME="SMDll" CONTAINERID="BPF" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="SMDll.cpp" FORMNAME="" UNITNAME="SMDll" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="include\AXT\AXTLIB.lib" FORMNAME="" UNITNAME="AXTLIB.lib" CONTAINERID="LibTool" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="lib\Hanra\SLDll.lib" FORMNAME="" UNITNAME="SLDll.lib" CONTAINERID="LibTool" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="TEdit.h" FORMNAME="" UNITNAME="TEdit.h" CONTAINERID="" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Timer.h" FORMNAME="" UNITNAME="Timer.h" CONTAINERID="" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="UserFile.cpp" FORMNAME="" UNITNAME="UserFile.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="UserINI.cpp" FORMNAME="" UNITNAME="UserINI.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Define.h" FORMNAME="" UNITNAME="Define" CONTAINERID="" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Ajin_AIO.cpp" FORMNAME="" UNITNAME="Ajin_AIO" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Ajin_DIO.cpp" FORMNAME="" UNITNAME="Ajin_DIO" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="IOs.cpp" FORMNAME="" UNITNAME="IOs" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Actuators.cpp" FORMNAME="" UNITNAME="Actuators" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="TowerLamp.cpp" FORMNAME="" UNITNAME="TowerLamp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Ajin_Motion.cpp" FORMNAME="" UNITNAME="Ajin_Motion" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Motor.cpp" FORMNAME="" UNITNAME="Motor" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Motors.cpp" FORMNAME="" UNITNAME="Motors" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="ErrMan.cpp" FORMNAME="" UNITNAME="ErrMan.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="FormDllMain.cpp" FORMNAME="FrmDllMain" UNITNAME="FormDllMain" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="FormErr.cpp" FORMNAME="FrmErr" UNITNAME="FormErr" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="FormMsgOk.cpp" FORMNAME="FrmMsgOk" UNITNAME="FormMsgOk" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="FormMsgTime.cpp" FORMNAME="FrmMsgTime" UNITNAME="FormMsgTime" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="FormMsgYesNo.cpp" FORMNAME="FrmMsgYesNo" UNITNAME="FormMsgYesNo" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="FormPassword.cpp" FORMNAME="FrmPassword" UNITNAME="FormPassword" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="FormUpdate.cpp" FORMNAME="FrmUpdate" UNITNAME="FormUpdate" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="SMDllDefine.h" FORMNAME="" UNITNAME="SMDllDefine.h" CONTAINERID="" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="SMInterfaceUnit.cpp" FORMNAME="" UNITNAME="SMInterfaceUnit" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+  </FILELIST>
+  <BUILDTOOLS>
+  </BUILDTOOLS>
+
+  <IDEOPTIONS>
+[Version Info]
+IncludeVerInfo=1
+AutoIncBuild=1
+MajorVer=1
+MinorVer=3
+Release=2
+Build=10
+Debug=0
+PreRelease=0
+Special=0
+Private=0
+DLL=0
+Locale=1042
+CodePage=949
+
+[Version Info Keys]
+CompanyName=
+FileDescription=
+FileVersion=1.3.2.10
+InternalName=
+LegalCopyright=
+LegalTrademarks=
+OriginalFilename=
+ProductName=
+ProductVersion=1.0.0.0
+Comments=
+
+[HistoryLists\hlIncludePath]
+Count=24
+Item0=..;$(BCB)\include;include\AXT;$(BCB)\include\vcl;include\Hanra;include\AXL;include\AxtLib
+Item1=..;$(BCB)\include;include\AXT;$(BCB)\include\vcl;include\Hanra;include\AXL;SMDll;SMDll\include\Hanra;SMDll\include\AXL
+Item2=..;$(BCB)\include;include\AXT;$(BCB)\include\vcl;include\Hanra;include\AXL;SMDll;SMDll\include\Hanra
+Item3=..;$(BCB)\include;include\AXT;$(BCB)\include\vcl;include\Hanra;include\AXL;SMDll
+Item4=..;$(BCB)\include;include\AXT;$(BCB)\include\vcl;include\Hanra;include\AXL
+Item5=..;$(BCB)\include;include\AXT;$(BCB)\include\vcl;include\Hanra;include\AXL;D:\BC6Works\HRT_100\SMDll\include\AXL
+Item6=..;$(BCB)\include;.\SMDll\include\AXT;$(BCB)\include\vcl;.\SMDll\include\Hanra;.\SMDll\include\AXL
+Item7=..;$(BCB)\include;$(BCB)\include\vcl;.\include\AXT;.\include\Hanra;.\include\AXL
+Item8=..\;..;$(BCB)\include;$(BCB)\include\vcl;.\include\AXT;.\include\Hanra;.\include\AXL
+Item9=..;$(BCB)\include;$(BCB)\include\vcl;.\include\AXT;.\include\Hanra;.\include\AXL;D:\BC6Works\Hxx_100\SMDll\include\AXL
+Item10=lib\AXL;..;$(BCB)\include;$(BCB)\include\vcl;.\include\AXT;.\include\Hanra;.\include\AXL
+Item11=lib\AXL;..;$(BCB)\include;$(BCB)\include\vcl;.\include\AXT;.\include\Hanra
+Item12=..;$(BCB)\include;$(BCB)\include\vcl;.\include\AXT;.\include\Hanra
+Item13=..;$(BCB)\include;$(BCB)\include\vcl;\include\AXT;\include\Hanra
+Item14=..\;..;$(BCB)\include;$(BCB)\include\vcl;.\include\AXT;.\include\Hanra;D:\BC6Works\HRI_580T\SMDll\include\AXT
+Item15=..\;..;$(BCB)\include;$(BCB)\include\vcl;.\include\AXT;.\include\Hanra
+Item16=..;D:\BC6Works\HRI_590\SMDll;$(BCB)\include;$(BCB)\include\vcl;.\include\AXT;.\include\Hanra;D:\BC6Works\HRI_590\SMDll\include\AXTj
+Item17=..;D:\BC6Works\HRI_590\SMDll;$(BCB)\include;$(BCB)\include\vcl;D:\BC6Works\HRI_590\SMDll\include\AXTj;D:\BC6Works\HRI_590\SMDll\include\Hanrad;.\include\AXT;.\include\Hanra
+Item18=..;D:\BC6Works\HRI_590\SMDll;$(BCB)\include;$(BCB)\include\vcl;D:\BC6Works\HRI_590\SMDll\include\AXTj;D:\BC6Works\HRI_590\SMDll\include\Hanrad;./include/AXT;./include/Hanra
+Item19=..;D:\BC6Works\HRI_590\SMDll;$(BCB)\include;$(BCB)\include\vcl;D:\BC6Works\HRI_590\SMDll\include\AXT;D:\BC6Works\HRI_590\SMDll\include\Hanra
+Item20=..\;D:\BC6Works\HRI_590\SMDll;$(BCB)\include;$(BCB)\include\vcl;D:\BC6Works\HRI_590\SMDll\include\AXT;D:\BC6Works\HRI_590\SMDll\include\Hanra
+Item21=..\;D:\BC6Works\EqipBase\SMDll;$(BCB)\include;$(BCB)\include\vcl;D:\BC6Works\EqipBase\SMDll\include\AXT;D:\BC6Works\EqipBase\SMDll\include\Hanra
+Item22=D:\BC6Works\EqipBase\SMDll;$(BCB)\include;$(BCB)\include\vcl;D:\BC6Works\EqipBase\SMDll\include\AXT;D:\BC6Works\EqipBase\SMDll\include\Hanra
+Item23=D:\BC6Works\EqipBase\SMDll;$(BCB)\include;$(BCB)\include\vcl
+
+[HistoryLists\hlLibraryPath]
+Count=19
+Item0=..;include\AXL;$(BCB)\lib\obj;$(BCB)\lib;include\Hanra;include\AxtLib;include\AXT
+Item1=..;include\AXL;$(BCB)\lib\obj;$(BCB)\lib;include\Hanra;include\AxtLib;D:\BC6Works\HRT_430T\SMDll\include\AXT
+Item2=..;include\AXL;$(BCB)\lib\obj;$(BCB)\lib;include\Hanra;include\AxtLib
+Item3=..;include\AXL;$(BCB)\lib\obj;$(BCB)\lib;include\Hanra;include\AxtLib;D:\BC6Works\HRT_430T\SMDll\include\AxtLib
+Item4=..;include\AXL;$(BCB)\lib\obj;$(BCB)\lib;.\include\Hanra;.\include\AXT
+Item5=..;lib\AXL;$(BCB)\lib\obj;$(BCB)\lib;.\lib\Hanra;.\lib\AXT
+Item6=..\;lib\AXL;..;$(BCB)\lib\obj;$(BCB)\lib;.\lib\Hanra;.\lib\AXT
+Item7=lib\AXL;..;$(BCB)\lib\obj;$(BCB)\lib;.\lib\Hanra;.\lib\AXT
+Item8=..;$(BCB)\lib\obj;$(BCB)\lib;.\lib\Hanra;.\lib\AXT
+Item9=..\;..;$(BCB)\lib\obj;$(BCB)\lib;.\lib\Hanra;.\lib\AXT
+Item10=..;D:\BC6Works\HRI_590\SMDll;$(BCB)\lib\obj;$(BCB)\lib;.\lib\Hanra;.\lib\AXT
+Item11=..;D:\BC6Works\HRI_590\SMDll;$(BCB)\lib\obj;$(BCB)\lib;D:\BC6Works\HRI_590\SMDll\libj;D:\BC6Works\HRI_590\SMDll\lib\AXTj;.\lib\Hanra;.\lib\AXT
+Item12=..;D:\BC6Works\HRI_590\SMDll;$(BCB)\lib\obj;$(BCB)\lib;D:\BC6Works\HRI_590\SMDll\libj;D:\BC6Works\HRI_590\SMDll\lib\AXTj;./lib/Hanra;./lib/AXT
+Item13=..;D:\BC6Works\HRI_590\SMDll;$(BCB)\lib\obj;$(BCB)\lib;D:\BC6Works\HRI_590\SMDll\lib;D:\BC6Works\HRI_590\SMDll\lib\AXT
+Item14=..;D:\BC6Works\HRI_590\SMDll;$(BCB)\lib\obj;$(BCB)\lib;D:\BC6Works\HRI_590\SMDll\lib
+Item15=..;D:\BC6Works\HRI_590\SMDll;$(BCB)\lib\obj;$(BCB)\lib
+Item16=..\;D:\BC6Works\HRI_590\SMDll;$(BCB)\lib\obj;$(BCB)\lib
+Item17=..\;D:\BC6Works\EqipBase\SMDll;$(BCB)\lib\obj;$(BCB)\lib
+Item18=D:\BC6Works\EqipBase\SMDll;$(BCB)\lib\obj;$(BCB)\lib
+
+[HistoryLists\hlDebugSourcePath]
+Count=1
+Item0=$(BCB)\source\vcl
+
+[HistoryLists\hlConditionals]
+Count=1
+Item0=_DEBUG
+
+[HistoryLists\hlIntOutputDir]
+Count=4
+Item0=.\obj
+Item1=..\obj
+Item2=D:\BC6Works\HRI_590\SMDll\obj
+Item3=D:\BC6Works\EqipBase\SMDll\obj
+
+[HistoryLists\hlFinalOutputDir]
+Count=7
+Item0=..\bin\
+Item1=..\bin
+Item2=../bin\
+Item3=../bin
+Item4=D:\BC6Works\HRI_590\bin\
+Item5=D:\BC6Works\EqipBase\bin\
+Item6=D:\BC6Works\EqipBase\bin
+
+[HistoryLists\hIBPIOutputDir]
+Count=6
+Item0=..\bin
+Item1=..\bin\
+Item2=../bin
+Item3=../bin\
+Item4=D:\BC6Works\HRI_590\bin
+Item5=D:\BC6Works\EqipBase\bin
+
+[Debugging]
+DebugSourceDirs=$(BCB)\source\vcl
+
+[Parameters]
+RunParams=
+Launcher=
+UseLauncher=0
+DebugCWD=
+HostApplication=
+RemoteHost=
+RemotePath=
+RemoteLauncher=
+RemoteCWD=
+RemoteDebug=0
+
+[Compiler]
+ShowInfoMsgs=0
+LinkDebugVcl=0
+LinkCGLIB=0
+
+[Language]
+ActiveLang=
+ProjectLang=
+RootDir=
+
+[Linker]
+LibPrefix=
+LibSuffix=
+LibVersion=
+  </IDEOPTIONS>
+</PROJECT>
