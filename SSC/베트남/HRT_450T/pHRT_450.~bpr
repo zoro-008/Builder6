@@ -48,7 +48,7 @@
     <PFLAGS value="-N2obj -N0obj -$Y+ -$W -$O- -$A8 -v -JPHNE -M"/>
     <RFLAGS value=""/>
     <AFLAGS value="/mx /w2 /zi"/>
-    <LFLAGS value="-lbin -Iobj -D&quot;&quot; -aa -Tpe -GD -s -Gn -v"/>
+    <LFLAGS value="-lbin -Iobj -D&quot;&quot; -aa -Tpe -GD -s -Gn -M -v"/>
     <OTHERFILES value=""/>
   </OPTIONS>
   <LINKER>
@@ -130,7 +130,7 @@ AutoIncBuild=1
 MajorVer=1
 MinorVer=1
 Release=2
-Build=3
+Build=13
 Debug=0
 PreRelease=0
 Special=0
@@ -142,7 +142,7 @@ CodePage=949
 [Version Info Keys]
 CompanyName=
 FileDescription=
-FileVersion=1.1.2.3
+FileVersion=1.1.2.13
 InternalName=
 LegalCopyright=
 LegalTrademarks=
