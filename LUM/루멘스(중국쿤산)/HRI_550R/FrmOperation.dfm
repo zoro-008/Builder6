@@ -1,6 +1,6 @@
 object FormOperation: TFormOperation
-  Left = 355
-  Top = 108
+  Left = 568
+  Top = 121
   Align = alClient
   BorderStyle = bsNone
   Caption = 'FormOperation'
