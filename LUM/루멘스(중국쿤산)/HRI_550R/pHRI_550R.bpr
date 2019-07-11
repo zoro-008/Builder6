@@ -119,10 +119,10 @@
 
   <IDEOPTIONS>
 [Version Info]
-IncludeVerInfo=0
+IncludeVerInfo=1
 AutoIncBuild=0
 MajorVer=1
-MinorVer=0
+MinorVer=1
 Release=0
 Build=0
 Debug=0
@@ -136,7 +136,7 @@ CodePage=949
 [Version Info Keys]
 CompanyName=
 FileDescription=
-FileVersion=1.0.0.0
+FileVersion=1.1.0.0
 InternalName=
 LegalCopyright=
 LegalTrademarks=
@@ -146,22 +146,24 @@ ProductVersion=1.0.0.0
 Comments=
 
 [HistoryLists\hlIncludePath]
-Count=6
-Item0=..;D:\Program Files\Borland\CBuilder6\Projects;D:\BC6Works\HRI - 550R;$(BCB)\include;$(BCB)\include\vcl;.\include\Hanra;C:\Users\k\Desktop\HRI_550R\include\Hanra;.\include\
-Item1=..;D:\Program Files\Borland\CBuilder6\Projects;D:\BC6Works\HRI - 550R;$(BCB)\include;$(BCB)\include\vcl;D:\BC6Works\HRI_550R\include\Hanra;C:\Users\k\Desktop\HRI_550R\include\Hanra
-Item2=..;D:\Program Files\Borland\CBuilder6\Projects;D:\BC6Works\HRI - 550R;$(BCB)\include;$(BCB)\include\vcl;D:\BC6Works\HRI_550R\include\Hanra
-Item3=..\;D:\Program Files\Borland\CBuilder6\Projects;D:\BC6Works\HRI - 550R;$(BCB)\include;$(BCB)\include\vcl;D:\BC6Works\HRI_550R\include\Hanra
-Item4=D:\Program Files\Borland\CBuilder6\Projects;D:\BC6Works\HRI - 550R;$(BCB)\include;$(BCB)\include\vcl;D:\BC6Works\HRI_550R\include\Hanra
-Item5=D:\Program Files\Borland\CBuilder6\Projects;D:\BC6Works\HRI - 550R;$(BCB)\include;$(BCB)\include\vcl
+Count=7
+Item0=..;D:\Program Files\Borland\CBuilder6\Projects;D:\BC6Works\HRI - 550R;$(BCB)\include;$(BCB)\include\vcl;.\include\Hanra;C:\Users\k\Desktop\HRI_550R\include\Hanra;.\include
+Item1=..;D:\Program Files\Borland\CBuilder6\Projects;D:\BC6Works\HRI - 550R;$(BCB)\include;$(BCB)\include\vcl;.\include\Hanra;C:\Users\k\Desktop\HRI_550R\include\Hanra;.\include\
+Item2=..;D:\Program Files\Borland\CBuilder6\Projects;D:\BC6Works\HRI - 550R;$(BCB)\include;$(BCB)\include\vcl;D:\BC6Works\HRI_550R\include\Hanra;C:\Users\k\Desktop\HRI_550R\include\Hanra
+Item3=..;D:\Program Files\Borland\CBuilder6\Projects;D:\BC6Works\HRI - 550R;$(BCB)\include;$(BCB)\include\vcl;D:\BC6Works\HRI_550R\include\Hanra
+Item4=..\;D:\Program Files\Borland\CBuilder6\Projects;D:\BC6Works\HRI - 550R;$(BCB)\include;$(BCB)\include\vcl;D:\BC6Works\HRI_550R\include\Hanra
+Item5=D:\Program Files\Borland\CBuilder6\Projects;D:\BC6Works\HRI - 550R;$(BCB)\include;$(BCB)\include\vcl;D:\BC6Works\HRI_550R\include\Hanra
+Item6=D:\Program Files\Borland\CBuilder6\Projects;D:\BC6Works\HRI - 550R;$(BCB)\include;$(BCB)\include\vcl
 
 [HistoryLists\hlLibraryPath]
-Count=6
-Item0=..;D:\Program Files\Borland\CBuilder6\Projects;D:\BC6Works\HRI - 550R;$(BCB)\lib\obj;$(BCB)\lib;.\lib\Hanra;.\lib\
-Item1=..;D:\Program Files\Borland\CBuilder6\Projects;D:\BC6Works\HRI - 550R;$(BCB)\lib\obj;$(BCB)\lib;D:\BC6Works\HRI_550R\lib\Hanra;C:\Users\k\Desktop\HRI_550R\lib\Hanra
-Item2=..;D:\Program Files\Borland\CBuilder6\Projects;D:\BC6Works\HRI - 550R;$(BCB)\lib\obj;$(BCB)\lib;D:\BC6Works\HRI_550R\lib\Hanra
-Item3=..\;D:\Program Files\Borland\CBuilder6\Projects;D:\BC6Works\HRI - 550R;$(BCB)\lib\obj;$(BCB)\lib;D:\BC6Works\HRI_550R\lib\Hanra
-Item4=D:\Program Files\Borland\CBuilder6\Projects;D:\BC6Works\HRI - 550R;$(BCB)\lib\obj;$(BCB)\lib;D:\BC6Works\HRI_550R\lib\Hanra
-Item5=D:\Program Files\Borland\CBuilder6\Projects;D:\BC6Works\HRI - 550R;$(BCB)\lib\obj;$(BCB)\lib
+Count=7
+Item0=..;D:\Program Files\Borland\CBuilder6\Projects;D:\BC6Works\HRI - 550R;$(BCB)\lib\obj;$(BCB)\lib;.\lib\Hanra;.\lib
+Item1=..;D:\Program Files\Borland\CBuilder6\Projects;D:\BC6Works\HRI - 550R;$(BCB)\lib\obj;$(BCB)\lib;.\lib\Hanra;.\lib\
+Item2=..;D:\Program Files\Borland\CBuilder6\Projects;D:\BC6Works\HRI - 550R;$(BCB)\lib\obj;$(BCB)\lib;D:\BC6Works\HRI_550R\lib\Hanra;C:\Users\k\Desktop\HRI_550R\lib\Hanra
+Item3=..;D:\Program Files\Borland\CBuilder6\Projects;D:\BC6Works\HRI - 550R;$(BCB)\lib\obj;$(BCB)\lib;D:\BC6Works\HRI_550R\lib\Hanra
+Item4=..\;D:\Program Files\Borland\CBuilder6\Projects;D:\BC6Works\HRI - 550R;$(BCB)\lib\obj;$(BCB)\lib;D:\BC6Works\HRI_550R\lib\Hanra
+Item5=D:\Program Files\Borland\CBuilder6\Projects;D:\BC6Works\HRI - 550R;$(BCB)\lib\obj;$(BCB)\lib;D:\BC6Works\HRI_550R\lib\Hanra
+Item6=D:\Program Files\Borland\CBuilder6\Projects;D:\BC6Works\HRI - 550R;$(BCB)\lib\obj;$(BCB)\lib
 
 [HistoryLists\hlDebugSourcePath]
 Count=1

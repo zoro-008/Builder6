@@ -249,7 +249,8 @@ void __fastcall CSequence::UpdateButton(void) //외부 버튼들 및 윈도우즈 버튼들이
     }
 
     //Time Out.
-    if (m_tmToStop.OnDelay(m_iStep == scToStopCon || m_iStep == scToStop , 20000)) {
+    bool bHeadInsp = HED.GetSeqStep() == CHead::scInsp ;
+    if (m_tmToStop.OnDelay(m_iStep == scToStopCon || m_iStep == scToStop && !bHeadInsp , 20000)) {
         //Trace Log.
         AnsiString Msg;
         Msg.sprintf("ToStopTimeOut : m_iStep=%d", m_iStep  );
