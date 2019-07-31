@@ -1,6 +1,6 @@
 object FormManual: TFormManual
-  Left = 139
-  Top = 77
+  Left = 1940
+  Top = 32
   Align = alClient
   BorderStyle = bsNone
   Caption = 'FormManual'

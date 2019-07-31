@@ -1,6 +1,6 @@
 object FormDeviceSet: TFormDeviceSet
-  Left = 586
-  Top = 40
+  Left = 2020
+  Top = 36
   Align = alClient
   BorderStyle = bsNone
   Caption = 'FormDeviceSet'

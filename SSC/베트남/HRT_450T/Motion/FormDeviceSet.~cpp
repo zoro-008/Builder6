@@ -1006,3 +1006,4 @@ void __fastcall TFrmDeviceSet::btLDR_CmpClick(TObject *Sender)
 
 
 
+

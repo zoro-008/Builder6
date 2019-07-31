@@ -1,6 +1,6 @@
 object FormOperation: TFormOperation
-  Left = 355
-  Top = 108
+  Left = 568
+  Top = 121
   Align = alClient
   BorderStyle = bsNone
   Caption = 'FormOperation'
@@ -1769,6 +1769,7 @@ object FormOperation: TFormOperation
           Height = 25
           Caption = 'Button1'
           TabOrder = 7
+          Visible = False
           OnClick = Button1Click
         end
       end
