@@ -729,7 +729,8 @@ void __fastcall TFrmOperation::tmUpdateTimer(TObject *Sender)
 
     lbPenCnt -> Caption = HED.m_iTotalPenDnCnt ;
 
-    lbBarcode -> Caption = STG.Barcode->sData ;
+
+    lbBar->Caption =  STG.Barcode->sData ;
 
     tmUpdate->Enabled = true;
 }
@@ -1127,18 +1128,9 @@ void __fastcall TFrmOperation::Button1Click(TObject *Sender)
 }
 //---------------------------------------------------------------------------
 
-void __fastcall TFrmOperation::btBarcodeClick(TObject *Sender)
-{
-    STG.SendBarcodeMsg("LON/r");
-    //DM.ARAY[riSTG].ChangeStat(csEror , csWork);
 
-    
-}
 //---------------------------------------------------------------------------
-void __fastcall TFrmOperation::btBarcodeOffClick(TObject *Sender)
-{
-    STG.SendBarcodeMsg("LOFF/r");
-}
+
 
 
 void __fastcall TFrmOperation::btTraceBwdClick(TObject *Sender)
@@ -1268,6 +1260,16 @@ void __fastcall TFrmOperation::pnPenCntResetClick(TObject *Sender)
 //---------------------------------------------------------------------------
 
 
-
+void __fastcall TFrmOperation::btBarOnClick(TObject *Sender)
+{
+    STG.SendBarcodeMsg("LON/r");             //
+}
 //---------------------------------------------------------------------------
+
+void __fastcall TFrmOperation::btBarOffClick(TObject *Sender)
+{
+    STG.SendBarcodeMsg("LOFF/r");
+}
+//---------------------------------------------------------------------------
+
 

@@ -266,9 +266,9 @@ __published:	// IDE-managed Components
         TLabel *Label3;
         TLabel *Label4;
         TPanel *pnPenCntReset;
-        TButton *btBarcode;
-        TButton *btBarcodeOff;
-        TLabel *lbBarcode;
+        TButton *btBarOn;
+        TButton *btBarOff;
+        TLabel *lbBar;
     void __fastcall FormShow(TObject *Sender);
     void __fastcall btOperatorClick(TObject *Sender);
     void __fastcall btPasswordCloseClick(TObject *Sender);
@@ -312,7 +312,7 @@ __published:	// IDE-managed Components
         void __fastcall btRawMapClearClick(TObject *Sender);
         void __fastcall btMAP_ClearClickClick(TObject *Sender);
         void __fastcall Button1Click(TObject *Sender);
-        void __fastcall btBarcodeClick(TObject *Sender);
+        void __fastcall btGetBarcodeClick(TObject *Sender);
         void __fastcall btTraceBwdClick(TObject *Sender);
         void __fastcall btTraceFwdClick(TObject *Sender);
         void __fastcall btReMarkClick(TObject *Sender);
@@ -324,7 +324,8 @@ __published:	// IDE-managed Components
         void __fastcall Panel11Click(TObject *Sender);
         void __fastcall Panel13Click(TObject *Sender);
         void __fastcall pnPenCntResetClick(TObject *Sender);
-        void __fastcall btBarcodeOffClick(TObject *Sender);
+        void __fastcall btBarOnClick(TObject *Sender);
+        void __fastcall btBarOffClick(TObject *Sender);
 
 private:	// User declarations
     double m_dUnit    ;

@@ -1,6 +1,6 @@
 object FrmOperation: TFrmOperation
-  Left = 2155
-  Top = 186
+  Left = 2446
+  Top = 137
   BorderStyle = bsNone
   Caption = 'FrmOperation'
   ClientHeight = 870
@@ -1007,12 +1007,12 @@ object FrmOperation: TFrmOperation
             Width = 83
             Height = 439
             TabOrder = 1
-            object lbBarcode: TLabel
+            object lbBar: TLabel
               Left = 0
-              Top = 264
-              Width = 52
+              Top = 168
+              Width = 18
               Height = 13
-              Caption = 'lbBarcode'
+              Caption = '???'
             end
             object Panel61: TPanel
               Left = 1
@@ -1148,8 +1148,8 @@ object FrmOperation: TFrmOperation
               OnClick = btMapOpenClick
             end
             object Button1: TButton
-              Left = 8
-              Top = 392
+              Left = 0
+              Top = 320
               Width = 75
               Height = 25
               Caption = 'Button1'
@@ -1157,23 +1157,23 @@ object FrmOperation: TFrmOperation
               Visible = False
               OnClick = Button1Click
             end
-            object btBarcode: TButton
-              Left = 3
-              Top = 280
+            object btBarOn: TButton
+              Left = 2
+              Top = 187
               Width = 75
               Height = 25
-              Caption = 'Barcode Test'
+              Caption = 'Barcode On'
               TabOrder = 9
-              OnClick = btBarcodeClick
+              OnClick = btBarOnClick
             end
-            object btBarcodeOff: TButton
-              Left = 3
-              Top = 312
+            object btBarOff: TButton
+              Left = 2
+              Top = 219
               Width = 75
               Height = 25
               Caption = 'Barcode Off'
               TabOrder = 10
-              OnClick = btBarcodeOffClick
+              OnClick = btBarOffClick
             end
           end
         end
