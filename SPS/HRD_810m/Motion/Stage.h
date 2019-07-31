@@ -96,7 +96,6 @@ class CStage
         bool   CheckSafe  (EN_ACTR_ID _iActr , bool       _bFwd    );
 
         AnsiString sMainWfName  ;
-        AnsiString sMainWfName1 ;
 
         bool GetWorkEnd     (){return Stat.bWorkEnd ;}
         bool GetReqStop     (){return Stat.bReqStop ;}

@@ -1,6 +1,6 @@
 object FrmOperation: TFrmOperation
-  Left = 301
-  Top = 104
+  Left = 2155
+  Top = 186
   BorderStyle = bsNone
   Caption = 'FrmOperation'
   ClientHeight = 870
@@ -594,7 +594,7 @@ object FrmOperation: TFrmOperation
         Top = 21
         Width = 638
         Height = 478
-        ActivePage = TabSheet9
+        ActivePage = TabSheet14
         Align = alClient
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
@@ -602,7 +602,7 @@ object FrmOperation: TFrmOperation
         Font.Name = 'Times New Roman'
         Font.Style = [fsBold]
         ParentFont = False
-        TabIndex = 0
+        TabIndex = 1
         TabOrder = 1
         TabWidth = 100
         object TabSheet9: TTabSheet
@@ -1007,6 +1007,13 @@ object FrmOperation: TFrmOperation
             Width = 83
             Height = 439
             TabOrder = 1
+            object lbBarcode: TLabel
+              Left = 0
+              Top = 264
+              Width = 52
+              Height = 13
+              Caption = 'lbBarcode'
+            end
             object Panel61: TPanel
               Left = 1
               Top = 1
@@ -1141,14 +1148,32 @@ object FrmOperation: TFrmOperation
               OnClick = btMapOpenClick
             end
             object Button1: TButton
-              Left = 32
-              Top = 304
+              Left = 8
+              Top = 392
               Width = 75
               Height = 25
               Caption = 'Button1'
               TabOrder = 8
               Visible = False
               OnClick = Button1Click
+            end
+            object btBarcode: TButton
+              Left = 3
+              Top = 280
+              Width = 75
+              Height = 25
+              Caption = 'Barcode Test'
+              TabOrder = 9
+              OnClick = btBarcodeClick
+            end
+            object btBarcodeOff: TButton
+              Left = 3
+              Top = 312
+              Width = 75
+              Height = 25
+              Caption = 'Barcode Off'
+              TabOrder = 10
+              OnClick = btBarcodeOffClick
             end
           end
         end

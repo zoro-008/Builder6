@@ -667,7 +667,6 @@ bool CStage::BarcodeLoadingTest()
 
 
                       sMainWfName  = sWaferId  ;
-                      sMainWfName1 = sWaferIdx ;
 
 
                       Trace("BarcodeIdx",sWaferIdx.c_str());
@@ -859,6 +858,7 @@ bool CStage::CycleSupply(void)
     int r,c ;
     AnsiString sSendMsg ;
     AnsiString sWaferId , sWaferIdx;
+    AnsiString sMapPath ;
     bool bRet = false ;
     int iTemp ;
 
@@ -1010,34 +1010,33 @@ bool CStage::CycleSupply(void)
 
 
                   if(OM.CmnOptn.bUseBarcode){
-                      sWaferId  = GetWaferId (Barcode->sData);
-                      sWaferIdx = GetWaferIdx(Barcode->sData);
+                      //쓸데 없어서 뺌. 안에 보면 ","를 기준으로 뽑는데 현재 "."을 쓰는듯. 20190729
+                      //sWaferId  = GetWaferId (Barcode->sData);
+                      //sWaferIdx = GetWaferIdx(Barcode->sData);
 
                       //일단 김진식씨 테스트 용으로 웨이퍼 바코드 다 쓰는 걸로 임시 수정. 2013.12.26
+                      sWaferId  = Barcode->sData ;
                       sWaferIdx = Barcode->sData ;
                       iTemp = sWaferIdx.Pos("\r") ;
                       sWaferIdx = sWaferIdx.Delete(iTemp,1);
-
-
-
-                      sMainWfName  = sWaferId  ;
-                      sMainWfName1 = sWaferIdx ;
-
+                      sMainWfName  = sWaferIdx  ;
 
                       Trace("BarcodeIdx",sWaferIdx.c_str());
 
                       //sWaferId  = "KA85929XB-26.27.28.29.30" ;
-
-
+                      //20190729
+                      //C90879-13C0 <= 웨이퍼바코드가 이런게 들어옴.
+                      //하는 요령은 밑에 쩜이 없어서C90879-13C0.map 으로 이름을 바꾸고 OM.DevInfo.sExtention에 map을 입력.
+                      if(sWaferId.Pos(".")&&OM.DevInfo.iMapType == 0){
+                          sMapPath = OM.CmnOptn.sSourcePath +"\\" + sWaferId  ;
+                      }
+                      else {
+                          sMapPath = OM.CmnOptn.sSourcePath +"\\" + sWaferId + "." + OM.DevInfo.sExtention  ;
+                      }
 
                       if(OM.DevInfo.iMapType == 0) {
-                          Trace("ConvertCmn Path", (OM.CmnOptn.sSourcePath +"\\" + sWaferId + "." + OM.DevInfo.sExtention).c_str());
-                          if(sWaferId.Pos(".")){
-                              bRet = MAPU.ConvertCmn(OM.CmnOptn.sSourcePath +"\\" + sWaferId , riMAP) ;
-                          }
-                          else {
-                              bRet = MAPU.ConvertCmn(OM.CmnOptn.sSourcePath +"\\" + sWaferId + "." + OM.DevInfo.sExtention , riMAP) ;
-                          }
+                          Trace("ConvertCmn Path", sMapPath.c_str());
+                          bRet = MAPU.ConvertCmn(sMapPath , riMAP) ;
 
                           if(!bRet){
                               EM_SetErr(eiSTG_MapLoadingFail);
@@ -1050,7 +1049,7 @@ bool CStage::CycleSupply(void)
                       }
                       else if(OM.DevInfo.iMapType == 1){
 
-                          bRet = MAPU.ConvertCoordi1  (OM.CmnOptn.sSourcePath +"\\" + sWaferId + "." + OM.DevInfo.sExtention , riMAP);
+                          bRet = MAPU.ConvertCoordi1  (sMapPath , riMAP);
                           if(!bRet){
                               EM_SetErr(eiSTG_MapLoadingFail);
                               STG.Barcode->sData = "";
@@ -1060,7 +1059,7 @@ bool CStage::CycleSupply(void)
                           }
                       }
                       else if(OM.DevInfo.iMapType == 2){
-                          bRet = MAPU.ConvertCoordi2  (OM.CmnOptn.sSourcePath +"\\" + sWaferId + "." + OM.DevInfo.sExtention , riMAP);
+                          bRet = MAPU.ConvertCoordi2  (sMapPath , riMAP);
                           if(!bRet) {
                               EM_SetErr(eiSTG_MapLoadingFail);
                               STG.Barcode->sData = "";
@@ -1070,7 +1069,7 @@ bool CStage::CycleSupply(void)
                           }
                       }
                       else {
-                          bRet = MAPU.ConvertCoordi8in(OM.CmnOptn.sSourcePath +"\\" + sWaferId + "." + OM.DevInfo.sExtention , riMAP);
+                          bRet = MAPU.ConvertCoordi8in(sMapPath , riMAP);
                           if(!bRet){
                               EM_SetErr(eiSTG_MapLoadingFail);
                               STG.Barcode->sData = "";
@@ -1079,26 +1078,6 @@ bool CStage::CycleSupply(void)
                               return false ;
                           }
                       }
-
-          //            if(!MAPU.MergeArray (riMSK , riMAP  , riSTG)) {
-          //                //g_bLocking = false ;
-          //                DM.ARAY[riSTG].SetStat(csNone);
-          //                EM_SetErr(eiSTG_MapLoadingFail);
-          //                Step.iCycle = 40 ;
-          //                return false ;
-          //            }
-          //            if(OM.DevInfo.bMskExist && OM.DevInfo.iMapType == 0){
-          //                MAPU.ChangeMaskNone(OM.CmnOptn.sSourcePath +"\\" + sWaferId + "." + OM.DevInfo.sExtention , OM.DevInfo.iMapType , riSTG);
-          //            }
-          //            //g_bLocking = false ;
-          //                 if(OM.DevInfo.iFlatAngle == 0) {                           }/*0  */
-          //            else if(OM.DevInfo.iFlatAngle == 1) {DM.ARAY[riSTG].TurnCw90 ();}/*90 */
-          //            else if(OM.DevInfo.iFlatAngle == 2) {DM.ARAY[riSTG].TurnCw180();}/*180*/
-          //            else if(OM.DevInfo.iFlatAngle == 3) {DM.ARAY[riSTG].TurnCw270();}/*270*/
-          //        }
-          //        else {
-          //            //???지울까?? ㅠ JS
-          //        }
 
 
                     const int    iFlatAngle    = OM.DevInfo.iFlatAngle   ;
@@ -1637,4 +1616,6 @@ bool CStage::LotInfoAdd()
     LT.WriteLotDayLog();
     LT.LotInfo.dEndTime = Now();
 }
+
+
 
