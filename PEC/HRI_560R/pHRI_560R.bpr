@@ -42,11 +42,10 @@
   <OPTIONS>
     <CFLAG1 value="-Od -H=$(BCB)\lib\vcl60.csm -Hc -Vx -Ve -X- -r- -a8 -b- -k -y -v -vi- -c 
       -tW -tWM"/>
-    <PFLAGS value="-N2D:\BC6Works\HRI_560R\obj -N0D:\BC6Works\HRI_560R\obj -$YD -$W -$O- -$A8 
-      -v -JPHNE -M"/>
+    <PFLAGS value="-N2obj -N0obj -$YD -$W -$O- -$A8 -v -JPHNE -M"/>
     <RFLAGS value=""/>
     <AFLAGS value="/mx /w2 /zd"/>
-    <LFLAGS value="-lbin -ID:\BC6Works\HRI_560R\obj -D&quot;&quot; -aa -Tpe -x -Gn -v"/>
+    <LFLAGS value="-lbin -Iobj -D&quot;&quot; -aa -Tpe -x -Gn -v"/>
     <OTHERFILES value=""/>
   </OPTIONS>
   <LINKER>
@@ -114,7 +113,7 @@ AutoIncBuild=1
 MajorVer=1
 MinorVer=0
 Release=1
-Build=11
+Build=16
 Debug=0
 PreRelease=0
 Special=0
@@ -126,7 +125,7 @@ CodePage=949
 [Version Info Keys]
 CompanyName=
 FileDescription=
-FileVersion=1.0.1.11
+FileVersion=1.0.1.16
 InternalName=
 LegalCopyright=
 LegalTrademarks=
@@ -206,8 +205,8 @@ Item1=_DEBUG
 
 [HistoryLists\hlIntOutputDir]
 Count=3
-Item0=D:\BC6Works\HRI_560R\obj
-Item1=OBJ
+Item0=obj
+Item1=D:\BC6Works\HRI_560R\obj
 Item2=D:\BC6Works\HRT_430\obj
 
 [HistoryLists\hlFinalOutputDir]
