@@ -12,12 +12,17 @@
 #include "UserIni.h"
 #include "LotUnit.h"
 #include "MapUnit.h"
-#include "SVMaths.h"
+//#include "SVMaths.h"
 #include "ManualMan.h"
+
+
 //---------------------------------------------------------------------------
-#include <math.hpp>
-#include "math.h"
+//#include <math.hpp>
+//#include "math.h"
 #include "Head.h"
+
+#include "FormMain.h"//메세지 이용해서 접근.
+
 //---------------------------------------------------------------------------
 #pragma package(smart_init)
 
@@ -27,6 +32,7 @@ CStage STG;
 CStage::CStage()
 {
     Init();
+
 }
 
 //---------------------------------------------------------------------------
@@ -88,25 +94,7 @@ void CStage::OnReadBarcode(DWORD _cbInQue)
     STG.Barcode->ReadData(_cbInQue, RcvBuff);
     sRcvMsg += (char*)RcvBuff ;
 
-    //if(!sRcvMsg.Pos(",03,") ) return ;
-    //if(!sRcvMsg.Pos("@@"  ) ) return ;
-    //
-    //Trace("procCom1",sRcvMsg.c_str());
-    //sTemp = sRcvMsg.SubString(sRcvMsg.Pos(",03,")+ 4,2) + "." + sRcvMsg.SubString(sRcvMsg.Pos(",03,")+6,3);
-    //if(TryStrToFloat(sTemp , dTemp)) STG.m_dPrbData[0] =  dTemp ;
-    //else                             STG.m_dPrbData[0] = -9.999 ;
-    //
-    //sTemp = sRcvMsg.SubString(sRcvMsg.Pos(",03,")+10,2) + "." + sRcvMsg.SubString(sRcvMsg.Pos(",03,")+12,3);
-    //if(TryStrToFloat(sTemp , dTemp)) STG.m_dPrbData[1] =  dTemp ;
-    //else                             STG.m_dPrbData[1] = -9.999 ;
-    //
-    //sTemp = sRcvMsg.SubString(sRcvMsg.Pos(",03,")+16,2) + "." + sRcvMsg.SubString(sRcvMsg.Pos(",03,")+18,3);
-    //if(TryStrToFloat(sTemp , dTemp)) STG.m_dPrbData[2] =  dTemp ;
-    //else                             STG.m_dPrbData[2] = -9.999 ;
 
-
-//    sTemp = sRcvMsg.SubString(sRcvMsg.Pos("01,01,")+6,5);
-//    동도 이것이 소숫점을 안붙여서 오옴...아나.
 
     STG.Barcode->sData += sRcvMsg ;
 
@@ -120,12 +108,23 @@ void CStage::OnReadBarcode(DWORD _cbInQue)
 
 AnsiString CStage::GetWaferId(AnsiString _sBarcodeData)
 {
+    AnsiString sId1, sId2, sId3, sId;
 
-    //_sBarcodeData.Delete(1,_sBarcodeData.Pos(","));
-    AnsiString sId1 = _sBarcodeData.SubString(1, _sBarcodeData.Pos(",")-1);  // 20131227 바코드 불러 오기 실패해서 수정함...
-    AnsiString sId2 = _sBarcodeData.SubString(_sBarcodeData.Pos(",")  , 20); // 바코드 데이터 전부를 읽어 오도록 수정...
-    AnsiString sid3 = _sBarcodeData.SubString(_sBarcodeData.Pos(",0") , 10); // 기존에는 중간에 특정 부분만 읽어 옴...
-    AnsiString sId = sId1.Trim() + sId2.Trim() + sid3.Trim();                // 맵파일 이름에 형식이 아직 픽스 된게 아니라 추후에 수정 가능성 있음..,JH
+    Trace("Barcode", _sBarcodeData.c_str());
+
+    if(!OM.CmnOptn.bUse1stBarcode){
+        //_sBarcodeData.Delete(1,_sBarcodeData.Pos(","));
+        sId1 = _sBarcodeData.SubString(1, _sBarcodeData.Pos(",")-1);  // 20131227 바코드 불러 오기 실패해서 수정함...
+        sId2 = _sBarcodeData.SubString(_sBarcodeData.Pos(",")  , 20); // 바코드 데이터 전부를 읽어 오도록 수정...
+        sId3 = _sBarcodeData.SubString(_sBarcodeData.Pos(",0") , 10); // 기존에는 중간에 특정 부분만 읽어 옴...
+        sId = sId1.Trim() + sId2.Trim() + sId3.Trim();                // 맵파일 이름에 형식이 아직 픽스 된게 아니라 추후에 수정 가능성 있음..,JH
+    }
+    else{
+        sId1 = _sBarcodeData.SubString(1, _sBarcodeData.Pos(",")-1);  // 20131227 바코드 불러 오기 실패해서 수정함...
+        sId2 = _sBarcodeData.SubString(_sBarcodeData.Pos(",")  , 20); // 바코드 데이터 전부를 읽어 오도록 수정...
+        sId = sId1.Trim() + sId2.Trim();                              // 맵파일 이름에 형식이 아직 픽스 된게 아니라 추후에 수정 가능성 있음..,JH
+    }
+
 
     return sId.Trim();
 
@@ -573,12 +572,16 @@ bool CStage::ToStop(void) //스탑을 하기 위한 함수.
                  return false ;
 
         case 11: if(!MoveActr(aiSTG_TrsCmpGR , ccBwd)) return false ;
+                 MT_Stop(miSTG_XTrs);
+                 Step.iToStop++;
+                 return false ;
 
+        case 12: if(!MT_GetStop(miSTG_XTrs)) return false ;
                  MoveMotr(miSTG_XTrs , piSTG_XTrsWait);
                  Step.iToStop ++;
                  return false ;
 
-        case 12: if(!MoveMotr(miSTG_XTrs , piSTG_XTrsWait)) return false ;
+        case 13: if(!MoveMotr(miSTG_XTrs , piSTG_XTrsWait)) return false ;
                  Load(false);
 
                  Step.iToStop = 0   ;
@@ -608,7 +611,9 @@ bool CStage::Autorun(void) //오토런닝시에 계속 타는 함수.
 
 
         if(!IO_GetX(xSTG_CastDetect)  &&  DM.ARAY[riCST].CheckAllStat(csNone )                                                                              ) EM_SetErr(eiCST_Need      ) ;
-        if( IO_GetX(xSTG_CastDetect)  && !DM.ARAY[riCST].CheckAllStat(csNone )&& !DM.ARAY[riCST].GetCntStat  (csUnkwn) && !DM.ARAY[riCST].GetCntStat(csMask)) EM_SetErr(eiCST_NeedChange) ;
+        if( IO_GetX(xSTG_CastDetect)  && !DM.ARAY[riCST].CheckAllStat(csNone )&& !DM.ARAY[riCST].GetCntStat  (csUnkwn) && !DM.ARAY[riCST].GetCntStat(csMask)) {
+            EM_SetErr(eiCST_NeedChange) ;
+        }
 
         //if( IO_GetX(xSTG_CastDetect)  &&  DM.ARAY[riCST].CheckAllStat(csNone )) EM_SetErr(eiCST_Unknwn    ); //바코드를 안쓰면 이에러가 뜨게 된다. 에러내용에 맵파일 로딩 하라고 뜸.
         if(!IO_GetX(xSTG_CastDetect)  && !DM.ARAY[riCST].CheckAllStat(csNone )) EM_SetErr(eiCST_Dispr     );
@@ -637,6 +642,189 @@ bool CStage::Autorun(void) //오토런닝시에 계속 타는 함수.
         case scExpend : if(CycleExpend  ()){ Trace(m_sPartName.c_str(),"CycleExpend End");SetEndTime(Step.iSeq);Step.iSeq = scIdle ;} return false ;
         case scPlace  : if(CyclePlace   ()){ Trace(m_sPartName.c_str(),"CyclePlace  End");SetEndTime(Step.iSeq);Step.iSeq = scIdle ;} return false ;
     }
+}
+
+bool CStage::BarcodeLoadingTest()
+{
+                  Barcode->sData="5510KC6.002\r";
+
+                  //if(!m_tmTemp.OnDelay(true , 1000 )) return false ;
+ bool bRet ;
+ String sWaferId ;
+ String sWaferIdx;
+ int iTemp ;
+
+
+                  if(OM.CmnOptn.bUseBarcode){
+                      sWaferId  = GetWaferId (Barcode->sData);
+                      sWaferIdx = GetWaferIdx(Barcode->sData);
+
+                      //일단 김진식씨 테스트 용으로 웨이퍼 바코드 다 쓰는 걸로 임시 수정. 2013.12.26
+                      sWaferIdx = Barcode->sData ;
+                      iTemp = sWaferIdx.Pos("\r") ;
+                      sWaferIdx = sWaferIdx.Delete(iTemp,1);
+
+
+
+                      sMainWfName  = sWaferId  ;
+                      sMainWfName1 = sWaferIdx ;
+
+
+                      Trace("BarcodeIdx",sWaferIdx.c_str());
+
+                      //sWaferId  = "KA85929XB-26.27.28.29.30" ;
+
+
+
+                      if(OM.DevInfo.iMapType == 0) {
+                           bRet = MAPU.ConvertCmn(OM.CmnOptn.sSourcePath +"\\" + sWaferId + "." + OM.DevInfo.sExtention , riMAP) ;
+                          if(!bRet){
+                              EM_SetErr(eiSTG_MapLoadingFail);
+                              STG.Barcode->sData = "";
+                              Trace("ConvertCmn","fail");
+                              MoveActr(aiSTG_TrsCmpGR , ccBwd);
+                              Step.iCycle = 40 ;
+                              return false ;
+                          }
+                      }
+                      else if(OM.DevInfo.iMapType == 1){
+
+                          bRet = MAPU.ConvertCoordi1  (OM.CmnOptn.sSourcePath +"\\" + sWaferId + "." + OM.DevInfo.sExtention , riMAP);
+                          if(!bRet){
+                              EM_SetErr(eiSTG_MapLoadingFail);
+                              STG.Barcode->sData = "";
+                              MoveActr(aiSTG_TrsCmpGR , ccBwd);
+                              Step.iCycle = 40 ;
+                              return false ;
+                          }
+                      }
+                      else if(OM.DevInfo.iMapType == 2){
+                          bRet = MAPU.ConvertCoordi2  (OM.CmnOptn.sSourcePath +"\\" + sWaferId + "." + OM.DevInfo.sExtention , riMAP);
+                          if(!bRet) {
+                              EM_SetErr(eiSTG_MapLoadingFail);
+                              STG.Barcode->sData = "";
+                              MoveActr(aiSTG_TrsCmpGR , ccBwd);
+                              Step.iCycle = 40 ;
+                              return false ;
+                          }
+                      }
+                      else {
+                          bRet = MAPU.ConvertCoordi8in(OM.CmnOptn.sSourcePath +"\\" + sWaferId + "." + OM.DevInfo.sExtention , riMAP);
+                          if(!bRet){
+                              EM_SetErr(eiSTG_MapLoadingFail);
+                              STG.Barcode->sData = "";
+                              MoveActr(aiSTG_TrsCmpGR , ccBwd);
+                              Step.iCycle = 40 ;
+                              return false ;
+                          }
+                      }
+
+          //            if(!MAPU.MergeArray (riMSK , riMAP  , riSTG)) {
+          //                //g_bLocking = false ;
+          //                DM.ARAY[riSTG].SetStat(csNone);
+          //                EM_SetErr(eiSTG_MapLoadingFail);
+          //                Step.iCycle = 40 ;
+          //                return false ;
+          //            }
+          //            if(OM.DevInfo.bMskExist && OM.DevInfo.iMapType == 0){
+          //                MAPU.ChangeMaskNone(OM.CmnOptn.sSourcePath +"\\" + sWaferId + "." + OM.DevInfo.sExtention , OM.DevInfo.iMapType , riSTG);
+          //            }
+          //            //g_bLocking = false ;
+          //                 if(OM.DevInfo.iFlatAngle == 0) {                           }/*0  */
+          //            else if(OM.DevInfo.iFlatAngle == 1) {DM.ARAY[riSTG].TurnCw90 ();}/*90 */
+          //            else if(OM.DevInfo.iFlatAngle == 2) {DM.ARAY[riSTG].TurnCw180();}/*180*/
+          //            else if(OM.DevInfo.iFlatAngle == 3) {DM.ARAY[riSTG].TurnCw270();}/*270*/
+          //        }
+          //        else {
+          //            //???지울까?? ㅠ JS
+          //        }
+
+
+                    const int    iFlatAngle    = OM.DevInfo.iFlatAngle   ;
+                    int    iColMax ;
+                    int    iRowMax ;
+
+                    iColMax = DM.ARAY[riMAP].GetMaxCol();
+                    iRowMax = DM.ARAY[riMAP].GetMaxRow();
+
+                         if(iFlatAngle == 0) {                           }/*0  */
+                    else if(iFlatAngle == 1) {DM.ARAY[riMAP].TurnCw90 ();}/*90 */
+                    else if(iFlatAngle == 2) {DM.ARAY[riMAP].TurnCw180();}/*180*/
+                    else if(iFlatAngle == 3) {DM.ARAY[riMAP].TurnCw270();}/*270*/
+
+                    iColMax = DM.ARAY[riMAP].GetMaxCol();
+                    iRowMax = DM.ARAY[riMAP].GetMaxRow();
+
+
+                    if(!MAPU.MergeArray(riMSK , riMAP  , riSTG)){ FM_MsgOk("ERROR","마스크영역에 기준점을 확인 해주세요"); DM.ARAY[riSTG].SetStat(csNone); }
+
+                    if(OM.DevInfo.bMskExist && OM.DevInfo.iMapType == 0){ MAPU.ChangeMaskNone(OM.CmnOptn.sSourcePath +"\\" + sWaferId + "." + OM.DevInfo.sExtention , OM.DevInfo.iMapType , riSTG); }
+
+                    iColMax = DM.ARAY[riSTG].GetMaxCol();
+                    iRowMax = DM.ARAY[riSTG].GetMaxRow();
+
+                    if(OM.DevInfo.bMskExist) {
+                             if(iFlatAngle == 0) {                           }/*0  */
+                        else if(iFlatAngle == 1) {DM.ARAY[riSTG].TurnCw90 ();}/*90 */
+                        else if(iFlatAngle == 2) {DM.ARAY[riSTG].TurnCw180();}/*180*/
+                        else if(iFlatAngle == 3) {DM.ARAY[riSTG].TurnCw270();}/*270*/
+                    }
+                    iColMax = DM.ARAY[riSTG].GetMaxCol();
+                    iRowMax = DM.ARAY[riSTG].GetMaxRow();
+
+                  }
+
+                  //SP 김진식씨 요청 사항. 한가지 맵파일만 자동으로 계속 불러 오기...JH
+
+                  if(!OM.CmnOptn.bUseBarcode && OM.CmnOptn.bLoadOnlyOneMapMarking){
+                      //g_bLocking = true ;  //나중에  MAPU 안으로 넣을수 있도록 하자.
+                      bRet = MAPU.ConvertCmn (OM.CmnOptn.sLoadOnlyOneMapMrkPath , riMAP);
+                      //g_bLocking = false ;
+                      if(!bRet){
+                          EM_SetErr(eiSTG_MapLoadingFail);
+                          Trace("ConvertCmn","fail");
+                          Step.iCycle = 40 ;
+                          MoveActr(aiSTG_TrsCmpGR , ccBwd);
+                          return false ;
+                      }
+                      //g_bLocking = true ;
+                      bRet = MAPU.MergeArray(riMSK , riMAP  , riSTG);
+                      //g_bLocking = false ;
+
+                      if(!bRet){
+                          DM.ARAY[riSTG].SetStat(csNone);
+                          EM_SetErr(eiSTG_MapLoadingFail);
+                          STG.Barcode->sData = "";
+                          Step.iCycle = 40 ;
+                          MoveActr(aiSTG_TrsCmpGR , ccBwd);
+                          return false ;
+                      }
+                      if(OM.DevInfo.bMskExist && OM.DevInfo.iMapType == 0){
+                          //g_bLocking = true ;
+                          MAPU.ChangeMaskNone(OM.CmnOptn.sLoadOnlyOneMapMrkPath , OM.DevInfo.iMapType , riSTG);
+                          //g_bLocking = false ; //나중에  MAPU 안으로 넣을수 있도록 하자.
+                      }
+
+                           if(OM.DevInfo.iFlatAngle == 0) {                           }
+                      else if(OM.DevInfo.iFlatAngle == 1) {DM.ARAY[riSTG].TurnCw90 ();}
+                      else if(OM.DevInfo.iFlatAngle == 2) {DM.ARAY[riSTG].TurnCw180();}
+                      else if(OM.DevInfo.iFlatAngle == 3) {DM.ARAY[riSTG].TurnCw270();}
+                  }
+
+
+                  sWaferIdx = Barcode->sData ;
+                  iTemp = sWaferIdx.Pos("\r") ;
+                  sWaferIdx = sWaferIdx.Delete(iTemp,1);
+                  if(OM.CmnOptn.bUseBarcode) m_sWorkingWfrId = sWaferIdx ;
+                  else                       m_sWorkingWfrId = Now().CurrentDateTime().FormatString("yyyymmdd_hhnnss") ;
+
+                  DM.ARAY[riSTG].SetID   (sWaferId );
+                  DM.ARAY[riSTG].SetLotNo(sWaferIdx);
+
+                  LT.WriteArayData(riSTG);
+
+                  //FindChip(riCST , r, c , csUnkwn);
+                  //DM.ARAY[riCST].SetStat(r, 0, csMask);
 }
 
 //One Cycle.
@@ -671,6 +859,8 @@ bool CStage::CycleSupply(void)
     int r,c ;
     AnsiString sSendMsg ;
     AnsiString sWaferId , sWaferIdx;
+    bool bRet = false ;
+    int iTemp ;
 
     //Cycle.
     switch (Step.iCycle) {
@@ -808,6 +998,7 @@ bool CStage::CycleSupply(void)
                       EM_SetErr(eiSTG_BarcodeFail);
                       SendBarcodeMsg("LOFF\r");
                       MoveActr(aiSTG_TrsCmpGR , ccBwd);
+                      STG.Barcode->sData = "";
                       Step.iCycle = 40 ;
                       return false ;
                       //Bar Code 확인 하여서 m_bBarCodeRlst값 변환.JS
@@ -824,94 +1015,169 @@ bool CStage::CycleSupply(void)
 
                       //일단 김진식씨 테스트 용으로 웨이퍼 바코드 다 쓰는 걸로 임시 수정. 2013.12.26
                       sWaferIdx = Barcode->sData ;
-                      sWaferIdx = sWaferIdx.Delete(sWaferIdx.Pos("\r"),1);
+                      iTemp = sWaferIdx.Pos("\r") ;
+                      sWaferIdx = sWaferIdx.Delete(iTemp,1);
 
-                      sMainWfName = sWaferId ;
+
+
+                      sMainWfName  = sWaferId  ;
+                      sMainWfName1 = sWaferIdx ;
+
 
                       Trace("BarcodeIdx",sWaferIdx.c_str());
 
                       //sWaferId  = "KA85929XB-26.27.28.29.30" ;
 
 
-                              g_bLocking = true ;
+
                       if(OM.DevInfo.iMapType == 0) {
-                          if(!MAPU.ConvertCmn      (OM.CmnOptn.sSourcePath +"\\" + sWaferId + "." + OM.DevInfo.sExtention , riMAP)){
-                              g_bLocking = false ;
+                          Trace("ConvertCmn Path", (OM.CmnOptn.sSourcePath +"\\" + sWaferId + "." + OM.DevInfo.sExtention).c_str());
+                          if(sWaferId.Pos(".")){
+                              bRet = MAPU.ConvertCmn(OM.CmnOptn.sSourcePath +"\\" + sWaferId , riMAP) ;
+                          }
+                          else {
+                              bRet = MAPU.ConvertCmn(OM.CmnOptn.sSourcePath +"\\" + sWaferId + "." + OM.DevInfo.sExtention , riMAP) ;
+                          }
+
+                          if(!bRet){
                               EM_SetErr(eiSTG_MapLoadingFail);
+                              STG.Barcode->sData = "";
                               Trace("ConvertCmn","fail");
+                              MoveActr(aiSTG_TrsCmpGR , ccBwd);
                               Step.iCycle = 40 ;
                               return false ;
                           }
                       }
                       else if(OM.DevInfo.iMapType == 1){
-                          if(!MAPU.ConvertCoordi1  (OM.CmnOptn.sSourcePath +"\\" + sWaferId + "." + OM.DevInfo.sExtention , riMAP)){
-                              g_bLocking = false ;
+
+                          bRet = MAPU.ConvertCoordi1  (OM.CmnOptn.sSourcePath +"\\" + sWaferId + "." + OM.DevInfo.sExtention , riMAP);
+                          if(!bRet){
                               EM_SetErr(eiSTG_MapLoadingFail);
+                              STG.Barcode->sData = "";
+                              MoveActr(aiSTG_TrsCmpGR , ccBwd);
                               Step.iCycle = 40 ;
                               return false ;
                           }
                       }
                       else if(OM.DevInfo.iMapType == 2){
-                          if(!MAPU.ConvertCoordi2  (OM.CmnOptn.sSourcePath +"\\" + sWaferId + "." + OM.DevInfo.sExtention , riMAP)) {
-                              g_bLocking = false ;
+                          bRet = MAPU.ConvertCoordi2  (OM.CmnOptn.sSourcePath +"\\" + sWaferId + "." + OM.DevInfo.sExtention , riMAP);
+                          if(!bRet) {
                               EM_SetErr(eiSTG_MapLoadingFail);
+                              STG.Barcode->sData = "";
+                              MoveActr(aiSTG_TrsCmpGR , ccBwd);
                               Step.iCycle = 40 ;
                               return false ;
                           }
                       }
                       else {
-                          if(!MAPU.ConvertCoordi8in(OM.CmnOptn.sSourcePath +"\\" + sWaferId + "." + OM.DevInfo.sExtention , riMAP)){
-                              g_bLocking = false ;
+                          bRet = MAPU.ConvertCoordi8in(OM.CmnOptn.sSourcePath +"\\" + sWaferId + "." + OM.DevInfo.sExtention , riMAP);
+                          if(!bRet){
                               EM_SetErr(eiSTG_MapLoadingFail);
+                              STG.Barcode->sData = "";
+                              MoveActr(aiSTG_TrsCmpGR , ccBwd);
                               Step.iCycle = 40 ;
                               return false ;
                           }
                       }
-                      if(!MAPU.MergeArray (riMSK , riMAP  , riSTG)) {
-                          g_bLocking = false ;
-                          DM.ARAY[riSTG].SetStat(csNone);
-                          EM_SetErr(eiSTG_MapLoadingFail);
-                          Step.iCycle = 40 ;
-                          return false ;
-                      }
-                      if(OM.DevInfo.bMskExist && OM.DevInfo.iMapType == 0){
-                          MAPU.ChangeMaskNone(OM.CmnOptn.sSourcePath +"\\" + sWaferId + "." + OM.DevInfo.sExtention , OM.DevInfo.iMapType , riSTG);
-                      }
-                      g_bLocking = false ;
-                           if(OM.DevInfo.iFlatAngle == 0) {                           }/*0  */
-                      else if(OM.DevInfo.iFlatAngle == 1) {DM.ARAY[riSTG].TurnCw90 ();}/*90 */
-                      else if(OM.DevInfo.iFlatAngle == 2) {DM.ARAY[riSTG].TurnCw180();}/*180*/
-                      else if(OM.DevInfo.iFlatAngle == 3) {DM.ARAY[riSTG].TurnCw270();}/*270*/
-                  }
-                  else {
-                      //???지울까?? ㅠ JS
+
+          //            if(!MAPU.MergeArray (riMSK , riMAP  , riSTG)) {
+          //                //g_bLocking = false ;
+          //                DM.ARAY[riSTG].SetStat(csNone);
+          //                EM_SetErr(eiSTG_MapLoadingFail);
+          //                Step.iCycle = 40 ;
+          //                return false ;
+          //            }
+          //            if(OM.DevInfo.bMskExist && OM.DevInfo.iMapType == 0){
+          //                MAPU.ChangeMaskNone(OM.CmnOptn.sSourcePath +"\\" + sWaferId + "." + OM.DevInfo.sExtention , OM.DevInfo.iMapType , riSTG);
+          //            }
+          //            //g_bLocking = false ;
+          //                 if(OM.DevInfo.iFlatAngle == 0) {                           }/*0  */
+          //            else if(OM.DevInfo.iFlatAngle == 1) {DM.ARAY[riSTG].TurnCw90 ();}/*90 */
+          //            else if(OM.DevInfo.iFlatAngle == 2) {DM.ARAY[riSTG].TurnCw180();}/*180*/
+          //            else if(OM.DevInfo.iFlatAngle == 3) {DM.ARAY[riSTG].TurnCw270();}/*270*/
+          //        }
+          //        else {
+          //            //???지울까?? ㅠ JS
+          //        }
+
+
+                    const int    iFlatAngle    = OM.DevInfo.iFlatAngle   ;
+                    int    iColMax ;
+                    int    iRowMax ;
+
+                    iColMax = DM.ARAY[riMAP].GetMaxCol();
+                    iRowMax = DM.ARAY[riMAP].GetMaxRow();
+
+                         if(iFlatAngle == 0) {                           }/*0  */
+                    else if(iFlatAngle == 1) {DM.ARAY[riMAP].TurnCw90 ();}/*90 */
+                    else if(iFlatAngle == 2) {DM.ARAY[riMAP].TurnCw180();}/*180*/
+                    else if(iFlatAngle == 3) {DM.ARAY[riMAP].TurnCw270();}/*270*/
+
+                    iColMax = DM.ARAY[riMAP].GetMaxCol();
+                    iRowMax = DM.ARAY[riMAP].GetMaxRow();
+
+
+                    if(!MAPU.MergeArray(riMSK , riMAP  , riSTG)){ FM_MsgOk("ERROR","마스크영역에 기준점을 확인 해주세요"); DM.ARAY[riSTG].SetStat(csNone); }
+
+                    if(OM.DevInfo.bMskExist && OM.DevInfo.iMapType == 0){ MAPU.ChangeMaskNone(OM.CmnOptn.sSourcePath +"\\" + sWaferId + "." + OM.DevInfo.sExtention , OM.DevInfo.iMapType , riSTG); }
+
+                    iColMax = DM.ARAY[riSTG].GetMaxCol();
+                    iRowMax = DM.ARAY[riSTG].GetMaxRow();
+
+                    if(OM.DevInfo.bMskExist) {
+                             if(iFlatAngle == 0) {                           }/*0  */
+                        else if(iFlatAngle == 1) {DM.ARAY[riSTG].TurnCw90 ();}/*90 */
+                        else if(iFlatAngle == 2) {DM.ARAY[riSTG].TurnCw180();}/*180*/
+                        else if(iFlatAngle == 3) {DM.ARAY[riSTG].TurnCw270();}/*270*/
+                    }
+                    iColMax = DM.ARAY[riSTG].GetMaxCol();
+                    iRowMax = DM.ARAY[riSTG].GetMaxRow();
+
                   }
 
                   //SP 김진식씨 요청 사항. 한가지 맵파일만 자동으로 계속 불러 오기...JH
+
                   if(!OM.CmnOptn.bUseBarcode && OM.CmnOptn.bLoadOnlyOneMapMarking){
-                      if(!MAPU.ConvertCmn (OM.CmnOptn.sLoadOnlyOneMapMrkPath , riMAP)){
-                          g_bLocking = false ;
+                      //g_bLocking = true ;  //나중에  MAPU 안으로 넣을수 있도록 하자.
+                      bRet = MAPU.ConvertCmn (OM.CmnOptn.sLoadOnlyOneMapMrkPath , riMAP);
+                      //g_bLocking = false ;
+                      if(!bRet){
                           EM_SetErr(eiSTG_MapLoadingFail);
                           Trace("ConvertCmn","fail");
                           Step.iCycle = 40 ;
+                          MoveActr(aiSTG_TrsCmpGR , ccBwd);
                           return false ;
                       }
-                      if(!MAPU.MergeArray(riMSK , riMAP  , riSTG)){
-                          g_bLocking = false ;
+                      //g_bLocking = true ;
+                      bRet = MAPU.MergeArray(riMSK , riMAP  , riSTG);
+                      //g_bLocking = false ;
+
+                      if(!bRet){
                           DM.ARAY[riSTG].SetStat(csNone);
                           EM_SetErr(eiSTG_MapLoadingFail);
+                          STG.Barcode->sData = "";
                           Step.iCycle = 40 ;
+                          MoveActr(aiSTG_TrsCmpGR , ccBwd);
                           return false ;
                       }
                       if(OM.DevInfo.bMskExist && OM.DevInfo.iMapType == 0){
+                          //g_bLocking = true ;
                           MAPU.ChangeMaskNone(OM.CmnOptn.sLoadOnlyOneMapMrkPath , OM.DevInfo.iMapType , riSTG);
+                          //g_bLocking = false ; //나중에  MAPU 안으로 넣을수 있도록 하자.
                       }
-                      g_bLocking = false ;
+
                            if(OM.DevInfo.iFlatAngle == 0) {                           }
                       else if(OM.DevInfo.iFlatAngle == 1) {DM.ARAY[riSTG].TurnCw90 ();}
                       else if(OM.DevInfo.iFlatAngle == 2) {DM.ARAY[riSTG].TurnCw180();}
                       else if(OM.DevInfo.iFlatAngle == 3) {DM.ARAY[riSTG].TurnCw270();}
                   }
+
+
+                  sWaferIdx = Barcode->sData ;
+                  iTemp = sWaferIdx.Pos("\r") ;
+                  sWaferIdx = sWaferIdx.Delete(iTemp,1);
+                  if(OM.CmnOptn.bUseBarcode) m_sWorkingWfrId = sWaferIdx ;
+                  else                       m_sWorkingWfrId = Now().CurrentDateTime().FormatString("yyyymmdd_hhnnss") ;
 
                   DM.ARAY[riSTG].SetID   (sWaferId );
                   DM.ARAY[riSTG].SetLotNo(sWaferIdx);
@@ -1091,7 +1357,12 @@ bool CStage::CyclePlace(void)
 
     if(IO_GetX(xSTG_OvrLdDetect)){
         AT_MoveCyl(aiSTG_TrsCmpGR , ccBwd);
-        MT_GoAbsRun(miSTG_XTrs , PM.GetValue(miSTG_TStg , pvSTG_XTrsWait));
+
+        if(!MT_GetStop(miSTG_XTrs)){ //20150326 엔드카메라 조건수정중에 혹시하해서 추가함.  멈추는지 테스트 해보자...
+            MT_Stop(miSTG_XTrs);
+        }
+
+        MT_GoAbsRun(miSTG_XTrs , PM.GetValue(miSTG_TStg , pvSTG_XTrsWait)); //어차피 투스탑에서 보낸다. 메뉴얼조건때문에 추가..
         EM_SetErr(eiSTG_TrsOverloadDetect);
         Step.iCycle = 0;
         return true;
@@ -1128,7 +1399,52 @@ bool CStage::CyclePlace(void)
                   Step.iCycle = 0 ;
                   return true ;
 
-        case  10: IO_SetY(ySTG_WfrVac , false);
+        case  10: 
+
+                  
+                  
+
+
+                  if(OM.CmnOptn.bUseEndCam ){// 20150326 메뉴얼 상태 및 오버로드 센서 알람있을때 스크린샷 오버라이트 되어서...
+
+                      Cam[ciEnd] -> SetTrgMode(tmSw); //자꾸 트리거 모드가 풀려서
+                      //원인을 알수 없어... 일단 야매로 처리...
+
+                      if(!DM.ARAY[riSTG].GetCntStat  (csFail ) && //펜찍어야 되는 곳이 없고.
+                         !DM.ARAY[riSTG].CheckAllStat(csNone ) && //웨이퍼는 있어야 되고.
+                         !DM.ARAY[riSTG].GetCntStat  (csEror ) && //테두리 영역도 다작업되고.
+                         !DM.ARAY[riSTG].GetCntStat  (csWait ) ){ //비젼검사 기다리는것도 없어야...
+                          if (!IO_GetX(xETC_FrntDoorL) || !IO_GetX(xETC_FrntDoorR) ){ //문짝 열린채로 사진 찍으면 안되서.
+                              EM_SetErr(eiETC_FDoor);
+                              Step.iCycle = 0 ;
+                              return true ;
+                          }
+                          //엔드비젼 그랩 명령. 메세지 처리 해서 여기서 써도 안전.
+                          GrabEndVisn();
+                      }
+                  }
+                  Step.iCycle++;
+                  return false ;
+
+
+
+        case  11:
+                  if(OM.CmnOptn.bUseEndCam ){
+                      if(!DM.ARAY[riSTG].GetCntStat  (csFail ) &&
+                         !DM.ARAY[riSTG].CheckAllStat(csNone ) &&
+                         !DM.ARAY[riSTG].GetCntStat  (csEror ) &&
+                         !DM.ARAY[riSTG].GetCntStat  (csWait ) ){
+                          if(!GetGrabEndEndVisn()) return false ; //엔드비젼 그랩 종료 됐는지 확인..
+                          SendCmdEndVisn(mcCapAndShowSec); //스샷 및 이미지 세이브.
+                      }
+                  }
+                  m_tmTemp.Clear();
+                  Step.iCycle++;
+                  return false ;
+
+        case  12: if(!m_tmTemp.OnDelay(true , 1000)) return false ; //메세지 날라가서 스샷 및 이미지 저장 될때까지 딜레이좀 넣음.
+
+                  IO_SetY(ySTG_WfrVac , false);
                   MoveActr(aiSTG_ChkTblUD  , ccBwd);
                   MoveActr(aiSTG_TrsCmpGR  , ccBwd);
                   MoveActr(aiSTG_WfrAlgnFB , ccBwd);
@@ -1136,7 +1452,7 @@ bool CStage::CyclePlace(void)
                   Step.iCycle++;
                   return false;
 
-        case  11: if(!MoveActr(aiSTG_ChkTblUD   , ccBwd)) return false ;
+        case  13: if(!MoveActr(aiSTG_ChkTblUD   , ccBwd)) return false ;
                   if(!MoveActr(aiSTG_TrsCmpGR   , ccBwd)) return false ;
                   if(!MoveActr(aiSTG_WfrAlgnFB  , ccBwd)) return false ;
                   if(MM.GetManNo() == mcSTG_CyclePlace && !MoveActr(aiHED_PenCoverUD , ccBwd)) return false ; //메뉴얼 배출중에 펜이랑 트렌스퍼랑 박을수 있음.JS
@@ -1145,26 +1461,26 @@ bool CStage::CyclePlace(void)
                   Step.iCycle++;
                   return false;
 
-        case  12: if(MM.GetManNo() == mcSTG_CyclePlace &&!MT_GoAbsRun(miHED_XHed , PM.GetValue(miHED_XHed , pvHED_XHedPCover))) return false; //메뉴얼 배출중에 펜이랑 트렌스퍼랑 박을수 있음.JS
+        case  14: if(MM.GetManNo() == mcSTG_CyclePlace &&!MT_GoAbsRun(miHED_XHed , PM.GetValue(miHED_XHed , pvHED_XHedPCover))) return false; //메뉴얼 배출중에 펜이랑 트렌스퍼랑 박을수 있음.JS
                   if(MM.GetManNo() == mcSTG_CyclePlace &&!MT_GoAbsRun(miHED_YHed , PM.GetValue(miHED_YHed , pvHED_YHedPCover))) return false; //메뉴얼 배출중에 펜이랑 트렌스퍼랑 박을수 있음.JS
                   MoveMotr(miSTG_TStg , piSTG_TStgWait);
                   MoveMotr(miSTG_ZCst , piSTG_ZCstPlace);
                   Step.iCycle++;
                   return false;
 
-        case  13: if(!MoveMotr(miSTG_TStg , piSTG_TStgWait )) return false ;
+        case  15: if(!MoveMotr(miSTG_TStg , piSTG_TStgWait )) return false ;
                   if(!MoveMotr(miSTG_ZCst , piSTG_ZCstPlace)) return false ;
                   //MT_GoIncMan(miSTG_ZCst , PM.GetValue(miSTG_ZCst , poSTG_ZCstPlaceOfs));
                   IO_SetY(ySTG_Ionizer , true);
                   Step.iCycle++;
                   return false;
 
-        case  14: if(!MT_GetStopInpos(miSTG_ZCst)) return false;
+        case  16: if(!MT_GetStopInpos(miSTG_ZCst)) return false;
                   MoveMotr(miSTG_XTrs , piSTG_XTrsPlace);
                   Step.iCycle++;
                   return false;
 
-        case  15: if(!MoveMotr(miSTG_XTrs , piSTG_XTrsPlace)) return false ;
+        case  17: if(!MoveMotr(miSTG_XTrs , piSTG_XTrsPlace)) return false ;
 
                   //if() 여기에 추가 한다...오버로드 센서 에러 JH
 
@@ -1184,20 +1500,20 @@ bool CStage::CyclePlace(void)
                   Step.iCycle++;
                   return false;
 
-        case  16: if(!MoveMotr(miSTG_XTrs , piSTG_XTrsPick)) return false;
+        case  18: if(!MoveMotr(miSTG_XTrs , piSTG_XTrsPick)) return false;
                   FindChip(riCST , r , c , csMask);
-                  g_bLocking = true ;
+                  //g_bLocking = true ; //나중에  MAPU 안으로 넣을수 있도록 하자.
                   DM.ARAY[riCST].SetStat(r , 0 , csWork);
                   DM.ARAY[riSTG].SetStat(csNone);
                   DM.ARAY[riMAP].SetStat(csNone);
-                  g_bLocking = false ;
+                  //g_bLocking = false ; //나중에  MAPU 안으로 넣을수 있도록 하자.
                   HED.MarkData.ClearData();
                   if(MM.GetManNo() == mcSTG_CyclePlace || OM.CmnOptn.bLoadingStop) MoveMotr(miSTG_XTrs , piSTG_XTrsWait    ) ;
                   else                                                             MoveMotr(miSTG_XTrs , piSTG_XTrsPickWait) ;
                   Step.iCycle++;
                   return false;
 
-        case  17: if(MM.GetManNo() == mcSTG_CyclePlace || OM.CmnOptn.bLoadingStop) {if(!MoveMotr(miSTG_XTrs , piSTG_XTrsWait    )) return false; }
+        case  19: if(MM.GetManNo() == mcSTG_CyclePlace || OM.CmnOptn.bLoadingStop) {if(!MoveMotr(miSTG_XTrs , piSTG_XTrsWait    )) return false; }
                   else                                                             {if(!MoveMotr(miSTG_XTrs , piSTG_XTrsPickWait)) return false; }
                   IO_SetY(ySTG_Ionizer , false);
                   HED.Rqst.bNeedTAlign = true;
@@ -1295,13 +1611,14 @@ void CStage::Load(bool IsLoad)
     sPath = EXE_FOLDER + "SeqData\\" + m_sPartName.Trim() + ".INI";
 
     if ( IsLoad ) {
-        //UserINI.Load(sPath, "Member" , "m_bWfrAligned  " , m_bWfrAligned   );
+        UserINI.Load(sPath, "Member" , "m_sWorkingWfrId  " , m_sWorkingWfrId   );
 
     }
     else {
         UserINI.ClearFile(sPath) ;
-        //UserINI.Save(sPath, "Member" , "m_bWfrAligned  " , m_bWfrAligned   );
+        UserINI.Save(sPath, "Member" , "m_sWorkingWfrId  " , m_sWorkingWfrId   );
     }
+    //m_sWorkingWfrId = "sunkyewon1" ;
 }
 //---------------------------------------------------------------------------
 

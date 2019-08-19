@@ -12,6 +12,7 @@ USEFORM("Vision\FormCamLightPara.cpp", FrmCamLightPara);
 USEFORM("Vision\FormTrainChk.cpp", FrmTrainChk);
 USEFORM("Vision\FormCalPara.cpp", FrmCalPara);
 USEFORM("Vision\FormImage.cpp", FrmImage);
+USEFORM("Vision\FormEndImg.cpp", FrmEndImg);
 USEFORM("Vision\FormVisnPara.cpp", FrmVisnPara);
 USEFORM("Vision\FormAlgoPara.cpp", FrmAlgoPara);
 USEFORM("Vision\FormVisnMain.cpp", FrmVisnMain);
@@ -27,6 +28,8 @@ USEFORM("Motion\FormLotOpen.cpp", FrmLotOpen);
 USEFORM("Motion\FrameMotr.cpp", FraMotr); /* TFrame: File Type */
 USEFORM("Motion\FrameCyl.cpp", FraCyl); /* TFrame: File Type */
 USEFORM("Motion\FormInform.cpp", FrmInform);
+USEFORM("Motion\FormMapViewer.cpp", FrmMapViewer);
+USEFORM("Motion\FormInfo.cpp", FrmInfo);
 //---------------------------------------------------------------------------
 WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int)
 {
@@ -47,24 +50,26 @@ WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int)
          delete FrmLoading;
          Application->Initialize();
          Application->CreateForm(__classid(TFrmMain), &FrmMain);
-         Application->CreateForm(__classid(TFrmOperation), &FrmOperation);
-         Application->CreateForm(__classid(TFrmDevice), &FrmDevice);
-         Application->CreateForm(__classid(TFrmDeviceSet), &FrmDeviceSet);
-         Application->CreateForm(__classid(TFrmOption), &FrmOption);
-         Application->CreateForm(__classid(TFrmSPC), &FrmSPC);
-         Application->CreateForm(__classid(TFrmMaster), &FrmMaster);
-         Application->CreateForm(__classid(TFrmHisto), &FrmHisto);
-         Application->CreateForm(__classid(TFrmMag), &FrmMag);
-         Application->CreateForm(__classid(TFrmJob), &FrmJob);
-         Application->CreateForm(__classid(TFrmVisnPara), &FrmVisnPara);
-         Application->CreateForm(__classid(TFrmVisnMain), &FrmVisnMain);
-         Application->CreateForm(__classid(TFrmLotOpen), &FrmLotOpen);
-         Application->CreateForm(__classid(TFrmCamLightPara), &FrmCamLightPara);
-         Application->CreateForm(__classid(TFrmCalPara), &FrmCalPara);
-         Application->CreateForm(__classid(TFrmAlgoPara), &FrmAlgoPara);
-         Application->CreateForm(__classid(TFrmTrainChk), &FrmTrainChk);
-         Application->CreateForm(__classid(TFrmInform), &FrmInform);
-         Application->Run();
+                 Application->CreateForm(__classid(TFrmOperation), &FrmOperation);
+                 Application->CreateForm(__classid(TFrmDevice), &FrmDevice);
+                 Application->CreateForm(__classid(TFrmDeviceSet), &FrmDeviceSet);
+                 Application->CreateForm(__classid(TFrmOption), &FrmOption);
+                 Application->CreateForm(__classid(TFrmSPC), &FrmSPC);
+                 Application->CreateForm(__classid(TFrmMaster), &FrmMaster);
+                 Application->CreateForm(__classid(TFrmHisto), &FrmHisto);
+                 Application->CreateForm(__classid(TFrmMag), &FrmMag);
+                 Application->CreateForm(__classid(TFrmJob), &FrmJob);
+                 Application->CreateForm(__classid(TFrmVisnPara), &FrmVisnPara);
+                 Application->CreateForm(__classid(TFrmVisnMain), &FrmVisnMain);
+                 Application->CreateForm(__classid(TFrmLotOpen), &FrmLotOpen);
+                 Application->CreateForm(__classid(TFrmCamLightPara), &FrmCamLightPara);
+                 Application->CreateForm(__classid(TFrmCalPara), &FrmCalPara);
+                 Application->CreateForm(__classid(TFrmAlgoPara), &FrmAlgoPara);
+                 Application->CreateForm(__classid(TFrmTrainChk), &FrmTrainChk);
+                 Application->CreateForm(__classid(TFrmInform), &FrmInform);
+                 Application->CreateForm(__classid(TFrmInfo), &FrmInfo);
+                 Application->CreateForm(__classid(TFrmMapViewer), &FrmMapViewer);
+                 Application->Run();
     }
     catch (Exception &exception)
     {

@@ -7,8 +7,10 @@
 //---------------------------------------------------------------------------
 //Vision
 //---------------------------------------------------------------------------
-#include "VisionMan.h"
+#include "uRs232c.h"
 //---------------------------------------------------------------------------
+
+
 
 class CStage
 {
@@ -93,8 +95,8 @@ class CStage
         bool   CheckSafe  (EN_MOTR_ID _iMotr , EN_PSTN_ID _iPstnId );
         bool   CheckSafe  (EN_ACTR_ID _iActr , bool       _bFwd    );
 
-        AnsiString sMainWfName ; 
-
+        AnsiString sMainWfName  ;
+        AnsiString sMainWfName1 ;
 
         bool GetWorkEnd     (){return Stat.bWorkEnd ;}
         bool GetReqStop     (){return Stat.bReqStop ;}
@@ -130,6 +132,7 @@ class CStage
         bool Autorun   (void); //
 
         //One Cycle.
+        bool BarcodeLoadingTest();
         bool CycleSupply  (void); //웨이퍼 공급.
         bool CycleExpend  (void); //익스펜딩.
         bool CyclePlace   (void); //웨이퍼 배출.
@@ -158,6 +161,7 @@ class CStage
         double GetStageAbsMmFromAbsAngle(double _dAbsAngle); //원하는 각도 넣고 mm리턴
         double GetStageAbsAngleFromAbsMm(double _dAbsMm   ); //원하는 mm 넣고 각도 림턴.
 
+        String m_sWorkingWfrId ; //현제 작업 하고 있는 웨이퍼의 바코드 넘버 ..바코드 찍고 갱신.
 
 
 };

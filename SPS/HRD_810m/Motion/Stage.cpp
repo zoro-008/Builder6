@@ -1172,6 +1172,18 @@ bool CStage::CycleSupply(void)
                       else if(OM.DevInfo.iFlatAngle == 3) {DM.ARAY[riSTG].TurnCw270();}
                   }
 
+                  //20190813
+                  //바코드 사용 옵션 or 맵파일 사용 옵션 중 하나는 무조건 셋팅이 되야하는데
+                  //장비 운용 미스로 두 옵션 다 꺼진 상황에서 프로그램 뻑남
+                  //두 옵션 다 꺼져있으면 에러 띄우기. 진섭
+                  if(!OM.CmnOptn.bUseBarcode && !OM.CmnOptn.bLoadOnlyOneMapMarking){
+                      EM_SetErr(eiSTG_MapLoadingFail);
+                      Trace("BarcodeReading","fail");
+                      Step.iCycle = 40 ;
+                      MoveActr(aiSTG_TrsCmpGR , ccBwd);
+                      return false ;
+                  }
+
 
                   sWaferIdx = Barcode->sData ;
                   iTemp = sWaferIdx.Pos("\r") ;

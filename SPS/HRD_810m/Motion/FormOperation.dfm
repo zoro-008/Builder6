@@ -1,6 +1,6 @@
 object FrmOperation: TFrmOperation
-  Left = 301
-  Top = 104
+  Left = 0
+  Top = 137
   BorderStyle = bsNone
   Caption = 'FrmOperation'
   ClientHeight = 870
@@ -594,7 +594,7 @@ object FrmOperation: TFrmOperation
         Top = 21
         Width = 638
         Height = 478
-        ActivePage = TabSheet9
+        ActivePage = TabSheet14
         Align = alClient
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
@@ -602,7 +602,7 @@ object FrmOperation: TFrmOperation
         Font.Name = 'Times New Roman'
         Font.Style = [fsBold]
         ParentFont = False
-        TabIndex = 0
+        TabIndex = 1
         TabOrder = 1
         TabWidth = 100
         object TabSheet9: TTabSheet
@@ -1007,6 +1007,13 @@ object FrmOperation: TFrmOperation
             Width = 83
             Height = 439
             TabOrder = 1
+            object lbBar: TLabel
+              Left = 0
+              Top = 168
+              Width = 18
+              Height = 13
+              Caption = '???'
+            end
             object Panel61: TPanel
               Left = 1
               Top = 1
@@ -1141,14 +1148,32 @@ object FrmOperation: TFrmOperation
               OnClick = btMapOpenClick
             end
             object Button1: TButton
-              Left = 32
-              Top = 304
+              Left = 0
+              Top = 320
               Width = 75
               Height = 25
               Caption = 'Button1'
               TabOrder = 8
               Visible = False
               OnClick = Button1Click
+            end
+            object btBarOn: TButton
+              Left = 2
+              Top = 187
+              Width = 75
+              Height = 25
+              Caption = 'Barcode On'
+              TabOrder = 9
+              OnClick = btBarOnClick
+            end
+            object btBarOff: TButton
+              Left = 2
+              Top = 219
+              Width = 75
+              Height = 25
+              Caption = 'Barcode Off'
+              TabOrder = 10
+              OnClick = btBarOffClick
             end
           end
         end
@@ -3504,7 +3529,7 @@ object FrmOperation: TFrmOperation
       object lbDInfo3: TLabel
         Left = 10
         Top = 107
-        Width = 77
+        Width = 78
         Height = 16
         Caption = 'TOTAL TIME'
         Font.Charset = ANSI_CHARSET
@@ -3530,7 +3555,7 @@ object FrmOperation: TFrmOperation
       object lbDInfo7: TLabel
         Left = 10
         Top = 188
-        Width = 95
+        Width = 96
         Height = 16
         Caption = 'WAFER COUNT'
         Font.Charset = ANSI_CHARSET
@@ -3543,7 +3568,7 @@ object FrmOperation: TFrmOperation
       object lbDInfo6: TLabel
         Left = 10
         Top = 161
-        Width = 63
+        Width = 64
         Height = 16
         Caption = 'FAIL CHIP'
         Font.Charset = ANSI_CHARSET
@@ -3556,7 +3581,7 @@ object FrmOperation: TFrmOperation
       object Label31: TLabel
         Left = 10
         Top = 241
-        Width = 85
+        Width = 86
         Height = 16
         Caption = 'WAFER UPEH'
         Font.Charset = ANSI_CHARSET
@@ -3570,7 +3595,7 @@ object FrmOperation: TFrmOperation
       object lbDInfo4: TLabel
         Left = 12
         Top = 215
-        Width = 77
+        Width = 78
         Height = 16
         Caption = 'WAFER UPH'
         Font.Charset = ANSI_CHARSET
@@ -3756,7 +3781,7 @@ object FrmOperation: TFrmOperation
       object lbLInfo0: TLabel
         Left = 10
         Top = 27
-        Width = 87
+        Width = 88
         Height = 16
         Caption = 'WAFER NAME'
         Font.Charset = ANSI_CHARSET
@@ -3782,7 +3807,7 @@ object FrmOperation: TFrmOperation
       object lbLInfo5: TLabel
         Left = 10
         Top = 129
-        Width = 77
+        Width = 78
         Height = 16
         Caption = 'START TIME'
         Font.Charset = ANSI_CHARSET
@@ -3808,7 +3833,7 @@ object FrmOperation: TFrmOperation
       object lbLInfo3: TLabel
         Left = 10
         Top = 102
-        Width = 63
+        Width = 64
         Height = 16
         Caption = 'FAIL CHIP'
         Font.Charset = ANSI_CHARSET
@@ -3847,7 +3872,7 @@ object FrmOperation: TFrmOperation
       object lbLInfo4: TLabel
         Left = 10
         Top = 215
-        Width = 77
+        Width = 78
         Height = 16
         Caption = 'WAFER UPH'
         Font.Charset = ANSI_CHARSET
@@ -3861,7 +3886,7 @@ object FrmOperation: TFrmOperation
       object Label12: TLabel
         Left = 10
         Top = 242
-        Width = 85
+        Width = 86
         Height = 16
         Caption = 'WAFER UPEH'
         Font.Charset = ANSI_CHARSET
@@ -4201,7 +4226,7 @@ object FrmOperation: TFrmOperation
         object lbOption7: TLabel
           Left = 7
           Top = 6
-          Width = 146
+          Width = 147
           Height = 15
           Caption = 'IGNORE VACUUM SENSOR'
           Font.Charset = ANSI_CHARSET
@@ -4339,7 +4364,7 @@ object FrmOperation: TFrmOperation
         object lbOption5: TLabel
           Left = 7
           Top = 6
-          Width = 91
+          Width = 92
           Height = 15
           Caption = 'CHECK FAIL CNT'
           Font.Charset = ANSI_CHARSET
@@ -5523,7 +5548,7 @@ object FrmOperation: TFrmOperation
       object Label17: TLabel
         Left = 12
         Top = 4
-        Width = 113
+        Width = 114
         Height = 22
         Caption = 'PASSWORD'
       end

@@ -170,7 +170,7 @@ __published:	// IDE-managed Components
         TMemo *mmMemo;
     TPageControl *pcControl;
     TTabSheet *TabSheet9;
-    TPanel *Panel24;
+        TPanel *pnCapture;
     TPanel *Panel5;
     TPanel *Panel10;
     TPanel *pnSTG;
@@ -260,6 +260,15 @@ __published:	// IDE-managed Components
     TBitBtn *btHED_PenBw;
     TListBox *lbErr;
     TButton *Button1;
+        TLabel *Label1;
+        TPanel *Panel3;
+        TLabel *lbPenCnt;
+        TLabel *Label3;
+        TLabel *Label4;
+        TPanel *pnPenCntReset;
+        TButton *btBarOn;
+        TButton *btBarOff;
+        TLabel *lbBar;
     void __fastcall FormShow(TObject *Sender);
     void __fastcall btOperatorClick(TObject *Sender);
     void __fastcall btPasswordCloseClick(TObject *Sender);
@@ -303,18 +312,27 @@ __published:	// IDE-managed Components
         void __fastcall btRawMapClearClick(TObject *Sender);
         void __fastcall btMAP_ClearClickClick(TObject *Sender);
         void __fastcall Button1Click(TObject *Sender);
-        void __fastcall Button2Click(TObject *Sender);
+        void __fastcall btGetBarcodeClick(TObject *Sender);
         void __fastcall btTraceBwdClick(TObject *Sender);
         void __fastcall btTraceFwdClick(TObject *Sender);
         void __fastcall btReMarkClick(TObject *Sender);
         void __fastcall pnTControlClick(TObject *Sender);
         void __fastcall Panel20Click(TObject *Sender);
-    void __fastcall Panel10Click(TObject *Sender);
+        void __fastcall Panel15Click(TObject *Sender);
+        void __fastcall Panel18Click(TObject *Sender);
+        void __fastcall Panel9Click(TObject *Sender);
+        void __fastcall Panel11Click(TObject *Sender);
+        void __fastcall Panel13Click(TObject *Sender);
+        void __fastcall pnPenCntResetClick(TObject *Sender);
+        void __fastcall btBarOnClick(TObject *Sender);
+        void __fastcall btBarOffClick(TObject *Sender);
 
 private:	// User declarations
     double m_dUnit    ;
     double m_dPitch   ;
     int    m_iUnitType;
+
+
 
     void DM_Init   (); //Data Man Init.
     void Man_Init  (); //Manual Button , Tag Init.
@@ -336,6 +354,8 @@ private:	// User declarations
 
 public:		// User declarations
     __fastcall TFrmOperation(TComponent* Owner);
+
+    void __fastcall GetPanelScreenShot(TPanel * _pPanel, String _sPath);
 };
 //---------------------------------------------------------------------------
 extern PACKAGE TFrmOperation *FrmOperation;

@@ -20,6 +20,7 @@
 #include "UserINI.h"
 #include "SpcSubUnit.h"
 #include "Array.h"
+
 //---------------------------------------------------------------------------
 //Part Reference
 //---------------------------------------------------------------------------
@@ -55,6 +56,32 @@ __fastcall TFrmOperation::TFrmOperation(TComponent* Owner)
 
 }
 //---------------------------------------------------------------------------
+void __fastcall TFrmOperation::GetPanelScreenShot(TPanel * _pPanel, String _sPath)
+{
+    Graphics::TBitmap *Bm = new Graphics::TBitmap();
+
+    tagRECT Rect ;
+    GetWindowRect(_pPanel -> Handle , &Rect);
+
+    HDC dc;
+    LOGPALETTE *lpPal;
+
+    Bm->Width  = Rect.right - Rect.left;
+    Bm->Height = Rect.bottom - Rect.top;
+    dc = GetDC(0); 
+    if(dc == 0) return; 
+
+    BitBlt(Bm->Canvas->Handle,0,0,Bm->Width,Bm->Height,dc,Rect.left,Rect.top,SRCCOPY);
+
+    ReleaseDC(0,dc);
+
+
+    Bm -> SaveToFile(_sPath);
+
+    //m_sLastSaveData = _sPath ;
+
+    delete Bm;
+};
 
 void TFrmOperation::DM_Init ()
 {
@@ -110,6 +137,7 @@ void TFrmOperation::Man_Init()
     iTag = (int)mcSTG_CyclePlace     ; sTemp = "[" + AnsiString(iTag ) + "]" + "웨이퍼 배출"        ; SetManualBtn(btMan1_4 , sTemp , iTag) ;
     iTag = (int)mcSTG_CycleUnExpend  ; sTemp = "[" + AnsiString(iTag ) + "]" + "웨이퍼 해제"        ; SetManualBtn(btMan1_5 , sTemp , iTag) ;
     iTag = (int)mcSTG_WfrAlgn        ; sTemp = "[" + AnsiString(iTag ) + "]" + "웨이퍼 레일 얼라인" ; SetManualBtn(btMan1_6 , sTemp , iTag) ;
+
 
     iTag = (int)mcHED_CycleHome      ; sTemp = "[" + AnsiString(iTag ) + "]" + "해드 홈      " ; SetManualBtn(btMan2_1 , sTemp , iTag) ;
 
@@ -303,15 +331,12 @@ void __fastcall TFrmOperation::FormShow(TObject *Sender)
     tmUpdate->Enabled = true;
     tmUpdateAray->Enabled = true ;
 
+    VSM.LiveAllOff(true);
     VSM.SetParentVisnMain(pnVisnBase) ;
     VSM.SetParentVisnPara(NULL);
     VSM.SetParentAlgoPara(NULL);
     VSM.SetSettingMode(false);
-    VSM.Live(VSM.GetActiveVisn() , false);
 
-
-    //lbSource -> Caption = OM.CmnOptn.sSourcePath ;
-    //lbWorked -> Caption = OM.CmnOptn.sWorkedPath ;
 }
 //---------------------------------------------------------------------------
 void __fastcall TFrmOperation::FormClose(TObject *Sender,
@@ -327,8 +352,6 @@ void __fastcall TFrmOperation::FormDestroy(TObject *Sender)
 {
     tmUpdate -> Enabled = false ;
     tmUpdateAray -> Enabled = false ;
-    g_bLocking = true ;
-    //mmMemo -> Lines -> Clear();
 }
 //---------------------------------------------------------------------------
 
@@ -545,20 +568,27 @@ void TFrmOperation::UpdateAray()
 void __fastcall TFrmOperation::tmUpdateTimer(TObject *Sender)
 {
 //    Trace("Operation Form","Update Start");
+
+
     tmUpdate->Enabled = false;
 
+    DM.m_iTempDpCnt1 = 1;
     SEQ.m_dLastTime = Now();
 
     //Oper Level Display
+    DM.m_iTempDpCnt1 = 2;
     LV_Display();
 
     //Lot Info Display
+    DM.m_iTempDpCnt1 = 3;
     LT_Display();
 
     //Error Display
+    DM.m_iTempDpCnt1 = 4;
     EM_DisplayList(lbErr);
 
     //Option Display
+    DM.m_iTempDpCnt1 = 5;
     OP_Dispaly();
 
     //DataMan Update
@@ -568,6 +598,8 @@ void __fastcall TFrmOperation::tmUpdateTimer(TObject *Sender)
     pcManual -> Enabled = !SEQ._bRun ;
 
     //Button Start Enabled
+    DM.m_iTempDpCnt1 = 6;
+
     btTRS_CmpBw -> Font -> Color = AT_Complete(aiSTG_TrsCmpGR   , ccBwd) ? clLime : clBlack ;
     btTRS_CmpFw -> Font -> Color = AT_Complete(aiSTG_TrsCmpGR   , ccFwd) ? clLime : clBlack ;
     btHED_PenBw -> Font -> Color = AT_Complete(aiHED_PenMrkDU   , ccBwd) ? clLime : clBlack ;
@@ -584,6 +616,7 @@ void __fastcall TFrmOperation::tmUpdateTimer(TObject *Sender)
 
 
     //TODO :: 나중에 수정 JS
+    DM.m_iTempDpCnt1 = 7;
     lbWfrGoodCnt -> Caption = DM.ARAY[riSTG].GetCntStat(csGood );
     lbWfrFailCnt -> Caption = DM.ARAY[riSTG].GetCntStat(csFail );
     lbWfrMaskCnt -> Caption = DM.ARAY[riSTG].GetCntStat(csEror );
@@ -599,9 +632,10 @@ void __fastcall TFrmOperation::tmUpdateTimer(TObject *Sender)
     //pnPickCycleTime -> Caption    = sTemp2 ;
 
     //Theta Set 관련.
-    btSetT   -> Enabled = HED.Rqst.bNeedTAlign ;
+    //btSetT   -> Enabled = HED.Rqst.bNeedTAlign ;
 
     //초기 위치 관련.
+    DM.m_iTempDpCnt1 = 8;
     static bool bPreNeedOriDataSet = false ;
     if(HED.m_bNeedOriDataSet && !bPreNeedOriDataSet) {
         if(OM.DevOptn.iOriMathod == omFiducial) VSM.SetActiveVisn(viWfo);
@@ -612,7 +646,8 @@ void __fastcall TFrmOperation::tmUpdateTimer(TObject *Sender)
 
         FM_MsgOk("CHECK","기준점을 확인해주세요");
     }
-    btManOri -> Enabled = HED.Rqst.bNeedOrigin ;
+    //btManOri -> Enabled = HED.Rqst.bNeedOrigin ;
+    DM.m_iTempDpCnt1 = 9 ;
     spManOri -> Visible = SEQ._bFlick && HED.m_bNeedOriDataSet   ;
     bPreNeedOriDataSet = HED.m_bNeedOriDataSet ;
 
@@ -633,6 +668,7 @@ void __fastcall TFrmOperation::tmUpdateTimer(TObject *Sender)
 
 
     //비젼 창 핸들링.
+    DM.m_iTempDpCnt1 = 10;
     EN_VISN_ID iCrntActiveVisn = 0 ;
     static EN_VISN_ID iPreActiveVisn = 1 ;
     //if(SEQ._bRun) {
@@ -653,7 +689,7 @@ void __fastcall TFrmOperation::tmUpdateTimer(TObject *Sender)
 
     int iLevel;
     iLevel = FM_GetLevel();
-
+    DM.m_iTempDpCnt1 = 11;
     if(iLevel == lvOperator){
         GroupBox1  -> Visible = false;
         GroupBox2  -> Visible = false;
@@ -691,8 +727,10 @@ void __fastcall TFrmOperation::tmUpdateTimer(TObject *Sender)
         edJogUnit  -> Visible = true;
     }
 
+    lbPenCnt -> Caption = HED.m_iTotalPenDnCnt ;
 
 
+    lbBar->Caption =  STG.Barcode->sData ;
 
     tmUpdate->Enabled = true;
 }
@@ -703,6 +741,12 @@ void __fastcall TFrmOperation::tmUpdateArayTimer(TObject *Sender)
     tmUpdateAray->Enabled = false ;
 
     DM.UpdateAray();
+
+    String sTemp = "Col=" + String(DM.ARAY[riSTG].GetMaxCol()) + " Row=" + String(DM.ARAY[riSTG].GetMaxRow()) ;
+
+    Label1->Caption = sTemp ;
+
+
 
     tmUpdateAray->Enabled = true ;
 }
@@ -824,57 +868,6 @@ void __fastcall TFrmOperation::btSTG_ChkBwClick(TObject *Sender)
 }
 
 //---------------------------------------------------------------------------
-/*
-    //if(!OM.CmnOptn.bUseMapFile) return ;
-    if(!odMap->Execute()) return ;
-
-    //Local Var.
-    TUserINI   UserINI;
-    AnsiString sTemp  ;
-    AnsiString sVal   ;
-    AnsiString sRslt  ;
-
-    AnsiString sId    ;
-    AnsiString sLotNo ;
-
-    int iRow , iCol   ;
-
-    AnsiString sTemp2= "" ;
-
-    String sPath = odMap->FileName;
-    if(!FileExists(sPath)) return ;
-
-    UserINI.Load(sPath.c_str()  , "ETC"  , "ID"    , &sId    );
-    UserINI.Load(sPath.c_str()  , "ETC"  , "LotNo" , &sLotNo );
-    UserINI.Load(sPath.c_str()  , "ETC"  , "Row"   , &iRow   );
-    UserINI.Load(sPath.c_str()  , "ETC"  , "Col"   , &iCol   );
-
-    DM.ARAY[riSTG].SetMaxColRow(iCol,iRow );
-
-    for(int r = 0 ; r < iRow ; r++) {
-        sTemp.printf("R%02d", r);
-        UserINI.Load(sPath.c_str()  , "Data"  , sTemp , sRslt );
-        for(int c = 0 ; c < iCol ; c++) {
-            //sVal = "0x"+sRslt.SubString(c+1,1) ;
-            sVal = sRslt.SubString(1,2) ;
-            sRslt.Delete(1,3) ;
-            DM.ARAY[riSTG].SetStat(r,c,(EN_CHIP_STAT)StrToInt(sVal)  );
-            sTemp2 = sVal+"," ;
-        }
-    }
-
-    DM.ARAY[riSTG].SetID   (sId   );
-    DM.ARAY[riSTG].SetLotNo(sLotNo);
-
-    Trace("Rcv Array",sTemp2.c_str()) ;
-
-    DM.ARAY[riSTG].ChangeStat(csWait , csUnkwn);
-    DM.ARAY[riSTG].ChangeStat(csGood , csUnkwn);
-
-    return ;
-    if(!MAPU.ConvertFile(OM.CmnOptn.sSourcePath + "\\hanra.sinf" , mmMemo, riMAP)) return ;
-*/
-
 void __fastcall TFrmOperation::btConvertOpenClick(TObject *Sender)
 {
 
@@ -890,13 +883,22 @@ void __fastcall TFrmOperation::btConvertOpenClick(TObject *Sender)
     //Local Var.
     String sPath = odMap->FileName;
 
+    int iOriR  , iOriC ;
+
+
 
     if(OM.DevInfo.iMapType == 0) {
-        if(!MAPU.ConvertCmn      (sPath , riMAP)) FM_MsgOk("ERROR","맵파일이나 DEVICE에 맵파일 정보를 확인 해주세요.") ;
+        if(OM.DevInfo.bMskExist){
+            if(!MAPU.ChangeMaskNone(sPath , OM.DevInfo.iMapType , riMAP)) FM_MsgOk("ERROR","맵파일이나 DEVICE에 맵파일 정보를 확인 해주세요.") ;
+        }
+        else {
+            Trace("Operator", "Device Set Form_Make Mark Click");
+            if(!MAPU.ConvertCmn      (sPath , riMAP)) FM_MsgOk("ERROR","맵파일이나 DEVICE에 맵파일 정보를 확인 해주세요.") ;
+        }
     }
     else if(OM.DevInfo.iMapType == 1) {
         if(!MAPU.ConvertCoordi1  (sPath , riMAP)) FM_MsgOk("ERROR","맵파일이나 DEVICE에 맵파일 정보를 확인 해주세요.") ;
-        MAPU.DeleteNullColRow(riMSK , riMAP);
+        if(!MAPU.DeleteNullColRow(riMSK , riMAP)) return;
     }
     else if(OM.DevInfo.iMapType == 2){
         if(!MAPU.ConvertCoordi2  (sPath , riMAP)) FM_MsgOk("ERROR","맵파일이나 DEVICE에 맵파일 정보를 확인 해주세요.") ;
@@ -905,19 +907,31 @@ void __fastcall TFrmOperation::btConvertOpenClick(TObject *Sender)
         if(!MAPU.ConvertCoordi8in(sPath , riMAP)) FM_MsgOk("ERROR","맵파일이나 DEVICE에 맵파일 정보를 확인 해주세요.") ;
     }
 
+    const int    iFlatAngle    = OM.DevInfo.iFlatAngle   ;
+
+    //DM.ARAY[riMAP].
+
+         if(iFlatAngle == 0) {                           }/*0  */
+    else if(iFlatAngle == 1) {DM.ARAY[riMAP].TurnCw90 ();}/*90 */
+    else if(iFlatAngle == 2) {DM.ARAY[riMAP].TurnCw180();}/*180*/
+    else if(iFlatAngle == 3) {DM.ARAY[riMAP].TurnCw270();}/*270*/
+
+
+
+
 
     if(!MAPU.MergeArray(riMSK , riMAP  , riSTG)){ FM_MsgOk("ERROR","마스크영역에 기준점을 확인 해주세요"); DM.ARAY[riSTG].SetStat(csNone); }
 
     if(OM.DevInfo.bMskExist && OM.DevInfo.iMapType == 0){ MAPU.ChangeMaskNone(sPath , OM.DevInfo.iMapType , riSTG); }
 
 
+    if(OM.DevInfo.bMskExist) {
+             if(iFlatAngle == 0) {                           }/*0  */
+        else if(iFlatAngle == 1) {DM.ARAY[riSTG].TurnCw90 ();}/*90 */
+        else if(iFlatAngle == 2) {DM.ARAY[riSTG].TurnCw180();}/*180*/
+        else if(iFlatAngle == 3) {DM.ARAY[riSTG].TurnCw270();}/*270*/
+    }
 
-
-    const int    iFlatAngle    = OM.DevInfo.iFlatAngle   ;
-         if(iFlatAngle == 0) {                           }/*0  */
-    else if(iFlatAngle == 1) {DM.ARAY[riSTG].TurnCw90 ();}/*90 */
-    else if(iFlatAngle == 2) {DM.ARAY[riSTG].TurnCw180();}/*180*/
-    else if(iFlatAngle == 3) {DM.ARAY[riSTG].TurnCw270();}/*270*/
 
 
 
@@ -946,7 +960,9 @@ void __fastcall TFrmOperation::btConvertOpenClick(TObject *Sender)
     HED.Rqst.bNeedTAlign = true  ;
     HED.Rqst.bNeedOrigin = false ;
 
-    DM.UpdateAray();
+    //sun 20141022 화면 락되는 것 때문에 지워봄. DM.UpdateAray();
+
+    mmMemo -> Lines -> Assign(MAPU.m_slRowList);
 
 
 }
@@ -1017,6 +1033,8 @@ void __fastcall TFrmOperation::btMapOpenClick(TObject *Sender)
     else                              {if(!MAPU.ConvertCoordi8in(sPath , riMAP)) FM_MsgOk("ERROR","맵파일이나 DEVICE에 맵파일 정보를 확인 해주세요.") ;}
 
     Trace("Operator", "Operation Form_MapOpen Button Click") ;
+
+    mmMemo -> Lines -> Assign(MAPU.m_slRowList);
 }
 //---------------------------------------------------------------------------
 
@@ -1041,7 +1059,7 @@ void __fastcall TFrmOperation::btRawMapOpenClick(TObject *Sender)
 void __fastcall TFrmOperation::FormCreate(TObject *Sender)
 {
     //MAPU.SetMemo(Memo1);//
-    MAPU.SetMemo(mmMemo) ;
+    //MAPU.SetMemo(mmMemo) ;
 }
 //---------------------------------------------------------------------------
 
@@ -1063,7 +1081,7 @@ void __fastcall TFrmOperation::btManOriClick(TObject *Sender)
     HED.m_dTempPosY = MT_GetCmdPos(miHED_YHed) ;
     */
 
-    for(int i = 0 ; i < MAX_VISN_ID ; i++) VSM.Live(i,false);
+    VSM.LiveAllOff(true);
 
     HED.m_iLastInspChipC = c;
     HED.m_iLastInspChipR = r;
@@ -1110,10 +1128,7 @@ void __fastcall TFrmOperation::Button1Click(TObject *Sender)
 }
 //---------------------------------------------------------------------------
 
-void __fastcall TFrmOperation::Button2Click(TObject *Sender)
-{
-    DM.ARAY[riSTG].ChangeStat(csEror , csWork);
-}
+
 //---------------------------------------------------------------------------
 
 
@@ -1168,8 +1183,10 @@ void __fastcall TFrmOperation::btReMarkClick(TObject *Sender)
 
 void __fastcall TFrmOperation::pnTControlClick(TObject *Sender)
 {
-    DM_Init ();
-   // SEQ.m_bTest = !SEQ.m_bTest ;
+/*
+
+*/
+
 }
 //---------------------------------------------------------------------------
 
@@ -1181,93 +1198,78 @@ void __fastcall TFrmOperation::pnTControlClick(TObject *Sender)
 
 void __fastcall TFrmOperation::Panel20Click(TObject *Sender)
 {
-AnsiString Barcode = "S2V3AWWX01-603,6z0d84,01\r";
+//AnsiString Barcode = "S2V3AWWX01-603,6z0d84,01\r";
 
-    Barcode.Delete(Barcode.Pos("\r"),1);
+//    Barcode.Delete(Barcode.Pos("\r"),1);
 
-    ShowMessage(Barcode);
-/*
-AnsiString Barcode = "S2V3AWWX01-603,6z0d84,01\r";
-AnsiString sWaferId  ;
-AnsiString sWaferIdx ;
+//    ShowMessage(Barcode);
 
-
-
-     if(OM.CmnOptn.bUseBarcode){
-         sWaferId  = STG.GetWaferId (Barcode);
-         sWaferIdx = STG.GetWaferIdx(Barcode);
-
-         //sWaferId  = "KA85929XB-26.27.28.29.30" ;
-
-
-         g_bLocking = true ;
-         if(OM.DevInfo.iMapType == 0) {
-             if(!MAPU.ConvertCmn      (OM.CmnOptn.sSourcePath +"\\" + Barcode + "." + OM.DevInfo.sExtention , riMAP)){
-                 g_bLocking = false ;
-                 EM_SetErr(eiSTG_MapLoadingFail);
-                 return  ;
-
-             }
-         }
-
-         else if(OM.DevInfo.iMapType == 1){
-             if(!MAPU.ConvertCoordi1  (OM.CmnOptn.sSourcePath +"\\" + Barcode + "." + OM.DevInfo.sExtention , riMAP)){
-                 g_bLocking = false ;
-                 EM_SetErr(eiSTG_MapLoadingFail);
-                 return  ;
-             }
-         }
-         else if(OM.DevInfo.iMapType == 2){
-             if(!MAPU.ConvertCoordi2  (OM.CmnOptn.sSourcePath +"\\" + Barcode + "." + OM.DevInfo.sExtention , riMAP)) {
-                 g_bLocking = false ;
-                 EM_SetErr(eiSTG_MapLoadingFail);
-                 return  ;
-             }
-         }
-         else {
-             if(!MAPU.ConvertCoordi8in(OM.CmnOptn.sSourcePath +"\\" + Barcode + "." + OM.DevInfo.sExtention , riMAP)){
-                 g_bLocking = false ;
-                 EM_SetErr(eiSTG_MapLoadingFail);
-                 return  ;
-             }
-         }
-         //if(!MAPU.ConvertCmn (OM.CmnOptn.sSourcePath +"\\" + sWaferId + ".sinf" , riMAP)) {EM_SetErr(eiSTG_MapLoadingFail); Step.iCycle = 40 ; return false ;}
-         if(OM.DevInfo.iFlatAngle == 0) {                           }
-             else if(OM.DevInfo.iFlatAngle == 1) {DM.ARAY[riMAP].TurnCw90 ();}
-             else if(OM.DevInfo.iFlatAngle == 2) {DM.ARAY[riMAP].TurnCw180();}
-             else if(OM.DevInfo.iFlatAngle == 3) {DM.ARAY[riMAP].TurnCw270();}
-             //if(!MAPU.ConvertCmn (OM.CmnOptn.sSourcePath +"\\" + sWaferId + ".sinf" , riMAP)) {EM_SetErr(eiSTG_MapLoadingFail); Step.iCycle = 40 ; return false ;}
-
-             if(!MAPU.MergeArray (riMSK , riMAP  , riSTG)) {
-                 EM_SetErr(eiSTG_MapLoadingFail);
-             }
-
-         }
-     */
 }
 //---------------------------------------------------------------------------
 
 
-void __fastcall TFrmOperation::Panel10Click(TObject *Sender)
+
+
+
+
+
+void __fastcall TFrmOperation::Panel15Click(TObject *Sender)
 {
-  /*
-    if(!OM.CmnOptn.bUseBarcode && OM.CmnOptn.bLoadOnlyOneMapMarking){
-        if(!MAPU.ConvertCmn (OM.CmnOptn.sLoadOnlyOneMapMrkPath , riMAP)){
-            EM_SetErr(eiSTG_MapLoadingFail);
-        }
-        if(!MAPU.MergeArray(riMSK , riMAP  , riSTG)){
-            DM.ARAY[riSTG].SetStat(csNone);
-            EM_SetErr(eiSTG_MapLoadingFail);
-        }
-        if(OM.DevInfo.bMskExist && OM.DevInfo.iMapType == 0){
-            MAPU.ChangeMaskNone(OM.CmnOptn.sLoadOnlyOneMapMrkPath , OM.DevInfo.iMapType , riSTG);
-        }
-             if(OM.DevInfo.iFlatAngle == 0) {                           }
-        else if(OM.DevInfo.iFlatAngle == 1) {DM.ARAY[riSTG].TurnCw90 ();}
-        else if(OM.DevInfo.iFlatAngle == 2) {DM.ARAY[riSTG].TurnCw180();}
-        else if(OM.DevInfo.iFlatAngle == 3) {DM.ARAY[riSTG].TurnCw270();}
-    }
-   */
+//    if(SEQ.iTempStep ==0) {
+//        SEQ.iTempStep = 10 ;
+//    }
+//    else {
+//        SEQ.iTempStep = 0 ;
+//    }
 }
 //---------------------------------------------------------------------------
+
+
+
+void __fastcall TFrmOperation::Panel18Click(TObject *Sender)
+{
+//    SEQ.bShowErr = true ;        
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TFrmOperation::Panel9Click(TObject *Sender)
+{
+ //   VSM.SetActiveVisn(0);
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TFrmOperation::Panel11Click(TObject *Sender)
+{
+ //   VSM.SetActiveVisn(1);
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TFrmOperation::Panel13Click(TObject *Sender)
+{
+ //   STG.BarcodeLoadingTest();
+}
+//---------------------------------------------------------------------------
+
+
+
+void __fastcall TFrmOperation::pnPenCntResetClick(TObject *Sender)
+{
+
+    HED.m_iTotalPenDnCnt = 0 ;
+}
+//---------------------------------------------------------------------------
+
+
+void __fastcall TFrmOperation::btBarOnClick(TObject *Sender)
+{
+    STG.SendBarcodeMsg("LON/r");             //
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TFrmOperation::btBarOffClick(TObject *Sender)
+{
+    STG.SendBarcodeMsg("LOFF/r");
+}
+//---------------------------------------------------------------------------
+
 

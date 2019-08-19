@@ -7,32 +7,34 @@
     <OBJFILES value="obj\pHRD_810m.obj obj\SVInterface.obj obj\ApiImport.obj obj\Tracker.obj 
       obj\CamUnit.obj obj\LightUnit.obj obj\ProcUnit.obj obj\FormHisto.obj 
       obj\FormPixel.obj obj\FormMag.obj obj\FormJob.obj obj\FormCamLightPara.obj 
-      obj\FormTrainChk.obj obj\FormCalPara.obj obj\FormImage.obj obj\Vision.obj 
-      obj\VOptnMan.obj obj\VisionMan.obj obj\FormVisnPara.obj 
-      obj\FormAlgoPara.obj obj\FormVisnMain.obj obj\MainThread.obj 
-      obj\UserINI.obj obj\UserFile.obj obj\Chip.obj obj\Array.obj 
-      obj\DataMan.obj obj\FormLoading.obj obj\FormMain.obj obj\FormOperation.obj 
-      obj\FormDevice.obj obj\FormDeviceSet.obj obj\FormOption.obj 
-      obj\FormSPC.obj obj\FormMaster.obj obj\FormLotOpen.obj obj\FrameMotr.obj 
-      obj\FrameCyl.obj obj\FormInform.obj obj\FormInfo.obj obj\PstnMan.obj 
-      obj\Sequence.obj obj\OptionMan.obj obj\Head.obj obj\Stage.obj 
-      obj\LotUnit.obj obj\ManualMan.obj obj\uRs232c.obj obj\SPCUnit.obj 
-      obj\SpcSubUnit.obj obj\MapUnit.obj obj\QuedataUnit.obj"/>
+      obj\FormTrainChk.obj obj\FormCalPara.obj obj\FormImage.obj 
+      obj\FormEndImg.obj obj\Vision.obj obj\VOptnMan.obj obj\VisionMan.obj 
+      obj\FormVisnPara.obj obj\FormAlgoPara.obj obj\FormVisnMain.obj 
+      obj\MainThread.obj obj\UserINI.obj obj\UserFile.obj obj\Chip.obj 
+      obj\Array.obj obj\DataMan.obj obj\FormLoading.obj obj\FormMain.obj 
+      obj\FormOperation.obj obj\FormDevice.obj obj\FormDeviceSet.obj 
+      obj\FormOption.obj obj\FormSPC.obj obj\FormMaster.obj obj\FormLotOpen.obj 
+      obj\FrameMotr.obj obj\FrameCyl.obj obj\FormInform.obj 
+      obj\FormMapViewer.obj obj\FormInfo.obj obj\PstnMan.obj obj\Sequence.obj 
+      obj\OptionMan.obj obj\Head.obj obj\Stage.obj obj\LotUnit.obj 
+      obj\ManualMan.obj obj\uRs232c.obj obj\SPCUnit.obj obj\SpcSubUnit.obj 
+      obj\MapUnit.obj obj\QuedataUnit.obj"/>
     <RESFILES value="pHRD_810m.res"/>
     <DEFFILE value="Include\Euresys\MultiCam.def"/>
     <RESDEPEN value="$(RESFILES) Vision\FormHisto.dfm Vision\FormPixel.dfm Vision\FormMag.dfm 
       Vision\FormJob.dfm Vision\FormCamLightPara.dfm Vision\FormTrainChk.dfm 
-      Vision\FormCalPara.dfm Vision\FormImage.dfm Vision\FormVisnPara.dfm 
-      Vision\FormAlgoPara.dfm Vision\FormVisnMain.dfm Motion\FormLoading.dfm 
-      Motion\FormMain.dfm Motion\FormOperation.dfm Motion\FormDevice.dfm 
-      Motion\FormDeviceSet.dfm Motion\FormOption.dfm Motion\FormSPC.dfm 
-      Motion\FormMaster.dfm Motion\FormLotOpen.dfm Motion\FrameMotr.dfm 
-      Motion\FrameCyl.dfm Motion\FormInform.dfm Motion\FormInfo.dfm"/>
+      Vision\FormCalPara.dfm Vision\FormImage.dfm Vision\FormEndImg.dfm 
+      Vision\FormVisnPara.dfm Vision\FormAlgoPara.dfm Vision\FormVisnMain.dfm 
+      Motion\FormLoading.dfm Motion\FormMain.dfm Motion\FormOperation.dfm 
+      Motion\FormDevice.dfm Motion\FormDeviceSet.dfm Motion\FormOption.dfm 
+      Motion\FormSPC.dfm Motion\FormMaster.dfm Motion\FormLotOpen.dfm 
+      Motion\FrameMotr.dfm Motion\FrameCyl.dfm Motion\FormInform.dfm 
+      Motion\FormMapViewer.dfm Motion\FormInfo.dfm"/>
     <LIBFILES value="bin\SMDll.lib Include\Hanra\SLDll.lib"/>
     <LIBRARIES value="dbrtl.lib teedb.lib bcbsmp.lib tee.lib indy.lib vclx.lib"/>
     <SPARELIBS value="vcl.lib rtl.lib vclx.lib indy.lib tee.lib bcbsmp.lib teedb.lib dbrtl.lib"/>
     <PACKAGES value="vcl.bpi rtl.bpi"/>
-    <PATHCPP value=".;SVDll;Include\Imi;Vision;Vision;Vision;Vision;Vision;Vision;Vision;Vision;Vision;Vision;Vision;Vision;Vision;Vision;Vision;Vision;Vision;Vision;Motion;Motion;Motion;Motion;Motion;Motion;Motion;Motion;Motion;Motion;Motion;Motion;Motion;Motion;Motion;Motion;Motion;Motion;Motion;Motion;Motion;Motion;Motion;Motion;Motion;Motion;Motion;Motion;Motion;Motion;Motion"/>
+    <PATHCPP value=".;SVDll;Include\Imi;Vision;Vision;Vision;Vision;Vision;Vision;Vision;Vision;Vision;Vision;Vision;Vision;Vision;Vision;Vision;Vision;Vision;Vision;Vision;Motion;Motion;Motion;Motion;Motion;Motion;Motion;Motion;Motion;Motion;Motion;Motion;Motion;Motion;Motion;Motion;Motion;Motion;Motion;Motion;Motion;Motion;Motion;Motion;Motion;Motion;Motion;Motion;Motion;Motion;Motion;Motion"/>
     <PATHPAS value=".;"/>
     <PATHRC value=".;"/>
     <PATHASM value=".;"/>
@@ -85,6 +87,7 @@
       <FILE FILENAME="Vision\FormTrainChk.cpp" FORMNAME="FrmTrainChk" UNITNAME="FormTrainChk" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
       <FILE FILENAME="Vision\FormCalPara.cpp" FORMNAME="FrmCalPara" UNITNAME="FormCalPara" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
       <FILE FILENAME="Vision\FormImage.cpp" FORMNAME="FrmImage" UNITNAME="FormImage" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Vision\FormEndImg.cpp" FORMNAME="FrmEndImg" UNITNAME="FormEndImg" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
       <FILE FILENAME="Vision\VisnDefine.h" FORMNAME="" UNITNAME="VisnDefine" CONTAINERID="" DESIGNCLASS="" LOCALCOMMAND=""/>
       <FILE FILENAME="Vision\Vision.cpp" FORMNAME="" UNITNAME="Vision" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
       <FILE FILENAME="Vision\VOptnMan.cpp" FORMNAME="" UNITNAME="VOptnMan" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
@@ -112,6 +115,7 @@
       <FILE FILENAME="Motion\FrameMotr.cpp" FORMNAME="FraMotr" UNITNAME="FrameMotr" CONTAINERID="CCompiler" DESIGNCLASS="TFrame" LOCALCOMMAND=""/>
       <FILE FILENAME="Motion\FrameCyl.cpp" FORMNAME="FraCyl" UNITNAME="FrameCyl" CONTAINERID="CCompiler" DESIGNCLASS="TFrame" LOCALCOMMAND=""/>
       <FILE FILENAME="Motion\FormInform.cpp" FORMNAME="FrmInform" UNITNAME="FormInform" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Motion\FormMapViewer.cpp" FORMNAME="FrmMapViewer" UNITNAME="FormMapViewer" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
       <FILE FILENAME="Motion\FormInfo.cpp" FORMNAME="FrmInfo" UNITNAME="FormInfo" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
       <FILE FILENAME="Motion\UtilDefine.h" FORMNAME="" UNITNAME="UtilDefine.h" CONTAINERID="" DESIGNCLASS="" LOCALCOMMAND=""/>
       <FILE FILENAME="Motion\PstnMan.cpp" FORMNAME="" UNITNAME="PstnMan" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
@@ -141,7 +145,7 @@ AutoIncBuild=1
 MajorVer=1
 MinorVer=0
 Release=0
-Build=65
+Build=72
 Debug=0
 PreRelease=0
 Special=0
@@ -153,7 +157,7 @@ CodePage=949
 [Version Info Keys]
 CompanyName=
 FileDescription=
-FileVersion=1.0.0.65
+FileVersion=1.0.0.72
 InternalName=
 LegalCopyright=
 LegalTrademarks=
