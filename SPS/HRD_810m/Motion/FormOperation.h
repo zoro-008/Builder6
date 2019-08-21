@@ -312,10 +312,6 @@ __published:	// IDE-managed Components
         void __fastcall btRawMapClearClick(TObject *Sender);
         void __fastcall btMAP_ClearClickClick(TObject *Sender);
         void __fastcall Button1Click(TObject *Sender);
-<<<<<<< HEAD
-=======
-        void __fastcall btGetBarcodeClick(TObject *Sender);
->>>>>>> d3f637ca917fa54902a04198aecdf5ee272a1c73
         void __fastcall btTraceBwdClick(TObject *Sender);
         void __fastcall btTraceFwdClick(TObject *Sender);
         void __fastcall btReMarkClick(TObject *Sender);

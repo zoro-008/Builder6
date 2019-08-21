@@ -1,9 +1,5 @@
 object FrmOperation: TFrmOperation
-<<<<<<< HEAD
   Left = 0
-=======
-  Left = 2446
->>>>>>> d3f637ca917fa54902a04198aecdf5ee272a1c73
   Top = 137
   BorderStyle = bsNone
   Caption = 'FrmOperation'

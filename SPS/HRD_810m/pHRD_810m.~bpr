@@ -145,7 +145,7 @@ AutoIncBuild=1
 MajorVer=1
 MinorVer=0
 Release=0
-Build=72
+Build=74
 Debug=0
 PreRelease=0
 Special=0
@@ -157,7 +157,7 @@ CodePage=949
 [Version Info Keys]
 CompanyName=
 FileDescription=
-FileVersion=1.0.0.72
+FileVersion=1.0.0.74
 InternalName=
 LegalCopyright=
 LegalTrademarks=
@@ -165,9 +165,6 @@ OriginalFilename=
 ProductName=
 ProductVersion=1.0.0.0
 Comments=
-
-[Excluded Packages]
-c:\program files\borland\cbuilder6\Bin\dclite60.bpl=Borland Integrated Translation Environment
 
 [HistoryLists\hlIncludePath]
 Count=30
@@ -283,5 +280,10 @@ RemoteDebug=0
 ShowInfoMsgs=0
 LinkDebugVcl=0
 LinkCGLIB=0
+
+[Language]
+ActiveLang=
+ProjectLang=
+RootDir=
   </IDEOPTIONS>
 </PROJECT>
