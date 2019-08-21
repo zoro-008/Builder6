@@ -1262,23 +1262,15 @@ void __fastcall TFrmOperation::pnPenCntResetClick(TObject *Sender)
 
 void __fastcall TFrmOperation::btBarOnClick(TObject *Sender)
 {
-<<<<<<< HEAD
     STG.SendBarcodeMsg("LON\r");             //
     //SendBarcodeMsg("LON/r");             //
-=======
-    STG.SendBarcodeMsg("LON/r");             //
->>>>>>> d3f637ca917fa54902a04198aecdf5ee272a1c73
 }
 //---------------------------------------------------------------------------
 
 void __fastcall TFrmOperation::btBarOffClick(TObject *Sender)
 {
-<<<<<<< HEAD
     STG.SendBarcodeMsg("LOFF\r");
     //SendBarcodeMsg("LOFF/r");             //
-=======
-    STG.SendBarcodeMsg("LOFF/r");
->>>>>>> d3f637ca917fa54902a04198aecdf5ee272a1c73
 }
 //---------------------------------------------------------------------------
 

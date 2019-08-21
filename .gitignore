@@ -1,2 +1,7 @@
 **/bin
 **/obj
+*.~cpp
+*.~ddp
+*.~dfm
+*.~h
+*.~bpr
