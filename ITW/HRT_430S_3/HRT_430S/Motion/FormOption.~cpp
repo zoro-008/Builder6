@@ -134,6 +134,79 @@ void __fastcall TFrmOption::Timer1Timer(TObject *Sender)
     bool bView = false;
     static bool bPreView = false;
 
+    switch(OM.CmnOptn.iLedFailBin){
+        case 0: edBinCount1 ->  Text = STL.m_iBin0Cnt; break;
+        case 1: edBinCount1 ->  Text = STL.m_iBin1Cnt; break;
+        case 2: edBinCount1 ->  Text = STL.m_iBin2Cnt; break;
+        case 3: edBinCount1 ->  Text = STL.m_iBin3Cnt; break;
+        case 4: edBinCount1 ->  Text = STL.m_iBin4Cnt; break;
+        case 5: edBinCount1 ->  Text = STL.m_iBin5Cnt; break;
+        case 6: edBinCount1 ->  Text = STL.m_iBin6Cnt; break;
+        case 7: edBinCount1 ->  Text = STL.m_iBin7Cnt; break;
+        case 8: edBinCount1 ->  Text = STL.m_iBin8Cnt; break;
+        case 9: edBinCount1 ->  Text = STL.m_iBin9Cnt; break;
+    }
+    switch(OM.CmnOptn.iZnnrFailBin){
+        case 0: edBinCount2 ->  Text = STL.m_iBin0Cnt; break;
+        case 1: edBinCount2 ->  Text = STL.m_iBin1Cnt; break;
+        case 2: edBinCount2 ->  Text = STL.m_iBin2Cnt; break;
+        case 3: edBinCount2 ->  Text = STL.m_iBin3Cnt; break;
+        case 4: edBinCount2 ->  Text = STL.m_iBin4Cnt; break;
+        case 5: edBinCount2 ->  Text = STL.m_iBin5Cnt; break;
+        case 6: edBinCount2 ->  Text = STL.m_iBin6Cnt; break;
+        case 7: edBinCount2 ->  Text = STL.m_iBin7Cnt; break;
+        case 8: edBinCount2 ->  Text = STL.m_iBin8Cnt; break;
+        case 9: edBinCount2 ->  Text = STL.m_iBin9Cnt; break;
+    }
+    switch(OM.CmnOptn.iDropFailBin){
+        case 0: edBinCount3 ->  Text = STL.m_iBin0Cnt; break;
+        case 1: edBinCount3 ->  Text = STL.m_iBin1Cnt; break;
+        case 2: edBinCount3 ->  Text = STL.m_iBin2Cnt; break;
+        case 3: edBinCount3 ->  Text = STL.m_iBin3Cnt; break;
+        case 4: edBinCount3 ->  Text = STL.m_iBin4Cnt; break;
+        case 5: edBinCount3 ->  Text = STL.m_iBin5Cnt; break;
+        case 6: edBinCount3 ->  Text = STL.m_iBin6Cnt; break;
+        case 7: edBinCount3 ->  Text = STL.m_iBin7Cnt; break;
+        case 8: edBinCount3 ->  Text = STL.m_iBin8Cnt; break;
+        case 9: edBinCount3 ->  Text = STL.m_iBin9Cnt; break;
+    }
+    switch(OM.CmnOptn.iAllFailBin){
+        case 0: edBinCount4 ->  Text = STL.m_iBin0Cnt; break;
+        case 1: edBinCount4 ->  Text = STL.m_iBin1Cnt; break;
+        case 2: edBinCount4 ->  Text = STL.m_iBin2Cnt; break;
+        case 3: edBinCount4 ->  Text = STL.m_iBin3Cnt; break;
+        case 4: edBinCount4 ->  Text = STL.m_iBin4Cnt; break;
+        case 5: edBinCount4 ->  Text = STL.m_iBin5Cnt; break;
+        case 6: edBinCount4 ->  Text = STL.m_iBin6Cnt; break;
+        case 7: edBinCount4 ->  Text = STL.m_iBin7Cnt; break;
+        case 8: edBinCount4 ->  Text = STL.m_iBin8Cnt; break;
+        case 9: edBinCount4 ->  Text = STL.m_iBin9Cnt; break;
+    }
+    switch(OM.CmnOptn.iLowVfBin){
+        case 0: edBinCount5 ->  Text = STL.m_iBin0Cnt; break;
+        case 1: edBinCount5 ->  Text = STL.m_iBin1Cnt; break;
+        case 2: edBinCount5 ->  Text = STL.m_iBin2Cnt; break;
+        case 3: edBinCount5 ->  Text = STL.m_iBin3Cnt; break;
+        case 4: edBinCount5 ->  Text = STL.m_iBin4Cnt; break;
+        case 5: edBinCount5 ->  Text = STL.m_iBin5Cnt; break;
+        case 6: edBinCount5 ->  Text = STL.m_iBin6Cnt; break;
+        case 7: edBinCount5 ->  Text = STL.m_iBin7Cnt; break;
+        case 8: edBinCount5 ->  Text = STL.m_iBin8Cnt; break;
+        case 9: edBinCount5 ->  Text = STL.m_iBin9Cnt; break;
+    }
+    switch(OM.CmnOptn.iHighVfBin){
+        case 0: edBinCount6 ->  Text = STL.m_iBin0Cnt; break;
+        case 1: edBinCount6 ->  Text = STL.m_iBin1Cnt; break;
+        case 2: edBinCount6 ->  Text = STL.m_iBin2Cnt; break;
+        case 3: edBinCount6 ->  Text = STL.m_iBin3Cnt; break;
+        case 4: edBinCount6 ->  Text = STL.m_iBin4Cnt; break;
+        case 5: edBinCount6 ->  Text = STL.m_iBin5Cnt; break;
+        case 6: edBinCount6 ->  Text = STL.m_iBin6Cnt; break;
+        case 7: edBinCount6 ->  Text = STL.m_iBin7Cnt; break;
+        case 8: edBinCount6 ->  Text = STL.m_iBin8Cnt; break;
+        case 9: edBinCount6 ->  Text = STL.m_iBin9Cnt; break;
+    }
+
     if(OM.MstOptn.bUsedVfSortOption){
         bView = true;
     }
@@ -166,78 +239,7 @@ void __fastcall TFrmOption::Timer1Timer(TObject *Sender)
         edHighVfBin  -> Visible = false;
     }
 
-    switch(edLedFailBin -> Text.ToInt()){
-        case 0: edBinCount1 ->  Text = STL.m_iBin0Cnt; break;
-        case 1: edBinCount1 ->  Text = STL.m_iBin1Cnt; break;
-        case 2: edBinCount1 ->  Text = STL.m_iBin2Cnt; break;
-        case 3: edBinCount1 ->  Text = STL.m_iBin3Cnt; break;
-        case 4: edBinCount1 ->  Text = STL.m_iBin4Cnt; break;
-        case 5: edBinCount1 ->  Text = STL.m_iBin5Cnt; break;
-        case 6: edBinCount1 ->  Text = STL.m_iBin6Cnt; break;
-        case 7: edBinCount1 ->  Text = STL.m_iBin7Cnt; break;
-        case 8: edBinCount1 ->  Text = STL.m_iBin8Cnt; break;
-        case 9: edBinCount1 ->  Text = STL.m_iBin9Cnt; break;
-    }
-    switch(edZnnrFailBin -> Text.ToInt()){
-        case 0: edBinCount2 ->  Text = STL.m_iBin0Cnt; break;
-        case 1: edBinCount2 ->  Text = STL.m_iBin1Cnt; break;
-        case 2: edBinCount2 ->  Text = STL.m_iBin2Cnt; break;
-        case 3: edBinCount2 ->  Text = STL.m_iBin3Cnt; break;
-        case 4: edBinCount2 ->  Text = STL.m_iBin4Cnt; break;
-        case 5: edBinCount2 ->  Text = STL.m_iBin5Cnt; break;
-        case 6: edBinCount2 ->  Text = STL.m_iBin6Cnt; break;
-        case 7: edBinCount2 ->  Text = STL.m_iBin7Cnt; break;
-        case 8: edBinCount2 ->  Text = STL.m_iBin8Cnt; break;
-        case 9: edBinCount2 ->  Text = STL.m_iBin9Cnt; break;
-    }
-    switch(edDropFailBin -> Text.ToInt()){
-        case 0: edBinCount3 ->  Text = STL.m_iBin0Cnt; break;
-        case 1: edBinCount3 ->  Text = STL.m_iBin1Cnt; break;
-        case 2: edBinCount3 ->  Text = STL.m_iBin2Cnt; break;
-        case 3: edBinCount3 ->  Text = STL.m_iBin3Cnt; break;
-        case 4: edBinCount3 ->  Text = STL.m_iBin4Cnt; break;
-        case 5: edBinCount3 ->  Text = STL.m_iBin5Cnt; break;
-        case 6: edBinCount3 ->  Text = STL.m_iBin6Cnt; break;
-        case 7: edBinCount3 ->  Text = STL.m_iBin7Cnt; break;
-        case 8: edBinCount3 ->  Text = STL.m_iBin8Cnt; break;
-        case 9: edBinCount3 ->  Text = STL.m_iBin9Cnt; break;
-    }
-    switch(edAllFailBin -> Text.ToInt()){
-        case 0: edBinCount4 ->  Text = STL.m_iBin0Cnt; break;
-        case 1: edBinCount4 ->  Text = STL.m_iBin1Cnt; break;
-        case 2: edBinCount4 ->  Text = STL.m_iBin2Cnt; break;
-        case 3: edBinCount4 ->  Text = STL.m_iBin3Cnt; break;
-        case 4: edBinCount4 ->  Text = STL.m_iBin4Cnt; break;
-        case 5: edBinCount4 ->  Text = STL.m_iBin5Cnt; break;
-        case 6: edBinCount4 ->  Text = STL.m_iBin6Cnt; break;
-        case 7: edBinCount4 ->  Text = STL.m_iBin7Cnt; break;
-        case 8: edBinCount4 ->  Text = STL.m_iBin8Cnt; break;
-        case 9: edBinCount4 ->  Text = STL.m_iBin9Cnt; break;
-    }
-    switch(edLowVfBin -> Text.ToInt()){
-        case 0: edBinCount5 ->  Text = STL.m_iBin0Cnt; break;
-        case 1: edBinCount5 ->  Text = STL.m_iBin1Cnt; break;
-        case 2: edBinCount5 ->  Text = STL.m_iBin2Cnt; break;
-        case 3: edBinCount5 ->  Text = STL.m_iBin3Cnt; break;
-        case 4: edBinCount5 ->  Text = STL.m_iBin4Cnt; break;
-        case 5: edBinCount5 ->  Text = STL.m_iBin5Cnt; break;
-        case 6: edBinCount5 ->  Text = STL.m_iBin6Cnt; break;
-        case 7: edBinCount5 ->  Text = STL.m_iBin7Cnt; break;
-        case 8: edBinCount5 ->  Text = STL.m_iBin8Cnt; break;
-        case 9: edBinCount5 ->  Text = STL.m_iBin9Cnt; break;
-    }
-    switch(edHighVfBin -> Text.ToInt()){
-        case 0: edBinCount6 ->  Text = STL.m_iBin0Cnt; break;
-        case 1: edBinCount6 ->  Text = STL.m_iBin1Cnt; break;
-        case 2: edBinCount6 ->  Text = STL.m_iBin2Cnt; break;
-        case 3: edBinCount6 ->  Text = STL.m_iBin3Cnt; break;
-        case 4: edBinCount6 ->  Text = STL.m_iBin4Cnt; break;
-        case 5: edBinCount6 ->  Text = STL.m_iBin5Cnt; break;
-        case 6: edBinCount6 ->  Text = STL.m_iBin6Cnt; break;
-        case 7: edBinCount6 ->  Text = STL.m_iBin7Cnt; break;
-        case 8: edBinCount6 ->  Text = STL.m_iBin8Cnt; break;
-        case 9: edBinCount6 ->  Text = STL.m_iBin9Cnt; break;
-    }
+
     bPreView = bView;
 
     Timer1 -> Enabled = true;

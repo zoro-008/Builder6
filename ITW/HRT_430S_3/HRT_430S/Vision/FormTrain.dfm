@@ -1,6 +1,6 @@
 object FrmTrain: TFrmTrain
-  Left = 418
-  Top = 1
+  Left = 387
+  Top = 0
   BorderStyle = bsDialog
   Caption = 'FrmTrain'
   ClientHeight = 986

@@ -148,6 +148,7 @@ private:	// User declarations
 
     //fmMag
     CVision       * m_pVision   ;
+    CCamera       * m_pCam      ;
     CImage        * m_pActiveImg;
     void          * m_pOriMsgWnd;
 

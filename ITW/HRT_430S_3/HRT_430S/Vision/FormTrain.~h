@@ -20,6 +20,8 @@
 #include "Tracker.h"
 #include "FormValueList.h"
 #include "UnitVision.h"
+#include "CamUnit.h"
+#include "PkgCamera.h"
 
 
 #include <ComCtrls.hpp>

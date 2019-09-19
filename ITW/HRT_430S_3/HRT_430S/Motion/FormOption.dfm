@@ -1,6 +1,6 @@
 object FrmOption: TFrmOption
-  Left = 207
-  Top = 136
+  Left = -3
+  Top = 185
   BorderStyle = bsNone
   Caption = 'FrmOption'
   ClientHeight = 863

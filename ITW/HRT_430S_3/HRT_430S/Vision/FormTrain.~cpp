@@ -1036,6 +1036,18 @@ void __fastcall TFrmTrain::vlParaKeyUp(TObject *Sender, WORD &Key,
 
 void __fastcall TFrmTrain::btSaveParaClick(TObject *Sender)
 {
+    //if(btMasterPara -> Down) {
+    //    m_pVision -> UpdateMasterPara(false , vlPara);
+    //}
+    //else if(btLocalPara -> Down) {
+    //    m_pVision -> UpdateLocalPara (false , vlPara);
+    //}
+    //else if(btCommonPara -> Down) {
+    //    m_pVision -> UpdateCommonPara(false , vlPara);
+    //}
+    //
+    //m_pVision -> LoadSave(false);
+
     if(btMasterPara -> Down) {
         m_pVision -> UpdateMasterPara(false , vlPara);
     }
@@ -1045,8 +1057,9 @@ void __fastcall TFrmTrain::btSaveParaClick(TObject *Sender)
     else if(btCommonPara -> Down) {
         m_pVision -> UpdateCommonPara(false , vlPara);
     }
-
+    
     m_pVision -> LoadSave(false);
+
 }
 //---------------------------------------------------------------------------
 

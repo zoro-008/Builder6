@@ -761,7 +761,8 @@ bool CLoader::CyclePlace ()
                   IO_SetY(yLDR_MgzOutAC,true);
                   IO_SetY(yLDR_MgzInAC ,true); //미리 좀 돌려 놓는다.
 
-                  bStripEnd = DM.ARAY[riPRB].CheckAllStat(csNone) && DM.ARAY[riWRK].CheckAllStat(csNone) && DM.ARAY[riPSB].CheckAllStat(csNone);
+                  //bStripEnd = DM.ARAY[riPRB].CheckAllStat(csNone) && DM.ARAY[riWRK].CheckAllStat(csNone) && DM.ARAY[riPSB].CheckAllStat(csNone);
+                  bStripEnd = _iMgzCnt == OM.DevOptn.iLotEndMgzCnt && DM.ARAY[riPRB].CheckAllStat(csNone) && DM.ARAY[riWRK].CheckAllStat(csNone) /*&& DM.ARAY[riPSB].CheckAllStat(csNone)*/;
                   if(bStripEnd) {
                       WRK.m_bDispLotEnded = true ;
 

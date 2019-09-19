@@ -378,6 +378,47 @@ void CCamera_V01::LoadSave(bool _bLoad , String _sFolderPath , String _sVisnName
 
 }
 
+/*
+        //로드 세이브.
+void CCamera_V01::LoadSave(bool _bLoad , String _sFolderPath , String _sVisnName)
+{
+    String sIniPath        = _sFolderPath + "\\Vision\\" + _sVisnName + "_" + m_sName + "_" + GetPkgName() + ".ini" ;
+    String sCrntImagePath  = _sFolderPath + "\\Vision\\" + _sVisnName + "_" + m_sName + "_CrntImage.bmp"  ;
+    String sTrainImagePath = _sFolderPath + "\\Vision\\" + _sVisnName + "_" + m_sName + "_TrainImage.bmp" ;
+
+    TUserINI Ini ;
+    if(_bLoad) {
+        m_pCrntImg   -> LoadBmp(sCrntImagePath .c_str());
+        m_pTrainImg  -> LoadBmp(sTrainImagePath.c_str());
+
+        Ini.Load(sIniPath, "MasterPara" , MPara.iCamId     .GetName(), MPara.iCamId     .GetStrPnt());
+
+        Ini.Load(sIniPath, "CommonPara" , CPara.iBrightness.GetName(), CPara.iBrightness.GetStrPnt());
+        Ini.Load(sIniPath, "CommonPara" , CPara.iSharpness .GetName(), CPara.iSharpness .GetStrPnt());
+        Ini.Load(sIniPath, "CommonPara" , CPara.iGain      .GetName(), CPara.iGain      .GetStrPnt());
+        Ini.Load(sIniPath, "CommonPara" , CPara.iShutter   .GetName(), CPara.iShutter   .GetStrPnt());
+
+    }
+    else {
+        if(m_sCrntJobFilePath != "")Ini.ClearFile(sIniPath       ) ;
+        if(m_sCrntJobFilePath != "")Ini.ClearFile(sCrntImagePath ) ;
+        if(m_sCrntJobFilePath != "")Ini.ClearFile(sTrainImagePath) ;
+
+        m_pCrntImg   -> SaveBmp(sCrntImagePath .c_str());
+        m_pTrainImg  -> SaveBmp(sTrainImagePath.c_str());
+
+        Ini.Save(sIniPath, "MasterPara" , MPara.iCamId     .GetName(), MPara.iCamId     .GetStrPnt());
+
+        Ini.Save(sIniPath, "CommonPara" , CPara.iBrightness.GetName(), CPara.iBrightness.GetStrPnt());
+        Ini.Save(sIniPath, "CommonPara" , CPara.iSharpness .GetName(), CPara.iSharpness .GetStrPnt());
+        Ini.Save(sIniPath, "CommonPara" , CPara.iGain      .GetName(), CPara.iGain      .GetStrPnt());
+        Ini.Save(sIniPath, "CommonPara" , CPara.iShutter   .GetName(), CPara.iShutter   .GetStrPnt());
+    }
+
+    m_sCrntJobFilePath = _sFolderPath ;
+
+}
+*/
 
 
 

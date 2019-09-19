@@ -2100,7 +2100,7 @@ object FrmOperation: TFrmOperation
         Top = 20
         Width = 369
         Height = 331
-        ActivePage = TabSheet12
+        ActivePage = TabSheet4
         Align = alClient
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
@@ -2110,7 +2110,7 @@ object FrmOperation: TFrmOperation
         MultiLine = True
         ParentFont = False
         TabHeight = 30
-        TabIndex = 5
+        TabIndex = 3
         TabOrder = 1
         TabPosition = tpLeft
         TabWidth = 54

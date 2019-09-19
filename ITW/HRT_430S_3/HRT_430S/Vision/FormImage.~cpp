@@ -162,6 +162,10 @@ void __fastcall TFrmImage::tmUpdateTimer(TObject *Sender)
     btTrain -> Enabled = !m_bAutorun && m_iLevel > 0 ;
 
     //그랩하고나서 폼에서 갱신이 안되는것 같아서 그랩 끝났을때 온페인트 한번 해준다.
+    if(m_pVision -> GetGrabEnd()){
+        OnPaint();
+    }
+
 
     tmUpdate -> Enabled = true ;
 }

@@ -1,6 +1,6 @@
 object FrmImage: TFrmImage
-  Left = -97
-  Top = 148
+  Left = 68
+  Top = 149
   BorderStyle = bsNone
   Caption = 'FrmImage'
   ClientHeight = 801

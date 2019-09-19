@@ -155,8 +155,8 @@ __fastcall TFrmOperation::TFrmOperation(TComponent* Owner)
     btMan4_5  -> Caption = "[" + AnsiString(mcPSB_L1Pitch           ) + "]" + "Go Left 1 Pitch"        ;  btMan4_5  -> Tag = (int)mcPSB_L1Pitch         ; btMan4_5  -> Visible = true  ;
     btMan4_6  -> Caption = "[" + AnsiString(mcSTL_Pick              ) + "]" + "Sorting Pick"           ;  btMan4_6  -> Tag = (int)mcSTL_Pick            ; btMan4_6  -> Visible = true  ;
     btMan4_7  -> Caption = "[" + AnsiString(mcSTL_Place             ) + "]" + "Sorting Place"          ;  btMan4_7  -> Tag = (int)mcSTL_Place           ; btMan4_7  -> Visible = true  ;
-    btMan4_8  -> Caption = "[" + AnsiString(mcSTL_YTopClamp         ) + "]" + "Sorting UP\nCYL UP/DN"  ;  btMan4_8  -> Tag = (int)mcSTL_YTopClamp       ; btMan4_8  -> Visible = true  ;
-    btMan4_9  -> Caption = "[" + AnsiString(mcSTL_YBtmClamp         ) + "]" + "Sorting DN\nCYL UP/DN"  ;  btMan4_9  -> Tag = (int)mcSTL_YBtmClamp       ; btMan4_9  -> Visible = true  ;
+    btMan4_8  -> Caption = "[" + AnsiString(mcSTL_YTopClamp         ) + "]" + "Sorting UP CYL UP/DN"  ;  btMan4_8  -> Tag = (int)mcSTL_YTopClamp       ; btMan4_8  -> Visible = true  ;
+    btMan4_9  -> Caption = "[" + AnsiString(mcSTL_YBtmClamp         ) + "]" + "Sorting DN CYL UP/DN"  ;  btMan4_9  -> Tag = (int)mcSTL_YBtmClamp       ; btMan4_9  -> Visible = true  ;
     btMan4_10 -> Caption = "[" + AnsiString(mcSTL_YTopUpPnch1Pitch  ) + "]" + "Sort YTop Up 1 pith"    ;  btMan4_10 -> Tag = (int)mcSTL_YTopUpPnch1Pitch; btMan4_10 -> Visible = true  ;
     btMan4_11 -> Caption = "[" + AnsiString(mcSTL_YTopDnPnch1Pitch  ) + "]" + "Sort YTop Dn 1 pith"    ;  btMan4_11 -> Tag = (int)mcSTL_YTopDnPnch1Pitch; btMan4_11 -> Visible = true  ;
     btMan4_12 -> Caption = "[" + AnsiString(mcSTL_YBtmUp1pitch      ) + "]" + "Sort YBtm Up 1 pith"    ;  btMan4_12 -> Tag = (int)mcSTL_YBtmUp1pitch    ; btMan4_12 -> Visible = true  ;

@@ -1,6 +1,6 @@
 object FrmDeviceSet: TFrmDeviceSet
-  Left = -164
-  Top = 481
+  Left = -58
+  Top = 274
   BorderStyle = bsNone
   Caption = 'FrmDeviceSet'
   ClientHeight = 863
@@ -23,7 +23,7 @@ object FrmDeviceSet: TFrmDeviceSet
     Top = 0
     Width = 1272
     Height = 863
-    ActivePage = tsSortTool
+    ActivePage = tsOption
     Align = alClient
     Font.Charset = ARABIC_CHARSET
     Font.Color = clWindowText
@@ -33,7 +33,7 @@ object FrmDeviceSet: TFrmDeviceSet
     ParentFont = False
     Style = tsButtons
     TabHeight = 35
-    TabIndex = 4
+    TabIndex = 6
     TabOrder = 0
     TabWidth = 156
     OnChange = pcDeviceSetChange

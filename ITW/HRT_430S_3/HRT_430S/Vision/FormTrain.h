@@ -150,6 +150,7 @@ private:	// User declarations
 
     //fmMag
     CVision       * m_pVision   ;
+    
     CImage        * m_pActiveImg;
     void          * m_pOriMsgWnd;
 

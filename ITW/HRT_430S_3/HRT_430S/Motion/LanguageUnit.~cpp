@@ -17,9 +17,14 @@ CLangUnit LAG;
 
 CLangUnit::CLangUnit(void)
 {
-    Init();
 }
 CLangUnit::~CLangUnit(void)
+{
+}
+void CLangUnit::Init(void)
+{
+}
+void CLangUnit::Close(void)
 {
 }
 //---------------------------------------------------------------------------

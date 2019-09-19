@@ -506,6 +506,9 @@ bool CLoader::CyclePick()
 
     PreStep.iCycle = Step.iCycle ;
 
+    bool bFrstMgz = false;
+    AnsiString sLotNo;
+
     //if(Stat.bReqStop) {
     //    Step.iCycle = 0;
     //    return true ;
@@ -588,14 +591,23 @@ bool CLoader::CyclePick()
 
         case  19: if(!MoveMotr(miLDR_YCmp , piLDR_YWork)) return false ;
                   DM.ARAY[riLDR].SetStat(csUnkwn) ;
+                  if(m_iMgzCnt <= 0) bFrstMgz = true;
                   m_iMgzCnt++;              //1
 
+                  if(bFrstMgz){
+                      sLotNo = PopLotNo();
+                      if(sLotNo != "") {DM.ARAY[riLDR].SetLotNo(sLotNo) ; }
+                      else             {EM_SetErr(eiETC_LotErr);          }
+                  }
                   if(m_iMgzCnt > OM.DevOptn.iLotEndMgzCnt) {
                       //LT.LotOpen(PopLotNo(), OM.m_sCrntDev );
                       //LT.SaveLotInfo();
                       if(OM.MstOptn.bNotUstLot) { DM.ARAY[riLDR].SetLotNo(Now().FormatString("yymmdd(hhnnss)")); }
-                      else DM.ARAY[riLDR].SetLotNo(PopLotNo()) ;
-
+                      else {
+                          sLotNo = PopLotNo();
+                          if(sLotNo != "") {DM.ARAY[riLDR].SetLotNo(sLotNo); }
+                          else             {EM_SetErr(eiETC_LotErr);         }
+                      }
                       LT.AddDayInfoLotCnt(1);
                       m_iMgzCnt = 1;
                   }

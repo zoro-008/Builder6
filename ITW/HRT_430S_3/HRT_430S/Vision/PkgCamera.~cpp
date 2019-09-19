@@ -170,6 +170,7 @@ bool CCamera_V01::Run(CImage * _pImg) //카메라 같은 경우.._pImg 이것을 안쓴다.
     //    return false ;ResetEvent(m_hGrabEnd);
     //}DWORD dwRet = WaitForSingleObject(m_hGrabEnd , 5000) ;
 
+    //m_hGrabEnd을 false 시켜줌
     ResetEvent(m_hGrabEnd);
 
     if(!Cam[MPara.iCamId.GetEnum()] -> Grab()){
